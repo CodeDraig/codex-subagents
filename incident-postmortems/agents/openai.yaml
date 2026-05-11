@@ -1,0 +1,4 @@
+interface:
+  display_name: "Incident Postmortems"
+  short_description: "Analyze incidents and corrective actions"
+  default_prompt: "Use $incident-postmortems to reconstruct this incident and produce practical follow-up actions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Modeling"
+  short_description: "Design data entities, migrations, and lineage"
+  default_prompt: "Use $data-modeling to design or review this data model, migration, or lineage change."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dependency Risk Triage"
+  short_description: "Assess dependency upgrade and advisory risk"
+  default_prompt: "Use $dependency-risk-triage to evaluate this dependency change, advisory, or upgrade plan."

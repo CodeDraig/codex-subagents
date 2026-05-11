@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX Flow Mapping"
+  short_description: "Map user workflows, states, and edge cases"
+  default_prompt: "Use $ux-flow-mapping to map this user workflow, screen flow, or interaction state model."

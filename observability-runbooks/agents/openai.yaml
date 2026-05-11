@@ -1,0 +1,4 @@
+interface:
+  display_name: "Observability Runbooks"
+  short_description: "Design telemetry, alerts, dashboards, and runbooks"
+  default_prompt: "Use $observability-runbooks to design diagnostics, alerts, dashboards, or runbook steps for this system."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Matrix Design"
+  short_description: "Map risks to practical test coverage"
+  default_prompt: "Use $test-matrix-design to design a test strategy for this feature, workflow, or release."

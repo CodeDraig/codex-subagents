@@ -1,0 +1,4 @@
+interface:
+  display_name: "Localization Readiness"
+  short_description: "Prepare UI and copy for internationalization"
+  default_prompt: "Use $localization-readiness to review this UI, copy, or workflow for localization readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Accessibility Audit"
+  short_description: "Audit workflows for accessibility barriers"
+  default_prompt: "Use $accessibility-audit to review this UI, workflow, or component for accessibility issues."

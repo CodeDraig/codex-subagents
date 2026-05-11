@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competitive Research"
+  short_description: "Research markets, competitors, and ecosystem norms"
+  default_prompt: "Use $competitive-research to investigate this market, product category, or technology comparison."

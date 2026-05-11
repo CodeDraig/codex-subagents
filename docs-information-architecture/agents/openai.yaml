@@ -1,0 +1,4 @@
+interface:
+  display_name: "Docs Information Architecture"
+  short_description: "Structure documentation by audience and task"
+  default_prompt: "Use $docs-information-architecture to organize or improve this documentation set."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Privacy Review"
+  short_description: "Review data minimization, retention, and consent"
+  default_prompt: "Use $privacy-review to evaluate this feature or change for privacy and data handling risk."

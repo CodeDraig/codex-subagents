@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Injection Defense"
+  short_description: "Harden AI tool and retrieval boundaries"
+  default_prompt: "Use $prompt-injection-defense to review this AI workflow for prompt injection and tool-boundary risks."

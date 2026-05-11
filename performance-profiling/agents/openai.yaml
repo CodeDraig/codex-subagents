@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance Profiling"
+  short_description: "Measure and diagnose performance bottlenecks"
+  default_prompt: "Use $performance-profiling to investigate this latency, memory, startup, query, or throughput issue."

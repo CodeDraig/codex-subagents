@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Discovery"
+  short_description: "Shape product problems and success criteria"
+  default_prompt: "Use $product-discovery to clarify this product idea, user problem, or feature opportunity."

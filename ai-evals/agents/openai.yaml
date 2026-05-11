@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Evals"
+  short_description: "Design AI evaluation cases and rubrics"
+  default_prompt: "Use $ai-evals to evaluate this AI feature, prompt, retrieval flow, or model behavior."

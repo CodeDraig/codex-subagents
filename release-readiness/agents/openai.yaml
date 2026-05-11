@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Readiness"
+  short_description: "Check rollout, rollback, and release risk"
+  default_prompt: "Use $release-readiness to assess this release, deployment, migration, or rollout plan."

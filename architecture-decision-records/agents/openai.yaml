@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Decision Records"
+  short_description: "Create and review ADRs for durable decisions"
+  default_prompt: "Use $architecture-decision-records to draft or review an ADR for this architecture decision."

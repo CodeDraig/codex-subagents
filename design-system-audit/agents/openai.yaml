@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design System Audit"
+  short_description: "Audit UI components, tokens, and visual consistency"
+  default_prompt: "Use $design-system-audit to evaluate this UI or component set for design-system consistency."

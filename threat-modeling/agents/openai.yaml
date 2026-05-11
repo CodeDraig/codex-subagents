@@ -1,0 +1,4 @@
+interface:
+  display_name: "Threat Modeling"
+  short_description: "Analyze assets, trust boundaries, and attack paths"
+  default_prompt: "Use $threat-modeling to build a practical threat model for this feature, system, or code change."
