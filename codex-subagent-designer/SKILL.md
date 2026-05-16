@@ -12,9 +12,10 @@ Use this skill to decide whether subagents help, how to split the work, and how 
 1. Restate the user's goal as a concrete outcome.
 2. Identify the local critical path: the next task the main agent should do directly.
 3. Identify parallel sidecar tasks that can advance the goal without blocking the immediate next step.
-4. Assign each subagent one bounded responsibility with explicit inputs, outputs, and ownership.
-5. Define how results will be integrated, reviewed, and verified.
-6. Avoid delegation when the work is urgent, tightly coupled, trivial, or impossible to validate from the subagent's output.
+4. Select exact custom agent types from the software-development crew when available.
+5. Assign each subagent one bounded responsibility with explicit inputs, outputs, and ownership.
+6. Define how results will be integrated, reviewed, and verified.
+7. Avoid delegation when the work is urgent, tightly coupled, trivial, or impossible to validate from the subagent's output.
 
 Before spawning or recommending subagents, obey the active session's tool and policy constraints. If subagent tools are unavailable or the current instructions require explicit user permission, provide a subagent plan and prompts instead of launching agents.
 
@@ -35,9 +36,30 @@ Keep the work local when:
 - A subagent would need secrets, production access, or broad destructive authority.
 - Ownership cannot be expressed without likely merge conflicts.
 
-## Agent Roles
+## Agent Selection
 
-Use role names that match the available subagent system when possible.
+Default to named custom agents from [software-development-crew.md](references/software-development-crew.md) when the current runtime exposes them. Use generic `worker`, `explorer`, or `default` only as fallbacks.
+
+Use an exact custom agent when:
+
+- The task has a clear domain: product, architecture, API, database, frontend, backend, AI, security, privacy, performance, tests, release, observability, docs, accessibility, localization, dependencies, developer experience, OSINT, technical support, or newsroom work.
+- The task benefits from a standing playbook, model choice, sandbox posture, or output contract.
+- The handoff would otherwise need a long prompt to recreate domain behavior.
+
+Use generic fallbacks only when:
+
+- The runtime does not expose the needed custom `agent_type`.
+- The task is a pure codebase lookup that fits `explorer`.
+- The task is a tiny implementation patch where domain specialization adds no value.
+- The task is mixed and no named agent fits better than `default`.
+
+When a custom agent is available, name it explicitly in the plan and dispatch. Do not write `Role: worker` when the intended role is `backend-domain-engineer`, `frontend-experience-engineer`, `test-automation-engineer`, or another named crew member.
+
+Before dispatching, check [software-development-crew.md](references/software-development-crew.md) for the lifecycle map and intentional overlaps.
+
+## Fallback Roles
+
+Use these only when a custom agent is unavailable or genuinely less appropriate.
 
 - Explorer: answer specific codebase questions, map architecture, locate tests, or inspect failure causes. Prefer read-only outputs with file references.
 - Worker: implement a bounded patch in a declared write set. Require changed file paths and verification results in the final response.
@@ -68,11 +90,12 @@ Main agent:
 - Why local: ...
 
 Subagents:
-- Role: ...
+- Agent type: exact custom agent name, or fallback role with reason
   Task: ...
   Owns: ...
   Output: ...
   Integration point: ...
+  Why this agent: ...
 
 Verification:
 - ...
