@@ -1,0 +1,4 @@
+interface:
+  display_name: "ML Engineering"
+  short_description: "Design model training, evaluation, and inference behavior"
+  default_prompt: "Use $ml-engineering to design or review model training code, evaluation harnesses, feature pipelines, or inference contracts."

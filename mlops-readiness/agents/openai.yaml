@@ -1,0 +1,4 @@
+interface:
+  display_name: "MLOps Readiness"
+  short_description: "Review model release controls, monitoring, and rollback readiness"
+  default_prompt: "Use $mlops-readiness to assess registry state, deployment readiness, monitoring, drift, reproducibility, and rollback controls."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Execution"
+  short_description: "Coordinate delivery sequencing, dependencies, and handoffs"
+  default_prompt: "Use $engineering-execution to coordinate implementation sequencing, integration risks, ownership boundaries, and delivery readiness."

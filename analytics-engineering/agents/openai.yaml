@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analytics Engineering"
+  short_description: "Design metric contracts and BI-ready transformations"
+  default_prompt: "Use $analytics-engineering to define metric contracts, semantic layers, and dashboard-ready transformations."

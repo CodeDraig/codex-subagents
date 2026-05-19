@@ -10,6 +10,7 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Architecture and contracts | `systems-architect`, `api-contract-architect`, `database-modeler` |
 | UX and product surface | `ux-flow-architect`, `design-system-engineer`, `accessibility-reviewer`, `localization-engineer` |
 | Product implementation | `frontend-experience-engineer`, `backend-domain-engineer`, `ai-feature-engineer`, `prompt-evaluation-engineer`, `data-platform-engineer`, `rapid-prototype-scout`, `implementation-finisher` |
+| Data, analytics, and ML execution | `data-scientist`, `analytics-engineer`, `ml-engineer`, `mlops-engineer`, `software-engineering-lead` |
 | Risk and quality | `security-threat-modeler`, `security-fix-engineer`, `privacy-compliance-reviewer`, `performance-investigator`, `performance-optimizer`, `test-strategy-architect`, `test-automation-engineer`, `code-reviewer`, `refactor-surgeon` |
 | Shipping and operations | `build-release-engineer`, `devops-platform-engineer`, `observability-incident-engineer`, `documentation-engineer`, `developer-experience-engineer`, `dependency-maintenance-engineer` |
 | Open Source Intelligence | `osint-research-lead`, `source-verification-analyst`, `geolocation-chronolocation-analyst`, `public-records-researcher`, `social-network-analyst`, `misinformation-risk-analyst` |
@@ -36,6 +37,11 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | AI product behavior, prompts, retrieval, tool use | `ai-feature-engineer` |
 | AI eval datasets, judge rubrics, prompt regression checks | `prompt-evaluation-engineer` |
 | Data pipelines, analytics, warehouse, reporting | `data-platform-engineer` |
+| Exploratory analysis, statistical framing, experiment interpretation | `data-scientist` |
+| Metric contracts, semantic models, BI transformations, dashboards | `analytics-engineer` |
+| Model training, inference code, feature pipelines, ML eval harnesses | `ml-engineer` |
+| Model registry, release controls, drift, monitoring, rollback | `mlops-engineer` |
+| Multi-slice implementation sequencing, integration risk, delivery coherence | `software-engineering-lead` |
 | Quick feasibility spike or throwaway prototype | `rapid-prototype-scout` |
 | Last-mile integration and cleanup | `implementation-finisher` |
 | Security design, trust boundaries, abuse cases | `security-threat-modeler` |
@@ -78,9 +84,9 @@ Use this crew before falling back to generic `worker` or `explorer`.
 
 | Model | Reasoning Efforts Used | Representative Agents |
 | --- | --- | --- |
-| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist` |
+| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist`, `data-scientist`, `mlops-engineer`, `software-engineering-lead` |
 | `gpt-5.4-mini` | `low`, `medium` | `dependency-maintenance-engineer`, `documentation-engineer`, `design-system-engineer` |
-| `gpt-5.3-codex` | `medium`, `high` | `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `implementation-finisher` |
+| `gpt-5.3-codex` | `medium`, `high` | `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `implementation-finisher`, `analytics-engineer`, `ml-engineer` |
 | `gpt-5.3-codex-spark` | `low`, `medium`, `high` | `rapid-prototype-scout`, `developer-experience-engineer`, `test-automation-engineer` |
 
 ## Intentional Overlap
@@ -96,6 +102,10 @@ Some domains have paired agents because model capability and latency change the 
 | News verification | `news-fact-checker` uses `gpt-5.5` with `high` reasoning for publication risk. | `copy-desk-editor` uses `gpt-5.4-mini` with `medium` reasoning for line edits and packaging. |
 | Support operations | `escalation-support-engineer` uses `gpt-5.5` with `high` reasoning for complex cases. | `support-automation-engineer` uses `gpt-5.3-codex` with `high` reasoning for support tooling. |
 | OSINT | `osint-research-lead` uses `gpt-5.5` with `xhigh` reasoning for lawful scope and synthesis. | `source-verification-analyst` uses `gpt-5.5` with `high` reasoning for claim-level corroboration. |
+| Data platform vs analysis | `data-scientist` uses `gpt-5.5` with `high` reasoning for exploratory analysis, experiment interpretation, and evidence-backed recommendations. | `data-platform-engineer` uses `gpt-5.3-codex` with `high` reasoning for production ingestion, transformation, warehouse, lakehouse, lineage, backfill, and reporting implementation. |
+| Analytics semantics vs data modeling | `analytics-engineer` uses `gpt-5.3-codex` with `high` reasoning for metric contracts, semantic models, dashboards, and BI-ready transformations. | `database-modeler` uses `gpt-5.5` with `high` reasoning for persistence shape, indexing, retention, migrations, and durable data ownership decisions. |
+| ML delivery vs ML operations | `ml-engineer` uses `gpt-5.3-codex` with `high` reasoning for training, inference, feature pipelines, and eval harnesses. | `mlops-engineer` uses `gpt-5.5` with `high` reasoning for registry, release controls, drift, monitoring, reproducibility, rollback, and production model readiness. |
+| Engineering execution | `software-engineering-lead` uses `gpt-5.5` with `high` reasoning for read-only delivery sequencing, integration risk, validation gates, and handoff review. | `technical-planner` creates durable implementation plans, while `systems-architect` owns architecture decisions and long-term system boundaries. |
 
 ## Future Skills Backlog
 
@@ -126,6 +136,11 @@ These backlog items now have repository-local skill folders:
 - `$docs-information-architecture`: `docs-information-architecture/`
 - `$accessibility-audit`: `accessibility-audit/`
 - `$localization-readiness`: `localization-readiness/`
+- `$data-science-workflows`: `data-science-workflows/`
+- `$analytics-engineering`: `analytics-engineering/`
+- `$ml-engineering`: `ml-engineering/`
+- `$mlops-readiness`: `mlops-readiness/`
+- `$engineering-execution`: `engineering-execution/`
 
 ## Remaining Skill Backlog
 

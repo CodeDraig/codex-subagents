@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Science Workflows"
+  short_description: "Analyze evidence, experiments, and uncertainty"
+  default_prompt: "Use $data-science-workflows to frame exploratory analysis, interpret experiments, and make evidence-backed recommendations."
