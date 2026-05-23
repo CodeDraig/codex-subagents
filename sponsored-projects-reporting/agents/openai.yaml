@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sponsored Projects Reporting"
+  short_description: "Organizes grant reporting obligations, calendars, evidence, and closeout items."
+  default_prompt: "Use $sponsored-projects-reporting to map award reporting requirements, evidence, owners, and deadlines."

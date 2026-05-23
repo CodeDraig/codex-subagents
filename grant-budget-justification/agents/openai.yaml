@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Budget Justification"
+  short_description: "Drafts and reviews grant budget narratives with assumptions and restriction flags."
+  default_prompt: "Use $grant-budget-justification to connect budget lines to project work, assumptions, sponsor restrictions, and owner questions."

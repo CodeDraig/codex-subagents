@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance Operations Review"
+  short_description: "Reviews operational finance assumptions, variance drivers, controls, and evidence gaps."
+  default_prompt: "Use $finance-operations-review to review finance operations, assumptions, variances, and owner questions without regulated financial advice."

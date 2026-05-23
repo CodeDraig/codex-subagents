@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Evidence Management"
+  short_description: "Organizes audit evidence, request lists, traceability, and exceptions."
+  default_prompt: "Use $audit-evidence-management to package audit evidence, traceability, gaps, exceptions, and owner questions."

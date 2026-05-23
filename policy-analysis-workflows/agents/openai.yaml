@@ -1,0 +1,4 @@
+interface:
+  display_name: "Policy Analysis Workflows"
+  short_description: "Analyzes policy proposals, impacts, tradeoffs, evidence, and owner questions."
+  default_prompt: "Use $policy-analysis-workflows to produce source-backed policy analysis, stakeholder impacts, tradeoffs, and evidence gaps."

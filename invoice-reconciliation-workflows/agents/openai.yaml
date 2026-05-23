@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invoice Reconciliation Workflows"
+  short_description: "Matches invoices, POs, receipts, approvals, payments, and exceptions."
+  default_prompt: "Use $invoice-reconciliation-workflows to reconcile invoices, approvals, payments, exceptions, and owner next actions."

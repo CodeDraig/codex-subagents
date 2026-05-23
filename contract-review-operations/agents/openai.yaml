@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contract Review Operations"
+  short_description: "Extract contract obligations, risk flags, and owner questions"
+  default_prompt: "Use $contract-review-operations to review this contract scope for key terms, obligations, operational risks, and counsel or owner questions."

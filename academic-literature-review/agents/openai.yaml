@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Literature Review"
+  short_description: "Synthesizes scholarly literature with source-bound claims and gap tracking."
+  default_prompt: "Use $academic-literature-review to synthesize scholarly sources, evidence quality, disagreements, and gaps without fabricating claims."

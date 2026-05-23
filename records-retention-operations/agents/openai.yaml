@@ -1,0 +1,4 @@
+interface:
+  display_name: "Records Retention Operations"
+  short_description: "Map records inventories, retention workflows, holds, and approval gates"
+  default_prompt: "Use $records-retention-operations to review this records scope, retention authority, hold flags, disposition workflow, and approval gates."

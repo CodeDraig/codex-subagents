@@ -1,0 +1,4 @@
+interface:
+  display_name: "Procurement Vendor Review"
+  short_description: "Compares vendors against requirements, evidence, risks, and scorecards."
+  default_prompt: "Use $procurement-vendor-review to compare vendors, requirements, risk flags, evidence gaps, and handoffs."

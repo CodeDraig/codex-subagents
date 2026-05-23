@@ -16,6 +16,13 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Open Source Intelligence | `osint-research-lead`, `source-verification-analyst`, `geolocation-chronolocation-analyst`, `public-records-researcher`, `social-network-analyst`, `misinformation-risk-analyst` |
 | Technical Support | `support-triage-specialist`, `customer-diagnostics-engineer`, `escalation-support-engineer`, `knowledge-base-author`, `support-automation-engineer`, `customer-communications-specialist` |
 | News Site Staff | `assignment-editor`, `breaking-news-reporter`, `news-fact-checker`, `copy-desk-editor`, `audience-seo-editor`, `standards-ethics-editor` |
+| Legal and Regulatory Operations | `legal-research-analyst`, `contract-review-specialist`, `regulatory-monitor`, `records-retention-advisor`, `legal-ops-coordinator` |
+| Academic and Research Support | `literature-reviewer`, `research-methods-reviewer`, `citation-integrity-checker`, `research-data-curator`, `peer-review-prep-editor` |
+| Grants and Sponsored Projects | `grant-opportunity-scout`, `proposal-compliance-reviewer`, `budget-justification-writer`, `sponsored-projects-coordinator`, `grant-reporting-specialist` |
+| Finance and Accounting Operations | `financial-model-reviewer`, `accounting-controls-reviewer`, `invoice-reconciliation-specialist`, `audit-evidence-organizer`, `budget-variance-analyst` |
+| Procurement and Vendor Management | `rfp-response-analyst`, `vendor-risk-reviewer`, `procurement-compliance-specialist`, `sow-reviewer`, `vendor-scorecard-analyst` |
+| Policy and Public Affairs | `policy-analyst`, `public-comment-drafter`, `stakeholder-map-analyst`, `legislative-tracker`, `impact-assessment-writer` |
+| Publishing and Scholarly Production | `developmental-manuscript-editor`, `production-editor`, `permissions-reviewer`, `indexing-coordinator`, `journal-submission-specialist` |
 
 ## Routing Rules
 
@@ -79,14 +86,49 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | News copy editing, headlines, captions | `copy-desk-editor` |
 | News SEO, audience, social, newsletter packaging | `audience-seo-editor` |
 | Newsroom ethics, standards, fairness, privacy | `standards-ethics-editor` |
+| Source-backed legal or regulatory research, issue spotting, authority map | `legal-research-analyst` |
+| Contract clauses, obligations, dates, risk flags, owner questions | `contract-review-specialist` |
+| Regulatory source monitoring, changes, effective dates, owner questions | `regulatory-monitor` |
+| Records inventories, retention schedules, disposition workflows, hold flags | `records-retention-advisor` |
+| Legal operations intake, matter tracking, source packages, handoffs | `legal-ops-coordinator` |
+| Scholarly literature synthesis, evidence themes, disagreements, gaps | `literature-reviewer` |
+| Study design, methodology, validity, reproducibility, analysis-plan critique | `research-methods-reviewer` |
+| Citation support, quote accuracy, provenance, bibliography defects | `citation-integrity-checker` |
+| Research dataset metadata, lineage, reproducibility, sharing readiness | `research-data-curator` |
+| Manuscript peer-review preparation, argument gaps, reviewer questions | `peer-review-prep-editor` |
+| Grant opportunity fit, eligibility signals, deadlines, review criteria | `grant-opportunity-scout` |
+| Grant solicitation requirements, compliance matrices, attachment checks | `proposal-compliance-reviewer` |
+| Grant budget narratives, cost assumptions, sponsor restrictions | `budget-justification-writer` |
+| Sponsored-project reporting calendars, deliverables, closeout coordination | `sponsored-projects-coordinator` |
+| Grant progress-report inputs, evidence gaps, closeout items | `grant-reporting-specialist` |
+| Financial model assumptions, formula risks, source ties | `financial-model-reviewer` |
+| Accounting control design, evidence expectations, remediation questions | `accounting-controls-reviewer` |
+| Invoice, PO, receipt, approval, payment matching and exceptions | `invoice-reconciliation-specialist` |
+| Audit evidence inventories, request lists, traceability maps | `audit-evidence-organizer` |
+| Budget-to-actual variance drivers, evidence gaps, assumption changes | `budget-variance-analyst` |
+| RFP parsing, response matrices, owner assignments, package checks | `rfp-response-analyst` |
+| Vendor risk evidence, specialist handoffs, diligence questions | `vendor-risk-reviewer` |
+| Procurement policy requirements, approvals, exceptions, sourcing evidence | `procurement-compliance-specialist` |
+| Statement-of-work deliverables, milestones, acceptance criteria, ambiguities | `sow-reviewer` |
+| Vendor comparison scorecards, disclosed criteria, evidence gaps | `vendor-scorecard-analyst` |
+| Source-backed policy analysis, issue maps, impacts, tradeoffs | `policy-analyst` |
+| Public comments, testimony, consultation responses, submission checklists | `public-comment-drafter` |
+| Stakeholder group mapping, aggregate interests, impact blind spots | `stakeholder-map-analyst` |
+| Bills, amendments, hearings, votes, effective dates, official source logs | `legislative-tracker` |
+| Policy impact assessments, costs, benefits, assumptions, evidence gaps | `impact-assessment-writer` |
+| Manuscript structure, argument, audience fit, major revision priorities | `developmental-manuscript-editor` |
+| Production editing, style sheets, proof stages, schedules, query logs | `production-editor` |
+| Third-party content permissions, license restrictions, attribution needs | `permissions-reviewer` |
+| Index term candidates, locators, cross-references, author queries | `indexing-coordinator` |
+| Journal submission packages, metadata gaps, disclosures, response matrices | `journal-submission-specialist` |
 
 ## Model Coverage
 
 | Model | Reasoning Efforts Used | Representative Agents |
 | --- | --- | --- |
-| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist`, `data-scientist`, `mlops-engineer`, `software-engineering-lead` |
-| `gpt-5.4-mini` | `low`, `medium` | `dependency-maintenance-engineer`, `documentation-engineer`, `design-system-engineer` |
-| `gpt-5.3-codex` | `medium`, `high` | `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `implementation-finisher`, `analytics-engineer`, `ml-engineer` |
+| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist`, `data-scientist`, `mlops-engineer`, `software-engineering-lead`, `legal-research-analyst`, `literature-reviewer`, `proposal-compliance-reviewer`, `financial-model-reviewer`, `vendor-risk-reviewer`, `policy-analyst`, `permissions-reviewer` |
+| `gpt-5.4-mini` | `low`, `medium` | `dependency-maintenance-engineer`, `documentation-engineer`, `design-system-engineer`, `peer-review-prep-editor`, `grant-reporting-specialist`, `production-editor`, `indexing-coordinator` |
+| `gpt-5.3-codex` | `medium`, `high` | `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `implementation-finisher`, `analytics-engineer`, `ml-engineer`, `research-data-curator`, `invoice-reconciliation-specialist`, `audit-evidence-organizer`, `vendor-scorecard-analyst` |
 | `gpt-5.3-codex-spark` | `low`, `medium`, `high` | `rapid-prototype-scout`, `developer-experience-engineer`, `test-automation-engineer` |
 
 ## Intentional Overlap
@@ -106,14 +148,21 @@ Some domains have paired agents because model capability and latency change the 
 | Analytics semantics vs data modeling | `analytics-engineer` uses `gpt-5.3-codex` with `high` reasoning for metric contracts, semantic models, dashboards, and BI-ready transformations. | `database-modeler` uses `gpt-5.5` with `high` reasoning for persistence shape, indexing, retention, migrations, and durable data ownership decisions. |
 | ML delivery vs ML operations | `ml-engineer` uses `gpt-5.3-codex` with `high` reasoning for training, inference, feature pipelines, and eval harnesses. | `mlops-engineer` uses `gpt-5.5` with `high` reasoning for registry, release controls, drift, monitoring, reproducibility, rollback, and production model readiness. |
 | Engineering execution | `software-engineering-lead` uses `gpt-5.5` with `high` reasoning for read-only delivery sequencing, integration risk, validation gates, and handoff review. | `technical-planner` creates durable implementation plans, while `systems-architect` owns architecture decisions and long-term system boundaries. |
-
-## Future Skills Backlog
-
-The agent examples intentionally reference Skills that may not exist yet. Keep this backlog synchronized whenever the TOML files gain or lose Skill references.
+| Legal research vs public records | `legal-research-analyst` uses `gpt-5.5` with `high` reasoning for source-backed legal/regulatory research, issue spotting, authority maps, caveats, and counsel questions. | `public-records-researcher` owns official record, docket, registry, filing, and entity-disambiguation searches. |
+| Contract review vs privacy/security/procurement | `contract-review-specialist` uses `gpt-5.5` with `high` reasoning for clause extraction, obligations, operational impacts, and owner questions. | `privacy-compliance-reviewer` owns personal-data risk; `vendor-risk-reviewer`, `procurement-compliance-specialist`, and `sow-reviewer` own procurement evidence, policy, and SOW workflow slices. |
+| Regulatory monitoring vs policy analysis | `regulatory-monitor` uses `gpt-5.5` with `high` reasoning for official source monitoring, changes, effective dates, and owner questions. | `policy-analyst`, `public-comment-drafter`, `stakeholder-map-analyst`, `legislative-tracker`, and `impact-assessment-writer` own policy-position, stakeholder, and public-affairs artifacts. |
+| Records retention operations | `records-retention-advisor` uses `gpt-5.5` with `medium` reasoning for retention inventories, schedules, hold flags, disposition workflows, and approval gates. | `privacy-compliance-reviewer` owns privacy law and personal-data implications, while counsel or authorized owners make final retention decisions. |
+| Legal operations coordination | `legal-ops-coordinator` uses `gpt-5.5` with `medium` reasoning for intake, matter tracking, source packages, deadlines, owner questions, and routing. | Specialist legal/regulatory agents own research, contract, regulatory, and retention analysis; this role coordinates handoffs without legal judgment. |
+| Academic research support | `literature-reviewer`, `research-methods-reviewer`, and `citation-integrity-checker` use `gpt-5.5` for source-backed synthesis, validity critique, and citation integrity. | `research-data-curator` uses `gpt-5.3-codex` for repo-local metadata and reproducibility artifacts; `peer-review-prep-editor` uses `gpt-5.4-mini` for manuscript preparation. |
+| Grants and sponsored projects | `proposal-compliance-reviewer` uses `gpt-5.5` with `high` reasoning for sponsor compliance matrices. | `budget-justification-writer`, `sponsored-projects-coordinator`, and `grant-reporting-specialist` support budget narratives, award calendars, and reporting evidence without official submission authority. |
+| Finance and accounting operations | `financial-model-reviewer` and `accounting-controls-reviewer` use `gpt-5.5` for high-stakes model and control review. | `invoice-reconciliation-specialist` and `audit-evidence-organizer` use `gpt-5.3-codex` for operational artifacts; none provide tax, investment, legal, valuation, or audit-opinion advice. |
+| Procurement and vendor management | `vendor-risk-reviewer`, `procurement-compliance-specialist`, and `sow-reviewer` use `gpt-5.5` for high-stakes vendor, policy, and SOW review. | `rfp-response-analyst` and `vendor-scorecard-analyst` create matrices and scorecards from disclosed criteria without award authority. |
+| Policy and public affairs | `policy-analyst` and `impact-assessment-writer` use `gpt-5.5` with high reasoning for source-backed tradeoff and impact analysis. | `public-comment-drafter`, `stakeholder-map-analyst`, and `legislative-tracker` support drafting, aggregate mapping, and official-source monitoring without legal advice, deceptive advocacy, or political microtargeting. |
+| Publishing and scholarly production | `developmental-manuscript-editor` and `permissions-reviewer` use `gpt-5.5` for structural and rights-sensitive review. | `production-editor`, `indexing-coordinator`, and `journal-submission-specialist` coordinate production, indexing, and submissions without publisher approval, legal clearance, or research-integrity certification. |
 
 ## Implemented Skill Assets
 
-These backlog items now have repository-local skill folders:
+Every Skill referenced by the agent examples has a repository-local skill folder:
 
 - `$product-discovery`: `product-discovery/`
 - `$competitive-research`: `competitive-research/`
@@ -141,6 +190,27 @@ These backlog items now have repository-local skill folders:
 - `$ml-engineering`: `ml-engineering/`
 - `$mlops-readiness`: `mlops-readiness/`
 - `$engineering-execution`: `engineering-execution/`
+- `$legal-research-workflows`: `legal-research-workflows/`
+- `$contract-review-operations`: `contract-review-operations/`
+- `$records-retention-operations`: `records-retention-operations/`
+- `$academic-literature-review`: `academic-literature-review/`
+- `$research-methods-review`: `research-methods-review/`
+- `$citation-integrity-review`: `citation-integrity-review/`
+- `$grant-proposal-compliance`: `grant-proposal-compliance/`
+- `$sponsored-projects-reporting`: `sponsored-projects-reporting/`
+- `$grant-budget-justification`: `grant-budget-justification/`
+- `$finance-operations-review`: `finance-operations-review/`
+- `$audit-evidence-management`: `audit-evidence-management/`
+- `$invoice-reconciliation-workflows`: `invoice-reconciliation-workflows/`
+- `$procurement-vendor-review`: `procurement-vendor-review/`
+- `$rfp-response-workflows`: `rfp-response-workflows/`
+- `$sow-review-workflows`: `sow-review-workflows/`
+- `$policy-analysis-workflows`: `policy-analysis-workflows/`
+- `$public-comment-drafting`: `public-comment-drafting/`
+- `$legislative-tracking`: `legislative-tracking/`
+- `$publishing-production-workflows`: `publishing-production-workflows/`
+- `$permissions-rights-review`: `permissions-rights-review/`
+- `$journal-submission-workflows`: `journal-submission-workflows/`
 
 ## Remaining Skill Backlog
 

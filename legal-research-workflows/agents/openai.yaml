@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legal Research Workflows"
+  short_description: "Organize source-backed legal and regulatory research without legal advice"
+  default_prompt: "Use $legal-research-workflows to organize this legal or regulatory research question, source authority, caveats, and counsel questions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Proposal Compliance"
+  short_description: "Builds sponsor requirement matrices and proposal compliance checks."
+  default_prompt: "Use $grant-proposal-compliance to parse a solicitation and produce a proposal compliance matrix with owner questions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOW Review Workflows"
+  short_description: "Reviews SOW scope, deliverables, milestones, acceptance criteria, and risk flags."
+  default_prompt: "Use $sow-review-workflows to review SOW scope, deliverables, milestones, acceptance criteria, and owner questions."

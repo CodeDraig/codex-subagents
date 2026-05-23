@@ -1,0 +1,4 @@
+interface:
+  display_name: "Publishing Production Workflows"
+  short_description: "Coordinates manuscript production schedules, style sheets, proofs, and next actions."
+  default_prompt: "Use $publishing-production-workflows to organize manuscript production, editorial passes, style decisions, risks, and actions."

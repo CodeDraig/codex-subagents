@@ -1,0 +1,4 @@
+interface:
+  display_name: "Permissions Rights Review"
+  short_description: "Tracks content permissions, licenses, attribution, restrictions, and rights questions."
+  default_prompt: "Use $permissions-rights-review to review permissions status, license restrictions, attribution needs, and owner questions."

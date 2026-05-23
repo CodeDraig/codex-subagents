@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Comment Drafting"
+  short_description: "Drafts source-backed public comments with submission rules and review flags."
+  default_prompt: "Use $public-comment-drafting to structure a public comment, evidence needs, draft language, and submission checklist."
