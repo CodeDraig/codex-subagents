@@ -103,7 +103,11 @@ def check_reference_registry(errors: list[str]) -> None:
 
 
 def check_skill_agent_yaml(errors: list[str]) -> None:
-    for path in sorted((ROOT / "SKILLS").glob("*/agents/openai.yaml")):
+    for skill_path in sorted((ROOT / "SKILLS").glob("*/SKILL.md")):
+        path = skill_path.parent / "agents/openai.yaml"
+        if not path.exists():
+            errors.append(f"{rel(path)}: missing skill agent sidecar")
+            continue
         text = path.read_text(encoding="utf-8")
         if re.search(r"(?m)^(models|agents):", text):
             continue

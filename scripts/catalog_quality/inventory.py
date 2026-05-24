@@ -200,6 +200,11 @@ FIELDNAMES = [
     "after_scores",
     "validation_evidence",
 ]
+REVIEW_FIELDNAMES = [
+    field
+    for field in FIELDNAMES
+    if field not in {"kind", "family", "name", "path"}
+]
 
 
 def family_for(kind: str, name: str) -> str:
@@ -257,8 +262,37 @@ def make_row(kind: str, family: str, name: str, path: Path) -> dict[str, str]:
     }
 
 
+def load_existing_rows() -> dict[tuple[str, str], dict[str, str]]:
+    if not OUTPUT.exists():
+        return {}
+
+    rows: dict[tuple[str, str], dict[str, str]] = {}
+    with OUTPUT.open(newline="", encoding="utf-8") as handle:
+        reader = csv.DictReader(handle)
+        for row in reader:
+            key = (row.get("kind", ""), row.get("name", ""))
+            if not all(key):
+                raise ValueError(f"{OUTPUT.relative_to(ROOT).as_posix()}: row missing kind or name")
+            if key in rows:
+                raise ValueError(f"{OUTPUT.relative_to(ROOT).as_posix()}: duplicate row key {key!r}")
+            rows[key] = row
+    return rows
+
+
+def merge_existing_review_data(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    existing_rows = load_existing_rows()
+    merged_rows: list[dict[str, str]] = []
+    for row in rows:
+        existing = existing_rows.get((row["kind"], row["name"]))
+        if existing:
+            for field in REVIEW_FIELDNAMES:
+                row[field] = existing.get(field, "")
+        merged_rows.append(row)
+    return merged_rows
+
+
 def main() -> int:
-    rows = asset_rows()
+    rows = merge_existing_review_data(asset_rows())
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDNAMES, lineterminator="\n")
