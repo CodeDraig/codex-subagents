@@ -10,12 +10,13 @@ Use this skill to decide whether subagents help, how to split the work, and how 
 ## Core Workflow
 
 1. Restate the user's goal as a concrete outcome.
-2. Identify the local critical path: the next task the main agent should do directly.
-3. Identify parallel sidecar tasks that can advance the goal without blocking the immediate next step.
-4. Select exact custom agent types from the software-development crew when available.
-5. Assign each subagent one bounded responsibility with explicit inputs, outputs, and ownership.
-6. Define how results will be integrated, reviewed, and verified.
-7. Avoid delegation when the work is urgent, tightly coupled, trivial, or impossible to validate from the subagent's output.
+2. If the task creates, reviews, or changes reusable Skills or Agents, read [quality-rubric.md](../../REFERENCES/quality-rubric.md) before proposing or editing assets.
+3. Identify the local critical path: the next task the main agent should do directly.
+4. Identify parallel sidecar tasks that can advance the goal without blocking the immediate next step.
+5. Select exact custom agent types from the software-development crew when available.
+6. Assign each subagent one bounded responsibility with explicit inputs, outputs, and ownership.
+7. Define how results will be integrated, reviewed, scored, and verified.
+8. Avoid delegation when the work is urgent, tightly coupled, trivial, or impossible to validate from the subagent's output.
 
 Before spawning or recommending subagents, obey the active session's tool and policy constraints. If subagent tools are unavailable or the current instructions require explicit user permission, provide a subagent plan and prompts instead of launching agents.
 
@@ -80,6 +81,59 @@ For coding workers, include: "You are not alone in the codebase. Do not revert e
 
 For validators, pass raw artifacts and a user-like request. Do not pass your diagnosis, expected result, or intended fix unless the task is explicitly to evaluate that claim.
 
+## Reusable Asset Quality Gate
+
+Use this gate whenever the task creates, expands, reviews, or installs assets under `SKILLS/`, `AGENTS/openai/`, or a deployed skill directory.
+
+Do not treat structural validity as completion. A syntactically valid skill or TOML file can still be too shallow to use.
+
+Before creating assets:
+
+1. Read [quality-rubric.md](../../REFERENCES/quality-rubric.md).
+2. Identify the target assets and adjacent existing agents, skills, and registry entries.
+3. Define the domain-specific behavior the asset must add beyond generic prompt advice.
+4. List the supporting evidence, reference material, tools, commands, templates, examples, or decision rules the asset needs.
+5. Decide whether the target should be `Ready` now or explicitly marked as a thinner scaffold for later improvement.
+
+After creating or editing assets:
+
+1. Score each changed Skill or Agent with the rubric before claiming completion.
+2. Require every catalog-ready asset to score at least 3 on every required criterion.
+3. Record any criterion below 3 as a required fix, not as optional polish.
+4. Run structural validation only after the usefulness review has passed.
+5. If the user asked for complete coverage, do not stop at a subset that validates structurally.
+
+Reject assets that pass only because they have frontmatter, a workflow list, and an output contract. The asset must contain enough domain-specific checks, boundaries, supporting material, and validation guidance to make future agent behavior more consistent.
+
+## Skill Package Definition Of Done
+
+A reusable Skill package is complete only when it includes:
+
+- Trigger guidance that says when to use the skill and how it differs from nearby skills.
+- A workflow with domain-specific checks in each step.
+- At least one meaningful supporting file when the domain benefits from a checklist, template, source-quality guide, decision table, example, or validation script.
+- Concrete heuristics such as failure modes, severity distinctions, owner decisions, escalation triggers, compatibility rules, or source-quality rules.
+- Tooling or validation guidance: commands, file patterns, parsers, source classes, evidence requirements, manual review gates, or reasons validation cannot proceed.
+- A stable output contract with evidence fields, not just a generic summary.
+- Domain-specific stop conditions and handoffs.
+
+If those elements are missing, label the skill `Useful but Thin` or `Scaffold Only` in the review output and do not describe it as ready.
+
+## Agent Template Definition Of Done
+
+A reusable Agent template is complete only when it includes:
+
+- A distinct role that cannot be replaced by a one-paragraph prompt without loss of behavior.
+- An explicit `$skill-name` reference when a relevant skill exists, or a written justification when no skill applies.
+- A fallback workflow summary for runtimes where the skill is unavailable.
+- Domain-specific intake questions, checks, evidence expectations, edge cases, and things the agent must not do.
+- Model, reasoning, and sandbox settings that match risk and work mode.
+- Concrete handoffs to implemented agents for adjacent domains.
+- Exact return sections aligned to downstream integration.
+- Registry coverage in [software-development-crew.md](../../REFERENCES/software-development-crew.md).
+
+Do not create broad "general expert" agents. Split the role or add supporting skill material until the behavior is specific and reviewable.
+
 ## Planning Pattern
 
 Use this structure for a subagent plan:
@@ -112,3 +166,5 @@ When creating or reviewing reusable Codex subagent configuration files, read [su
 For a full reusable OpenAI software-development crew, read [software-development-crew.md](../../REFERENCES/software-development-crew.md). The examples live under `AGENTS/openai/` as one TOML file per agent.
 
 When judging whether a Skill or Agent is complete enough for catalog inclusion, read [quality-rubric.md](../../REFERENCES/quality-rubric.md). Reject scaffold-only assets that contain generic workflow platitudes without domain-specific checks, supporting references, tools, validation guidance, boundaries, and output contracts.
+
+When this skill is installed outside this repository, the same references may be bundled under `references/` inside the installed skill directory. Use the bundled copies when the repository-level `../../REFERENCES/` path is not available.
