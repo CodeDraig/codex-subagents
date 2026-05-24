@@ -44,12 +44,12 @@ Create the repo-local skills that support data-science and analytics-engineering
 
 ### Files to Create
 
-- `data-science-workflows/SKILL.md` — Defines the reusable workflow for exploratory analysis, statistical framing, experiment interpretation, feature analysis, uncertainty, caveats, and evidence-backed recommendations. Output contract should include `Question`, `Data Reviewed`, `Method`, `Findings`, `Caveats`, `Recommended Decision`, and `Validation`.
-- `data-science-workflows/agents/openai.yaml` — Skill interface metadata with display name, short description, and default prompt.
-- `data-science-workflows/references/analysis-checklist.md` — Checklist for data inputs, assumptions, missingness, bias, leakage, experiment validity, uncertainty, and reproducibility.
-- `analytics-engineering/SKILL.md` — Defines the reusable workflow for metric contracts, semantic layers, BI-ready transformations, dashboard validation, dbt-style models, and stakeholder definitions.
-- `analytics-engineering/agents/openai.yaml` — Skill interface metadata.
-- `analytics-engineering/references/metrics-contract-checklist.md` — Checklist for metric grain, dimensions, filters, ownership, freshness, tests, lineage, dashboard consumers, and breaking-change handling.
+- `SKILLS/data-science-workflows/SKILL.md` — Defines the reusable workflow for exploratory analysis, statistical framing, experiment interpretation, feature analysis, uncertainty, caveats, and evidence-backed recommendations. Output contract should include `Question`, `Data Reviewed`, `Method`, `Findings`, `Caveats`, `Recommended Decision`, and `Validation`.
+- `SKILLS/data-science-workflows/agents/openai.yaml` — Skill interface metadata with display name, short description, and default prompt.
+- `SKILLS/data-science-workflows/references/analysis-checklist.md` — Checklist for data inputs, assumptions, missingness, bias, leakage, experiment validity, uncertainty, and reproducibility.
+- `SKILLS/analytics-engineering/SKILL.md` — Defines the reusable workflow for metric contracts, semantic layers, BI-ready transformations, dashboard validation, dbt-style models, and stakeholder definitions.
+- `SKILLS/analytics-engineering/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/analytics-engineering/references/metrics-contract-checklist.md` — Checklist for metric grain, dimensions, filters, ownership, freshness, tests, lineage, dashboard consumers, and breaking-change handling.
 
 ### Files to Modify
 
@@ -57,7 +57,7 @@ Create the repo-local skills that support data-science and analytics-engineering
 
 ### Implementation Details
 
-Follow the existing skill-folder convention used by `data-modeling/`, `ai-evals/`, and `observability-runbooks/`: frontmatter with `name` and `description`, a concise `#` heading, `Overview`, `Workflow`, reference pointer, `Output Contract`, and `Stop Conditions`.
+Follow the existing skill-folder convention used by `SKILLS/data-modeling/`, `SKILLS/ai-evals/`, and `SKILLS/observability-runbooks/`: frontmatter with `name` and `description`, a concise `#` heading, `Overview`, `Workflow`, reference pointer, `Output Contract`, and `Stop Conditions`.
 
 Use kebab-case skill names:
 
@@ -69,7 +69,7 @@ Keep instructions concise and operational. Avoid broad educational prose; these 
 ### Validation
 
 - `rg --files data-science-workflows analytics-engineering` should list exactly the six expected files.
-- `sed -n '1,80p' data-science-workflows/SKILL.md` and `sed -n '1,80p' analytics-engineering/SKILL.md` should show valid frontmatter and output contracts.
+- `sed -n '1,80p' SKILLS/data-science-workflows/SKILL.md` and `sed -n '1,80p' SKILLS/analytics-engineering/SKILL.md` should show valid frontmatter and output contracts.
 
 ### Dependencies
 
@@ -89,15 +89,15 @@ Create the repo-local skills that support ML implementation, model operations, a
 
 ### Files to Create
 
-- `ml-engineering/SKILL.md` — Defines the reusable workflow for model training/inference code, feature pipelines, evaluation harnesses, integration boundaries, and production-facing ML behavior.
-- `ml-engineering/agents/openai.yaml` — Skill interface metadata.
-- `ml-engineering/references/model-delivery-checklist.md` — Checklist for data splits, feature contracts, baseline metrics, evaluation criteria, model artifacts, inference APIs, and rollback limits.
-- `mlops-readiness/SKILL.md` — Defines the reusable workflow for model registry, deployment, monitoring, reproducibility, drift, rollback, and model release controls.
-- `mlops-readiness/agents/openai.yaml` — Skill interface metadata.
-- `mlops-readiness/references/model-operations-checklist.md` — Checklist for model versioning, promotion gates, observability, drift thresholds, rollback, reproducibility, runtime constraints, and approval points.
-- `engineering-execution/SKILL.md` — Defines the reusable workflow for multi-agent execution coordination, technical sequencing, integration risks, ownership boundaries, and delivery coherence.
-- `engineering-execution/agents/openai.yaml` — Skill interface metadata.
-- `engineering-execution/references/delivery-coordination-checklist.md` — Checklist for scope decomposition, file ownership, dependency order, validation gates, integration risk, handoffs, and final readiness.
+- `SKILLS/ml-engineering/SKILL.md` — Defines the reusable workflow for model training/inference code, feature pipelines, evaluation harnesses, integration boundaries, and production-facing ML behavior.
+- `SKILLS/ml-engineering/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/ml-engineering/references/model-delivery-checklist.md` — Checklist for data splits, feature contracts, baseline metrics, evaluation criteria, model artifacts, inference APIs, and rollback limits.
+- `SKILLS/mlops-readiness/SKILL.md` — Defines the reusable workflow for model registry, deployment, monitoring, reproducibility, drift, rollback, and model release controls.
+- `SKILLS/mlops-readiness/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/mlops-readiness/references/model-operations-checklist.md` — Checklist for model versioning, promotion gates, observability, drift thresholds, rollback, reproducibility, runtime constraints, and approval points.
+- `SKILLS/engineering-execution/SKILL.md` — Defines the reusable workflow for multi-agent execution coordination, technical sequencing, integration risks, ownership boundaries, and delivery coherence.
+- `SKILLS/engineering-execution/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/engineering-execution/references/delivery-coordination-checklist.md` — Checklist for scope decomposition, file ownership, dependency order, validation gates, integration risk, handoffs, and final readiness.
 
 ### Files to Modify
 
@@ -134,11 +134,11 @@ Create five OpenAI TOML agent examples that invoke the new skills and preserve e
 
 ### Files to Create
 
-- `codex-subagent-designer/agents/examples/openai/data-scientist.toml` — Data science analysis and experiment interpretation agent. Use `gpt-5.5` with `high` reasoning and `workspace-write` so it can create notebooks/scripts or analysis artifacts when assigned.
-- `codex-subagent-designer/agents/examples/openai/analytics-engineer.toml` — Metric, semantic-model, BI, and analytics transformation agent. Use `gpt-5.3-codex` with `high` reasoning and `workspace-write`.
-- `codex-subagent-designer/agents/examples/openai/ml-engineer.toml` — Model training/inference and evaluation implementation agent. Use `gpt-5.3-codex` with `high` reasoning and `workspace-write`.
-- `codex-subagent-designer/agents/examples/openai/mlops-engineer.toml` — Model operations, registry, monitoring, drift, release, and rollback agent. Use `gpt-5.5` with `high` reasoning and `workspace-write`.
-- `codex-subagent-designer/agents/examples/openai/software-engineering-lead.toml` — Execution-coordination agent for multi-slice implementation, integration readiness, and technical delivery coherence. Use `gpt-5.5` with `high` reasoning and `read-only` unless assigned to write implementation plans; if write access is needed for handoff artifacts, use `workspace-write` with strict non-implementation instructions.
+- `AGENTS/openai/data-scientist.toml` — Data science analysis and experiment interpretation agent. Use `gpt-5.5` with `high` reasoning and `workspace-write` so it can create notebooks/scripts or analysis artifacts when assigned.
+- `AGENTS/openai/analytics-engineer.toml` — Metric, semantic-model, BI, and analytics transformation agent. Use `gpt-5.3-codex` with `high` reasoning and `workspace-write`.
+- `AGENTS/openai/ml-engineer.toml` — Model training/inference and evaluation implementation agent. Use `gpt-5.3-codex` with `high` reasoning and `workspace-write`.
+- `AGENTS/openai/mlops-engineer.toml` — Model operations, registry, monitoring, drift, release, and rollback agent. Use `gpt-5.5` with `high` reasoning and `workspace-write`.
+- `AGENTS/openai/software-engineering-lead.toml` — Execution-coordination agent for multi-slice implementation, integration readiness, and technical delivery coherence. Use `gpt-5.5` with `high` reasoning and `read-only` unless assigned to write implementation plans; if write access is needed for handoff artifacts, use `workspace-write` with strict non-implementation instructions.
 
 ### Files to Modify
 
@@ -203,7 +203,7 @@ Update the canonical crew registry so the new agents and skills are discoverable
 
 ### Files to Modify
 
-- `codex-subagent-designer/references/software-development-crew.md` — Add the new crew to lifecycle coverage, routing rules, model coverage, intentional overlap, implemented skill assets, and use guidance.
+- `REFERENCES/software-development-crew.md` — Add the new crew to lifecycle coverage, routing rules, model coverage, intentional overlap, implemented skill assets, and use guidance.
 
 ### Implementation Details
 
@@ -219,18 +219,18 @@ Registry updates should include:
 - Intentional-overlap entries documenting the boundaries with `data-platform-engineer`, `database-modeler`, `devops-platform-engineer`, `systems-architect`, and `technical-planner`.
 - Model coverage updates for the chosen models.
 - Implemented skill assets entries for:
-  - `$data-science-workflows`: `data-science-workflows/`
-  - `$analytics-engineering`: `analytics-engineering/`
-  - `$ml-engineering`: `ml-engineering/`
-  - `$mlops-readiness`: `mlops-readiness/`
-  - `$engineering-execution`: `engineering-execution/`
+  - `$data-science-workflows`: `SKILLS/data-science-workflows/`
+  - `$analytics-engineering`: `SKILLS/analytics-engineering/`
+  - `$ml-engineering`: `SKILLS/ml-engineering/`
+  - `$mlops-readiness`: `SKILLS/mlops-readiness/`
+  - `$engineering-execution`: `SKILLS/engineering-execution/`
 
 Keep "Remaining Skill Backlog" as `None` if every referenced skill is implemented.
 
 ### Validation
 
-- `rg -n "data-scientist|analytics-engineer|ml-engineer|mlops-engineer|software-engineering-lead" codex-subagent-designer/references/software-development-crew.md` should show lifecycle and routing coverage.
-- `rg -n "data-science-workflows|analytics-engineering|ml-engineering|mlops-readiness|engineering-execution" codex-subagent-designer/references/software-development-crew.md` should show implemented skill coverage.
+- `rg -n "data-scientist|analytics-engineer|ml-engineer|mlops-engineer|software-engineering-lead" REFERENCES/software-development-crew.md` should show lifecycle and routing coverage.
+- `rg -n "data-science-workflows|analytics-engineering|ml-engineering|mlops-readiness|engineering-execution" REFERENCES/software-development-crew.md` should show implemented skill coverage.
 
 ### Dependencies
 
@@ -260,7 +260,7 @@ Validate the new catalog assets and review routing clarity before execution is c
 
 Run a focused validation pass:
 
-- TOML parseability for all files under `codex-subagent-designer/agents/examples/openai/`.
+- TOML parseability for all files under `AGENTS/openai/`.
 - Required-key checks for the five new TOML files.
 - Skill-folder existence checks for every new skill referenced from TOML or registry text.
 - Basic frontmatter checks for new `SKILL.md` files.
@@ -291,27 +291,27 @@ Then perform a findings-first review focused on:
 
 | # | File | Phase | Purpose |
 |---|------|-------|---------|
-| 1 | `data-science-workflows/SKILL.md` | 1 | Data science workflow skill. |
-| 2 | `data-science-workflows/agents/openai.yaml` | 1 | Skill interface metadata. |
-| 3 | `data-science-workflows/references/analysis-checklist.md` | 1 | Data science checklist. |
-| 4 | `analytics-engineering/SKILL.md` | 1 | Analytics engineering workflow skill. |
-| 5 | `analytics-engineering/agents/openai.yaml` | 1 | Skill interface metadata. |
-| 6 | `analytics-engineering/references/metrics-contract-checklist.md` | 1 | Metrics contract checklist. |
-| 7 | `ml-engineering/SKILL.md` | 2 | ML engineering workflow skill. |
-| 8 | `ml-engineering/agents/openai.yaml` | 2 | Skill interface metadata. |
-| 9 | `ml-engineering/references/model-delivery-checklist.md` | 2 | Model delivery checklist. |
-| 10 | `mlops-readiness/SKILL.md` | 2 | MLOps readiness workflow skill. |
-| 11 | `mlops-readiness/agents/openai.yaml` | 2 | Skill interface metadata. |
-| 12 | `mlops-readiness/references/model-operations-checklist.md` | 2 | Model operations checklist. |
-| 13 | `engineering-execution/SKILL.md` | 2 | Engineering execution workflow skill. |
-| 14 | `engineering-execution/agents/openai.yaml` | 2 | Skill interface metadata. |
-| 15 | `engineering-execution/references/delivery-coordination-checklist.md` | 2 | Delivery coordination checklist. |
-| 16 | `codex-subagent-designer/agents/examples/openai/data-scientist.toml` | 3 | Data scientist agent template. |
-| 17 | `codex-subagent-designer/agents/examples/openai/analytics-engineer.toml` | 3 | Analytics engineer agent template. |
-| 18 | `codex-subagent-designer/agents/examples/openai/ml-engineer.toml` | 3 | ML engineer agent template. |
-| 19 | `codex-subagent-designer/agents/examples/openai/mlops-engineer.toml` | 3 | MLOps engineer agent template. |
-| 20 | `codex-subagent-designer/agents/examples/openai/software-engineering-lead.toml` | 3 | Software engineering lead agent template. |
-| 21 | `codex-subagent-designer/references/software-development-crew.md` | 4 | Registry and routing synchronization. |
+| 1 | `SKILLS/data-science-workflows/SKILL.md` | 1 | Data science workflow skill. |
+| 2 | `SKILLS/data-science-workflows/agents/openai.yaml` | 1 | Skill interface metadata. |
+| 3 | `SKILLS/data-science-workflows/references/analysis-checklist.md` | 1 | Data science checklist. |
+| 4 | `SKILLS/analytics-engineering/SKILL.md` | 1 | Analytics engineering workflow skill. |
+| 5 | `SKILLS/analytics-engineering/agents/openai.yaml` | 1 | Skill interface metadata. |
+| 6 | `SKILLS/analytics-engineering/references/metrics-contract-checklist.md` | 1 | Metrics contract checklist. |
+| 7 | `SKILLS/ml-engineering/SKILL.md` | 2 | ML engineering workflow skill. |
+| 8 | `SKILLS/ml-engineering/agents/openai.yaml` | 2 | Skill interface metadata. |
+| 9 | `SKILLS/ml-engineering/references/model-delivery-checklist.md` | 2 | Model delivery checklist. |
+| 10 | `SKILLS/mlops-readiness/SKILL.md` | 2 | MLOps readiness workflow skill. |
+| 11 | `SKILLS/mlops-readiness/agents/openai.yaml` | 2 | Skill interface metadata. |
+| 12 | `SKILLS/mlops-readiness/references/model-operations-checklist.md` | 2 | Model operations checklist. |
+| 13 | `SKILLS/engineering-execution/SKILL.md` | 2 | Engineering execution workflow skill. |
+| 14 | `SKILLS/engineering-execution/agents/openai.yaml` | 2 | Skill interface metadata. |
+| 15 | `SKILLS/engineering-execution/references/delivery-coordination-checklist.md` | 2 | Delivery coordination checklist. |
+| 16 | `AGENTS/openai/data-scientist.toml` | 3 | Data scientist agent template. |
+| 17 | `AGENTS/openai/analytics-engineer.toml` | 3 | Analytics engineer agent template. |
+| 18 | `AGENTS/openai/ml-engineer.toml` | 3 | ML engineer agent template. |
+| 19 | `AGENTS/openai/mlops-engineer.toml` | 3 | MLOps engineer agent template. |
+| 20 | `AGENTS/openai/software-engineering-lead.toml` | 3 | Software engineering lead agent template. |
+| 21 | `REFERENCES/software-development-crew.md` | 4 | Registry and routing synchronization. |
 
 ## Risk Classification
 

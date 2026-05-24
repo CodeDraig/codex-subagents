@@ -13,11 +13,11 @@
 ### Task 1: Add Reusable Agent Examples
 
 **Files:**
-- Create: `codex-subagent-designer/agents/examples/openai/*.toml`
+- Create: `AGENTS/openai/*.toml`
 
 - [x] **Step 1: Create the example directory**
 
-Run: `mkdir -p codex-subagent-designer/agents/examples/openai`
+Run: `mkdir -p AGENTS/openai`
 
 Expected: directory exists.
 
@@ -32,8 +32,8 @@ Confirm the set includes `gpt-5.5` with `low`, `medium`, `high`, and `xhigh`, pl
 ### Task 2: Add Registry and Skill Backlog
 
 **Files:**
-- Create: `codex-subagent-designer/references/software-development-crew.md`
-- Modify: `codex-subagent-designer/agents/openai.yaml`
+- Create: `REFERENCES/software-development-crew.md`
+- Modify: `SKILLS/codex-subagent-designer/agents/openai.yaml`
 
 - [x] **Step 1: Write the registry**
 
@@ -41,20 +41,20 @@ Document every agent, lifecycle stage, model, reasoning effort, sandbox mode, an
 
 - [x] **Step 2: Update the OpenAI agent catalog**
 
-Point `codex-subagent-designer/agents/openai.yaml` at the reusable examples and registry.
+Point `SKILLS/codex-subagent-designer/agents/openai.yaml` at the reusable examples and registry.
 
 ### Task 3: Validate
 
 **Files:**
-- Read: `codex-subagent-designer/agents/examples/openai/*.toml`
-- Read: `codex-subagent-designer/references/software-development-crew.md`
+- Read: `AGENTS/openai/*.toml`
+- Read: `REFERENCES/software-development-crew.md`
 
 - [x] **Step 1: Parse TOML**
 
 Run: `python3 - <<'PY'
 from pathlib import Path
 import tomllib
-for path in sorted(Path("codex-subagent-designer/agents/examples/openai").glob("*.toml")):
+for path in sorted(Path("AGENTS/openai").glob("*.toml")):
     tomllib.loads(path.read_text())
     print(path)
 PY`
@@ -63,12 +63,12 @@ Expected: every TOML file path prints without parser errors.
 
 - [x] **Step 2: Check model coverage**
 
-Run: `rg 'model =|model_reasoning_effort' codex-subagent-designer/agents/examples/openai`
+Run: `rg 'model =|model_reasoning_effort' AGENTS/openai`
 
 Expected: output includes every requested model and all four `gpt-5.5` reasoning levels.
 
 - [x] **Step 3: Inspect future Skill backlog**
 
-Run: `rg '^-' codex-subagent-designer/references/software-development-crew.md`
+Run: `rg '^-' REFERENCES/software-development-crew.md`
 
 Expected: the registry includes a maintainable list of future Skills referenced by the agents.

@@ -38,7 +38,7 @@ Keep the work local when:
 
 ## Agent Selection
 
-Default to named custom agents from [software-development-crew.md](references/software-development-crew.md) when the current runtime exposes them. Use generic `worker`, `explorer`, or `default` only as fallbacks.
+Default to named custom agents from [software-development-crew.md](../../REFERENCES/software-development-crew.md) when the current runtime exposes them. Use generic `worker`, `explorer`, or `default` only as fallbacks.
 
 Use an exact custom agent when:
 
@@ -55,7 +55,7 @@ Use generic fallbacks only when:
 
 When a custom agent is available, name it explicitly in the plan and dispatch. Do not write `Role: worker` when the intended role is `backend-domain-engineer`, `frontend-experience-engineer`, `test-automation-engineer`, or another named crew member.
 
-Before dispatching, check [software-development-crew.md](references/software-development-crew.md) for the lifecycle map and intentional overlaps.
+Before dispatching, check [software-development-crew.md](../../REFERENCES/software-development-crew.md) for the lifecycle map and intentional overlaps.
 
 ## Fallback Roles
 
@@ -103,10 +103,10 @@ Verification:
 
 ## Prompt Templates
 
-When concrete prompt language would help, read [prompt-patterns.md](references/prompt-patterns.md). Use it for explorer, worker, validator, and forward-test prompts.
+When concrete prompt language would help, read [prompt-patterns.md](../../REFERENCES/prompt-patterns.md). Use it for explorer, worker, validator, and forward-test prompts.
 
 ## TOML Configs
 
-When creating or reviewing reusable Codex subagent configuration files, read [subagent-toml.md](references/subagent-toml.md). Keep generated TOML minimal: required identity fields first, optional runtime overrides only when the role truly needs them.
+When creating or reviewing reusable Codex subagent configuration files, read [subagent-toml.md](../../REFERENCES/subagent-toml.md). Keep generated TOML minimal: required identity fields first, optional runtime overrides only when the role truly needs them.
 
-For a full reusable OpenAI software-development crew, read [software-development-crew.md](references/software-development-crew.md). The examples live under `agents/examples/openai/` as one TOML file per agent.
+For a full reusable OpenAI software-development crew, read [software-development-crew.md](../../REFERENCES/software-development-crew.md). The examples live under `AGENTS/openai/` as one TOML file per agent.

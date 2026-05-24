@@ -23,7 +23,7 @@ The design adds a complementary domain crew that reuses the existing catalog whe
 1. **REQ-1**: Add a complementary data and execution-engineering crew to the agent examples, with coverage for data science, analytics engineering, ML engineering, MLOps, and software engineering delivery coordination.
 2. **REQ-2**: Add repo-local skills for the new agent domains so the agents can invoke reusable methodology instead of carrying all workflow logic only inside TOML instructions.
 3. **REQ-3**: Reuse existing agents wherever they already provide sufficient coverage. `data-platform-engineer` remains the owner for ingestion, transformation, warehouse/lakehouse, reporting pipelines, lineage, and backfills; `database-modeler` remains the owner for persistence shape, retention, indexing, and migrations; `devops-platform-engineer` remains the owner for general infrastructure and CI/CD.
-4. **REQ-4**: Update `codex-subagent-designer/references/software-development-crew.md` so lifecycle coverage, routing rules, model coverage, intentional overlap, implemented skill assets, and remaining backlog stay synchronized.
+4. **REQ-4**: Update `REFERENCES/software-development-crew.md` so lifecycle coverage, routing rules, model coverage, intentional overlap, implemented skill assets, and remaining backlog stay synchronized.
 5. **REQ-5**: Ensure every new TOML file parses cleanly and follows the established template pattern: `name`, `description`, `model`, `model_reasoning_effort`, `sandbox_mode`, `nickname_candidates`, and exact output sections.
 
 ### Non-Functional Requirements
@@ -82,45 +82,42 @@ This approach is selected because it matches the requested full-domain coverage 
 
 ## Architecture & Coverage
 
-The implementation should preserve the existing repository architecture: agent templates are TOML files under `codex-subagent-designer/agents/examples/openai/`, reusable methodologies are skill folders at the repo root, and the crew registry is `codex-subagent-designer/references/software-development-crew.md`.
+The implementation should preserve the current repository architecture: agent templates are TOML files under `AGENTS/openai/`, reusable methodologies are skill folders under `SKILLS/`, and the crew registry is `REFERENCES/software-development-crew.md`.
 
 ### Component Diagram
 
 ```text
-codex-subagent-designer/
-  agents/examples/openai/
-    data-scientist.toml
-    analytics-engineer.toml
-    ml-engineer.toml
-    mlops-engineer.toml
-    software-engineering-lead.toml
-  references/
-    software-development-crew.md
+AGENTS/openai/
+  data-scientist.toml
+  analytics-engineer.toml
+  ml-engineer.toml
+  mlops-engineer.toml
+  software-engineering-lead.toml
 
-data-science-workflows/
-  SKILL.md
-  agents/openai.yaml
-  references/analysis-checklist.md
+REFERENCES/
+  software-development-crew.md
 
-analytics-engineering/
-  SKILL.md
-  agents/openai.yaml
-  references/metrics-contract-checklist.md
-
-ml-engineering/
-  SKILL.md
-  agents/openai.yaml
-  references/model-delivery-checklist.md
-
-mlops-readiness/
-  SKILL.md
-  agents/openai.yaml
-  references/model-operations-checklist.md
-
-engineering-execution/
-  SKILL.md
-  agents/openai.yaml
-  references/delivery-coordination-checklist.md
+SKILLS/
+  data-science-workflows/
+    SKILL.md
+    agents/openai.yaml
+    references/analysis-checklist.md
+  analytics-engineering/
+    SKILL.md
+    agents/openai.yaml
+    references/metrics-contract-checklist.md
+  ml-engineering/
+    SKILL.md
+    agents/openai.yaml
+    references/model-delivery-checklist.md
+  mlops-readiness/
+    SKILL.md
+    agents/openai.yaml
+    references/model-operations-checklist.md
+  engineering-execution/
+    SKILL.md
+    agents/openai.yaml
+    references/delivery-coordination-checklist.md
 ```
 
 ### Coverage Boundaries

@@ -4,6 +4,6 @@ interface:
   default_prompt: "Use $codex-subagent-designer to design a focused subagent plan for this coding task."
 
 examples:
-  reusable_agent_directory: "agents/examples/openai"
-  registry: "references/software-development-crew.md"
+  reusable_agent_directory: "../../AGENTS/openai"
+  registry: "../../REFERENCES/software-development-crew.md"
   notes: "The OpenAI example roster is maintained as one TOML file per reusable software-development subagent."

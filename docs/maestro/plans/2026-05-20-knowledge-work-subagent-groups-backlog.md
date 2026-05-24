@@ -7,7 +7,7 @@ status: "implemented"
 
 # Knowledge Work Subagent Groups Implementation Record
 
-This record preserves the approved knowledge-work group recommendations that were implemented after the first Legal & Regulatory Operations tranche. The groups below now have TOML agent templates, repo-local skill folders, and synchronized entries in `codex-subagent-designer/references/software-development-crew.md`.
+This record preserves the approved knowledge-work group recommendations that were implemented after the first Legal & Regulatory Operations tranche. The groups below now have TOML agent templates, repo-local skill folders, and synchronized entries in `REFERENCES/software-development-crew.md`.
 
 ## Implementation Rule
 
@@ -15,7 +15,7 @@ Each group was implemented as an agent-plus-skill tranche:
 
 1. Create repo-local skills first.
 2. Create TOML agent templates that reference only existing skills.
-3. Synchronize `codex-subagent-designer/references/software-development-crew.md`.
+3. Synchronize `REFERENCES/software-development-crew.md`.
 4. Validate TOML parseability, skill reference resolution, registry routing, and boundary language.
 
 ## 1. Academic & Research Support

@@ -66,15 +66,15 @@ Create repo-local skills that support the first approved knowledge-work group: L
 
 ### Files to Create
 
-- `legal-research-workflows/SKILL.md` — Source-backed legal and regulatory research workflow with jurisdiction/source tracking, issue spotting, authority hierarchy, and counsel questions.
-- `legal-research-workflows/agents/openai.yaml` — Skill interface metadata.
-- `legal-research-workflows/references/source-authority-checklist.md` — Checklist for jurisdiction, source authority, currency, procedural posture, citations, and non-advice boundaries.
-- `contract-review-operations/SKILL.md` — Contract clause review, obligation extraction, risk flagging, negotiation issue logs, and escalation boundaries.
-- `contract-review-operations/agents/openai.yaml` — Skill interface metadata.
-- `contract-review-operations/references/clause-review-checklist.md` — Checklist for parties, obligations, dates, renewal/termination, liability, confidentiality, data, IP, payment, acceptance, and unresolved counsel questions.
-- `records-retention-operations/SKILL.md` — Retention schedule mapping, records inventory, disposition workflows, litigation-hold flags, and approval gates.
-- `records-retention-operations/agents/openai.yaml` — Skill interface metadata.
-- `records-retention-operations/references/retention-workflow-checklist.md` — Checklist for record classes, retention authority, jurisdiction, disposition, legal hold, privacy, audit trail, and approval gates.
+- `SKILLS/legal-research-workflows/SKILL.md` — Source-backed legal and regulatory research workflow with jurisdiction/source tracking, issue spotting, authority hierarchy, and counsel questions.
+- `SKILLS/legal-research-workflows/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/legal-research-workflows/references/source-authority-checklist.md` — Checklist for jurisdiction, source authority, currency, procedural posture, citations, and non-advice boundaries.
+- `SKILLS/contract-review-operations/SKILL.md` — Contract clause review, obligation extraction, risk flagging, negotiation issue logs, and escalation boundaries.
+- `SKILLS/contract-review-operations/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/contract-review-operations/references/clause-review-checklist.md` — Checklist for parties, obligations, dates, renewal/termination, liability, confidentiality, data, IP, payment, acceptance, and unresolved counsel questions.
+- `SKILLS/records-retention-operations/SKILL.md` — Retention schedule mapping, records inventory, disposition workflows, litigation-hold flags, and approval gates.
+- `SKILLS/records-retention-operations/agents/openai.yaml` — Skill interface metadata.
+- `SKILLS/records-retention-operations/references/retention-workflow-checklist.md` — Checklist for record classes, retention authority, jurisdiction, disposition, legal hold, privacy, audit trail, and approval gates.
 
 ### Files to Modify
 
@@ -109,11 +109,11 @@ Create five OpenAI TOML agent examples for the Legal & Regulatory Operations gro
 
 ### Files to Create
 
-- `codex-subagent-designer/agents/examples/openai/legal-research-analyst.toml` — Source-backed legal/regulatory research and issue-spotting analyst.
-- `codex-subagent-designer/agents/examples/openai/contract-review-specialist.toml` — Contract clause, obligation, risk, and question extraction specialist.
-- `codex-subagent-designer/agents/examples/openai/regulatory-monitor.toml` — Regulatory source monitoring, change tracking, effective-date tracking, and action-summary specialist.
-- `codex-subagent-designer/agents/examples/openai/records-retention-advisor.toml` — Records inventory, retention schedule, disposition workflow, and hold-flag specialist.
-- `codex-subagent-designer/agents/examples/openai/legal-ops-coordinator.toml` — Legal operations workflow coordinator for matter intake, task tracking, counsel questions, and evidence packaging.
+- `AGENTS/openai/legal-research-analyst.toml` — Source-backed legal/regulatory research and issue-spotting analyst.
+- `AGENTS/openai/contract-review-specialist.toml` — Contract clause, obligation, risk, and question extraction specialist.
+- `AGENTS/openai/regulatory-monitor.toml` — Regulatory source monitoring, change tracking, effective-date tracking, and action-summary specialist.
+- `AGENTS/openai/records-retention-advisor.toml` — Records inventory, retention schedule, disposition workflow, and hold-flag specialist.
+- `AGENTS/openai/legal-ops-coordinator.toml` — Legal operations workflow coordinator for matter intake, task tracking, counsel questions, and evidence packaging.
 
 ### Files to Modify
 
@@ -165,7 +165,7 @@ Update the canonical crew registry with Legal & Regulatory Operations coverage a
 
 ### Files to Modify
 
-- `codex-subagent-designer/references/software-development-crew.md` — Add lifecycle, routing, model coverage, intentional overlap, and implemented skill asset entries for the new group.
+- `REFERENCES/software-development-crew.md` — Add lifecycle, routing, model coverage, intentional overlap, and implemented skill asset entries for the new group.
 
 ### Implementation Details
 
@@ -176,16 +176,16 @@ Registry updates should include:
 - Model coverage updates for the new `gpt-5.5` agents.
 - Intentional overlap with existing `privacy-compliance-reviewer`, `public-records-researcher`, `source-verification-analyst`, procurement roles, and `standards-ethics-editor` where relevant.
 - Implemented skill assets:
-  - `$legal-research-workflows`: `legal-research-workflows/`
-  - `$contract-review-operations`: `contract-review-operations/`
-  - `$records-retention-operations`: `records-retention-operations/`
+  - `$legal-research-workflows`: `SKILLS/legal-research-workflows/`
+  - `$contract-review-operations`: `SKILLS/contract-review-operations/`
+  - `$records-retention-operations`: `SKILLS/records-retention-operations/`
 
 Keep `Remaining Skill Backlog` accurate and separate historical planning notes from missing active TOML skill references.
 
 ### Validation
 
-- `rg -n "legal-research-analyst|contract-review-specialist|regulatory-monitor|records-retention-advisor|legal-ops-coordinator" codex-subagent-designer/references/software-development-crew.md`
-- `rg -n "legal-research-workflows|contract-review-operations|records-retention-operations" codex-subagent-designer/references/software-development-crew.md`
+- `rg -n "legal-research-analyst|contract-review-specialist|regulatory-monitor|records-retention-advisor|legal-ops-coordinator" REFERENCES/software-development-crew.md`
+- `rg -n "legal-research-workflows|contract-review-operations|records-retention-operations" REFERENCES/software-development-crew.md`
 
 ### Dependencies
 
@@ -253,7 +253,7 @@ Validate the first knowledge-work group and review the catalog for routing clari
 
 Run focused checks:
 
-- TOML parseability for all files under `codex-subagent-designer/agents/examples/openai/`.
+- TOML parseability for all files under `AGENTS/openai/`.
 - Required-key checks for the five new Legal & Regulatory Operations TOMLs.
 - `$skill` reference resolution for all TOML files.
 - Skill frontmatter, output contract, and stop condition checks for the three new skills.
@@ -277,21 +277,21 @@ Run focused checks:
 
 | # | File | Phase | Purpose |
 |---|------|-------|---------|
-| 1 | `legal-research-workflows/SKILL.md` | 1 | Legal/regulatory research skill. |
-| 2 | `legal-research-workflows/agents/openai.yaml` | 1 | Skill interface metadata. |
-| 3 | `legal-research-workflows/references/source-authority-checklist.md` | 1 | Source authority checklist. |
-| 4 | `contract-review-operations/SKILL.md` | 1 | Contract review operations skill. |
-| 5 | `contract-review-operations/agents/openai.yaml` | 1 | Skill interface metadata. |
-| 6 | `contract-review-operations/references/clause-review-checklist.md` | 1 | Clause review checklist. |
-| 7 | `records-retention-operations/SKILL.md` | 1 | Records retention operations skill. |
-| 8 | `records-retention-operations/agents/openai.yaml` | 1 | Skill interface metadata. |
-| 9 | `records-retention-operations/references/retention-workflow-checklist.md` | 1 | Retention workflow checklist. |
-| 10 | `codex-subagent-designer/agents/examples/openai/legal-research-analyst.toml` | 2 | Legal research agent template. |
-| 11 | `codex-subagent-designer/agents/examples/openai/contract-review-specialist.toml` | 2 | Contract review agent template. |
-| 12 | `codex-subagent-designer/agents/examples/openai/regulatory-monitor.toml` | 2 | Regulatory monitoring agent template. |
-| 13 | `codex-subagent-designer/agents/examples/openai/records-retention-advisor.toml` | 2 | Records retention agent template. |
-| 14 | `codex-subagent-designer/agents/examples/openai/legal-ops-coordinator.toml` | 2 | Legal operations coordination agent template. |
-| 15 | `codex-subagent-designer/references/software-development-crew.md` | 3 | Registry synchronization. |
+| 1 | `SKILLS/legal-research-workflows/SKILL.md` | 1 | Legal/regulatory research skill. |
+| 2 | `SKILLS/legal-research-workflows/agents/openai.yaml` | 1 | Skill interface metadata. |
+| 3 | `SKILLS/legal-research-workflows/references/source-authority-checklist.md` | 1 | Source authority checklist. |
+| 4 | `SKILLS/contract-review-operations/SKILL.md` | 1 | Contract review operations skill. |
+| 5 | `SKILLS/contract-review-operations/agents/openai.yaml` | 1 | Skill interface metadata. |
+| 6 | `SKILLS/contract-review-operations/references/clause-review-checklist.md` | 1 | Clause review checklist. |
+| 7 | `SKILLS/records-retention-operations/SKILL.md` | 1 | Records retention operations skill. |
+| 8 | `SKILLS/records-retention-operations/agents/openai.yaml` | 1 | Skill interface metadata. |
+| 9 | `SKILLS/records-retention-operations/references/retention-workflow-checklist.md` | 1 | Retention workflow checklist. |
+| 10 | `AGENTS/openai/legal-research-analyst.toml` | 2 | Legal research agent template. |
+| 11 | `AGENTS/openai/contract-review-specialist.toml` | 2 | Contract review agent template. |
+| 12 | `AGENTS/openai/regulatory-monitor.toml` | 2 | Regulatory monitoring agent template. |
+| 13 | `AGENTS/openai/records-retention-advisor.toml` | 2 | Records retention agent template. |
+| 14 | `AGENTS/openai/legal-ops-coordinator.toml` | 2 | Legal operations coordination agent template. |
+| 15 | `REFERENCES/software-development-crew.md` | 3 | Registry synchronization. |
 | 16 | `docs/maestro/plans/2026-05-20-knowledge-work-subagent-groups-backlog.md` | 4 | Future group backlog. |
 
 ## Risk Classification

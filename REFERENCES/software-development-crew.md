@@ -1,6 +1,6 @@
 # Software Development Crew
 
-This reference catalogs reusable Codex custom-agent examples for a full software development lifecycle. Copy individual TOML files from `codex-subagent-designer/agents/examples/openai/` into a project's `.codex/agents/` directory when that role is useful.
+This reference catalogs reusable Codex custom-agent examples for a full software development lifecycle. Copy individual TOML files from `AGENTS/openai/` into a project's `.codex/agents/` directory when that role is useful.
 
 ## Lifecycle Map
 
@@ -164,53 +164,53 @@ Some domains have paired agents because model capability and latency change the 
 
 Every Skill referenced by the agent examples has a repository-local skill folder:
 
-- `$product-discovery`: `product-discovery/`
-- `$competitive-research`: `competitive-research/`
-- `$architecture-decision-records`: `architecture-decision-records/`
-- `$implementation-planning`: `implementation-planning/`
-- `$ux-flow-mapping`: `ux-flow-mapping/`
-- `$design-system-audit`: `design-system-audit/`
-- `$dependency-risk-triage`: `dependency-risk-triage/`
-- `$api-contract-review`: `api-contract-review/`
-- `$data-modeling`: `data-modeling/`
-- `$ai-evals`: `ai-evals/`
-- `$prompt-injection-defense`: `prompt-injection-defense/`
-- `$threat-modeling`: `threat-modeling/`
-- `$privacy-review`: `privacy-review/`
-- `$performance-profiling`: `performance-profiling/`
-- `$test-matrix-design`: `test-matrix-design/`
-- `$release-readiness`: `release-readiness/`
-- `$observability-runbooks`: `observability-runbooks/`
-- `$incident-postmortems`: `incident-postmortems/`
-- `$docs-information-architecture`: `docs-information-architecture/`
-- `$accessibility-audit`: `accessibility-audit/`
-- `$localization-readiness`: `localization-readiness/`
-- `$data-science-workflows`: `data-science-workflows/`
-- `$analytics-engineering`: `analytics-engineering/`
-- `$ml-engineering`: `ml-engineering/`
-- `$mlops-readiness`: `mlops-readiness/`
-- `$engineering-execution`: `engineering-execution/`
-- `$legal-research-workflows`: `legal-research-workflows/`
-- `$contract-review-operations`: `contract-review-operations/`
-- `$records-retention-operations`: `records-retention-operations/`
-- `$academic-literature-review`: `academic-literature-review/`
-- `$research-methods-review`: `research-methods-review/`
-- `$citation-integrity-review`: `citation-integrity-review/`
-- `$grant-proposal-compliance`: `grant-proposal-compliance/`
-- `$sponsored-projects-reporting`: `sponsored-projects-reporting/`
-- `$grant-budget-justification`: `grant-budget-justification/`
-- `$finance-operations-review`: `finance-operations-review/`
-- `$audit-evidence-management`: `audit-evidence-management/`
-- `$invoice-reconciliation-workflows`: `invoice-reconciliation-workflows/`
-- `$procurement-vendor-review`: `procurement-vendor-review/`
-- `$rfp-response-workflows`: `rfp-response-workflows/`
-- `$sow-review-workflows`: `sow-review-workflows/`
-- `$policy-analysis-workflows`: `policy-analysis-workflows/`
-- `$public-comment-drafting`: `public-comment-drafting/`
-- `$legislative-tracking`: `legislative-tracking/`
-- `$publishing-production-workflows`: `publishing-production-workflows/`
-- `$permissions-rights-review`: `permissions-rights-review/`
-- `$journal-submission-workflows`: `journal-submission-workflows/`
+- `$product-discovery`: `SKILLS/product-discovery/`
+- `$competitive-research`: `SKILLS/competitive-research/`
+- `$architecture-decision-records`: `SKILLS/architecture-decision-records/`
+- `$implementation-planning`: `SKILLS/implementation-planning/`
+- `$ux-flow-mapping`: `SKILLS/ux-flow-mapping/`
+- `$design-system-audit`: `SKILLS/design-system-audit/`
+- `$dependency-risk-triage`: `SKILLS/dependency-risk-triage/`
+- `$api-contract-review`: `SKILLS/api-contract-review/`
+- `$data-modeling`: `SKILLS/data-modeling/`
+- `$ai-evals`: `SKILLS/ai-evals/`
+- `$prompt-injection-defense`: `SKILLS/prompt-injection-defense/`
+- `$threat-modeling`: `SKILLS/threat-modeling/`
+- `$privacy-review`: `SKILLS/privacy-review/`
+- `$performance-profiling`: `SKILLS/performance-profiling/`
+- `$test-matrix-design`: `SKILLS/test-matrix-design/`
+- `$release-readiness`: `SKILLS/release-readiness/`
+- `$observability-runbooks`: `SKILLS/observability-runbooks/`
+- `$incident-postmortems`: `SKILLS/incident-postmortems/`
+- `$docs-information-architecture`: `SKILLS/docs-information-architecture/`
+- `$accessibility-audit`: `SKILLS/accessibility-audit/`
+- `$localization-readiness`: `SKILLS/localization-readiness/`
+- `$data-science-workflows`: `SKILLS/data-science-workflows/`
+- `$analytics-engineering`: `SKILLS/analytics-engineering/`
+- `$ml-engineering`: `SKILLS/ml-engineering/`
+- `$mlops-readiness`: `SKILLS/mlops-readiness/`
+- `$engineering-execution`: `SKILLS/engineering-execution/`
+- `$legal-research-workflows`: `SKILLS/legal-research-workflows/`
+- `$contract-review-operations`: `SKILLS/contract-review-operations/`
+- `$records-retention-operations`: `SKILLS/records-retention-operations/`
+- `$academic-literature-review`: `SKILLS/academic-literature-review/`
+- `$research-methods-review`: `SKILLS/research-methods-review/`
+- `$citation-integrity-review`: `SKILLS/citation-integrity-review/`
+- `$grant-proposal-compliance`: `SKILLS/grant-proposal-compliance/`
+- `$sponsored-projects-reporting`: `SKILLS/sponsored-projects-reporting/`
+- `$grant-budget-justification`: `SKILLS/grant-budget-justification/`
+- `$finance-operations-review`: `SKILLS/finance-operations-review/`
+- `$audit-evidence-management`: `SKILLS/audit-evidence-management/`
+- `$invoice-reconciliation-workflows`: `SKILLS/invoice-reconciliation-workflows/`
+- `$procurement-vendor-review`: `SKILLS/procurement-vendor-review/`
+- `$rfp-response-workflows`: `SKILLS/rfp-response-workflows/`
+- `$sow-review-workflows`: `SKILLS/sow-review-workflows/`
+- `$policy-analysis-workflows`: `SKILLS/policy-analysis-workflows/`
+- `$public-comment-drafting`: `SKILLS/public-comment-drafting/`
+- `$legislative-tracking`: `SKILLS/legislative-tracking/`
+- `$publishing-production-workflows`: `SKILLS/publishing-production-workflows/`
+- `$permissions-rights-review`: `SKILLS/permissions-rights-review/`
+- `$journal-submission-workflows`: `SKILLS/journal-submission-workflows/`
 
 ## Remaining Skill Backlog
 

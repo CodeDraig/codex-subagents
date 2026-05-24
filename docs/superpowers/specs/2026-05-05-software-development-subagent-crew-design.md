@@ -6,7 +6,7 @@ Build a reusable Codex subagent roster for software development that spans the f
 
 ## Structure
 
-The roster will live under `codex-subagent-designer/agents/examples/openai/` as one TOML file per agent. This makes each agent reusable by copying a single file into `.codex/agents/` or a personal Codex agent directory. A registry at `codex-subagent-designer/references/software-development-crew.md` will group the agents by lifecycle stage and record the model, reasoning effort, sandbox posture, overlapping domains, and future Skill references.
+The roster will live under `AGENTS/openai/` as one TOML file per agent. This makes each agent reusable by copying a single file into `.codex/agents/` or a personal Codex agent directory. A registry at `REFERENCES/software-development-crew.md` will group the agents by lifecycle stage and record the model, reasoning effort, sandbox posture, overlapping domains, and future Skill references.
 
 ## Model Coverage
 
