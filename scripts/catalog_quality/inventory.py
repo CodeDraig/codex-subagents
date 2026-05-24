@@ -247,13 +247,13 @@ def make_row(kind: str, family: str, name: str, path: Path) -> dict[str, str]:
         "family": family,
         "name": name,
         "path": rel_path,
-        "before_rating": "Needs Review",
-        "before_scores": "2/2/2/2/2/2/2",
-        "required_fixes": "Confirm catalog fit, prompt contract, routing coverage, references, and validation gates.",
-        "planned_changes": "Apply family uplift review and capture validation evidence for ready-state acceptance.",
-        "after_rating": "Ready",
-        "after_scores": "3/3/3/3/3/3/3",
-        "validation_evidence": f"Inventory generated from {rel_path}; mapped to {family}; ready-state score audit required.",
+        "before_rating": "",
+        "before_scores": "",
+        "required_fixes": "",
+        "planned_changes": "",
+        "after_rating": "",
+        "after_scores": "",
+        "validation_evidence": "",
     }
 
 
