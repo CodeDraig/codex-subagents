@@ -21,6 +21,8 @@ SKILLS/<skill-name>/
 
 The `name` in `SKILL.md` must match `<skill-name>`. If any agent template references `$<skill-name>`, the corresponding `SKILLS/<skill-name>/SKILL.md` file must exist before the registry claims full coverage.
 
+Before adding a skill to the catalog, rate it with `REFERENCES/quality-rubric.md`. Do not add scaffold-only skills that contain only generic workflow advice.
+
 ## Adding Agents
 
 Create each OpenAI agent template under `AGENTS/openai/<agent-name>.toml`.
@@ -35,6 +37,8 @@ Every agent template must parse as TOML and include the expected identity and ru
 - `nickname_candidates`
 - `developer_instructions`
 
+Before adding an agent to the catalog, rate it with `REFERENCES/quality-rubric.md`. Do not add broad "general expert" agents or templates whose instructions can be replaced by a one-paragraph prompt with no loss of behavior.
+
 ## Shared References
 
 Use `REFERENCES/software-development-crew.md` as the canonical registry for lifecycle coverage, routing rules, model coverage, intentional overlap, and implemented skill assets.
@@ -42,3 +46,5 @@ Use `REFERENCES/software-development-crew.md` as the canonical registry for life
 Use `REFERENCES/subagent-toml.md` when creating or reviewing reusable custom-agent TOML files.
 
 Use `REFERENCES/prompt-patterns.md` for subagent prompt patterns.
+
+Use `REFERENCES/quality-rubric.md` to review whether skills and agents are complete enough for reusable catalog inclusion.

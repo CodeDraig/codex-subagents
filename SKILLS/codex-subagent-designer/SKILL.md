@@ -110,3 +110,5 @@ When concrete prompt language would help, read [prompt-patterns.md](../../REFERE
 When creating or reviewing reusable Codex subagent configuration files, read [subagent-toml.md](../../REFERENCES/subagent-toml.md). Keep generated TOML minimal: required identity fields first, optional runtime overrides only when the role truly needs them.
 
 For a full reusable OpenAI software-development crew, read [software-development-crew.md](../../REFERENCES/software-development-crew.md). The examples live under `AGENTS/openai/` as one TOML file per agent.
+
+When judging whether a Skill or Agent is complete enough for catalog inclusion, read [quality-rubric.md](../../REFERENCES/quality-rubric.md). Reject scaffold-only assets that contain generic workflow platitudes without domain-specific checks, supporting references, tools, validation guidance, boundaries, and output contracts.

@@ -2,6 +2,8 @@
 
 Use this reference when creating or reviewing Codex custom subagent files and related `config.toml` entries.
 
+Use `REFERENCES/quality-rubric.md` alongside this file when deciding whether an agent template is complete enough for reusable catalog inclusion.
+
 ## Locations
 
 - Project-scoped custom agents: `.codex/agents/<name>.toml`
@@ -87,3 +89,4 @@ Use `max_depth = 1` unless there is a strong reason to allow subagents to spawn 
 - Tool-backed Codex sessions may expose only generic `default`, `worker`, and `explorer` spawning even when custom TOML files exist. In that case, read the TOML and inject the role's `developer_instructions` into a generic spawned agent prompt.
 - Agent-local `skills.config` behavior has changed across releases. Verify it in the target runtime before relying on per-agent skill enable/disable overrides.
 - Keep agent files narrow. Broad "do everything" agents usually perform worse than explicit prompts plus built-in `worker` or `explorer` roles.
+- Do not accept generic developer instructions that only say to be careful, communicate clearly, follow best practices, or consider edge cases. Reusable agents need domain-specific intake, checks, artifacts, boundaries, handoffs, and output contracts.
