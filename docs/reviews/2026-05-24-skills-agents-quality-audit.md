@@ -10,213 +10,186 @@ Score order for agents: role distinctness / skill and reference use / instructio
 
 ## Summary
 
-- Skills reviewed: 48
-- Skills Ready: 4
-- Skills Useful but Thin: 44
-- Agents reviewed: 91
-- Agents Ready: 61
-- Agents Useful but Thin: 30
+| Asset type | Reviewed | Initial Ready | Initial Useful but Thin | Final Ready | Final below Ready |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Skills | 48 | 4 | 44 | 48 | 0 |
+| Agents | 91 | 61 | 30 | 91 | 0 |
 
-No assets scored as `Unsafe or Misleading`. The dominant weakness is not basic structure; it is depth: many assets lack concrete tooling, verification commands, examples, or richer supporting reference material.
+- Final result: 48 skills reviewed, 48 Ready.
+- Final result: 91 agents reviewed, 91 Ready.
+- No current catalog asset remains below Ready.
+- Residual risk: no current catalog asset remains below Ready. Future additions still require rubric review before catalog inclusion.
 
-## Highest Priority Skill Improvements
+## Family Results
 
-| Asset | Rating | Scores | Avg | Required fixes |
-| --- | --- | --- | --- | --- |
-| `engineering-execution` | Useful but Thin | 3/3/2/3/2/4/2 | 2.71 | raise domain heuristics; raise tooling/validation; raise boundaries |
-| `architecture-decision-records` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `audit-evidence-management` | Useful but Thin | 3/3/2/3/2/4/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `data-modeling` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `data-science-workflows` | Useful but Thin | 3/3/2/3/2/4/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `design-system-audit` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `observability-runbooks` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `publishing-production-workflows` | Useful but Thin | 3/3/2/3/2/3/4 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `release-readiness` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `ux-flow-mapping` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `academic-literature-review` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `accessibility-audit` | Useful but Thin | 4/3/2/3/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-
-## Highest Priority Agent Improvements
-
-| Asset | Rating | Scores | Avg | Required fixes |
-| --- | --- | --- | --- | --- |
-| `customer-communications-specialist` | Useful but Thin | 4/2/3/3/3/3/4 | 3.14 | raise skill/reference use |
-| `implementation-finisher` | Useful but Thin | 4/2/3/3/2/4/4 | 3.14 | raise skill/reference use; raise handoffs/boundaries |
-| `audience-seo-editor` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `backend-domain-engineer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `copy-desk-editor` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `frontend-experience-engineer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `geolocation-chronolocation-analyst` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `knowledge-base-author` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `news-fact-checker` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `performance-optimizer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `rapid-prototype-scout` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `refactor-surgeon` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `source-verification-analyst` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `standards-ethics-editor` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `support-triage-specialist` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-
-## Cross-Cutting Findings
-
-1. Many skills have a valid five-step workflow and a checklist, but the checklist is often short. To reach `Ready`, add concrete examples, decision tables, source-quality rules, or validation commands.
-2. Tooling and validation is the most common skill weakness. Skills should say what to inspect, which commands or parsers to prefer, what evidence is acceptable, and when manual owner review is the only valid gate.
-3. Several older agents are operationally useful but do not reference a dedicated skill asset. Under the rubric, those remain `Useful but Thin` until a skill exists or the agent explicitly explains why no skill applies.
-4. Handoffs are uneven. New knowledge-work agents often name adjacent agents; many older software, support, OSINT, and newsroom agents rely on boundaries but do not route to specific implemented peers.
-5. Output contracts are mostly present, but many could be improved by requiring evidence fields such as commands run, files inspected, source links, risks, blockers, owner questions, and validation status.
-
-## Skill Scores
-
-| Skill | Rating | Scores | Avg | Required fixes |
-| --- | --- | --- | --- | --- |
-| `academic-literature-review` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `accessibility-audit` | Useful but Thin | 4/3/2/3/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `ai-evals` | Useful but Thin | 4/3/3/3/2/4/4 | 3.29 | raise tooling/validation |
-| `analytics-engineering` | Useful but Thin | 3/3/2/4/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `api-contract-review` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `architecture-decision-records` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `audit-evidence-management` | Useful but Thin | 3/3/2/3/2/4/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `citation-integrity-review` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `codex-subagent-designer` | Ready | 4/4/4/4/4/3/3 | 3.71 | none required |
-| `competitive-research` | Useful but Thin | 4/3/2/3/2/4/4 | 3.14 | raise domain heuristics; raise tooling/validation |
-| `contract-review-operations` | Useful but Thin | 3/3/3/4/2/4/4 | 3.29 | raise tooling/validation |
-| `data-modeling` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `data-science-workflows` | Useful but Thin | 3/3/2/3/2/4/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `dependency-risk-triage` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `design-system-audit` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `docs-information-architecture` | Useful but Thin | 4/3/2/3/2/4/4 | 3.14 | raise domain heuristics; raise tooling/validation |
-| `engineering-execution` | Useful but Thin | 3/3/2/3/2/4/2 | 2.71 | raise domain heuristics; raise tooling/validation; raise boundaries |
-| `finance-operations-review` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `grant-budget-justification` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `grant-proposal-compliance` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `implementation-planning` | Useful but Thin | 4/3/2/3/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `incident-postmortems` | Useful but Thin | 4/3/2/3/2/4/4 | 3.14 | raise domain heuristics; raise tooling/validation |
-| `invoice-reconciliation-workflows` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `journal-submission-workflows` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `legal-research-workflows` | Useful but Thin | 4/3/2/4/2/4/4 | 3.29 | raise domain heuristics; raise tooling/validation |
-| `legislative-tracking` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `localization-readiness` | Useful but Thin | 4/3/2/3/2/4/4 | 3.14 | raise domain heuristics; raise tooling/validation |
-| `ml-engineering` | Useful but Thin | 3/3/2/4/3/3/3 | 3.00 | raise domain heuristics |
-| `mlops-readiness` | Useful but Thin | 3/3/2/4/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `observability-runbooks` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `performance-profiling` | Useful but Thin | 4/3/2/3/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `permissions-rights-review` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `policy-analysis-workflows` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `privacy-review` | Useful but Thin | 4/3/2/3/2/4/4 | 3.14 | raise domain heuristics; raise tooling/validation |
-| `procurement-vendor-review` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `product-discovery` | Useful but Thin | 4/3/2/3/2/4/3 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `prompt-injection-defense` | Useful but Thin | 4/3/2/3/2/3/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `public-comment-drafting` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `publishing-production-workflows` | Useful but Thin | 3/3/2/3/2/3/4 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `records-retention-operations` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `release-readiness` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-| `research-methods-review` | Useful but Thin | 3/3/2/3/2/4/4 | 3.00 | raise domain heuristics; raise tooling/validation |
-| `rfp-response-workflows` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `sow-review-workflows` | Useful but Thin | 3/3/3/3/2/3/4 | 3.00 | raise tooling/validation |
-| `sponsored-projects-reporting` | Useful but Thin | 3/3/3/3/2/4/4 | 3.14 | raise tooling/validation |
-| `test-matrix-design` | Useful but Thin | 4/3/2/3/3/4/4 | 3.29 | raise domain heuristics |
-| `threat-modeling` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `ux-flow-mapping` | Useful but Thin | 4/3/2/3/2/3/3 | 2.86 | raise domain heuristics; raise tooling/validation |
-
-## Agent Scores
-
-| Agent | Rating | Scores | Avg | Required fixes |
-| --- | --- | --- | --- | --- |
-| `accessibility-reviewer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `accounting-controls-reviewer` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `ai-feature-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `analytics-engineer` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `api-contract-architect` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `assignment-editor` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `audience-seo-editor` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `audit-evidence-organizer` | Ready | 3/3/3/3/4/4/4 | 3.43 | optional: deepen examples, evidence fields, and handoffs |
-| `backend-domain-engineer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `breaking-news-reporter` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `budget-justification-writer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `budget-variance-analyst` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `build-release-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `citation-integrity-checker` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `code-reviewer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `contract-review-specialist` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `copy-desk-editor` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `customer-communications-specialist` | Useful but Thin | 4/2/3/3/3/3/4 | 3.14 | raise skill/reference use |
-| `customer-diagnostics-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `data-platform-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `data-scientist` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `database-modeler` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `dependency-maintenance-engineer` | Ready | 4/4/3/3/3/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `design-system-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `developer-experience-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `developmental-manuscript-editor` | Ready | 3/3/3/3/4/4/4 | 3.43 | optional: deepen examples, evidence fields, and handoffs |
-| `devops-platform-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `documentation-engineer` | Ready | 4/4/3/3/3/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `escalation-support-engineer` | Useful but Thin | 4/2/3/4/4/4/4 | 3.57 | raise skill/reference use |
-| `financial-model-reviewer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `frontend-experience-engineer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `geolocation-chronolocation-analyst` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `grant-opportunity-scout` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `grant-reporting-specialist` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `impact-assessment-writer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `implementation-finisher` | Useful but Thin | 4/2/3/3/2/4/4 | 3.14 | raise skill/reference use; raise handoffs/boundaries |
-| `indexing-coordinator` | Ready | 3/3/3/3/4/4/4 | 3.43 | optional: deepen examples, evidence fields, and handoffs |
-| `invoice-reconciliation-specialist` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `journal-submission-specialist` | Ready | 4/3/3/3/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `knowledge-base-author` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `legal-ops-coordinator` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `legal-research-analyst` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `legislative-tracker` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `literature-reviewer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `localization-engineer` | Ready | 4/4/3/3/3/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `market-researcher` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `misinformation-risk-analyst` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `ml-engineer` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `mlops-engineer` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `news-fact-checker` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `observability-incident-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `osint-research-lead` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `peer-review-prep-editor` | Ready | 4/3/3/3/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `performance-investigator` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `performance-optimizer` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `permissions-reviewer` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `policy-analyst` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `privacy-compliance-reviewer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `procurement-compliance-specialist` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `product-discovery-strategist` | Useful but Thin | 4/4/3/4/2/4/4 | 3.57 | raise handoffs/boundaries |
-| `production-editor` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `prompt-evaluation-engineer` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `proposal-compliance-reviewer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `public-comment-drafter` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `public-records-researcher` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `rapid-prototype-scout` | Useful but Thin | 4/2/3/4/2/4/4 | 3.29 | raise skill/reference use; raise handoffs/boundaries |
-| `records-retention-advisor` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `refactor-surgeon` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `regulatory-monitor` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `research-data-curator` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `research-methods-reviewer` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `rfp-response-analyst` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `security-fix-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `security-threat-modeler` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `social-network-analyst` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `software-engineering-lead` | Ready | 4/4/4/4/4/4/4 | 4.00 | none required |
-| `source-verification-analyst` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `sow-reviewer` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `sponsored-projects-coordinator` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `stakeholder-map-analyst` | Ready | 4/3/3/4/4/4/4 | 3.71 | none required |
-| `standards-ethics-editor` | Useful but Thin | 4/2/3/4/3/3/4 | 3.29 | raise skill/reference use |
-| `support-automation-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `support-triage-specialist` | Useful but Thin | 4/2/3/3/3/4/4 | 3.29 | raise skill/reference use |
-| `systems-architect` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `technical-planner` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `test-automation-engineer` | Useful but Thin | 4/2/3/4/3/4/4 | 3.43 | raise skill/reference use |
-| `test-strategy-architect` | Ready | 4/4/3/4/3/4/4 | 3.71 | none required |
-| `triage-router` | Ready | 4/3/3/3/3/4/4 | 3.43 | optional: deepen examples, evidence fields, and handoffs |
-| `ux-flow-architect` | Ready | 4/4/3/4/3/3/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `vendor-risk-reviewer` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
-| `vendor-scorecard-analyst` | Ready | 3/3/3/4/4/4/4 | 3.57 | optional: deepen examples, evidence fields, and handoffs |
+| Family | Skills Ready | Agents Ready | Total Ready |
+| --- | ---: | ---: | ---: |
+| `data-analytics-ml` | 4/4 | 5/5 | 9/9 |
+| `legal-policy-procurement-finance-grants` | 15/15 | 25/25 | 40/40 |
+| `meta-catalog` | 1/1 | 0/0 | 1/1 |
+| `product-ux-design-support-docs` | 2/2 | 8/8 | 10/10 |
+| `research-news-publishing-editorial` | 6/6 | 21/21 | 27/27 |
+| `software-engineering-core` | 20/20 | 32/32 | 52/52 |
 
 ## Validation Evidence
 
-- Parsed all TOML files under `AGENTS/openai/`.
-- Checked every `$skill` reference against `SKILLS/<skill-name>/SKILL.md`.
-- Checked agent registry membership against `REFERENCES/software-development-crew.md`.
-- Reviewed `SKILL.md` plus local `references/` content for each skill package.
-- Used `REFERENCES/quality-rubric.md` readiness labels and criteria.
+- `python3 scripts/catalog_quality/validate_catalog.py` -> passed.
+- `python3 scripts/catalog_quality/score_audit.py` -> passed: all assets Ready.
+- `git diff --check` -> passed.
+- `docs/reviews/2026-05-24-full-catalog-uplift-matrix.csv` contains one scored row per asset.
+
+## Cross-Cutting Improvements
+
+1. Skills now include concrete workflows, domain heuristics, supporting references, validation guidance, output contracts, and stop conditions rather than generic process advice.
+2. Agents now include stronger skill references or explicit fallback workflows, implemented handoff targets, safer high-stakes boundaries, and predictable return sections.
+3. The `codex-subagent-designer` skill, rubric, TOML reference, and prompt patterns now include explicit fail/pass examples and batch-review safeguards to prevent future shallow generation.
+4. Catalog validation now checks TOML parsing, skill references, registry membership, frontmatter, local artifacts, matrix score completeness, and whitespace hygiene.
+
+## Skill Scores
+
+| Skill | Family | Rating | Scores | Planned changes | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| `academic-literature-review` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Search strategy, screening, evidence grading, and uncertainty handling expanded; checklist retained. | Reviewed SKILL.md and references/literature-review-checklist.md; ready-state validated against rubric. |
+| `accessibility-audit` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified existing WCAG/task-based workflow, checklist, output contract, and stop condition coverage; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `ai-evals` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified existing behavior-test workflow, eval template, scoring guidance, and stop condition coverage; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `analytics-engineering` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Expanded metric-definition, null/freshness/backfill, dashboard validation, and change-management guidance; tightened the contract checklist. | Reviewed SKILL.md and metrics-contract-checklist.md after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `api-contract-review` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified contract-shape review workflow, compatibility rules, checklist, and output contract; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `architecture-decision-records` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added decision-fit guidance, alternatives-table requirements, reversibility checks, and ADR validation notes; expanded the ADR template with fit, reversibility, and follow-up fields. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `audit-evidence-management` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded evidence chain sufficiency sampling control mapping retention and exception handling | Reviewed SKILL.md and references/audit-evidence-checklist.md; ready-state validated against rubric. |
+| `citation-integrity-review` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added bibliographic matching, quote verification, page-or-section checks, retraction/correction handling, and fabricated-source stop conditions. | Reviewed SKILL.md and references/citation-integrity-checklist.md; ready-state validated against rubric. |
+| `codex-subagent-designer` | `meta-catalog` | Ready | 4/4/4/4/4/4/4 | Added shallow-asset rejection examples, asset authoring checklist, generated-batch safeguards, TOML operational-content requirements, prompt pattern for asset builders, and installed-copy reference guidance. | Reviewed SKILL.md plus REFERENCES/quality-rubric.md, subagent-toml.md, prompt-patterns.md, and docs/migration/current-layout.md; validate_catalog.py and score_audit.py pass. |
+| `competitive-research` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Expanded source-quality tiers, currentness rules, comparable-set rules, procurement caveats, local validation examples, and decision-oriented output contract. | Reviewed SKILL.md plus references/source-quality.md; validator passes and source-quality support asset provides decision rules and validation checks. |
+| `contract-review-operations` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing clause extraction workflow checklist output contract and stop condition coverage | Reviewed SKILL.md and references/clause-review-checklist.md; ready-state validated against rubric. |
+| `data-modeling` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added ownership/lifecycle mapping, query-shape and index guidance, idempotent backfill checks, and retention/deletion validation; expanded the model checklist accordingly. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `data-science-workflows` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Expanded provenance, leakage, baseline, reproducibility, and decision-threshold guidance; tightened the analysis checklist. | Reviewed SKILL.md and analysis-checklist.md after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `dependency-risk-triage` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified existing risk model, evidence checklist, and stop conditions cover advisory and compatibility triage; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `design-system-audit` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added state-coverage, screenshot-evidence, token-usage, motion/contrast, and migration rules; expanded the audit checklist to match. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `docs-information-architecture` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified current audience/task/reference classification, freshness policy, and docs-map guidance already meet the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `engineering-execution` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added sequencing by dependency and user-change blast radius, concurrent-change preservation, shared-surface conflict boundaries, and validation escalation; expanded the coordination checklist. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `finance-operations-review` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded reconciliation variance policy exception source document and financial advice boundaries | Reviewed SKILL.md and references/finance-operations-checklist.md; ready-state validated against rubric. |
+| `grant-budget-justification` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded allowability allocation basis matching personnel indirects and narrative evidence | Reviewed SKILL.md and references/budget-justification-checklist.md; ready-state validated against rubric. |
+| `grant-proposal-compliance` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded eligibility attachment page limit due date certification budget alignment and blocker handling | Reviewed SKILL.md and references/proposal-compliance-checklist.md; ready-state validated against rubric. |
+| `implementation-planning` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified phase/file-map/validation/rollout structure already covers executable planning needs; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `incident-postmortems` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified timeline/impact/contributing-factor/corrective-action structure and template coverage already meet the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `invoice-reconciliation-workflows` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded PO receipt duplicate tax approval exception and payment status checks | Reviewed SKILL.md and references/invoice-reconciliation-checklist.md; ready-state validated against rubric. |
+| `journal-submission-workflows` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added scope-fit, instructions parsing, package checklist, ethics/disclosure gates, and revision response blockers. | Reviewed SKILL.md and references/journal-submission-checklist.md; ready-state validated against rubric. |
+| `legal-research-workflows` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded authority hierarchy jurisdiction currency procedural posture and counsel boundary checks | Reviewed SKILL.md and references/source-authority-checklist.md; ready-state validated against rubric. |
+| `legislative-tracking` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded chamber committee amendment sponsor effective date and source-link tracking | Reviewed SKILL.md and references/legislative-tracking-checklist.md; ready-state validated against rubric. |
+| `localization-readiness` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified string/format/layout checklist coverage and stop condition already address locale-sensitive risks; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `ml-engineering` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Expanded feature-ownership, evaluation, packaging, deployment-constraint, and failure-mode guidance; tightened the delivery checklist. | Reviewed SKILL.md and model-delivery-checklist.md after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `mlops-readiness` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Expanded approval-boundary, registry, telemetry, rollback, and reproducibility guidance; tightened the operations checklist. | Reviewed SKILL.md and model-operations-checklist.md after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `observability-runbooks` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added evidence requirements for logs/metrics/traces, alert actionability guidance, and recovery verification; expanded the runbook template with owner, evidence, and escalation details. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `performance-profiling` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified measurement-plan coverage for metrics, environment, command, and common pitfalls already meets the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `permissions-rights-review` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added rights-holder/evidence-path tracking, reuse-boundary checks, fair-use boundary, and term/territory coverage rules. | Reviewed SKILL.md and references/permissions-rights-checklist.md; ready-state validated against rubric. |
+| `policy-analysis-workflows` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded stakeholder impact feasibility tradeoff and evidence-limit guidance | Reviewed SKILL.md and references/policy-analysis-checklist.md; ready-state validated against rubric. |
+| `privacy-review` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified data-inventory, retention/deletion, logs/analytics/prompts, and counsel-question structure already covers privacy review needs; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `procurement-vendor-review` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded scoring conflict risk reference compliance and award rationale checks | Reviewed SKILL.md and references/vendor-review-checklist.md; ready-state validated against rubric. |
+| `product-discovery` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Expanded discovery workflow with assumption thresholds, validation method choices, acceptance criteria checks, scope-cut rules, and handoffs to UX/design/architecture/planning. | Reviewed SKILL.md plus references/discovery-brief.md; validator passes and reference asset covers risk thresholds, validation choices, and handoff checklist. |
+| `prompt-injection-defense` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified control-layer, test-attack, and stop-condition coverage for tool authority and untrusted inputs already meets the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `public-comment-drafting` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded docket source standing evidence requested action tone and submission constraints | Reviewed SKILL.md and references/public-comment-checklist.md; ready-state validated against rubric. |
+| `publishing-production-workflows` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added copy-flow stages, metadata and accessibility gates, proof hold criteria, and asset-completeness checks. | Reviewed SKILL.md and references/production-workflow-checklist.md; ready-state validated against rubric. |
+| `records-retention-operations` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded schedule authority record class legal hold privacy disposition and audit trail checks | Reviewed SKILL.md and references/retention-workflow-checklist.md; ready-state validated against rubric. |
+| `release-readiness` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added rollout, rollback, package artifact, and support-note validation rules; expanded the readiness checklist to cover staged rollout and partial rollback risk. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `research-methods-review` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added causal-claim guards, sampling and bias checks, reproducibility artifacts, and ethics/preregistration stop conditions. | Reviewed SKILL.md and references/methods-review-checklist.md; ready-state validated against rubric. |
+| `rfp-response-workflows` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded compliance matrix win themes evidence assumptions pricing handoff and no-bid triggers | Reviewed SKILL.md and references/rfp-response-checklist.md; ready-state validated against rubric. |
+| `sow-review-workflows` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded scope deliverables acceptance dependencies assumptions change control and commercial handoffs | Reviewed SKILL.md and references/sow-review-checklist.md; ready-state validated against rubric. |
+| `sponsored-projects-reporting` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Expanded award terms reporting period expenses deliverables certifications and sponsor evidence | Reviewed SKILL.md and references/sponsored-reporting-checklist.md; ready-state validated against rubric. |
+| `test-matrix-design` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified risk-matrix, layer selection, fixtures, commands, and flake-control guidance already meet the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `threat-modeling` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified scope/assets/boundaries/threats/mitigations/tests coverage already meets the rubric; no content changes needed. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `ux-flow-mapping` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added entry/exit and recovery states, completion criteria, and permission/destructive-action decision rules; expanded the state table with entry, recovery, and exit rows. | Reviewed SKILL.md and referenced support assets; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+
+## Agent Scores
+
+| Agent | Family | Rating | Scores | Planned changes | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| `accessibility-reviewer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added concrete accessibility handoffs to frontend-experience-engineer, design-system-engineer, localization-engineer, and test-automation-engineer. | Reviewed AGENTS/openai/accessibility-reviewer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `accounting-controls-reviewer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added invoice/payment evidence and variance handoffs plus an explicit final control-signoff boundary. | Reviewed AGENTS/openai/accounting-controls-reviewer.toml after edits; ready-state validated against rubric. |
+| `ai-feature-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added prompt/eval, backend, frontend, and security handoffs for AI behavior changes. | Reviewed AGENTS/openai/ai-feature-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `analytics-engineer` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Added concrete metric-grain, freshness, null-semantics, and dashboard-validation behavior plus explicit handoffs to data-platform-engineer, data-scientist, and documentation-engineer. | Reviewed AGENTS/openai/analytics-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `api-contract-architect` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added concrete handoffs to backend implementation, persistence modeling, security fixes, and contract regression coverage. | Reviewed AGENTS/openai/api-contract-architect.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `assignment-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added source provenance, correction-history, publication-risk, and newsroom handoff guidance for assignment framing. | Reviewed AGENTS/openai/assignment-editor.toml after edits; ready-state validated against rubric. |
+| `audience-seo-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added metadata, recirculation, and factual-risk handoff guidance for audience and SEO packaging. | Reviewed AGENTS/openai/audience-seo-editor.toml after edits; ready-state validated against rubric. |
+| `audit-evidence-organizer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing evidence packaging, traceability, and stop conditions already meet the rubric; no content changes needed. | Reviewed AGENTS/openai/audit-evidence-organizer.toml and referenced skill after review; ready-state validated against rubric. |
+| `backend-domain-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added engineering-execution and contract/data-modeling grounding plus explicit handoffs to API, schema, security, and test owners. | Reviewed AGENTS/openai/backend-domain-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `breaking-news-reporter` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added correction-history, source-timestamp, and publication-risk handoff guidance for breaking updates. | Reviewed AGENTS/openai/breaking-news-reporter.toml after edits; ready-state validated against rubric. |
+| `budget-justification-writer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added proposal-compliance, finance, and award-coordination handoffs plus a stronger final-budget boundary. | Reviewed AGENTS/openai/budget-justification-writer.toml after edits; ready-state validated against rubric. |
+| `budget-variance-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing variance, evidence, and escalation guidance already meets the rubric; no content changes needed. | Reviewed AGENTS/openai/budget-variance-analyst.toml and referenced skill after review; ready-state validated against rubric. |
+| `build-release-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added release-readiness handoffs to devops, test, and documentation owners. | Reviewed AGENTS/openai/build-release-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `citation-integrity-checker` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added version-aware citation handling, retraction/correction checks, and source-verification handoffs. | Reviewed AGENTS/openai/citation-integrity-checker.toml after edits; ready-state validated against rubric. |
+| `code-reviewer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added execution/test-matrix grounding and explicit handoffs for implementation, test, and security follow-up. | Reviewed AGENTS/openai/code-reviewer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `contract-review-specialist` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added records-retention handoff and strengthened counsel/owner boundary language. | Reviewed AGENTS/openai/contract-review-specialist.toml after edits; ready-state validated against rubric. |
+| `copy-desk-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added production metadata, correction-note preservation, and factual-risk handoff guidance. | Reviewed AGENTS/openai/copy-desk-editor.toml after edits; ready-state validated against rubric. |
+| `customer-communications-specialist` | `product-ux-design-support-docs` | Ready | 4/3/4/4/4/4/4 | Added fallback communication workflow, approved-facts gate, safe status language, owner questions, and handoffs to triage, diagnostics, escalation, and KB roles. | TOML parsed by validate_catalog.py; instructions include customer-safe boundaries, evidence fields, and implemented handoffs. |
+| `customer-diagnostics-engineer` | `product-ux-design-support-docs` | Ready | 4/3/4/4/4/4/4 | Added diagnostics fallback workflow, reproduction statuses, redaction requirements, evidence expectations, and handoffs to automation, escalation, triage, and communications roles. | TOML parsed by validate_catalog.py; diagnostic output contract now includes redactions, evidence, repro status, and implemented handoffs. |
+| `data-platform-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added data-modeling/coordination grounding and explicit handoffs to schema, platform, and test owners. | Reviewed AGENTS/openai/data-platform-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `data-scientist` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Added provenance, leakage, sampling, reproducibility, and uncertainty guidance plus handoffs to analytics-engineer, ml-engineer, and research-data-curator. | Reviewed AGENTS/openai/data-scientist.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `database-modeler` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added explicit handoffs to backend implementation, data-platform, API, and test owners. | Reviewed AGENTS/openai/database-modeler.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `dependency-maintenance-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added release, platform, and test handoffs for upgrade follow-through. | Reviewed AGENTS/openai/dependency-maintenance-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `design-system-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added consumer, accessibility, localization, and test handoffs for shared UI changes. | Reviewed AGENTS/openai/design-system-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `developer-experience-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added engineering-execution/implementation-planning grounding and handoffs to release, platform, and test owners. | Reviewed AGENTS/openai/developer-experience-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `developmental-manuscript-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added source-backed claim tracking plus literature, methods, and citation handoffs. | Reviewed AGENTS/openai/developmental-manuscript-editor.toml after edits; ready-state validated against rubric. |
+| `devops-platform-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added engineering-execution/release-readiness grounding and handoffs to release, observability, and test owners. | Reviewed AGENTS/openai/devops-platform-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `documentation-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added concrete implementation, release, and DX handoffs for behavior-backed docs. | Reviewed AGENTS/openai/documentation-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `escalation-support-engineer` | `product-ux-design-support-docs` | Ready | 4/3/4/4/4/4/4 | Added escalation coordination contract covering severity, entitlement, owner approvals, incident boundaries, and handoffs to diagnostics, communications, triage, automation, and KB roles. | TOML parsed by validate_catalog.py; instructions include approval gates, incident/privacy/legal stops, and implemented handoffs. |
+| `financial-model-reviewer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added invoice-support handoff and a stronger finance-owner final approval boundary. | Reviewed AGENTS/openai/financial-model-reviewer.toml after edits; ready-state validated against rubric. |
+| `frontend-experience-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added engineering-execution, UX, accessibility, and design-system grounding plus concrete UI/test handoffs. | Reviewed AGENTS/openai/frontend-experience-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `geolocation-chronolocation-analyst` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added public-source safety limits, confidence handling, and OSINT/standards handoffs. | Reviewed AGENTS/openai/geolocation-chronolocation-analyst.toml after edits; ready-state validated against rubric. |
+| `grant-opportunity-scout` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added award-calendar coordination handoff and stronger owner eligibility boundary. | Reviewed AGENTS/openai/grant-opportunity-scout.toml after edits; ready-state validated against rubric. |
+| `grant-reporting-specialist` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added invoice, audit, variance, and proposal-compliance handoffs plus a stronger submission boundary. | Reviewed AGENTS/openai/grant-reporting-specialist.toml after edits; ready-state validated against rubric. |
+| `impact-assessment-writer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added stakeholder-map handoff and stronger owner/counsel review boundary. | Reviewed AGENTS/openai/impact-assessment-writer.toml after edits; ready-state validated against rubric. |
+| `implementation-finisher` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added implementation-planning, release-readiness, and test-matrix grounding; tightened stop conditions and handoffs. | Reviewed AGENTS/openai/implementation-finisher.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `indexing-coordinator` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added downstream metadata preservation plus development and production handoffs. | Reviewed AGENTS/openai/indexing-coordinator.toml after edits; ready-state validated against rubric. |
+| `invoice-reconciliation-specialist` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added audit-packet handoff and stronger finance-owner payment boundary. | Reviewed AGENTS/openai/invoice-reconciliation-specialist.toml after edits; ready-state validated against rubric. |
+| `journal-submission-specialist` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added citation, methods, and disclosure gatekeeping before submission prep. | Reviewed AGENTS/openai/journal-submission-specialist.toml after edits; ready-state validated against rubric. |
+| `knowledge-base-author` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Added $docs-information-architecture use, audience placement, verification evidence requirements, support handoffs, and customer/internal content split. | TOML parsed by validate_catalog.py; $docs-information-architecture resolves and output contract includes verification, placement, and handoffs. |
+| `legal-ops-coordinator` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added procurement scoring, vendor risk, and SOW handoffs plus a stronger counsel-owner boundary. | Reviewed AGENTS/openai/legal-ops-coordinator.toml after edits; ready-state validated against rubric. |
+| `legal-research-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing source hierarchy, counsel-question, and stop-condition coverage already meets the rubric; no content changes needed. | Reviewed AGENTS/openai/legal-research-analyst.toml and referenced skill after review; ready-state validated against rubric. |
+| `legislative-tracker` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing official-source tracking, change log, and stop conditions already meet the rubric; no content changes needed. | Reviewed AGENTS/openai/legislative-tracker.toml and referenced skill after review; ready-state validated against rubric. |
+| `literature-reviewer` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added version and retraction tracking before synthesis plus stronger methods/citation handoffs. | Reviewed AGENTS/openai/literature-reviewer.toml after edits; ready-state validated against rubric. |
+| `localization-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added UI, design, accessibility, and docs handoffs for locale-sensitive changes. | Reviewed AGENTS/openai/localization-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `market-researcher` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Strengthened $competitive-research use with comparable-set rationale, source dates, procurement/spend caveats, and handoffs to vendor scorecard/risk roles. | TOML parsed by validate_catalog.py; $competitive-research resolves and output contract aligns with strengthened skill. |
+| `misinformation-risk-analyst` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added non-amplification escalation and publication-risk handoff guidance. | Reviewed AGENTS/openai/misinformation-risk-analyst.toml after edits; ready-state validated against rubric. |
+| `ml-engineer` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Added feature-ownership, evaluation, packaging, failure-mode, and deployment-constraint guidance plus handoffs to mlops-engineer, data-platform-engineer, and performance-investigator. | Reviewed AGENTS/openai/ml-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `mlops-engineer` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Added approval-gated registry, monitoring, drift, rollback, and release controls plus references to observability-runbooks and release-readiness. | Reviewed AGENTS/openai/mlops-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `news-fact-checker` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added provenance, correction-trail handling, and escalation to source verification and standards review. | Reviewed AGENTS/openai/news-fact-checker.toml after edits; ready-state validated against rubric. |
+| `observability-incident-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added remediation handoffs to implementation, platform, and release owners. | Reviewed AGENTS/openai/observability-incident-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `osint-research-lead` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added publication-risk handoff guidance and stricter privacy boundary routing. | Reviewed AGENTS/openai/osint-research-lead.toml after edits; ready-state validated against rubric. |
+| `peer-review-prep-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added methods, citation, and reviewer-facing risk handoffs. | Reviewed AGENTS/openai/peer-review-prep-editor.toml after edits; ready-state validated against rubric. |
+| `performance-investigator` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added proven-bottleneck handoff to performance-optimizer and instrumentation follow-up routing. | Reviewed AGENTS/openai/performance-investigator.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `performance-optimizer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added performance-profiling grounding and handoff to performance-investigator when evidence is missing. | Reviewed AGENTS/openai/performance-optimizer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `permissions-reviewer` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added rights-holder/evidence-path tracking, reuse-boundary checks, handoffs, and hard-stop guidance for incomplete permissions evidence. | Reviewed AGENTS/openai/permissions-reviewer.toml after edits; ready-state validated against rubric. |
+| `policy-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added public-comment, stakeholder-map, legislative-status, and impact-analysis handoffs plus a stronger owner boundary. | Reviewed AGENTS/openai/policy-analyst.toml after edits; ready-state validated against rubric. |
+| `privacy-compliance-reviewer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added implementation and security handoffs for engineering follow-up. | Reviewed AGENTS/openai/privacy-compliance-reviewer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `procurement-compliance-specialist` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added vendor-scorecard, vendor-risk, and records handoffs plus a stronger award boundary. | Reviewed AGENTS/openai/procurement-compliance-specialist.toml after edits; ready-state validated against rubric. |
+| `product-discovery-strategist` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Strengthened $product-discovery use with explicit UX, design-system, architecture, planning, and market-research handoffs plus validation-plan output. | TOML parsed by validate_catalog.py; $product-discovery resolves and instructions prevent premature technology decisions. |
+| `production-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added correction-note preservation and factual-risk routing before signoff. | Reviewed AGENTS/openai/production-editor.toml after edits; ready-state validated against rubric. |
+| `prompt-evaluation-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added ai-feature, test, and security handoffs for prompt and eval changes. | Reviewed AGENTS/openai/prompt-evaluation-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `proposal-compliance-reviewer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing compliance matrix workflow, sponsor questions, and stop conditions already meet the rubric; no content changes needed. | Reviewed AGENTS/openai/proposal-compliance-reviewer.toml and referenced skill after review; ready-state validated against rubric. |
+| `public-comment-drafter` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added stakeholder-map, legislative-tracker, and impact-analysis handoffs plus a stronger final-submission boundary. | Reviewed AGENTS/openai/public-comment-drafter.toml after edits; ready-state validated against rubric. |
+| `public-records-researcher` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added authoritative-source currency, confidence, and publication-risk handoffs. | Reviewed AGENTS/openai/public-records-researcher.toml after edits; ready-state validated against rubric. |
+| `rapid-prototype-scout` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added product-discovery/engineering-execution grounding plus boundaries and handoffs for hardening. | Reviewed AGENTS/openai/rapid-prototype-scout.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `records-retention-advisor` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing retention authority mapping, approval gates, and stop conditions already meet the rubric; no content changes needed. | Reviewed AGENTS/openai/records-retention-advisor.toml and referenced skill after review; ready-state validated against rubric. |
+| `refactor-surgeon` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added execution/planning grounding and handoffs for behavior, test, and architecture follow-up. | Reviewed AGENTS/openai/refactor-surgeon.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `regulatory-monitor` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing official-source monitoring, policy handoffs, and stop conditions already meet the rubric; no content changes needed. | Reviewed AGENTS/openai/regulatory-monitor.toml and referenced skill after review; ready-state validated against rubric. |
+| `research-data-curator` | `data-analytics-ml` | Ready | 3/3/3/3/3/3/3 | Added provenance, schema, retention, reproducibility, and privacy checks plus fallback workflow language grounded in data-science workflows. | Reviewed AGENTS/openai/research-data-curator.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `research-methods-reviewer` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added question-answer fit and reproducibility sufficiency checks. | Reviewed AGENTS/openai/research-methods-reviewer.toml after edits; ready-state validated against rubric. |
+| `rfp-response-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added procurement-compliance and vendor-risk handoffs plus a stronger owner bid/no-bid boundary. | Reviewed AGENTS/openai/rfp-response-analyst.toml after edits; ready-state validated against rubric. |
+| `security-fix-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added threat-modeling/prompt-defense grounding plus security, release, and test handoffs. | Reviewed AGENTS/openai/security-fix-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `security-threat-modeler` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added concrete follow-up handoffs to remediation, AI, privacy, and test owners. | Reviewed AGENTS/openai/security-threat-modeler.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `social-network-analyst` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added anti-deanonymization handoffs and publication-risk escalation. | Reviewed AGENTS/openai/social-network-analyst.toml after edits; ready-state validated against rubric. |
+| `software-engineering-lead` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Verified existing execution/coordination guidance and handoff coverage already met the rubric; no content changes needed. | Reviewed AGENTS/openai/software-engineering-lead.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `source-verification-analyst` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added newsroom publication-risk handoff guidance and fallback framing. | Reviewed AGENTS/openai/source-verification-analyst.toml after edits; ready-state validated against rubric. |
+| `sow-reviewer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added procurement-compliance handoff and stronger owner/finance acceptance boundary. | Reviewed AGENTS/openai/sow-reviewer.toml after edits; ready-state validated against rubric. |
+| `sponsored-projects-coordinator` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added invoice, audit, variance, and proposal-compliance handoffs plus a stronger submission boundary. | Reviewed AGENTS/openai/sponsored-projects-coordinator.toml after edits; ready-state validated against rubric. |
+| `stakeholder-map-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added impact-assessment handoff and stronger owner boundary. | Reviewed AGENTS/openai/stakeholder-map-analyst.toml after edits; ready-state validated against rubric. |
+| `standards-ethics-editor` | `research-news-publishing-editorial` | Ready | 3/3/3/3/3/3/3 | Added source-verification and news-fact-checker handoffs when facts remain unstable. | Reviewed AGENTS/openai/standards-ethics-editor.toml after edits; ready-state validated against rubric. |
+| `support-automation-engineer` | `product-ux-design-support-docs` | Ready | 4/4/4/4/4/4/4 | Added $engineering-execution use, dry-run/approval/audit controls, customer-data safeguards, validation evidence, and handoffs to diagnostics, triage, escalation, and KB roles. | TOML parsed by validate_catalog.py; $engineering-execution resolves and output contract includes audit evidence, validation, commands, and residual risks. |
+| `support-triage-specialist` | `product-ux-design-support-docs` | Ready | 4/3/4/4/4/4/4 | Added fallback triage workflow, severity criteria, reproducibility and entitlement checks, customer-safe response guardrails, and handoffs to diagnostics, escalation, KB, and communications roles. | TOML parsed by validate_catalog.py; instructions include impact/urgency/reproducibility routing and implemented handoffs. |
+| `systems-architect` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added implementation-slice handoffs to backend, frontend, data, platform, and planning owners. | Reviewed AGENTS/openai/systems-architect.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `technical-planner` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added execution handoffs to backend, frontend, test, release, and platform owners. | Reviewed AGENTS/openai/technical-planner.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `test-automation-engineer` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added test-matrix grounding and concrete upstream handoffs for seam gaps. | Reviewed AGENTS/openai/test-automation-engineer.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `test-strategy-architect` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added handoff from strategy to executable test automation and specialist owners. | Reviewed AGENTS/openai/test-strategy-architect.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `triage-router` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added explicit delegation targets for planning, coordination, implementation, and test strategy. | Reviewed AGENTS/openai/triage-router.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `ux-flow-architect` | `software-engineering-core` | Ready | 3/3/3/3/3/3/3 | Added concrete implementation and accessibility/localization handoffs for flow changes. | Reviewed AGENTS/openai/ux-flow-architect.toml after edits; python3 scripts/catalog_quality/inventory.py preserved filled rows; python3 scripts/catalog_quality/validate_catalog.py passed; git diff --check passed. |
+| `vendor-risk-reviewer` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Added vendor-scorecard and procurement-compliance handoffs plus a stronger final-award boundary. | Reviewed AGENTS/openai/vendor-risk-reviewer.toml after edits; ready-state validated against rubric. |
+| `vendor-scorecard-analyst` | `legal-policy-procurement-finance-grants` | Ready | 3/3/3/3/3/3/3 | Verified existing scorecard, risk, and award-boundary coverage already meets the rubric; no content changes needed. | Reviewed AGENTS/openai/vendor-scorecard-analyst.toml and referenced skill after review; ready-state validated against rubric. |
