@@ -1,6 +1,6 @@
 ---
 name: grant-proposal-compliance
-description: Use when parsing grant solicitations, building compliance matrices, checking proposal requirements, or preparing sponsor-question logs.
+description: Use when parsing grant solicitations, building compliance matrices, checking proposal requirements, or preparing sponsor-question logs before submission.
 ---
 
 # Grant Proposal Compliance
@@ -11,17 +11,17 @@ Turn sponsor requirements into a traceable compliance matrix. Support proposal t
 
 ## Workflow
 
-1. Restate sponsor, opportunity ID, deadline, program goals, eligibility, and submission channel.
-2. Extract required sections, page limits, attachments, forms, certifications, formatting rules, and review criteria.
-3. Build a compliance matrix with owner, evidence, status, and unresolved question fields.
-4. Flag restricted, ambiguous, late-breaking, or institution-owned requirements.
-5. Produce sponsor questions and handoffs for authorized officials.
+1. Restate sponsor, opportunity ID, deadline, program goals, eligibility, submission channel, amendment history, and any known institutional routing rule.
+2. Extract required sections, page limits, attachments, forms, certifications, formatting rules, review criteria, and any portal-specific or file-naming constraints.
+3. Build a compliance matrix with requirement, owner, evidence, status, and unresolved question fields, then tie budget sections to the narrative and sponsor instructions.
+4. Flag submission blockers, late-breaking changes, ambiguous requirements, institution-owned certifications, and anything that must go to sponsored-programs, legal, or an authorized signer.
+5. Produce sponsor questions, a readiness check, and handoffs that separate draft support from final submission authority.
 
 Use `references/proposal-compliance-checklist.md` for solicitation parsing.
 
 ## Output Contract
 
-Return exactly: `Opportunity Scope`, `Requirement Matrix`, `Eligibility Flags`, `Attachment Checklist`, `Review Criteria`, `Sponsor Questions`, `Owner Handoffs`.
+Return exactly: `Opportunity Scope`, `Requirement Matrix`, `Eligibility Flags`, `Attachment Checklist`, `Review Criteria`, `Submission Blockers`, `Sponsor Questions`, `Owner Handoffs`.
 
 ## Stop Conditions
 

@@ -11,17 +11,17 @@ Track legislative activity with source dates, official identifiers, status chang
 
 ## Workflow
 
-1. Restate jurisdiction, bill or topic, official source set, date range, and alert criteria.
-2. Record bill identifiers, sponsors, committees, amendments, hearings, votes, deadlines, and effective dates.
-3. Summarize material changes and affected obligations or policy questions.
-4. Flag uncertainty, source conflicts, stakeholder impacts, and specialist handoffs.
-5. Produce a monitoring log and next-check plan.
+1. Restate jurisdiction, bill or topic, official source set, date range, alert criteria, and whether the item is in introduction, committee, floor, conference, or enrolled stage.
+2. Record bill identifiers, sponsors, chamber, committees, amendments, hearings, votes, referrals, deadlines, enactment, veto, and effective dates.
+3. Summarize material changes, compare current text to prior versions, and note affected obligations or policy questions.
+4. Flag uncertainty, source conflicts, missing official links, stakeholder impacts, and specialist handoffs for legal or policy interpretation.
+5. Produce a monitoring log, source links, and a next-check plan keyed to the next official action date.
 
 Use `references/legislative-tracking-checklist.md` for tracking coverage.
 
 ## Output Contract
 
-Return exactly: `Tracking Scope`, `Official Sources`, `Status Log`, `Material Changes`, `Upcoming Dates`, `Impact Notes`, `Owner Alerts`.
+Return exactly: `Tracking Scope`, `Official Sources`, `Status Log`, `Amendment Log`, `Upcoming Dates`, `Impact Notes`, `Owner Alerts`.
 
 ## Stop Conditions
 

@@ -7,15 +7,15 @@ description: Use when organizing source-backed legal or regulatory research, jur
 
 ## Overview
 
-Support legal and regulatory research as evidence organization, not legal advice. Keep the focus on jurisdiction, source authority, currency, procedural posture, open questions, and what a qualified owner or counsel must decide.
+Support legal and regulatory research as evidence organization, not legal advice. Keep the focus on jurisdiction, authority hierarchy, currency, procedural posture, open questions, and what a qualified owner or counsel must decide.
 
 ## Workflow
 
-1. Restate the research question, jurisdiction, governing source type, date range, and intended use.
-2. Inventory sources checked, preferring official statutes, regulations, agency guidance, court records, public filings, and authoritative institutional sources.
-3. Separate binding authority, persuasive authority, guidance, commentary, and unverified secondary material.
-4. Track source dates, effective dates, procedural posture, conflicts, uncertainty, and citation details.
-5. Produce issue spots, source-backed summaries, caveats, and counsel questions without recommending legal action.
+1. Restate the research question, jurisdiction, governing source type, date range, intended use, and any deadline or procedural posture that could affect which source matters.
+2. Inventory sources checked, preferring official statutes, regulations, agency guidance, court records, public filings, dockets, and authoritative institutional sources.
+3. Separate binding authority, persuasive authority, guidance, commentary, and unverified secondary material; note the source hierarchy if authorities conflict.
+4. Track source dates, effective dates, amendment dates, archival status, procedural posture, and citation details that would let another reviewer find the same material.
+5. Produce issue spots, source-backed summaries, caveats, and counsel questions without recommending legal action or implying a final rights determination.
 
 Use `references/source-authority-checklist.md` for source and authority checks.
 

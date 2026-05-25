@@ -11,11 +11,11 @@ Draft public comments as transparent, source-backed submissions. Keep legal conc
 
 ## Workflow
 
-1. Restate docket, agency, deadline, submission rules, commenter identity, and position owner.
-2. Extract questions asked, formatting rules, evidence needs, and requested relief or recommendations.
-3. Build a comment outline with sourced claims, stakeholder impacts, examples, and caveats.
-4. Flag legal, technical, privacy, financial, and reputational review needs.
-5. Produce draft language plus a compliance checklist.
+1. Restate docket, agency, deadline, submission rules, commenter identity, position owner, and whether the comment is individual, organizational, or coalition-backed.
+2. Extract questions asked, formatting rules, evidence needs, requested relief or recommendations, page limits, file format, and any disclosure requirement for sponsorship or conflicts.
+3. Build a comment outline with sourced claims, stakeholder impacts, examples, caveats, and a clear statement of what is evidence versus opinion.
+4. Flag legal, technical, privacy, financial, reputational, and submission-rule review needs, especially anything that needs sign-off before public filing.
+5. Produce draft language plus a submission checklist that shows what remains open before filing.
 
 Use `references/public-comment-checklist.md` for drafting coverage.
 
