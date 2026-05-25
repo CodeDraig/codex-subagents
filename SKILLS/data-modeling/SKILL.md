@@ -11,13 +11,20 @@ Model data from invariants and access patterns, not object names. A good model p
 
 ## Workflow
 
-1. Identify invariants, owners, lifecycle, and access patterns.
+1. Identify invariants, owners, lifecycle, and access patterns. Map which service or team owns each entity and which users or tenants can mutate it.
 2. Choose storage shape: relational, document, event, analytical, cache, search, or hybrid.
-3. Define constraints, indexes, consistency, deletion, retention, audit, and lineage.
-4. Plan migrations and backfills with rollback limits.
-5. Define validation queries and fixtures.
+3. Define constraints, indexes, consistency, deletion, retention, audit, and lineage. Make query filters, sorts, joins, and cardinality explicit before naming tables or collections.
+4. Plan migrations and backfills with rollback limits. Prefer expand-before-contract, idempotent backfills, and phased cleanup over one-shot rewrites.
+5. Define validation queries and fixtures. Include orphan, duplicate, null, tenant-isolation, and index-usage checks.
 
-Use `references/model-checklist.md` for detailed review.
+Use `references/model-checklist.md` for review coverage and validation queries.
+
+## Decision Rules
+
+- Model tenant or ownership boundaries first; never bury them in application code alone.
+- Index for the actual query shape, not theoretical future use. If a query path does not exist yet, do not pre-optimise it without evidence.
+- If deletion, retention, or export are requirements, design them into the primary model rather than treating them as afterthoughts.
+- If a backfill can fail midway, require an idempotent rerun and a measurable checkpoint before cleanup.
 
 ## Output Contract
 

@@ -7,6 +7,7 @@
 - Alert:
 - Owner:
 - Severity:
+- Evidence required to confirm the issue:
 
 ## Triage
 
@@ -15,6 +16,7 @@
 3. Check recent deploys, config, dependency status, and saturation.
 4. Mitigate safely.
 5. Verify recovery.
+6. Capture the log, metric, and trace evidence that supports the diagnosis.
 
 ## Escalation
 
@@ -22,3 +24,4 @@
 - Include:
 - Stop doing:
 - Customer/support note:
+- Alert actionability: what concrete action the owner should take next.

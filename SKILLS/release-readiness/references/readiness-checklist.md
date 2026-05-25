@@ -10,6 +10,8 @@
 - Observability exists for success and failure.
 - Rollback or mitigation is documented.
 - Release notes and support impact are ready.
+- Package or publish artifacts are verified when the release ships a distributable.
+- Rollout owner and stop/hold criteria are explicit.
 
 ## Rollback Notes
 
@@ -18,3 +20,4 @@
 - Can flag be disabled?
 - Is client compatibility preserved?
 - Who decides rollback?
+- If rollback is partial, document the mitigation path and the residual risk.

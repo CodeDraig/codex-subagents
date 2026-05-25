@@ -1,52 +1,52 @@
 kind,family,name,path,before_rating,before_scores,required_fixes,planned_changes,after_rating,after_scores,validation_evidence
 skill,research-news-publishing-editorial,academic-literature-review,SKILLS/academic-literature-review/SKILL.md,,,,,,,
-skill,software-engineering-core,accessibility-audit,SKILLS/accessibility-audit/SKILL.md,,,,,,,
-skill,software-engineering-core,ai-evals,SKILLS/ai-evals/SKILL.md,,,,,,,
+skill,software-engineering-core,accessibility-audit,SKILLS/accessibility-audit/SKILL.md,,,,,,"Verified existing WCAG/task-based workflow, checklist, output contract, and stop condition coverage; no content changes needed.",3/3/3/3/3/3/3
+skill,software-engineering-core,ai-evals,SKILLS/ai-evals/SKILL.md,,,,,,"Verified existing behavior-test workflow, eval template, scoring guidance, and stop condition coverage; no content changes needed.",3/3/3/3/3/3/3
 skill,data-analytics-ml,analytics-engineering,SKILLS/analytics-engineering/SKILL.md,,,,,,,
-skill,software-engineering-core,api-contract-review,SKILLS/api-contract-review/SKILL.md,,,,,,,
-skill,software-engineering-core,architecture-decision-records,SKILLS/architecture-decision-records/SKILL.md,,,,,,,
+skill,software-engineering-core,api-contract-review,SKILLS/api-contract-review/SKILL.md,,,,,,"Verified contract-shape review workflow, compatibility rules, checklist, and output contract; no content changes needed.",3/3/3/3/3/3/3
+skill,software-engineering-core,architecture-decision-records,SKILLS/architecture-decision-records/SKILL.md,,,,,,"Added decision-fit guidance, alternatives-table requirements, reversibility checks, and ADR validation notes; expanded the ADR template with fit, reversibility, and follow-up fields.",3/3/3/3/3/3/3
 skill,legal-policy-procurement-finance-grants,audit-evidence-management,SKILLS/audit-evidence-management/SKILL.md,,,,,,,
 skill,research-news-publishing-editorial,citation-integrity-review,SKILLS/citation-integrity-review/SKILL.md,,,,,,,
 skill,meta-catalog,codex-subagent-designer,SKILLS/codex-subagent-designer/SKILL.md,,,,,,,
 skill,product-ux-design-support-docs,competitive-research,SKILLS/competitive-research/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,contract-review-operations,SKILLS/contract-review-operations/SKILL.md,,,,,,,
-skill,software-engineering-core,data-modeling,SKILLS/data-modeling/SKILL.md,,,,,,,
+skill,software-engineering-core,data-modeling,SKILLS/data-modeling/SKILL.md,,,,,,"Added ownership/lifecycle mapping, query-shape and index guidance, idempotent backfill checks, and retention/deletion validation; expanded the model checklist accordingly.",3/3/3/3/3/3/3
 skill,data-analytics-ml,data-science-workflows,SKILLS/data-science-workflows/SKILL.md,,,,,,,
-skill,software-engineering-core,dependency-risk-triage,SKILLS/dependency-risk-triage/SKILL.md,,,,,,,
-skill,software-engineering-core,design-system-audit,SKILLS/design-system-audit/SKILL.md,,,,,,,
-skill,software-engineering-core,docs-information-architecture,SKILLS/docs-information-architecture/SKILL.md,,,,,,,
-skill,software-engineering-core,engineering-execution,SKILLS/engineering-execution/SKILL.md,,,,,,,
+skill,software-engineering-core,dependency-risk-triage,SKILLS/dependency-risk-triage/SKILL.md,,,,,,"Verified existing risk model, evidence checklist, and stop conditions cover advisory and compatibility triage; no content changes needed.",3/3/3/3/3/3/3
+skill,software-engineering-core,design-system-audit,SKILLS/design-system-audit/SKILL.md,,,,,,"Added state-coverage, screenshot-evidence, token-usage, motion/contrast, and migration rules; expanded the audit checklist to match.",3/3/3/3/3/3/3
+skill,software-engineering-core,docs-information-architecture,SKILLS/docs-information-architecture/SKILL.md,,,,,,"Verified current audience/task/reference classification, freshness policy, and docs-map guidance already meet the rubric; no content changes needed.",3/3/3/3/3/3/3
+skill,software-engineering-core,engineering-execution,SKILLS/engineering-execution/SKILL.md,,,,,,"Added sequencing by dependency and user-change blast radius, concurrent-change preservation, shared-surface conflict boundaries, and validation escalation; expanded the coordination checklist.",3/3/3/3/3/3/3
 skill,legal-policy-procurement-finance-grants,finance-operations-review,SKILLS/finance-operations-review/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,grant-budget-justification,SKILLS/grant-budget-justification/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,grant-proposal-compliance,SKILLS/grant-proposal-compliance/SKILL.md,,,,,,,
-skill,software-engineering-core,implementation-planning,SKILLS/implementation-planning/SKILL.md,,,,,,,
-skill,software-engineering-core,incident-postmortems,SKILLS/incident-postmortems/SKILL.md,,,,,,,
+skill,software-engineering-core,implementation-planning,SKILLS/implementation-planning/SKILL.md,,,,,,Verified phase/file-map/validation/rollout structure already covers executable planning needs; no content changes needed.,3/3/3/3/3/3/3
+skill,software-engineering-core,incident-postmortems,SKILLS/incident-postmortems/SKILL.md,,,,,,Verified timeline/impact/contributing-factor/corrective-action structure and template coverage already meet the rubric; no content changes needed.,3/3/3/3/3/3/3
 skill,legal-policy-procurement-finance-grants,invoice-reconciliation-workflows,SKILLS/invoice-reconciliation-workflows/SKILL.md,,,,,,,
 skill,research-news-publishing-editorial,journal-submission-workflows,SKILLS/journal-submission-workflows/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,legal-research-workflows,SKILLS/legal-research-workflows/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,legislative-tracking,SKILLS/legislative-tracking/SKILL.md,,,,,,,
-skill,software-engineering-core,localization-readiness,SKILLS/localization-readiness/SKILL.md,,,,,,,
+skill,software-engineering-core,localization-readiness,SKILLS/localization-readiness/SKILL.md,,,,,,Verified string/format/layout checklist coverage and stop condition already address locale-sensitive risks; no content changes needed.,3/3/3/3/3/3/3
 skill,data-analytics-ml,ml-engineering,SKILLS/ml-engineering/SKILL.md,,,,,,,
 skill,data-analytics-ml,mlops-readiness,SKILLS/mlops-readiness/SKILL.md,,,,,,,
-skill,software-engineering-core,observability-runbooks,SKILLS/observability-runbooks/SKILL.md,,,,,,,
-skill,software-engineering-core,performance-profiling,SKILLS/performance-profiling/SKILL.md,,,,,,,
+skill,software-engineering-core,observability-runbooks,SKILLS/observability-runbooks/SKILL.md,,,,,,"Added evidence requirements for logs/metrics/traces, alert actionability guidance, and recovery verification; expanded the runbook template with owner, evidence, and escalation details.",3/3/3/3/3/3/3
+skill,software-engineering-core,performance-profiling,SKILLS/performance-profiling/SKILL.md,,,,,,"Verified measurement-plan coverage for metrics, environment, command, and common pitfalls already meets the rubric; no content changes needed.",3/3/3/3/3/3/3
 skill,research-news-publishing-editorial,permissions-rights-review,SKILLS/permissions-rights-review/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,policy-analysis-workflows,SKILLS/policy-analysis-workflows/SKILL.md,,,,,,,
-skill,software-engineering-core,privacy-review,SKILLS/privacy-review/SKILL.md,,,,,,,
+skill,software-engineering-core,privacy-review,SKILLS/privacy-review/SKILL.md,,,,,,"Verified data-inventory, retention/deletion, logs/analytics/prompts, and counsel-question structure already covers privacy review needs; no content changes needed.",3/3/3/3/3/3/3
 skill,legal-policy-procurement-finance-grants,procurement-vendor-review,SKILLS/procurement-vendor-review/SKILL.md,,,,,,,
 skill,product-ux-design-support-docs,product-discovery,SKILLS/product-discovery/SKILL.md,,,,,,,
-skill,software-engineering-core,prompt-injection-defense,SKILLS/prompt-injection-defense/SKILL.md,,,,,,,
+skill,software-engineering-core,prompt-injection-defense,SKILLS/prompt-injection-defense/SKILL.md,,,,,,"Verified control-layer, test-attack, and stop-condition coverage for tool authority and untrusted inputs already meets the rubric; no content changes needed.",3/3/3/3/3/3/3
 skill,legal-policy-procurement-finance-grants,public-comment-drafting,SKILLS/public-comment-drafting/SKILL.md,,,,,,,
 skill,research-news-publishing-editorial,publishing-production-workflows,SKILLS/publishing-production-workflows/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,records-retention-operations,SKILLS/records-retention-operations/SKILL.md,,,,,,,
-skill,software-engineering-core,release-readiness,SKILLS/release-readiness/SKILL.md,,,,,,,
+skill,software-engineering-core,release-readiness,SKILLS/release-readiness/SKILL.md,,,,,,"Added rollout, rollback, package artifact, and support-note validation rules; expanded the readiness checklist to cover staged rollout and partial rollback risk.",3/3/3/3/3/3/3
 skill,research-news-publishing-editorial,research-methods-review,SKILLS/research-methods-review/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,rfp-response-workflows,SKILLS/rfp-response-workflows/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,sow-review-workflows,SKILLS/sow-review-workflows/SKILL.md,,,,,,,
 skill,legal-policy-procurement-finance-grants,sponsored-projects-reporting,SKILLS/sponsored-projects-reporting/SKILL.md,,,,,,,
-skill,software-engineering-core,test-matrix-design,SKILLS/test-matrix-design/SKILL.md,,,,,,,
-skill,software-engineering-core,threat-modeling,SKILLS/threat-modeling/SKILL.md,,,,,,,
-skill,software-engineering-core,ux-flow-mapping,SKILLS/ux-flow-mapping/SKILL.md,,,,,,,
+skill,software-engineering-core,test-matrix-design,SKILLS/test-matrix-design/SKILL.md,,,,,,"Verified risk-matrix, layer selection, fixtures, commands, and flake-control guidance already meet the rubric; no content changes needed.",3/3/3/3/3/3/3
+skill,software-engineering-core,threat-modeling,SKILLS/threat-modeling/SKILL.md,,,,,,Verified scope/assets/boundaries/threats/mitigations/tests coverage already meets the rubric; no content changes needed.,3/3/3/3/3/3/3
+skill,software-engineering-core,ux-flow-mapping,SKILLS/ux-flow-mapping/SKILL.md,,,,,,"Added entry/exit and recovery states, completion criteria, and permission/destructive-action decision rules; expanded the state table with entry, recovery, and exit rows.",3/3/3/3/3/3/3
 agent,software-engineering-core,accessibility-reviewer,AGENTS/openai/accessibility-reviewer.toml,,,,,,,
 agent,legal-policy-procurement-finance-grants,accounting-controls-reviewer,AGENTS/openai/accounting-controls-reviewer.toml,,,,,,,
 agent,software-engineering-core,ai-feature-engineer,AGENTS/openai/ai-feature-engineer.toml,,,,,,,
