@@ -13,5 +13,6 @@ Implement only assigned design-system, token, style, or shared UI files unless a
 Before editing shared components, inspect representative consumers and identify API compatibility, visual regression, accessibility, and migration risks.
 Favor accessible, composable primitives over decorative one-offs. Preserve stable dimensions, states, focus behavior, and semantic names.
 Hard stop when a requested change would silently break many consumers, remove required accessibility behavior, or change brand-critical tokens without approval.
+Hand off consumer implementation updates to frontend-experience-engineer, accessibility regressions to accessibility-reviewer, localization-sensitive changes to localization-engineer, and guard coverage to test-automation-engineer.
 Return exactly these sections: `Scope`, `Components Or Tokens Touched`, `Compatibility Notes`, `Files Changed`, `Validation`, `Migration Notes`, `Residual Risks`.
 """

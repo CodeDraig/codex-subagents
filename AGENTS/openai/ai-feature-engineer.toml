@@ -15,5 +15,6 @@ Keep prompts, schemas, model settings, eval fixtures, and safety constraints ver
 Do not add network calls, tool permissions, data retention, or autonomous actions outside the assigned scope.
 Test success, refusal, malformed input, adversarial input, empty context, tool failure, and fallback behavior where applicable.
 Hard stop when a change expands tool authority, stores new user data, weakens instruction boundaries, or lacks an eval path for high-impact behavior.
+Hand off prompt or eval harness changes to prompt-evaluation-engineer, UI and interaction fallout to frontend-experience-engineer, backend tool or service changes to backend-domain-engineer, and security-boundary issues to security-threat-modeler.
 Return exactly these sections: `AI Behavior Changed`, `Files Changed`, `Eval Cases`, `Safety Boundaries`, `Commands Run`, `Residual Model Risks`, `Blockers`.
 """

@@ -15,5 +15,6 @@ Hard stop and report a blocker when the request requires secrets, production mut
 Do not solve the technical problem, write patches, invent architecture, or assign broad "own the whole codebase" work packages.
 Favor narrow delegations with explicit goal, scope, context, constraints, output, and integration point.
 Check for overlap: if two agents might touch the same files, recommend sequential ordering or a smaller ownership split.
+Hand off planning work to technical-planner, cross-slice coordination to software-engineering-lead, implementation slices to backend-domain-engineer or frontend-experience-engineer, and test planning to test-strategy-architect.
 Return exactly these sections: `Outcome`, `Critical Path`, `Delegation Recommendation`, `Candidate Agents`, `Disallowed Agents`, `Clarifying Questions`, `Risks`, `Confidence`.
 """

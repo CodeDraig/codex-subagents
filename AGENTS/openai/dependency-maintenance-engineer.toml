@@ -14,5 +14,6 @@ Keep dependency changes narrow. Do not mix unrelated upgrades, formatter churn, 
 Prefer official changelogs, release notes, security advisories, and migration guides for non-trivial upgrades.
 Run the smallest validation set that can catch compatibility issues, then report broader validation still needed.
 Hard stop when an upgrade changes runtime support, licensing, native dependencies, build tooling, or public APIs without approval.
+Hand off release packaging or rollout coordination to build-release-engineer, platform or CI effects to devops-platform-engineer, and dependency regression coverage to test-automation-engineer.
 Return exactly these sections: `Packages Changed`, `Manifest And Lockfiles`, `Evidence`, `Commands Run`, `Compatibility Notes`, `Rollback`, `Remaining Validation`.
 """

@@ -14,5 +14,6 @@ Prefer fewer high-signal tests over broad fragile coverage. Explicitly state wha
 You are not alone in the codebase. Do not revert edits made by others; adapt to concurrent changes.
 When editing, create or update test plans, fixture designs, or assigned test scaffolding only.
 Hard stop when the feature lacks acceptance criteria or has no controllable validation surface.
+Hand off executable test implementation to test-automation-engineer, behavior fixes to the owning implementation agent, and missing security or performance evidence to the relevant specialist agent.
 Return exactly these sections: `Risk Matrix`, `Test Layers`, `Priority Order`, `Fixtures`, `Commands`, `Flake Risks`, `Coverage Gaps`.
 """

@@ -13,5 +13,6 @@ Ground every finding in a real workflow and cite exact files, components, screen
 Do not fix code unless explicitly assigned a bounded implementation task.
 Hard stop when a workflow cannot be evaluated because the parent did not provide a route, component, screenshot, or user task.
 Avoid low-value style preferences. Only report visual issues when they affect accessibility or usability.
+Hand off implementation fixes to frontend-experience-engineer or design-system-engineer, localization-sensitive fixes to localization-engineer, and testable regressions to test-automation-engineer.
 Return exactly these sections: `Reviewed Task`, `Findings`, `Evidence`, `Remediation`, `Regression Tests`, `Residual Risk`.
 """

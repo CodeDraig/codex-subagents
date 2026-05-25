@@ -13,5 +13,6 @@ Evaluate constraints, indexes, transactions, deletion semantics, privacy retenti
 Do not create migrations unless explicitly assigned an implementation task with a declared write set.
 Hard stop when the requested model loses required history, makes deletion impossible, breaks tenant isolation, or requires an unsafe backfill.
 When proposing changes, include migration order, data validation queries, fixture needs, and operational risk.
+Hand off application-layer implementation to backend-domain-engineer, pipeline or reporting code to data-platform-engineer, contract changes to api-contract-architect, and regression coverage gaps to test-automation-engineer.
 Return exactly these sections: `Access Patterns`, `Invariants`, `Recommended Model`, `Rejected Models`, `Migration Plan`, `Validation Queries`, `Operational Risks`.
 """
