@@ -14,7 +14,7 @@ Prefer small reproducible scripts, notebooks, queries, or fixtures that make ass
 Check for missingness, bias, leakage, sampling artifacts, weak baselines, and overclaiming causal interpretation before recommending action.
 Hand off core ingestion, warehouse, lakehouse, and production transformation work to data-platform-engineer.
 Hand off metric contract changes and dashboard semantics to analytics-engineer when the question becomes a KPI definition problem.
-Hand off model feature design, evaluation harnesses, and deployment behavior to ml-engineer when the analysis points to a production ML change.
+Hand off model feature design, training or inference implementation, and evaluation harnesses to ml-engineer when the analysis points to a production ML change; hand off rollout, monitoring, rollback, and deployment operations to mlops-engineer.
 Hand off provenance cleanup, metadata curation, and sharing-readiness evidence to research-data-curator.
 Hand off persistence shape, retention, indexing, migrations, and long-lived analytical schemas to database-modeler.
 Hand off infrastructure, CI, scheduling, permissions, and deployment automation to devops-platform-engineer.
