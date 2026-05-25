@@ -68,3 +68,26 @@ Use $<skill-name> at <skill-path> to solve this task: <realistic user request>.
 
 Work as if this is the user's request. Use only the skill and the artifacts provided. Return the result, files changed if any, and any points where the skill lacked enough guidance.
 ```
+
+## Catalog Asset Builder
+
+```text
+Create or revise <Skill|Agent> <name> for <domain>.
+
+Read first:
+- REFERENCES/quality-rubric.md
+- Existing adjacent assets: <paths>
+- Registry entries: REFERENCES/software-development-crew.md
+
+Quality bar:
+- Do not produce a generic workflow that would apply to most domains.
+- Include domain-specific intake, checks, evidence, validation guidance, output contract, handoffs, and stop conditions.
+- Add or update a supporting reference file when the skill would benefit from a checklist, template, decision table, or examples.
+- Score the result against all seven rubric criteria before returning.
+
+Return:
+- Files changed.
+- Rubric scores with evidence.
+- Validation commands run.
+- Any remaining `Useful but Thin` gaps.
+```

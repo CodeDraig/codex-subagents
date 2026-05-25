@@ -44,6 +44,38 @@ Strong guidance names concrete checks, artifacts, or decision points:
 - "Map each invoice to purchase order, receipt, approval, payment status, duplicate risk, and policy exception."
 - "Separate binding authority, persuasive authority, guidance, commentary, and unverified secondary material."
 
+## Fail And Pass Patterns
+
+Failing Skill pattern:
+
+- Trigger: "Use for design work."
+- Workflow: "Understand the goal, review options, recommend best practices."
+- Output: "Summary and next steps."
+
+Why it fails: removing "design" leaves generic task advice. It lacks artifacts, checks, validation, examples, and stop conditions.
+
+Passing Skill pattern:
+
+- Trigger: "Use when auditing shared UI components, design tokens, interaction states, density, focus behavior, visual consistency, and migration risk."
+- Workflow: inspect component inventory, compare token use, check states, capture screenshots, map exceptions to owners, and separate design debt from release blockers.
+- Output: `Inventory`, `State Coverage`, `Token Findings`, `Screenshots`, `Release Blockers`, `Owner Questions`.
+
+Why it passes: it changes the agent's behavior and creates reviewable evidence.
+
+Failing Agent pattern:
+
+- Description: "A general research expert."
+- Instructions: "Find information, think carefully, and produce a useful report."
+
+Why it fails: the role is not distinct, has no source treatment, and cannot be routed predictably.
+
+Passing Agent pattern:
+
+- Description: "Verifies claims, timestamps, quotes, provenance, edits, and source incentives before evidence is used in reporting, support, or investigations."
+- Instructions: require source class, date checked, contradiction search, confidence, non-public data boundaries, publication-risk handoffs, and exact return sections.
+
+Why it passes: it defines dispatch signals, evidence rules, boundaries, and downstream integration.
+
 ## Skill Criteria
 
 Apply these criteria to every `SKILLS/<skill-name>/` package.
@@ -230,6 +262,8 @@ For every new or modified agent:
 4. Check handoffs refer to implemented agents when possible.
 5. Score each agent criterion.
 6. Fail the review if the agent can be replaced by a one-paragraph prompt with no loss of behavior.
+
+For generated batches, sample-based review is not enough. Every generated asset must receive an explicit score, and any repeated shallow phrase such as "best practices", "communicate clearly", or "consider edge cases" must be replaced with domain-specific checks before the batch is marked complete.
 
 ## Readiness Labels
 

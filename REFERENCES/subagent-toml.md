@@ -20,6 +20,15 @@ Required fields:
 - `description`: capability statement that helps the parent decide when to use the agent.
 - `developer_instructions`: standing instructions for the agent.
 
+Reusable catalog agents should also include operational content in `developer_instructions`:
+
+- Intake fields the parent should provide.
+- Domain-specific checks, artifacts, evidence, and failure modes.
+- `$skill-name` references when a relevant skill exists, plus fallback behavior if the skill is unavailable.
+- Specific handoffs to implemented agents for adjacent work.
+- Exact return sections aligned to downstream use.
+- Stop conditions for unsafe, unauthorized, high-stakes, or evidence-poor work.
+
 Common optional fields:
 
 - `model`: override model for this role; omit to inherit.
@@ -90,3 +99,4 @@ Use `max_depth = 1` unless there is a strong reason to allow subagents to spawn 
 - Agent-local `skills.config` behavior has changed across releases. Verify it in the target runtime before relying on per-agent skill enable/disable overrides.
 - Keep agent files narrow. Broad "do everything" agents usually perform worse than explicit prompts plus built-in `worker` or `explorer` roles.
 - Do not accept generic developer instructions that only say to be careful, communicate clearly, follow best practices, or consider edge cases. Reusable agents need domain-specific intake, checks, artifacts, boundaries, handoffs, and output contracts.
+- Before installing a generated agent, parse the TOML, check every `$skill` reference, confirm every named handoff target exists, and score it with `quality-rubric.md`.

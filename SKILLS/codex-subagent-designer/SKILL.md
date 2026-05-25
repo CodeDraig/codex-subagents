@@ -105,6 +105,71 @@ After creating or editing assets:
 
 Reject assets that pass only because they have frontmatter, a workflow list, and an output contract. The asset must contain enough domain-specific checks, boundaries, supporting material, and validation guidance to make future agent behavior more consistent.
 
+## Shallow Asset Rejection Examples
+
+Failing Skill pattern:
+
+```markdown
+## Workflow
+1. Understand the task.
+2. Review relevant information.
+3. Consider edge cases.
+4. Communicate clearly.
+```
+
+This fails because it would work unchanged for almost any domain. It has no domain decisions, no evidence rules, no tools, no examples, no stop conditions, and no reusable artifact.
+
+Passing Skill pattern:
+
+```markdown
+## Workflow
+1. Classify the invoice as PO-backed, contract-backed, reimbursement, credit, or exception.
+2. Match invoice line items to purchase order, receipt, approval, tax treatment, and payment status.
+3. Flag duplicate invoice numbers, vendor-bank changes, threshold approvals, stale receipts, and policy exceptions.
+4. Return a reconciliation packet with evidence links, unresolved exceptions, and finance-owner questions.
+```
+
+This passes because the workflow encodes domain checks and produces a repeatable artifact.
+
+Failing Agent pattern:
+
+```toml
+description = "Helps with data tasks."
+developer_instructions = "Analyze the data carefully, find insights, and explain your reasoning."
+```
+
+This fails because the role is too broad and the instructions do not define intake, evidence, tools, boundaries, or handoffs.
+
+Passing Agent pattern:
+
+```toml
+description = "Reviews metric definitions, joins, freshness, and dashboard contracts before analytics changes ship."
+developer_instructions = """
+Use $analytics-engineering when available.
+Restate grain, source tables, metric definition, filters, freshness SLA, and consuming dashboard.
+Check null handling, late-arriving data, backfill impact, owner approval, and rollback path.
+Hand schema ownership to `database-modeler`, pipeline changes to `data-platform-engineer`, and user-facing dashboard interpretation to `analytics-engineer`.
+Return exactly these sections: `Metric Contract`, `Evidence`, `Risks`, `Validation`, `Handoffs`, `Owner Questions`.
+"""
+```
+
+This passes because it names the real job, required checks, evidence, output contract, and implemented handoffs.
+
+## Asset Authoring Checklist
+
+Before calling a generated Skill or Agent `Ready`, confirm:
+
+- It names the trigger signals and exclusion boundaries that distinguish it from adjacent assets.
+- It includes at least three domain-specific checks, failure modes, decision rules, or severity distinctions.
+- It references supporting material such as a checklist, template, decision matrix, validation command, source-quality guide, or sample artifact when the domain benefits from one.
+- It defines a stable output contract with evidence fields, not only `Summary`.
+- It gives validation guidance: commands, file patterns, source classes, parsers, screenshots, review gates, or explicit limits when validation is impossible.
+- It names implemented handoff targets for adjacent work instead of vague teams or future groups.
+- It states stop conditions for unsafe, unauthorized, high-stakes, or evidence-poor work.
+- It is recorded in [software-development-crew.md](../../REFERENCES/software-development-crew.md) when it is an agent or referenced skill.
+
+If any item is missing, either revise the asset or mark it `Useful but Thin` rather than installing it as reusable catalog content.
+
 ## Skill Package Definition Of Done
 
 A reusable Skill package is complete only when it includes:
@@ -167,4 +232,4 @@ For a full reusable OpenAI software-development crew, read [software-development
 
 When judging whether a Skill or Agent is complete enough for catalog inclusion, read [quality-rubric.md](../../REFERENCES/quality-rubric.md). Reject scaffold-only assets that contain generic workflow platitudes without domain-specific checks, supporting references, tools, validation guidance, boundaries, and output contracts.
 
-When this skill is installed outside this repository, the same references may be bundled under `references/` inside the installed skill directory. Use the bundled copies when the repository-level `../../REFERENCES/` path is not available.
+When this skill is installed outside this repository, copy the shared references into `references/` and the reusable agent examples into `agents/examples/openai/` inside the installed skill directory. Use those bundled copies when the repository-level `../../REFERENCES/` and `AGENTS/openai/` paths are not available.

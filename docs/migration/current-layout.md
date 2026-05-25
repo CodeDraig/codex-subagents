@@ -48,3 +48,12 @@ Use `REFERENCES/subagent-toml.md` when creating or reviewing reusable custom-age
 Use `REFERENCES/prompt-patterns.md` for subagent prompt patterns.
 
 Use `REFERENCES/quality-rubric.md` to review whether skills and agents are complete enough for reusable catalog inclusion.
+
+## Installing The Designer Skill
+
+When installing `SKILLS/codex-subagent-designer/` outside this repository, preserve its supporting material:
+
+- Copy shared `REFERENCES/*.md` into the installed skill's `references/` directory.
+- Copy reusable OpenAI agent examples from `AGENTS/openai/` into `agents/examples/openai/`.
+- Rewrite installed links only for the installed copy; keep repository links pointing at canonical top-level `REFERENCES/` and `AGENTS/openai/`.
+- Verify no `.DS_Store` or local-only artifacts are copied.
