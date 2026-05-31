@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nonfiction Manuscript Development"
+  short_description: "Shapes nonfiction theses, proposals, chapter architecture, evidence plans, and revision strategy."
+  default_prompt: "Use $nonfiction-manuscript-development to develop a nonfiction proposal, outline, argument, evidence plan, or revision roadmap."

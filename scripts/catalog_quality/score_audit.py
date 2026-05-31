@@ -32,8 +32,8 @@ def main() -> int:
     with MATRIX.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
 
-    if len(rows) != 139:
-        errors.append(f"{MATRIX.relative_to(ROOT).as_posix()}: expected 139 rows, found {len(rows)}")
+    if len(rows) != 149:
+        errors.append(f"{MATRIX.relative_to(ROOT).as_posix()}: expected 149 rows, found {len(rows)}")
 
     for index, row in enumerate(rows, start=2):
         name = row.get("name", f"row {index}")

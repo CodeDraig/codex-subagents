@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Metadata Packaging"
+  short_description: "Prepares book metadata, descriptions, categories, keywords, accessibility fields, and launch package checks."
+  default_prompt: "Use $book-metadata-packaging to prepare or review book metadata, positioning copy, categories, keywords, and publication-package gaps."

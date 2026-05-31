@@ -1,0 +1,4 @@
+interface:
+  display_name: "Line Copyediting Workflows"
+  short_description: "Plans or performs line edits, copyedits, style sheets, query logs, and consistency passes."
+  default_prompt: "Use $line-copyediting-workflows to line edit or copyedit a manuscript with style-sheet decisions, queries, and proof handoff."

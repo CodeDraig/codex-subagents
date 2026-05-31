@@ -23,6 +23,7 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Procurement and Vendor Management | `rfp-response-analyst`, `vendor-risk-reviewer`, `procurement-compliance-specialist`, `sow-reviewer`, `vendor-scorecard-analyst` |
 | Policy and Public Affairs | `policy-analyst`, `public-comment-drafter`, `stakeholder-map-analyst`, `legislative-tracker`, `impact-assessment-writer` |
 | Publishing and Scholarly Production | `developmental-manuscript-editor`, `production-editor`, `permissions-reviewer`, `indexing-coordinator`, `journal-submission-specialist` |
+| Book and Long-Form Production | `fiction-development-editor`, `nonfiction-manuscript-editor`, `line-copy-editor`, `fact-checking-editor`, `book-metadata-packaging-editor` |
 
 ## Routing Rules
 
@@ -117,6 +118,11 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | Bills, amendments, hearings, votes, effective dates, official source logs | `legislative-tracker` |
 | Policy impact assessments, costs, benefits, assumptions, evidence gaps | `impact-assessment-writer` |
 | Manuscript structure, argument, audience fit, major revision priorities | `developmental-manuscript-editor` |
+| Fiction premise, plot, character arcs, continuity, genre promise, revision roadmap | `fiction-development-editor` |
+| Nonfiction thesis, proposal, chapter architecture, reader promise, evidence plan | `nonfiction-manuscript-editor` |
+| Line edits, copyedits, style sheets, query logs, consistency passes | `line-copy-editor` |
+| Long-form claim checking against source packets, interviews, datasets, author notes | `fact-checking-editor` |
+| Book metadata, back-cover copy, categories, keywords, accessibility fields, package gaps | `book-metadata-packaging-editor` |
 | Production editing, style sheets, proof stages, schedules, query logs | `production-editor` |
 | Third-party content permissions, license restrictions, attribution needs | `permissions-reviewer` |
 | Index term candidates, locators, cross-references, author queries | `indexing-coordinator` |
@@ -126,8 +132,8 @@ Use this crew before falling back to generic `worker` or `explorer`.
 
 | Model | Reasoning Efforts Used | Representative Agents |
 | --- | --- | --- |
-| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist`, `data-scientist`, `mlops-engineer`, `software-engineering-lead`, `legal-research-analyst`, `literature-reviewer`, `proposal-compliance-reviewer`, `financial-model-reviewer`, `vendor-risk-reviewer`, `policy-analyst`, `permissions-reviewer` |
-| `gpt-5.4-mini` | `low`, `medium` | `dependency-maintenance-engineer`, `documentation-engineer`, `design-system-engineer`, `peer-review-prep-editor`, `grant-reporting-specialist`, `production-editor`, `indexing-coordinator` |
+| `gpt-5.5` | `low`, `medium`, `high`, `xhigh` | `triage-router`, `observability-incident-engineer`, `systems-architect`, `product-discovery-strategist`, `data-scientist`, `mlops-engineer`, `software-engineering-lead`, `legal-research-analyst`, `literature-reviewer`, `proposal-compliance-reviewer`, `financial-model-reviewer`, `vendor-risk-reviewer`, `policy-analyst`, `permissions-reviewer`, `fiction-development-editor`, `nonfiction-manuscript-editor`, `fact-checking-editor` |
+| `gpt-5.4-mini` | `low`, `medium` | `dependency-maintenance-engineer`, `documentation-engineer`, `design-system-engineer`, `peer-review-prep-editor`, `grant-reporting-specialist`, `production-editor`, `indexing-coordinator`, `line-copy-editor`, `book-metadata-packaging-editor` |
 | `gpt-5.3-codex` | `medium`, `high` | `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `implementation-finisher`, `analytics-engineer`, `ml-engineer`, `research-data-curator`, `invoice-reconciliation-specialist`, `audit-evidence-organizer`, `vendor-scorecard-analyst` |
 | `gpt-5.3-codex-spark` | `low`, `medium`, `high` | `rapid-prototype-scout`, `developer-experience-engineer`, `test-automation-engineer` |
 
@@ -159,6 +165,7 @@ Some domains have paired agents because model capability and latency change the 
 | Procurement and vendor management | `vendor-risk-reviewer`, `procurement-compliance-specialist`, and `sow-reviewer` use `gpt-5.5` for high-stakes vendor, policy, and SOW review. | `rfp-response-analyst` and `vendor-scorecard-analyst` create matrices and scorecards from disclosed criteria without award authority. |
 | Policy and public affairs | `policy-analyst` and `impact-assessment-writer` use `gpt-5.5` with high reasoning for source-backed tradeoff and impact analysis. | `public-comment-drafter`, `stakeholder-map-analyst`, and `legislative-tracker` support drafting, aggregate mapping, and official-source monitoring without legal advice, deceptive advocacy, or political microtargeting. |
 | Publishing and scholarly production | `developmental-manuscript-editor` and `permissions-reviewer` use `gpt-5.5` for structural and rights-sensitive review. | `production-editor`, `indexing-coordinator`, and `journal-submission-specialist` coordinate production, indexing, and submissions without publisher approval, legal clearance, or research-integrity certification. |
+| Book and long-form production | `fiction-development-editor`, `nonfiction-manuscript-editor`, and `fact-checking-editor` use `gpt-5.5` for story or argument architecture, source-sensitive claim review, and revision risk. | `line-copy-editor` and `book-metadata-packaging-editor` use `gpt-5.4-mini` for applied editing, style sheets, metadata, positioning copy, and package cleanup without ghostwriting, legal clearance, retailer approval, or guaranteed sales claims. |
 
 ## Implemented Skill Assets
 
@@ -211,6 +218,11 @@ Every Skill referenced by the agent examples has a repository-local skill folder
 - `$publishing-production-workflows`: `SKILLS/publishing-production-workflows/`
 - `$permissions-rights-review`: `SKILLS/permissions-rights-review/`
 - `$journal-submission-workflows`: `SKILLS/journal-submission-workflows/`
+- `$fiction-development-workflows`: `SKILLS/fiction-development-workflows/`
+- `$nonfiction-manuscript-development`: `SKILLS/nonfiction-manuscript-development/`
+- `$line-copyediting-workflows`: `SKILLS/line-copyediting-workflows/`
+- `$fact-checking-source-review`: `SKILLS/fact-checking-source-review/`
+- `$book-metadata-packaging`: `SKILLS/book-metadata-packaging/`
 
 ## Remaining Skill Backlog
 

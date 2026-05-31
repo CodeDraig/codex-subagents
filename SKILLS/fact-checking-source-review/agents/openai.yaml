@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact Checking Source Review"
+  short_description: "Maps manuscript claims to sources, flags unsupported claims, and builds fact-check query logs."
+  default_prompt: "Use $fact-checking-source-review to verify nonfiction or long-form manuscript claims against source packets, citations, and author notes."
