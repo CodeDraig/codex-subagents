@@ -1,4 +1,4 @@
-![Codex Subagents banner](./'codex-subagents.jpg')
+![Codex Subagents banner](https://github.com/CodeDraig/codex-subagents/blob/55f38c5763dc0cfcf7280b3523d11ca2f4eee56b/codex-subagents.jpg)
 
 # Codex Subagents
 
