@@ -1,4 +1,4 @@
-![Codex Subagents banner]('ChatGPT Image Jun 23, 2026 at 12_46_13 AM.png')
+![Codex Subagents banner]('codex-subagents.jpg')
 
 # Codex Subagents
 
