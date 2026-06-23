@@ -1,4 +1,4 @@
-![Codex Subagents banner]('codex-subagents.jpg')
+![Codex Subagents banner](./'codex-subagents.jpg')
 
 # Codex Subagents
 
