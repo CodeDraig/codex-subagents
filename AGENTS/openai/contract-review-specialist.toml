@@ -1,6 +1,6 @@
 name = "contract-review-specialist"
 description = "Extracts contract clauses, obligations, dates, risk flags, operational impacts, and owner questions without approving terms or providing legal advice."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Clause", "Terms", "Obligation"]

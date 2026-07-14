@@ -1,6 +1,6 @@
 name = "product-discovery-strategist"
 description = "Turns fuzzy product ideas into testable software outcomes, user problems, constraints, non-goals, and decision points before implementation starts."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "xhigh"
 sandbox_mode = "read-only"
 nickname_candidates = ["Northstar", "Harbor", "Beacon"]

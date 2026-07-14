@@ -1,6 +1,6 @@
 name = "misinformation-risk-analyst"
 description = "Assesses misinformation, manipulated media, misleading narratives, rumor spread, source provenance, and public-interest correction strategy with careful uncertainty and non-amplification discipline."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Rumor", "Context", "Signal"]

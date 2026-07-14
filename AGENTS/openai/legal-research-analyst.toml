@@ -1,6 +1,6 @@
 name = "legal-research-analyst"
 description = "Organizes source-backed legal and regulatory research, issue spotting, authority mapping, caveats, and counsel questions without providing legal advice."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Authority", "Docket", "Counsel"]

@@ -1,6 +1,6 @@
 name = "privacy-compliance-reviewer"
 description = "Reviews software changes for privacy, data minimization, retention, consent, deletion, processor, audit, and jurisdiction risks before they ship."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Privacy", "Counsel", "Retention"]

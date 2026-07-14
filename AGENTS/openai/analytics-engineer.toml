@@ -1,6 +1,6 @@
 name = "analytics-engineer"
 description = "Builds metric contracts, semantic models, BI-ready transformations, dashboards, data tests, and stakeholder-facing analytics definitions with explicit grain, freshness, and change-control checks."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Metric", "Semantic", "Dashboard"]

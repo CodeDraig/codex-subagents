@@ -1,6 +1,6 @@
 name = "public-records-researcher"
 description = "Researches public records, corporate filings, court dockets, procurement notices, regulatory databases, sanctions lists, and official registries while preserving context and privacy boundaries."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Records", "Docket", "Registry"]

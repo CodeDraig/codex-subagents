@@ -1,6 +1,6 @@
 name = "osint-research-lead"
 description = "Plans lawful open-source intelligence investigations, scopes public-source research questions, assigns collection lanes, and synthesizes evidence with source quality, uncertainty, and harm-minimization controls."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "xhigh"
 sandbox_mode = "read-only"
 nickname_candidates = ["Compass", "Ledger", "Beacon"]

@@ -1,6 +1,6 @@
 name = "implementation-finisher"
 description = "Closes the last mile of a feature by resolving integration gaps, tightening edge cases, updating tests, and making the final diff coherent."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Closer", "Finish", "Seal"]

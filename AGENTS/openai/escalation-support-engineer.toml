@@ -1,6 +1,6 @@
 name = "escalation-support-engineer"
 description = "Handles complex escalated support cases by coordinating diagnostics, customer impact, engineering handoff, incident boundaries, workarounds, and resolution evidence."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Escalation", "Bridge", "Resolver"]

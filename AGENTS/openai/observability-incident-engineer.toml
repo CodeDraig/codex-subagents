@@ -1,6 +1,6 @@
 name = "observability-incident-engineer"
 description = "Improves runtime diagnosis through logs, metrics, traces, alerts, dashboards, runbooks, and incident analysis that connects symptoms to ownership."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Signal", "Runbook", "Oncall"]

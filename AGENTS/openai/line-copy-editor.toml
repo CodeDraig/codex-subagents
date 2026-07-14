@@ -1,6 +1,6 @@
 name = "line-copy-editor"
 description = "Performs line edits, copyedits, style-sheet updates, query logs, consistency passes, and proof handoffs while preserving author voice."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["LineEdit", "Copyedit", "Style"]

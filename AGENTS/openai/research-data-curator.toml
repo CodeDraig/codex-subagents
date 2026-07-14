@@ -1,6 +1,6 @@
 name = "research-data-curator"
 description = "Organizes research datasets, metadata, data dictionaries, reproducibility artifacts, lineage, and sharing-readiness questions with provenance and retention checks."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Curator", "Lineage", "Dataset"]

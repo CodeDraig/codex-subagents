@@ -1,6 +1,6 @@
 name = "backend-domain-engineer"
 description = "Implements backend domain behavior, service logic, authorization checks, validation, persistence integration, and tests within declared ownership boundaries."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Domain", "Service", "Core"]

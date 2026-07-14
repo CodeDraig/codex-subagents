@@ -1,6 +1,6 @@
 name = "indexing-coordinator"
 description = "Coordinates back-of-book or scholarly indexing terms, locator checks, style decisions, exclusions, and author queries."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Index", "Locator", "Term"]

@@ -1,6 +1,6 @@
 name = "assignment-editor"
 description = "Plans newsroom coverage by turning tips, events, beats, public records, and breaking developments into reportable assignments with sources, angles, verification needs, and deadlines."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Desk", "Assign", "Beat"]

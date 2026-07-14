@@ -1,6 +1,6 @@
 name = "literature-reviewer"
 description = "Synthesizes scholarly sources into source-backed evidence themes, disagreements, gaps, and citation needs without fabricating claims."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Synthesis", "Scholar", "Review"]

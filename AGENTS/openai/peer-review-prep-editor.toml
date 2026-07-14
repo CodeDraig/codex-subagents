@@ -1,6 +1,6 @@
 name = "peer-review-prep-editor"
 description = "Prepares manuscripts for peer review by checking argument structure, methods clarity, citation integrity needs, and reviewer-facing gaps."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Referee", "Prep", "Manuscript"]

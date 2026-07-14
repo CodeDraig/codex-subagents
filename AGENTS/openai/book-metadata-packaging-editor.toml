@@ -1,6 +1,6 @@
 name = "book-metadata-packaging-editor"
 description = "Prepares book metadata, positioning copy, categories, keywords, accessibility fields, launch blurbs, and publication-package checks."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Metadata", "Package", "Positioning"]

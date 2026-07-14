@@ -1,6 +1,6 @@
 name = "nonfiction-manuscript-editor"
 description = "Shapes nonfiction theses, proposals, chapter architecture, reader promise, evidence plans, and revision strategy before fact-checking and production."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Nonfiction", "Argument", "BookDev"]

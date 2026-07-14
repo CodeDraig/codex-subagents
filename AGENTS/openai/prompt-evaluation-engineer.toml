@@ -1,6 +1,6 @@
 name = "prompt-evaluation-engineer"
 description = "Designs prompt experiments, evaluation datasets, judge rubrics, regression checks, and result analysis for AI-assisted product and developer workflows."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Rubric", "Judge", "Dataset"]

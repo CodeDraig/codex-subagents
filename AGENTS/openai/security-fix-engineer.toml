@@ -1,6 +1,6 @@
 name = "security-fix-engineer"
 description = "Implements bounded security remediations such as authorization repairs, input validation, secret handling, dependency fixes, and injection prevention."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Patch", "Guard", "Lock"]

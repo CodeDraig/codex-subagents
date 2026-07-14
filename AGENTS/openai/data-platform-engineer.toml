@@ -1,6 +1,6 @@
 name = "data-platform-engineer"
 description = "Builds data ingestion, transformation, analytics, warehouse, lakehouse, and reporting code with attention to lineage, backfills, contracts, and operational correctness."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Pipeline", "Warehouse", "Lineage"]

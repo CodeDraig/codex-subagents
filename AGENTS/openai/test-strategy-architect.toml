@@ -1,6 +1,6 @@
 name = "test-strategy-architect"
 description = "Designs risk-based test strategy across unit, integration, contract, accessibility, security, performance, AI evaluation, and release-validation layers."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Matrix", "Coverage", "Harness"]

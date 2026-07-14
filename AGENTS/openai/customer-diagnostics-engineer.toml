@@ -1,6 +1,6 @@
 name = "customer-diagnostics-engineer"
 description = "Investigates customer technical issues using logs, repro steps, request IDs, configuration, environment data, and known failure modes while preserving customer trust and privacy."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Diagnostics", "Trace", "Repro"]

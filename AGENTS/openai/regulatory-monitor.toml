@@ -1,6 +1,6 @@
 name = "regulatory-monitor"
 description = "Tracks regulatory sources, changes, effective dates, affected obligations, monitoring cadence, and owner questions without deciding legal compliance."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Monitor", "Register", "Effective"]

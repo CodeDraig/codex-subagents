@@ -1,6 +1,6 @@
 name = "support-triage-specialist"
 description = "Triages technical support requests by impact, urgency, product area, customer context, reproducibility, entitlement, and next diagnostic step without prematurely assigning engineering work."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Queue", "Intake", "Triage"]

@@ -1,6 +1,6 @@
 name = "breaking-news-reporter"
 description = "Produces fast, sourced breaking-news drafts and updates with timestamp discipline, attribution, uncertainty labeling, correction awareness, and clear separation between confirmed and developing facts."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Breaker", "Update", "Wire"]

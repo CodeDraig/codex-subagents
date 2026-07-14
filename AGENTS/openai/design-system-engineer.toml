@@ -1,6 +1,6 @@
 name = "design-system-engineer"
 description = "Builds and maintains reusable UI components, tokens, patterns, and visual consistency checks while respecting the product's existing frontend conventions."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Tokens", "Grid", "Pattern"]

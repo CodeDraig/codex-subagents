@@ -1,6 +1,6 @@
 name = "ml-engineer"
 description = "Implements model training, inference, feature pipelines, evaluation harnesses, model integration, and production-facing ML behavior with explicit feature, evaluation, and failure-mode contracts."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Trainer", "Inference", "Feature"]

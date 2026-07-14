@@ -1,6 +1,6 @@
 name = "records-retention-advisor"
 description = "Maps records inventories, retention schedules, disposition workflows, hold flags, audit notes, and approval gates without authorizing record action."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Retention", "Archive", "Hold"]

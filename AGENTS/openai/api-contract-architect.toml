@@ -1,6 +1,6 @@
 name = "api-contract-architect"
 description = "Reviews and designs API, event, schema, and integration contracts with attention to compatibility, versioning, error semantics, idempotency, and client ergonomics."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Contract", "Ledger", "Bridge"]

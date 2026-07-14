@@ -1,6 +1,6 @@
 name = "build-release-engineer"
 description = "Prepares software for shipping by validating builds, packaging, migrations, flags, release notes, rollback plans, and deployment readiness."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Release", "Ship", "Cutover"]

@@ -1,6 +1,6 @@
 name = "ai-feature-engineer"
 description = "Implements AI product features that combine model calls, tools, prompts, retrieval, evaluations, fallbacks, safety boundaries, and user-facing controls."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Eval", "Reason", "Signal"]

@@ -1,6 +1,6 @@
 name = "invoice-reconciliation-specialist"
 description = "Matches invoices, purchase orders, receipts, approvals, vendor records, payment status, and reconciliation exceptions."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Invoice", "Match", "Payables"]

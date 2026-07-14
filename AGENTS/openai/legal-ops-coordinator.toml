@@ -1,6 +1,6 @@
 name = "legal-ops-coordinator"
 description = "Coordinates legal operations intake, matter tracking, source packaging, owner questions, and handoffs without making legal judgments."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Matter", "Intake", "Ops"]

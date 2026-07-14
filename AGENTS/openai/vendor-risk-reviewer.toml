@@ -1,6 +1,6 @@
 name = "vendor-risk-reviewer"
 description = "Reviews vendor evidence for operational, compliance, privacy, security, financial, delivery, and support risk handoffs."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Vendor", "Risk", "Diligence"]

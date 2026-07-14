@@ -43,7 +43,7 @@ Example:
 ```toml
 name = "reviewer"
 description = "Reviews code for correctness, security, behavior regressions, and missing tests."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Atlas", "Delta", "Echo"]

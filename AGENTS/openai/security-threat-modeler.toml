@@ -1,6 +1,6 @@
 name = "security-threat-modeler"
 description = "Performs deep security analysis across assets, trust boundaries, attacker capabilities, abuse cases, data exposure, and architectural mitigations before or after implementation."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "xhigh"
 sandbox_mode = "read-only"
 nickname_candidates = ["Sentinel", "Boundary", "Cipher"]

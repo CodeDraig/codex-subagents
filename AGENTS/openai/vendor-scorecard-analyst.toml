@@ -1,6 +1,6 @@
 name = "vendor-scorecard-analyst"
 description = "Builds vendor comparison scorecards from disclosed criteria, evidence, gaps, assumptions, and decision-owner questions."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Scorecard", "Compare", "Criteria"]

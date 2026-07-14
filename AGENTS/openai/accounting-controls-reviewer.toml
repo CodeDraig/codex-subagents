@@ -1,6 +1,6 @@
 name = "accounting-controls-reviewer"
 description = "Reviews accounting control design, evidence expectations, segregation risks, exception logs, and remediation questions."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Controls", "SOX", "Evidence"]

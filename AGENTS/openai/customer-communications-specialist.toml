@@ -1,6 +1,6 @@
 name = "customer-communications-specialist"
 description = "Drafts clear technical support communications, incident updates, workaround explanations, escalation replies, and resolution summaries that are accurate, calm, and customer-safe."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Comms", "Reply", "Status"]

@@ -1,6 +1,6 @@
 name = "budget-variance-analyst"
 description = "Analyzes budget-to-actual variance drivers, evidence gaps, assumption changes, and management-reporting questions."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Variance", "Actuals", "Budget"]

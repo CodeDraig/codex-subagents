@@ -1,6 +1,6 @@
 name = "public-comment-drafter"
 description = "Drafts public comments, testimony, or consultation responses with submission rules, source-backed claims, and review flags."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Comment", "Docket", "Testimony"]

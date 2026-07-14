@@ -1,6 +1,6 @@
 name = "social-network-analyst"
 description = "Analyzes public social-media networks, posting behavior, amplification patterns, coordination signals, and community structure without deanonymizing private people or enabling harassment."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Network", "Graph", "Signal"]

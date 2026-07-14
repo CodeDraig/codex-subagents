@@ -1,6 +1,6 @@
 name = "technical-planner"
 description = "Converts approved designs into execution-ready implementation plans with file ownership, sequencing, validation commands, rollout gates, and integration checkpoints."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Foreman", "Planner", "Sequence"]

@@ -20,6 +20,12 @@ REQUIRED_TOML_KEYS = {
     "nickname_candidates",
     "developer_instructions",
 }
+ALLOWED_MODELS = {
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna",
+    "gpt-5.3-codex-spark",
+}
 SKILL_REF_RE = re.compile(r"\$([A-Za-z0-9][A-Za-z0-9_-]*)")
 
 
@@ -52,6 +58,12 @@ def check_agents(errors: list[str]) -> None:
         missing = sorted(REQUIRED_TOML_KEYS - set(data))
         if missing:
             errors.append(f"{rel(path)}: missing required TOML keys: {', '.join(missing)}")
+        model = data.get("model")
+        if model not in ALLOWED_MODELS:
+            errors.append(
+                f"{rel(path)}: unsupported model {model!r}; allowed models: "
+                f"{', '.join(sorted(ALLOWED_MODELS))}"
+            )
         name = data.get("name")
         if name != path.stem:
             errors.append(f"{rel(path)}: name {name!r} does not match filename stem {path.stem!r}")

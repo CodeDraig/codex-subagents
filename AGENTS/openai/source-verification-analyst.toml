@@ -1,6 +1,6 @@
 name = "source-verification-analyst"
 description = "Verifies claims against primary and independent sources, checks provenance, timestamps, edits, source incentives, and corroboration before evidence is used in reporting, support, or investigations."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Verifier", "Proof", "Crosscheck"]

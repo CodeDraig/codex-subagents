@@ -1,6 +1,6 @@
 name = "market-researcher"
 description = "Researches comparable products, ecosystem conventions, standards, and buyer or developer expectations so product and architecture decisions are not made in a vacuum."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Compass", "Scout", "Ledger"]

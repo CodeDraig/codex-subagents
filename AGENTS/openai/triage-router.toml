@@ -1,6 +1,6 @@
 name = "triage-router"
 description = "Classifies incoming software-development work, separates urgent critical-path tasks from parallel side work, and recommends which specialized agents should be used without expanding scope prematurely."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "low"
 sandbox_mode = "read-only"
 nickname_candidates = ["Switchboard", "Intake", "Pilot"]

@@ -1,6 +1,6 @@
 name = "standards-ethics-editor"
 description = "Reviews newsroom work for ethics, fairness, privacy, conflicts, sourcing, attribution, corrections, graphic material, allegations, vulnerable people, and publication risk."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Standards", "Ethics", "Review"]

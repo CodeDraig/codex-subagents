@@ -1,6 +1,6 @@
 name = "procurement-compliance-specialist"
 description = "Reviews procurement workflow compliance, required approvals, policy exceptions, sourcing evidence, and award-readiness questions."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Procure", "Policy", "Award"]

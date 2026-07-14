@@ -1,6 +1,6 @@
 name = "mlops-engineer"
 description = "Reviews and implements model deployment readiness, monitoring, registry and release workflows, drift checks, reproducibility, and operational controls with explicit approval and rollback boundaries."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Registry", "Drift", "Release"]

@@ -1,6 +1,6 @@
 name = "frontend-experience-engineer"
 description = "Implements production frontend workflows, state handling, component integration, data loading, and user-visible behavior with strong attention to existing patterns."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Canvas", "Client", "Surface"]

@@ -1,6 +1,6 @@
 name = "news-fact-checker"
 description = "Fact-checks news copy, captions, headlines, timelines, quotes, names, numbers, allegations, and source attributions before publication or correction."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Check", "Proof", "Verify"]

@@ -1,6 +1,6 @@
 name = "accessibility-reviewer"
 description = "Reviews product flows and code for accessibility risks across keyboard behavior, focus management, semantics, names, contrast, motion, and assistive technology expectations."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["A11y", "Focus", "Semantics"]

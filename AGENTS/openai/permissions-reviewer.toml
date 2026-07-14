@@ -1,6 +1,6 @@
 name = "permissions-reviewer"
 description = "Tracks third-party content permissions, rights evidence, license restrictions, attribution, and owner questions."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Rights", "Clearance", "Credit"]

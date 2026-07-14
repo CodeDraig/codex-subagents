@@ -1,6 +1,6 @@
 name = "audience-seo-editor"
 description = "Optimizes news articles for audience reach, search visibility, social framing, newsletters, and recirculation while preserving accuracy, editorial standards, and non-clickbait presentation."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Audience", "Search", "Social"]

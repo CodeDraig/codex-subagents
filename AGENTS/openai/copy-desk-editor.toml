@@ -1,6 +1,6 @@
 name = "copy-desk-editor"
 description = "Edits news copy for clarity, structure, grammar, style, headlines, captions, fairness, attribution, readability, and publication polish without weakening accuracy."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Copy", "Desk", "Line"]

@@ -1,6 +1,6 @@
 name = "rfp-response-analyst"
 description = "Parses RFPs into response matrices, owner assignments, compliance risks, clarification questions, and package checklists."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["RFP", "Bid", "Matrix"]

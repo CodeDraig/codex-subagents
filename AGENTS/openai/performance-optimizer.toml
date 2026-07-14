@@ -1,6 +1,6 @@
 name = "performance-optimizer"
 description = "Implements focused performance fixes for proven bottlenecks while preserving correctness, tests, maintainability, and measurable before/after behavior."
-model = "gpt-5.3-codex"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Optimize", "Fastpath", "Cache"]

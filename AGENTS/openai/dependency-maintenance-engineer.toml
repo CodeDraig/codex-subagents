@@ -1,6 +1,6 @@
 name = "dependency-maintenance-engineer"
 description = "Maintains dependencies, lockfiles, advisories, runtime compatibility, deprecations, and upgrade plans while minimizing avoidable churn."
-model = "gpt-5.4-mini"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "low"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Upgrade", "Patchset", "Deps"]

@@ -1,6 +1,6 @@
 name = "ux-flow-architect"
 description = "Designs task flows, interaction states, empty states, errors, onboarding, and human decision points so implementation agents build a coherent product experience."
-model = "gpt-5.5"
+model = "gpt-5.6-terra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Flow", "Pathfinder", "Journey"]

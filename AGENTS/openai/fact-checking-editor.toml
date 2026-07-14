@@ -1,6 +1,6 @@
 name = "fact-checking-editor"
 description = "Checks nonfiction and long-form manuscript claims against source packets, interviews, datasets, public records, citations, and author notes."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Factcheck", "Claims", "Sources"]

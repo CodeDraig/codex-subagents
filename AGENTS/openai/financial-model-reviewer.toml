@@ -1,6 +1,6 @@
 name = "financial-model-reviewer"
 description = "Reviews operational financial models for assumptions, formula consistency, source ties, sensitivity risks, and owner questions."
-model = "gpt-5.5"
+model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Model", "Assumption", "Forecast"]

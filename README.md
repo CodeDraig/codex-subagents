@@ -52,7 +52,7 @@ python3.11 scripts/catalog_quality/score_audit.py
 git diff --check
 ```
 
-`validate_catalog.py` checks TOML parseability, required agent fields, skill frontmatter, `$skill` references, registry coverage, skill sidecars, and `.DS_Store` files.
+`validate_catalog.py` checks TOML parseability, required agent fields, the catalog's allowed model set, skill frontmatter, `$skill` references, registry coverage, skill sidecars, and `.DS_Store` files.
 
 `score_audit.py` checks that the full-catalog audit matrix contains 149 rows and that every asset is rated `Ready` with complete score and evidence fields.
 
