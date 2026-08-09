@@ -1,0 +1,4 @@
+interface:
+  display_name: "OSINT Research Planning"
+  short_description: "Plan lawful public-source investigations and collection"
+  default_prompt: "Use $osint-research-planning to scope this lawful public-source investigation and build a collection plan."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Geolocation and Chronolocation Analysis"
+  short_description: "Analyze public media location and time clues safely"
+  default_prompt: "Use $geolocation-chronolocation-analysis to estimate where and when this public media artifact was captured."

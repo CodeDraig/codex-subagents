@@ -6,13 +6,13 @@ Scope: every current skill package under `SKILLS/` and every OpenAI subagent pro
 
 ## Outcome
 
-The corrected catalog contains 144 Ready assets and five Useful but Thin assets. All 53 skills now meet the Ready gate; the remaining five findings are public-source agent profiles that omit both a skill reference and an explicit no-skill justification.
+The promoted catalog contains 154 Ready assets and no remaining thin assets. All 58 skills and all 96 agents meet the Ready gate; the five formerly thin public-source profiles now reference dedicated, validated skill packages with explicit fallback workflows.
 
 | Asset type | Reviewed | Ready | Useful but Thin | Scaffold Only | Unsafe or Misleading |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Skills | 53 | 53 | 0 | 0 | 0 |
-| Agents | 96 | 91 | 5 | 0 | 0 |
-| Total | 149 | 144 | 5 | 0 | 0 |
+| Skills | 58 | 58 | 0 | 0 | 0 |
+| Agents | 96 | 96 | 0 | 0 | 0 |
+| Total | 154 | 154 | 0 | 0 | 0 |
 
 ## Scoring Method
 
@@ -26,7 +26,7 @@ The corrected catalog contains 144 Ready assets and five Useful but Thin assets.
 
 ### 1. Resolved: all sidecar descriptions now meet the UI contract
 
-The 26 descriptions previously exceeding 64 characters were shortened without changing their display names, default prompts, skill instructions, references, or package behavior. All 53 quoted descriptions now fall between 25 and 64 characters.
+The 26 descriptions previously exceeding 64 characters were shortened without changing their display names, default prompts, skill instructions, references, or package behavior. The five new public-source sidecars also conform, so all 58 quoted descriptions now fall between 25 and 64 characters.
 
 | Skill | Corrected short description | Characters |
 | --- | --- | ---: |
@@ -57,34 +57,34 @@ The 26 descriptions previously exceeding 64 characters were shortened without ch
 | `sow-review-workflows` | Review SOW deliverables, milestones, and acceptance criteria | 60 |
 | `sponsored-projects-reporting` | Organize sponsored-project reporting and closeout | 49 |
 
-### 2. Five public-source profiles still need explicit skill integration
+### 2. Resolved: five public-source profiles now have dedicated skills
 
-These profiles have strong domain instructions, safety boundaries, handoffs, and exact return contracts. Agent criterion 2 remains below Ready because each lacks both a relevant `$skill-name` reference and a written explanation that no catalog skill fits.
+Each formerly thin profile now invokes a role-specific skill and retains a concise fallback summary for runtimes where the skill is unavailable. Every new package contains a discriminating trigger, domain workflow, decision rules, one reusable reference, validation guidance, an exact output contract, implemented handoffs, and public-source safety stops.
 
-| Agent | Required fix |
+| Agent | Dedicated Skill |
 | --- | --- |
-| `geolocation-chronolocation-analyst` | Reference a relevant Skill with fallback, or explicitly document why no repo-local Skill fits. |
-| `misinformation-risk-analyst` | Reference a relevant Skill with fallback, or explicitly document why no repo-local Skill fits. |
-| `osint-research-lead` | Reference a relevant Skill with fallback, or explicitly document why no repo-local Skill fits. |
-| `public-records-researcher` | Reference a relevant Skill with fallback, or explicitly document why no repo-local Skill fits. |
-| `social-network-analyst` | Reference a relevant Skill with fallback, or explicitly document why no repo-local Skill fits. |
+| `geolocation-chronolocation-analyst` | `$geolocation-chronolocation-analysis` |
+| `misinformation-risk-analyst` | `$misinformation-risk-analysis` |
+| `osint-research-lead` | `$osint-research-planning` |
+| `public-records-researcher` | `$public-records-research` |
+| `social-network-analyst` | `$public-social-network-analysis` |
 
 ### 3. Cross-catalog references and runtime declarations are coherent
 
-- All 96 TOMLs parse, filenames match `name`, required fields are present, all 88 explicit skill references resolve, and all named handoffs inspected resolve to implemented profiles.
-- All 96 agents and all 52 registry-managed skills appear in `REFERENCES/software-development-crew.md`; `codex-subagent-designer` is intentionally the meta-catalog exception.
+- All 96 TOMLs parse, filenames match `name`, required fields are present, all 93 explicit skill references resolve, and all named handoffs inspected resolve to implemented profiles.
+- All 96 agents and all 57 registry-managed skills appear in `REFERENCES/software-development-crew.md`; `codex-subagent-designer` is intentionally the meta-catalog exception.
 - Model choices use the current documented Codex roster: `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-5.6-luna`, and `gpt-5.3-codex-spark`.
 
 ### 4. The catalog validator still does not enforce the length rule
 
-`scripts/catalog_quality/validate_catalog.py` checks sidecar field presence but not the 25-64 character constraint. No validator change was made because this remediation was explicitly limited to descriptions and audit updates. `scripts/catalog_quality/score_audit.py` remains bound to the unchanged May all-Ready matrix and does not validate this review.
+`scripts/catalog_quality/validate_catalog.py` checks sidecar field presence but not the 25-64 character constraint. No validator change was made because this promotion adds content and audit records without changing validation policy. `scripts/catalog_quality/score_audit.py` remains bound to the unchanged May all-Ready matrix and does not validate this review.
 
 ## Highest-Scoring Assets
 
 These assets scored 4 on all seven criteria:
 
-- Skills: `analytics-engineering`, `api-contract-review`, `codex-subagent-designer`, `competitive-research`, `dependency-risk-triage`, `product-discovery`, `threat-modeling`.
-- Agents: `analytics-engineer`, `api-contract-architect`, `data-scientist`, `knowledge-base-author`, `market-researcher`, `ml-engineer`, `mlops-engineer`, `product-discovery-strategist`, `security-threat-modeler`, `support-automation-engineer`.
+- Skills: `analytics-engineering`, `api-contract-review`, `codex-subagent-designer`, `competitive-research`, `dependency-risk-triage`, `geolocation-chronolocation-analysis`, `misinformation-risk-analysis`, `osint-research-planning`, `product-discovery`, `public-records-research`, `public-social-network-analysis`, `threat-modeling`.
+- Agents: `analytics-engineer`, `api-contract-architect`, `data-scientist`, `geolocation-chronolocation-analyst`, `knowledge-base-author`, `market-researcher`, `misinformation-risk-analyst`, `ml-engineer`, `mlops-engineer`, `osint-research-lead`, `product-discovery-strategist`, `public-records-researcher`, `security-threat-modeler`, `social-network-analyst`, `support-automation-engineer`.
 
 ## Family Results
 
@@ -94,7 +94,7 @@ These assets scored 4 on all seven criteria:
 | `legal-policy-procurement-finance-grants` | 15 | 25 | 40 | 0 | 40 |
 | `meta-catalog` | 1 | 0 | 1 | 0 | 1 |
 | `product-ux-design-support-docs` | 2 | 8 | 10 | 0 | 10 |
-| `research-news-publishing-editorial` | 11 | 26 | 32 | 5 | 37 |
+| `research-news-publishing-editorial` | 16 | 26 | 42 | 0 | 42 |
 | `software-engineering-core` | 20 | 32 | 52 | 0 | 52 |
 
 ## Skill Scores
@@ -122,6 +122,7 @@ These assets scored 4 on all seven criteria:
 | `fact-checking-source-review` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `fiction-development-workflows` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `finance-operations-review` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
+| `geolocation-chronolocation-analysis` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `grant-budget-justification` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `grant-proposal-compliance` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `implementation-planning` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -134,8 +135,10 @@ These assets scored 4 on all seven criteria:
 | `localization-readiness` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `ml-engineering` | `data-analytics-ml` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `mlops-readiness` | `data-analytics-ml` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
+| `misinformation-risk-analysis` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `nonfiction-manuscript-development` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `observability-runbooks` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
+| `osint-research-planning` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `performance-profiling` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `permissions-rights-review` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `policy-analysis-workflows` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -144,6 +147,8 @@ These assets scored 4 on all seven criteria:
 | `product-discovery` | `product-ux-design-support-docs` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `prompt-injection-defense` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `public-comment-drafting` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
+| `public-records-research` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
+| `public-social-network-analysis` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `publishing-production-workflows` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `records-retention-operations` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `release-readiness` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -193,7 +198,7 @@ These assets scored 4 on all seven criteria:
 | `fiction-development-editor` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `financial-model-reviewer` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `frontend-experience-engineer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
-| `geolocation-chronolocation-analyst` | `research-news-publishing-editorial` | `4/2/4/4/4/4/4` | 26 | Useful but Thin | Reference a relevant $skill with a fallback, or state explicitly that no repo-local Skill fits and identify these instructions as the fallback workflow. |
+| `geolocation-chronolocation-analyst` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `grant-opportunity-scout` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `grant-reporting-specialist` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `impact-assessment-writer` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -209,13 +214,13 @@ These assets scored 4 on all seven criteria:
 | `literature-reviewer` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `localization-engineer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `market-researcher` | `product-ux-design-support-docs` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
-| `misinformation-risk-analyst` | `research-news-publishing-editorial` | `4/2/4/4/4/4/4` | 26 | Useful but Thin | Reference a relevant $skill with a fallback, or state explicitly that no repo-local Skill fits and identify these instructions as the fallback workflow. |
+| `misinformation-risk-analyst` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `ml-engineer` | `data-analytics-ml` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `mlops-engineer` | `data-analytics-ml` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `news-fact-checker` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `nonfiction-manuscript-editor` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `observability-incident-engineer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
-| `osint-research-lead` | `research-news-publishing-editorial` | `4/2/4/4/4/4/4` | 26 | Useful but Thin | Reference a relevant $skill with a fallback, or state explicitly that no repo-local Skill fits and identify these instructions as the fallback workflow. |
+| `osint-research-lead` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `peer-review-prep-editor` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `performance-investigator` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `performance-optimizer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -228,7 +233,7 @@ These assets scored 4 on all seven criteria:
 | `prompt-evaluation-engineer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `proposal-compliance-reviewer` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `public-comment-drafter` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
-| `public-records-researcher` | `research-news-publishing-editorial` | `4/2/4/4/4/4/4` | 26 | Useful but Thin | Reference a relevant $skill with a fallback, or state explicitly that no repo-local Skill fits and identify these instructions as the fallback workflow. |
+| `public-records-researcher` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `rapid-prototype-scout` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `records-retention-advisor` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `refactor-surgeon` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -238,7 +243,7 @@ These assets scored 4 on all seven criteria:
 | `rfp-response-analyst` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `security-fix-engineer` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `security-threat-modeler` | `software-engineering-core` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
-| `social-network-analyst` | `research-news-publishing-editorial` | `4/2/4/4/4/4/4` | 26 | Useful but Thin | Reference a relevant $skill with a fallback, or state explicitly that no repo-local Skill fits and identify these instructions as the fallback workflow. |
+| `social-network-analyst` | `research-news-publishing-editorial` | `4/4/4/4/4/4/4` | 28 | Ready | None. |
 | `software-engineering-lead` | `software-engineering-core` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `source-verification-analyst` | `research-news-publishing-editorial` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
 | `sow-reviewer` | `legal-policy-procurement-finance-grants` | `3/3/3/3/3/3/3` | 21 | Ready | None. |
@@ -258,19 +263,20 @@ These assets scored 4 on all seven criteria:
 
 ## Validation Evidence
 
-- PyYAML and exact sidecar checks -> 53/53 descriptions are quoted strings 25-64 characters; all 26 approved replacements match exactly.
-- `.validate-venv/bin/python` with the bundled skill validator -> 53/53 packages returned `Skill is valid!`.
+- PyYAML and exact sidecar checks -> 58/58 descriptions are quoted strings 25-64 characters; all 26 prior replacements and the five new interfaces match exactly.
+- `.validate-venv/bin/python` with the bundled skill validator -> 58/58 packages returned `Skill is valid!`.
 - `python3.11 scripts/catalog_quality/validate_catalog.py` -> passed: `catalog validation passed`.
-- CSV integrity check -> 149 unique assets, exact catalog coverage, score arithmetic, gate-consistent ratings, and `144 Ready / 5 Useful but Thin`.
+- CSV integrity check -> 154 unique assets, exact catalog coverage, score arithmetic, gate-consistent ratings, and `154 Ready`.
 - `python3.11 scripts/catalog_quality/score_audit.py` -> passed against the unchanged legacy May matrix only.
-- Report UTF-8, final-newline, whitespace, coverage, and final-diff checks are recorded after the final pass.
+- Five independent synthetic forward tests passed exact-section, evidence-separation, provenance, uncertainty, alternative-explanation, privacy, hard-stop, and non-fabrication checks. Feedback-driven clarifications were followed by five clean reruns.
+- Report UTF-8, final-newline, whitespace, coverage, and final-diff checks passed.
 
 Current product assumptions were checked against the official [Codex models](https://learn.chatgpt.com/docs/models), [custom subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents), and [skill authoring](https://learn.chatgpt.com/docs/build-skills) documentation.
 
 ## Assumptions And Remaining Uncertainty
 
-- Only the 26 approved `short_description` values changed. The 27 valid values, all display names, all default prompts, SKILL.md bodies, references, agents, and validators remain untouched.
+- The five new packages each contain only `SKILL.md`, `agents/openai.yaml`, and one supporting reference. Each matching agent received one skill invocation with a tailored fallback; its model, reasoning effort, sandbox mode, description, safety rules, handoffs, and output contract remain unchanged.
 - The short-description field contract is 25-64 characters. This review verifies conformance but does not claim that a runtime rejects longer values.
 - The extra top-level `examples` mapping in `SKILLS/codex-subagent-designer/agents/openai.yaml` remains untested and was not changed because unknown-key behavior was not demonstrated.
-- The pre-existing edit to `REFERENCES/software-development-crew.md` was preserved.
-- Static review does not prove task performance. The next sharp edge is to add the length guard to the catalog validator and resolve the five remaining agent-integration findings.
+- The synthetic forward tests used invented entities and supplied facts only. They exercised package behavior without private data, network access, or live investigation, so they do not establish performance on live-source cases.
+- The documented sidecar-length validator gap remains. No catalog asset remains below Ready.

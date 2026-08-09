@@ -9,12 +9,12 @@ This repository is a catalog, not an application. It provides copyable OpenAI/Co
 ## Current Inventory
 
 - 96 OpenAI agent templates in `AGENTS/openai/`.
-- 53 skill packages in `SKILLS/`.
-- 53 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
-- 52 skill reference files under `SKILLS/*/references/`.
-- 149 audited catalog assets tracked in `docs/reviews/2026-05-24-full-catalog-uplift-matrix.csv`.
+- 58 skill packages in `SKILLS/`.
+- 58 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
+- 57 skill reference files under `SKILLS/*/references/`.
+- 154 audited catalog assets tracked in `docs/reviews/2026-08-08-catalog-quality-review.csv`.
 
-The latest full-catalog audit is in `docs/reviews/2026-05-24-skills-agents-quality-audit.md`.
+The latest full-catalog audit is in `docs/reviews/2026-08-08-catalog-quality-review.md`.
 
 ## Repository Layout
 
@@ -54,7 +54,7 @@ git diff --check
 
 `validate_catalog.py` checks TOML parseability, required agent fields, the catalog's allowed model set, skill frontmatter, `$skill` references, registry coverage, skill sidecars, and `.DS_Store` files.
 
-`score_audit.py` checks that the full-catalog audit matrix contains 149 rows and that every asset is rated `Ready` with complete score and evidence fields.
+`score_audit.py` checks that the unchanged legacy May audit matrix contains 149 rows and that every historical asset is rated `Ready` with complete score and evidence fields. The current August audit is validated separately during catalog review.
 
 `scripts/catalog_quality/inventory.py` regenerates the review matrix and writes to `docs/reviews/2026-05-24-full-catalog-uplift-matrix.csv`; use it intentionally, not as a read-only check.
 

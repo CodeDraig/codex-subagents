@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public Social Network Analysis"
+  short_description: "Analyze public social networks without deanonymization"
+  default_prompt: "Use $public-social-network-analysis to assess public coordination signals, alternative explanations, and privacy limits."

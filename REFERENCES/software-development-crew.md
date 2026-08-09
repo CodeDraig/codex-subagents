@@ -204,6 +204,11 @@ Every Skill referenced by the agent examples has a repository-local skill folder
 - `$ml-engineering`: `SKILLS/ml-engineering/`
 - `$mlops-readiness`: `SKILLS/mlops-readiness/`
 - `$engineering-execution`: `SKILLS/engineering-execution/`
+- `$osint-research-planning`: `SKILLS/osint-research-planning/`
+- `$geolocation-chronolocation-analysis`: `SKILLS/geolocation-chronolocation-analysis/`
+- `$public-records-research`: `SKILLS/public-records-research/`
+- `$public-social-network-analysis`: `SKILLS/public-social-network-analysis/`
+- `$misinformation-risk-analysis`: `SKILLS/misinformation-risk-analysis/`
 - `$legal-research-workflows`: `SKILLS/legal-research-workflows/`
 - `$contract-review-operations`: `SKILLS/contract-review-operations/`
 - `$records-retention-operations`: `SKILLS/records-retention-operations/`

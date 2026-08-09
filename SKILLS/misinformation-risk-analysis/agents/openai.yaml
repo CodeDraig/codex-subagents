@@ -1,0 +1,4 @@
+interface:
+  display_name: "Misinformation Risk Analysis"
+  short_description: "Assess misinformation evidence, spread, and correction risk"
+  default_prompt: "Use $misinformation-risk-analysis to assess this claim, its spread, and a non-amplifying correction strategy."
