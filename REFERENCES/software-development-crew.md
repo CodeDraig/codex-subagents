@@ -130,12 +130,19 @@ Use this crew before falling back to generic `worker` or `explorer`.
 
 ## Model Coverage
 
-| Model | Reasoning Efforts Used | Representative Agents |
-| --- | --- | --- |
-| `gpt-5.6-sol` | `high`, `xhigh` | `systems-architect`, `security-threat-modeler`, `product-discovery-strategist`, `osint-research-lead`, `legal-research-analyst`, `privacy-compliance-reviewer`, `financial-model-reviewer`, `vendor-risk-reviewer`, `fact-checking-editor` |
-| `gpt-5.6-terra` | `low`, `medium`, `high` | `triage-router`, `backend-domain-engineer`, `frontend-experience-engineer`, `security-fix-engineer`, `data-platform-engineer`, `software-engineering-lead`, `documentation-engineer`, `peer-review-prep-editor` |
-| `gpt-5.6-luna` | `medium` | `audience-seo-editor`, `book-metadata-packaging-editor`, `copy-desk-editor`, `grant-reporting-specialist`, `indexing-coordinator`, `knowledge-base-author`, `line-copy-editor`, `localization-engineer`, `production-editor`, `support-triage-specialist` |
-| `gpt-5.3-codex-spark` | `low`, `medium`, `high` | `rapid-prototype-scout`, `developer-experience-engineer`, `test-automation-engineer` |
+The 96 templates in `AGENTS/openai/` are distributed as follows:
+
+| Model | Reasoning Effort | Agent Templates | Representative Agents |
+| --- | --- | ---: | --- |
+| `gpt-5.6-sol` | `high` | 12 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
+| `gpt-5.6-sol` | `xhigh` | 4 | `systems-architect`, `security-threat-modeler`, `product-discovery-strategist`, `osint-research-lead` |
+| `gpt-5.6-terra` | `low` | 2 | `dependency-maintenance-engineer`, `triage-router` |
+| `gpt-5.6-terra` | `medium` | 24 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
+| `gpt-5.6-terra` | `high` | 41 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
+| `gpt-5.6-luna` | `medium` | 10 | `audience-seo-editor`, `copy-desk-editor`, `support-triage-specialist` |
+| `gpt-5.3-codex-spark` | `low` | 1 | `rapid-prototype-scout` |
+| `gpt-5.3-codex-spark` | `medium` | 1 | `developer-experience-engineer` |
+| `gpt-5.3-codex-spark` | `high` | 1 | `test-automation-engineer` |
 
 ## Intentional Overlap
 

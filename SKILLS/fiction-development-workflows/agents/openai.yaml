@@ -1,4 +1,4 @@
 interface:
   display_name: "Fiction Development Workflows"
-  short_description: "Diagnoses fiction structure, character arcs, genre promise, continuity, and revision plans."
+  short_description: "Develop fiction structure, arcs, continuity, and revisions"
   default_prompt: "Use $fiction-development-workflows to develop or revise fiction premise, structure, character arcs, continuity, and scene-level priorities."
