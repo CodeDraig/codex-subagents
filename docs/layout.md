@@ -6,7 +6,6 @@ This repository uses three top-level canonical asset directories:
 - `SKILLS/<skill-name>/` contains runnable skill packages with `SKILL.md`, `agents/openai.yaml`, and optional `references/` material.
 - `REFERENCES/` contains shared catalog and configuration references used by skills and agent templates.
 
-The previous mixed layout has been removed. Do not add new skills or agent templates outside the canonical top-level asset directories.
 
 ## Adding Skills
 
@@ -56,4 +55,3 @@ When installing `SKILLS/codex-subagent-designer/` outside this repository, prese
 - Copy shared `REFERENCES/*.md` into the installed skill's `references/` directory.
 - Copy reusable OpenAI agent examples from `AGENTS/openai/` into `agents/examples/openai/`.
 - Rewrite installed links only for the installed copy; keep repository links pointing at canonical top-level `REFERENCES/` and `AGENTS/openai/`.
-- Verify no `.DS_Store` or local-only artifacts are copied.
