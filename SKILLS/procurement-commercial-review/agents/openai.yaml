@@ -1,0 +1,4 @@
+interface:
+  display_name: "Procurement and Commercial Review"
+  short_description: "Route vendor, RFP, and statement-of-work review"
+  default_prompt: "Use $procurement-commercial-review to choose the vendor, RFP, or statement-of-work workflow needed for this request."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security and Privacy Review"
+  short_description: "Route threat, prompt-injection, and privacy review"
+  default_prompt: "Use $security-privacy-review to choose only the security or privacy review modes needed for this request."

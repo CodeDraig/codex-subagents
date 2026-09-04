@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI and ML Lifecycle"
+  short_description: "Route AI evaluation, ML engineering, and MLOps"
+  default_prompt: "Use $ai-ml-lifecycle to choose the AI-evaluation, ML-engineering, or MLOps workflow needed for this request."

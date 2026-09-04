@@ -1,6 +1,6 @@
 # Skill and Agent Quality Rubric
 
-Use this rubric when creating, reviewing, or improving assets under `SKILLS/` and `AGENTS/openai/`. The goal is to prevent shallow assets that only restate generic good behavior. A useful asset should change how an agent works: it should supply domain checks, decision rules, artifacts, boundaries, and verification expectations that would be hard to recreate from a one-sentence prompt.
+Use this rubric when creating, reviewing, or improving assets under `SKILLS/` and `AGENTS/openai/`. The goal is to prevent shallow assets that only restate generic good behavior while keeping discovery context small. A useful asset should change how an agent works through domain checks, decision rules, artifacts, boundaries, and verification expectations disclosed only when relevant.
 
 ## Rating Scale
 
@@ -21,6 +21,7 @@ An asset is not ready for catalog inclusion unless:
 - It scores at least 3 on every required criterion for its asset type.
 - It has no 0 or 1 scores.
 - It passes the anti-platitude test.
+- A multi-mode Skill passes the progressive-discovery gate, and its weakest mode meets every required score.
 - Its claims about tools, paths, files, or external authority are true for the repo or clearly labeled as optional.
 - It has an explicit owner-facing output contract.
 
@@ -80,19 +81,20 @@ Why it passes: it defines dispatch signals, evidence rules, boundaries, and down
 
 Apply these criteria to every `SKILLS/<skill-name>/` package.
 
-### 1. Trigger Fit
+### 1. Trigger And Routing Fit
 
-The frontmatter description must tell the parent agent when to use the skill and when not to use it.
+The frontmatter description must tell the parent agent when to use the Skill and when not to use it. A multi-mode gateway must then select the smallest relevant workflow set.
 
 Score 4 requires:
 
 - Specific task signals, not only a broad topic label.
 - Named artifact types, workflows, or decisions the skill supports.
 - Clear exclusion or escalation boundaries for adjacent domains.
+- A mode table whose links and selection cues do not require loading sibling workflows.
 
 ### 2. Workflow Specificity
 
-The workflow must provide a repeatable sequence that changes agent behavior.
+The selected workflow must provide a repeatable sequence that changes agent behavior. For a gateway, detailed execution belongs in `references/workflows/`; `SKILL.md` retains only shared purpose, routing, and constraints.
 
 Score 4 requires:
 
@@ -127,7 +129,7 @@ Score 4 requires at least one meaningful supporting asset:
 - A decision matrix.
 - A source-quality guide.
 
-The supporting asset must be directly referenced from `SKILL.md` and specific enough to use during execution.
+Every workflow must be directly linked from `SKILL.md`. Artifacts may be linked from their workflow, but each link must state when the artifact is worth loading. An unconditional instruction to load all sibling workflows or artifacts fails this criterion.
 
 ### 5. Tooling And Validation Guidance
 
@@ -141,7 +143,7 @@ Score 4 requires:
 
 ### 6. Output Contract
 
-The skill must define a stable output shape.
+Every mode must define a stable output shape. Different modes may retain different contracts; do not force a gateway-wide shape when it weakens a mode.
 
 Score 4 requires:
 
@@ -152,7 +154,7 @@ Score 4 requires:
 
 ### 7. Boundaries And Stop Conditions
 
-The skill must prevent unsafe or misleading behavior.
+The Skill must prevent unsafe or misleading behavior. Put a boundary in the router only when it applies to every mode; retain mode-specific limits in the selected workflow.
 
 Score 4 requires:
 
@@ -160,6 +162,19 @@ Score 4 requires:
 - Clear handoffs to humans or other agents.
 - Explicit handling of high-stakes domains such as legal, financial, security, privacy, medical, policy, or public-source investigation when relevant.
 - Prohibition of fabricated evidence, hidden uncertainty, or unauthorized action.
+
+## Progressive Discovery Gate
+
+A multi-mode Skill is ready only when all of the following are true:
+
+- Frontmatter is a concise, discriminating selection index rather than an exhaustive capability list.
+- `SKILL.md` contains only shared scope, a mode table, the smallest-matching-set rule, and constraints common to every mode.
+- Each mode has one directly linked workflow under `references/workflows/`; activating the gateway does not require reading sibling workflows.
+- Detailed intake, procedure, decisions, validation, output contract, and mode-specific stop conditions live in the selected workflow.
+- Checklists, templates, matrices, and record shapes live under `references/artifacts/` and are loaded only when a workflow names the need.
+- Shared artifacts stay inside one gateway and are shared only when multiple modes use the same fields and semantics.
+- Router, workflow, and artifact content are not duplicated. Cross-mode requests load one primary workflow plus only the additional modes explicitly required.
+- Every mode independently passes workflow, heuristics, validation, output, and boundary review; the lowest mode score is the gateway score.
 
 ## Agent Criteria
 
@@ -246,13 +261,14 @@ Score 4 requires:
 
 ## Minimum Review Procedure
 
-For every new or modified skill:
+For every new or modified Skill:
 
-1. Read `SKILLS/<skill-name>/SKILL.md`.
-2. Read every referenced file under `SKILLS/<skill-name>/references/`.
-3. Score each skill criterion.
-4. Fail the review if the skill has no meaningful supporting asset and the domain would benefit from one.
-5. Fail the review if the workflow could apply unchanged to most other skills.
+1. Read `SKILLS/<skill-name>/SKILL.md` and verify that each mode has a discriminating route.
+2. Review every workflow and the artifacts it links, one mode at a time; do not infer quality from a sample.
+3. Score each mode and use the lowest mode score for the gateway.
+4. Fail the review if routing eagerly loads siblings, a reference is orphaned, or the same instructions are duplicated across layers.
+5. Fail the review if a mode lacks a meaningful supporting asset when its domain benefits from one.
+6. Fail the review if the workflow could apply unchanged to most other Skills.
 
 For every new or modified agent:
 
@@ -280,7 +296,7 @@ Use these labels in reviews and planning docs:
 Rating: Ready | Useful but Thin | Scaffold Only | Unsafe or Misleading
 
 Scores:
-- Trigger or role fit: N/4
+- Trigger, routing, or role fit: N/4
 - Workflow or instruction depth: N/4
 - Domain heuristics: N/4
 - Supporting assets or skill use: N/4

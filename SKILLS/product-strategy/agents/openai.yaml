@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Strategy"
+  short_description: "Route discovery and competitive research"
+  default_prompt: "Use $product-strategy to choose the product-discovery or competitive-research workflow needed for this request."

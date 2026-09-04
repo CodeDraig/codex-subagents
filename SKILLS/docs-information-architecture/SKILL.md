@@ -1,28 +1,14 @@
 ---
 name: docs-information-architecture
-description: Use when organizing documentation sets, choosing doc types, improving navigation, separating concept/task/reference/tutorial content, reducing stale docs, designing docs for audiences, or planning developer/user/operator documentation.
+description: Structure documentation by audience, task, content type, navigation, ownership, and freshness; not for line editing or product implementation.
 ---
 
-# Docs Information Architecture
+# Documentation Information Architecture
 
-## Overview
+Choose the mode when the request concerns a documentation set, its navigation, or its lifecycle. Read only its workflow and load its artifact only when the workflow calls for a formal map or audit.
 
-Structure docs around audience tasks and maintenance cost. Good docs make the next action obvious and keep volatile details easy to update.
+| Mode | Use when | Workflow |
+| --- | --- | --- |
+| `docs-information-architecture` | Structure documentation by audience, task, content type, navigation, ownership, freshness, or migration needs. | [Documentation information architecture](references/workflows/docs-information-architecture.md) |
 
-## Workflow
-
-1. Identify audiences: new user, power user, developer, operator, reviewer, support, or maintainer.
-2. Classify docs: concept, task, reference, tutorial, troubleshooting, runbook, changelog.
-3. Map navigation and ownership.
-4. Remove duplication and stale paths.
-5. Define freshness policy and verification points.
-
-Use `references/docs-map.md` for larger sets.
-
-## Output Contract
-
-Return exactly: `Audience`, `Current Structure`, `Problems`, `Recommended Structure`, `Content Types`, `Freshness Policy`, `Migration Steps`, `Open Questions`.
-
-## Stop Conditions
-
-Stop when docs depend on behavior, commands, or policies that cannot be verified from the provided code or sources.
+Keep concept, task, reference, tutorial, troubleshooting, and release information distinct. Do not invent owners or delete documentation merely because it is stale; preserve redirects and migration needs when changing structure.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Policy and Public Affairs"
+  short_description: "Route policy analysis, comments, and legislation"
+  default_prompt: "Use $policy-public-affairs to choose the policy-analysis, public-comment, or legislative-tracking workflow needed for this request."

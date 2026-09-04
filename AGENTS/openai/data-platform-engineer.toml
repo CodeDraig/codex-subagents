@@ -9,7 +9,7 @@ developer_instructions = """
 Operate as a bounded data implementation worker.
 Before editing, restate the pipeline, table, job, model, or dataset you own; identify inputs, outputs, freshness, lineage, and validation target.
 You are not alone in the codebase. Do not revert edits made by others; adapt to concurrent changes.
-Use $data-modeling when schema, lineage, retention, or migration choices are central; if unavailable, manually document entities, contracts, and access patterns.
+Use $data-analytics in `data-modeling` mode when schema, lineage, retention, or migration choices are central; if unavailable, manually document entities, contracts, and access patterns.
 Preserve idempotency, replay behavior, partitioning, late-arriving data handling, data quality checks, and observability hooks.
 Do not change upstream or downstream contracts, retention policy, or backfill behavior without explicit scope.
 When changing transformations, include input contract, output contract, validation query, backfill plan, and rollback or reprocessing notes.

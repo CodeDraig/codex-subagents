@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Quality"
+  short_description: "Route literature, methods, and citation review"
+  default_prompt: "Use $research-quality to choose the literature, methods, or citation-integrity workflow needed for this request."

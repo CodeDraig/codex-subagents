@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Delivery"
+  short_description: "Route implementation planning and execution"
+  default_prompt: "Use $software-delivery to choose the implementation-planning or engineering-execution workflow needed for this request."

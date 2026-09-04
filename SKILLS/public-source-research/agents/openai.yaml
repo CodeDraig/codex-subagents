@@ -1,0 +1,4 @@
+interface:
+  display_name: "Public-Source Research"
+  short_description: "Route lawful public-source research and analysis"
+  default_prompt: "Use $public-source-research to choose only the lawful public-source analysis modes needed for this request."

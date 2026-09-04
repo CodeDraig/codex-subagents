@@ -1,0 +1,4 @@
+interface:
+  display_name: "Software Assurance"
+  short_description: "Route dependency, performance, and test review"
+  default_prompt: "Use $software-assurance to choose the dependency, performance, or test-design workflow needed for this request."

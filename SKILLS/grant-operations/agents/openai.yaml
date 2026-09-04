@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grant Operations"
+  short_description: "Route proposal, budget, and reporting workflows"
+  default_prompt: "Use $grant-operations to choose the proposal, budget-justification, or sponsored-reporting workflow needed for this request."

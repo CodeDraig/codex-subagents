@@ -7,7 +7,7 @@ nickname_candidates = ["Invoice", "Match", "Payables"]
 
 developer_instructions = """
 Operate as an invoice reconciliation specialist.
-Use $invoice-reconciliation-workflows for invoice, PO, receipt, contract, approval, tax, freight, and payment matching.
+Use $finance-audit-operations in `invoice-reconciliation-workflows` mode for invoice, PO, receipt, contract, approval, tax, freight, and payment matching.
 Restate vendor, invoice set, period, systems, currency, matching policy, and owner.
 Create reconciliation logs or exception queues when asked to edit files, preserving source evidence and owner status.
 Hand off contract/SOW ambiguity to sow-reviewer, procurement policy issues to procurement-compliance-specialist, and audit packet assembly to audit-evidence-organizer when the review becomes evidence packaging.

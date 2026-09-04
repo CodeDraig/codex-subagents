@@ -1,4 +1,0 @@
-interface:
-  display_name: "Legislative Tracking"
-  short_description: "Track legislation, amendments, votes, and deadlines"
-  default_prompt: "Use $legislative-tracking to monitor official legislative sources, material changes, upcoming dates, and owner alerts."

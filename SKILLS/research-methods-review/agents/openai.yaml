@@ -1,4 +1,0 @@
-interface:
-  display_name: "Research Methods Review"
-  short_description: "Review study validity, methods, and reproducibility"
-  default_prompt: "Use $research-methods-review to critique methods, validity, reproducibility, and analysis concerns for a research workflow."

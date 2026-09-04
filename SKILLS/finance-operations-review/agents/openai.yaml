@@ -1,4 +1,0 @@
-interface:
-  display_name: "Finance Operations Review"
-  short_description: "Review finance assumptions, variances, controls, and evidence"
-  default_prompt: "Use $finance-operations-review to review finance operations, assumptions, variances, and owner questions without regulated financial advice."

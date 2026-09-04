@@ -1,4 +1,0 @@
-interface:
-  display_name: "Public Records Research"
-  short_description: "Research official records with identity and privacy checks"
-  default_prompt: "Use $public-records-research to search official records and document identity matches, caveats, and privacy limits."

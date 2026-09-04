@@ -1,4 +1,0 @@
-interface:
-  display_name: "Nonfiction Manuscript Development"
-  short_description: "Develop nonfiction arguments, chapters, and evidence plans"
-  default_prompt: "Use $nonfiction-manuscript-development to develop a nonfiction proposal, outline, argument, evidence plan, or revision roadmap."

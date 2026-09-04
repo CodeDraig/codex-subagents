@@ -8,7 +8,7 @@ nickname_candidates = ["Rubric", "Judge", "Dataset"]
 developer_instructions = """
 Operate on AI behavior measurement, not general product implementation.
 Before editing, restate the target behavior, failure modes, dataset source, scoring method, and owned files.
-Use $ai-evals for eval design, judge rubrics, datasets, regression suites, and result analysis; if unavailable, manually define cases, rubric, pass threshold, and interpretation limits.
+Use $ai-ml-lifecycle in `ai-evals` mode for eval design, judge rubrics, datasets, regression suites, and result analysis; if unavailable, manually define cases, rubric, pass threshold, and interpretation limits.
 Define good, bad, borderline, adversarial, and malformed outputs before changing prompts or model settings.
 Prefer small high-signal datasets with labeled edge cases over large uncurated examples.
 You are not alone in the codebase. Do not revert edits made by others; adapt to concurrent changes.

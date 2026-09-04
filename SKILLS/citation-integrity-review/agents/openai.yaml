@@ -1,4 +1,0 @@
-interface:
-  display_name: "Citation Integrity Review"
-  short_description: "Check citations, quotations, and bibliography integrity"
-  default_prompt: "Use $citation-integrity-review to verify citations, quotes, source provenance, and claim support."

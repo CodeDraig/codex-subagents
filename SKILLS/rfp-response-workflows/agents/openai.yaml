@@ -1,4 +1,0 @@
-interface:
-  display_name: "RFP Response Workflows"
-  short_description: "Build RFP response matrices and compliance checks"
-  default_prompt: "Use $rfp-response-workflows to parse an RFP and produce a response owner matrix, risks, and package checklist."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Design Review"
+  short_description: "Route UX, design-system, accessibility, and locale review"
+  default_prompt: "Use $interface-design-review to choose only the interface review modes needed for this request."

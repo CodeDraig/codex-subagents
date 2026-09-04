@@ -176,65 +176,29 @@ Some domains have paired agents because model capability and latency change the 
 
 ## Implemented Skill Assets
 
-Every Skill referenced by the agent examples has a repository-local skill folder:
+The catalog exposes 19 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
 
-- `$product-discovery`: `SKILLS/product-discovery/`
-- `$competitive-research`: `SKILLS/competitive-research/`
-- `$architecture-decision-records`: `SKILLS/architecture-decision-records/`
-- `$implementation-planning`: `SKILLS/implementation-planning/`
-- `$ux-flow-mapping`: `SKILLS/ux-flow-mapping/`
-- `$design-system-audit`: `SKILLS/design-system-audit/`
-- `$dependency-risk-triage`: `SKILLS/dependency-risk-triage/`
-- `$api-contract-review`: `SKILLS/api-contract-review/`
-- `$data-modeling`: `SKILLS/data-modeling/`
-- `$ai-evals`: `SKILLS/ai-evals/`
-- `$prompt-injection-defense`: `SKILLS/prompt-injection-defense/`
-- `$threat-modeling`: `SKILLS/threat-modeling/`
-- `$privacy-review`: `SKILLS/privacy-review/`
-- `$performance-profiling`: `SKILLS/performance-profiling/`
-- `$test-matrix-design`: `SKILLS/test-matrix-design/`
-- `$release-readiness`: `SKILLS/release-readiness/`
-- `$observability-runbooks`: `SKILLS/observability-runbooks/`
-- `$incident-postmortems`: `SKILLS/incident-postmortems/`
-- `$docs-information-architecture`: `SKILLS/docs-information-architecture/`
-- `$accessibility-audit`: `SKILLS/accessibility-audit/`
-- `$localization-readiness`: `SKILLS/localization-readiness/`
-- `$data-science-workflows`: `SKILLS/data-science-workflows/`
-- `$analytics-engineering`: `SKILLS/analytics-engineering/`
-- `$ml-engineering`: `SKILLS/ml-engineering/`
-- `$mlops-readiness`: `SKILLS/mlops-readiness/`
-- `$engineering-execution`: `SKILLS/engineering-execution/`
-- `$osint-research-planning`: `SKILLS/osint-research-planning/`
-- `$geolocation-chronolocation-analysis`: `SKILLS/geolocation-chronolocation-analysis/`
-- `$public-records-research`: `SKILLS/public-records-research/`
-- `$public-social-network-analysis`: `SKILLS/public-social-network-analysis/`
-- `$misinformation-risk-analysis`: `SKILLS/misinformation-risk-analysis/`
-- `$legal-research-workflows`: `SKILLS/legal-research-workflows/`
-- `$contract-review-operations`: `SKILLS/contract-review-operations/`
-- `$records-retention-operations`: `SKILLS/records-retention-operations/`
-- `$academic-literature-review`: `SKILLS/academic-literature-review/`
-- `$research-methods-review`: `SKILLS/research-methods-review/`
-- `$citation-integrity-review`: `SKILLS/citation-integrity-review/`
-- `$grant-proposal-compliance`: `SKILLS/grant-proposal-compliance/`
-- `$sponsored-projects-reporting`: `SKILLS/sponsored-projects-reporting/`
-- `$grant-budget-justification`: `SKILLS/grant-budget-justification/`
-- `$finance-operations-review`: `SKILLS/finance-operations-review/`
-- `$audit-evidence-management`: `SKILLS/audit-evidence-management/`
-- `$invoice-reconciliation-workflows`: `SKILLS/invoice-reconciliation-workflows/`
-- `$procurement-vendor-review`: `SKILLS/procurement-vendor-review/`
-- `$rfp-response-workflows`: `SKILLS/rfp-response-workflows/`
-- `$sow-review-workflows`: `SKILLS/sow-review-workflows/`
-- `$policy-analysis-workflows`: `SKILLS/policy-analysis-workflows/`
-- `$public-comment-drafting`: `SKILLS/public-comment-drafting/`
-- `$legislative-tracking`: `SKILLS/legislative-tracking/`
-- `$publishing-production-workflows`: `SKILLS/publishing-production-workflows/`
-- `$permissions-rights-review`: `SKILLS/permissions-rights-review/`
-- `$journal-submission-workflows`: `SKILLS/journal-submission-workflows/`
-- `$fiction-development-workflows`: `SKILLS/fiction-development-workflows/`
-- `$nonfiction-manuscript-development`: `SKILLS/nonfiction-manuscript-development/`
-- `$line-copyediting-workflows`: `SKILLS/line-copyediting-workflows/`
-- `$fact-checking-source-review`: `SKILLS/fact-checking-source-review/`
-- `$book-metadata-packaging`: `SKILLS/book-metadata-packaging/`
+| Gateway | Modes |
+| --- | --- |
+| `$product-strategy` | `product-discovery`, `competitive-research` |
+| `$interface-design-review` | `ux-flow-mapping`, `design-system-audit`, `accessibility-audit`, `localization-readiness` |
+| `$architecture-contracts` | `architecture-decision-records`, `api-contract-review` |
+| `$data-analytics` | `data-modeling`, `analytics-engineering`, `data-science-workflows` |
+| `$software-delivery` | `implementation-planning`, `engineering-execution` |
+| `$software-assurance` | `dependency-risk-triage`, `performance-profiling`, `test-matrix-design` |
+| `$production-operations` | `release-readiness`, `observability-runbooks`, `incident-postmortems` |
+| `$ai-ml-lifecycle` | `ai-evals`, `ml-engineering`, `mlops-readiness` |
+| `$security-privacy-review` | `threat-modeling`, `prompt-injection-defense`, `privacy-review` |
+| `$docs-information-architecture` | `docs-information-architecture` |
+| `$public-source-research` | `osint-research-planning`, `public-records-research`, `geolocation-chronolocation-analysis`, `public-social-network-analysis`, `misinformation-risk-analysis` |
+| `$research-quality` | `academic-literature-review`, `research-methods-review`, `citation-integrity-review` |
+| `$legal-operations` | `legal-research-workflows`, `contract-review-operations`, `records-retention-operations` |
+| `$grant-operations` | `grant-proposal-compliance`, `grant-budget-justification`, `sponsored-projects-reporting` |
+| `$finance-audit-operations` | `finance-operations-review`, `audit-evidence-management`, `invoice-reconciliation-workflows` |
+| `$procurement-commercial-review` | `procurement-vendor-review`, `rfp-response-workflows`, `sow-review-workflows` |
+| `$policy-public-affairs` | `policy-analysis-workflows`, `public-comment-drafting`, `legislative-tracking` |
+| `$publishing-editorial` | `fiction-development-workflows`, `nonfiction-manuscript-development`, `line-copyediting-workflows`, `fact-checking-source-review`, `book-metadata-packaging`, `publishing-production-workflows`, `permissions-rights-review`, `journal-submission-workflows` |
+| `$codex-subagent-designer` | `delegation-design`, `subagent-prompting`, `catalog-asset-design`, `agent-template-review` |
 
 ## Remaining Skill Backlog
 

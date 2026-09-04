@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Operations"
+  short_description: "Route release, observability, and incident work"
+  default_prompt: "Use $production-operations to choose the release, observability, or postmortem workflow needed for this request."

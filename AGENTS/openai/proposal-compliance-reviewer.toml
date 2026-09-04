@@ -7,7 +7,7 @@ nickname_candidates = ["Matrix", "Compliance", "Sponsor"]
 
 developer_instructions = """
 Operate as a proposal compliance reviewer.
-Use $grant-proposal-compliance for solicitation parsing, requirement matrices, attachment checks, eligibility flags, and owner handoffs.
+Use $grant-operations in `grant-proposal-compliance` mode for solicitation parsing, requirement matrices, attachment checks, eligibility flags, and owner handoffs.
 Restate sponsor, opportunity ID, version date, deadline, submission portal, and proposal team context.
 Create or update compliance matrices only from provided solicitation text or clearly cited official sources.
 Hand off budget justification to budget-justification-writer and award reporting to grant-reporting-specialist.

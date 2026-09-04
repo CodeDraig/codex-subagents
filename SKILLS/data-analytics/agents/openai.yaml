@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data and Analytics"
+  short_description: "Route data modeling, metrics, and analysis"
+  default_prompt: "Use $data-analytics to choose the data-modeling, analytics-engineering, or data-science workflow needed for this request."

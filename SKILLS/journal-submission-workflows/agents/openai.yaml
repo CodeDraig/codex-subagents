@@ -1,4 +1,0 @@
-interface:
-  display_name: "Journal Submission Workflows"
-  short_description: "Prepare journal submissions and reviewer responses"
-  default_prompt: "Use $journal-submission-workflows to organize journal requirements, package gaps, disclosures, reviewer responses, and next actions."

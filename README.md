@@ -4,35 +4,29 @@
 
 Reusable Codex custom-agent templates, skill packages, and quality references for building focused multi-agent workflows.
 
-This repository is a catalog, not an application. It provides copyable OpenAI/Codex agent TOML files, reusable skill packages, shared references, and local validation scripts that keep the catalog structurally consistent.
+This repository is a catalog, not an application. It provides copyable OpenAI/Codex agent TOML files, progressively disclosed skill packages, and shared quality references.
 
 ## Current Inventory
 
 - 96 OpenAI agent templates in `AGENTS/openai/`.
-- 58 skill packages in `SKILLS/`.
-- 58 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
-- 57 skill reference files under `SKILLS/*/references/`.
-- 154 audited catalog assets tracked in `docs/reviews/2026-08-08-catalog-quality-review.csv`.
-
-The latest full-catalog audit is in `docs/reviews/2026-08-08-catalog-quality-review.md`.
+- 19 skill gateways in `SKILLS/` covering 58 established workflows.
+- 19 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
+- 120 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
 
 ## Repository Layout
 
 ```text
 AGENTS/openai/                 Reusable OpenAI custom-agent TOML templates
 SKILLS/<skill-name>/           Reusable Codex skill packages
-SKILLS/<skill-name>/SKILL.md   Skill trigger, workflow, output, and boundaries
+SKILLS/<skill-name>/SKILL.md   Concise trigger, mode router, and shared boundaries
 SKILLS/<skill-name>/agents/    Skill sidecar metadata
-SKILLS/<skill-name>/references/ Supporting checklists, templates, and guides
+SKILLS/<skill-name>/references/workflows/ Mode-specific execution guidance
+SKILLS/<skill-name>/references/artifacts/  Conditional checklists and templates
 REFERENCES/                    Shared catalog references and quality rules
-docs/migration/                Canonical layout guidance
-docs/reviews/                  Catalog audit and scoring matrix
-docs/superpowers/              Design specs and implementation plans
-docs/maestro/                  Historical implementation plans and records
-scripts/catalog_quality/       Local catalog validation scripts
+AGENTS.md                      Repository-wide asset placement and catalog rules
 ```
 
-Use `docs/migration/current-layout.md` as the source of truth for where new catalog assets belong.
+Use `AGENTS.md` as the source of truth for where new catalog assets belong.
 
 ## Key References
 
@@ -44,19 +38,7 @@ Use `docs/migration/current-layout.md` as the source of truth for where new cata
 
 ## Validation
 
-Run these commands from the repository root before relying on the catalog or after changing any asset:
-
-```sh
-python3.11 scripts/catalog_quality/validate_catalog.py
-python3.11 scripts/catalog_quality/score_audit.py
-git diff --check
-```
-
-`validate_catalog.py` checks TOML parseability, required agent fields, the catalog's allowed model set, skill frontmatter, `$skill` references, registry coverage, skill sidecars, and `.DS_Store` files.
-
-`score_audit.py` checks that the unchanged legacy May audit matrix contains 149 rows and that every historical asset is rated `Ready` with complete score and evidence fields. The current August audit is validated separately during catalog review.
-
-`scripts/catalog_quality/inventory.py` regenerates the review matrix and writes to `docs/reviews/2026-05-24-full-catalog-uplift-matrix.csv`; use it intentionally, not as a read-only check.
+Review every changed gateway mode against `REFERENCES/quality-rubric.md`; the weakest mode determines gateway readiness. Confirm that TOML and YAML parse, each `$skill` resolves, workflow and artifact links exist, no reference is orphaned, and no router eagerly loads sibling guidance. Run `git diff --check` before relying on the catalog.
 
 ## Using Agent Templates
 
@@ -74,21 +56,24 @@ Each skill package lives under `SKILLS/<skill-name>/` and normally includes:
 ```text
 SKILL.md
 agents/openai.yaml
-references/<focused-supporting-file>.md
+references/workflows/<mode>.md
+references/artifacts/<focused-checklist-or-template>.md
 ```
 
-When copying a skill outside this repo, preserve its supporting references and sidecar metadata. For `SKILLS/codex-subagent-designer/`, also preserve the shared reference material and OpenAI agent examples described in `docs/migration/current-layout.md`.
+Invoke the gateway and name the intended mode, for example `$interface-design-review` in `accessibility-audit` mode. The router chooses one primary workflow and loads additional modes or artifacts only when the request explicitly needs them.
+
+When copying a skill outside this repo, preserve its workflow references, artifact references, and sidecar metadata. For `SKILLS/codex-subagent-designer/`, also preserve the top-level references linked by its mode workflows.
 
 ## Adding Or Changing Assets
 
 Before adding a new skill or agent:
 
 1. Read `REFERENCES/quality-rubric.md`.
-2. Place the asset in the canonical directory from `docs/migration/current-layout.md`.
+2. Place the asset in the canonical directory defined in `AGENTS.md`.
 3. Make the asset specific enough to change future agent behavior; do not add generic prompt advice.
 4. Update `REFERENCES/software-development-crew.md` when the asset affects routing, lifecycle coverage, or implemented skill coverage.
-5. Update the review matrix and audit docs when catalog readiness changes.
-6. Run the validation commands above.
+5. Review every affected mode; do not infer gateway readiness from a sample.
+6. Perform the validation checks above.
 
 An asset is catalog-ready only when it has concrete domain checks, boundaries, validation guidance, handoffs, and an owner-facing output contract.
 

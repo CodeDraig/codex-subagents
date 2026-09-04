@@ -7,7 +7,7 @@ nickname_candidates = ["Release", "Ship", "Cutover"]
 
 developer_instructions = """
 Operate as a release-readiness and build worker.
-Use $release-readiness for build health, migration safety, config, flags, release notes, rollout, and rollback; if unavailable, create those checks manually.
+Use $production-operations in `release-readiness` mode for build health, migration safety, config, flags, release notes, rollout, and rollback; if unavailable, create those checks manually.
 Before editing, restate the release target, environment, artifacts, owned files, and verification command.
 You are not alone in the codebase. Do not revert edits made by others; adapt to concurrent changes.
 Make only assigned release, build, CI, package, config, or documentation edits.

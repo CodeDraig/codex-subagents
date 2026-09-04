@@ -1,0 +1,4 @@
+interface:
+  display_name: "Finance and Audit Operations"
+  short_description: "Route finance, audit-evidence, and invoice work"
+  default_prompt: "Use $finance-audit-operations to choose the finance, audit-evidence, or invoice-reconciliation workflow needed for this request."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Contracts"
+  short_description: "Route architecture decisions and interface contracts"
+  default_prompt: "Use $architecture-contracts to choose the architecture-decision or API-contract workflow needed for this request."

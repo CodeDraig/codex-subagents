@@ -1,4 +1,0 @@
-interface:
-  display_name: "Invoice Reconciliation Workflows"
-  short_description: "Reconcile invoices, orders, receipts, and approvals"
-  default_prompt: "Use $invoice-reconciliation-workflows to reconcile invoices, approvals, payments, exceptions, and owner next actions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legal Operations"
+  short_description: "Route legal research, contracts, and retention"
+  default_prompt: "Use $legal-operations to choose the legal-research, contract-review, or records-retention workflow needed for this request."
