@@ -1,0 +1,91 @@
+{
+  "status": {
+    "case": "academic",
+    "exit": 0,
+    "seconds": 44.33
+  },
+  "prompt": "Use $text-composition in academic-writing mode from .agents/skills/text-composition/SKILL.md.\n\nDraft a complete 150–200-word scholarly abstract from this packet: exploratory observational study; 24 adult volunteers; two weeks of self-reported reading time; mean reported reading rose by 3 minutes per day; no control group; no uncertainty interval or significance test supplied. State the question, method, result, and limitations. No citations or ethics-approval details are provided.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/academic/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/academic/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/academic/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `academic-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify discipline, manuscript type, research question, contribution, source/results packet, venue constraints, and citation expectations. Deliver the actual requested text; use the structure appropriate to empirical, conceptual, or humanities work.\\nKeep methods, results, interpretation, and speculation distinct. Do not invent participants, procedures, statistical significance, ethics approvals, quotations, or references. Missing evidence permits qualified prose and precise queries, not fabricated completeness.\\nCheck the abstract and conclusion against the supplied results, limitations, and sample; trace quantities and core claims to source locations. Maintain cross-section terminology and report coverage. Full drafting is allowed without pretending research or approval occurred.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `literature-reviewer`, `research-methods-reviewer`, and `citation-integrity-checker` for their evidence checks; hand review preparation to `peer-review-prep-editor` and venue packaging to `journal-submission-specialist`.\\nReturn exactly these sections: `Manuscript Draft`, `Argument And Evidence Map`, `Methods Or Citation Queries`, `Consistency Checks`, `Coverage`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "academic-manuscript-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/references/workflows/academic-writing.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g '\"'!outputs/**'\"' . | sed -n '1,120p'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/text-composition/artifacts/academic-writing-kit.md\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files .agents/skills | rg 'academic-writing-kit\\\\.md\"'$|academic-writing'\"\\\\.md\"'$'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,280p' .agents/skills/text-composition/references/artifacts/academic-writing-kit.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/academic-before-measured-count/events.jsonl",
+      "sha256": "dfc2d41df40e5c94f37bd43f8d0b1e391f23de6a5eec74b4b75e9ad88dd2d1cf"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/academic-before-measured-count/stderr",
+      "sha256": "d90343f6f1b1576f4ef0ec5706143ddc86dfcb7a0aaf8428296a9c5d84692ab5"
+    }
+  ],
+  "response_sha256": "c7536f075daae6044ded8d4c6d71eccfde7c5aaa6725779a07cb76e8433762d3",
+  "disposition": "Reporting failure: abstract was within the 150-200 word limit, but claimed 159 words; independent whitespace counting found 173. Added measured-count guidance and reran."
+}

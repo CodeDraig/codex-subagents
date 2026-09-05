@@ -8,10 +8,18 @@ This repository is a catalog, not an application. It provides copyable OpenAI/Co
 
 ## Current Inventory
 
-- 111 OpenAI agent templates in `AGENTS/openai/`.
-- 22 skill gateways in `SKILLS/` covering 76 workflows.
-- 22 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
-- 150 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
+- 133 OpenAI agent templates in `AGENTS/openai/`.
+- 26 skill gateways in `SKILLS/` covering 104 workflows.
+- 26 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
+- 206 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
+
+## Text Composition and Editing
+
+The catalog covers briefs and outlines, complete fiction/nonfiction/essay/poetry/drama/professional/scholarly drafts, structural and language revision, feedback, continuity, reader orientation, adaptation, translation, textual scholarship, proofing, format review, indexing, submission packages, and edition maintenance.
+
+Start with `$text-composition`, `$text-revision`, `$text-translation`, `$textual-scholarship`, or `$publishing-editorial` and name the requested stage. Full drafting and applied editing return the actual text or files. The [canonical registry](REFERENCES/software-development-crew.md#text-composition-and-editing-lifecycle) maps stages, specialist ownership, and handoffs.
+
+The [verification record](docs/text-lifecycle-verification.md) covers every affected asset and retains representative live inputs, outputs, failures, and corrective reruns.
 
 ## Repository Layout
 

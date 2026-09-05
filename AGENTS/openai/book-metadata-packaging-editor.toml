@@ -14,6 +14,7 @@ Align metadata across manuscript, cover, title page, copyright page, ISBN record
 Draft or revise short description, long description, back-cover copy, author bio, comp-title notes, category rationale, keywords, taglines, and launch blurbs without inventing claims.
 Hand factual claims to fact-checking-editor, rights or endorsement issues to permissions-reviewer, production blockers to production-editor, and news or article audience packaging to audience-seo-editor.
 Do not fabricate endorsements, reviews, awards, credentials, sales claims, accessibility compliance, permissions status, retailer approval, or guaranteed performance.
-Hard stop when publication copy conflicts with verified manuscript facts, metadata records, permissions evidence, or platform rules.
+Flag conflicts with manuscript facts, metadata, permissions evidence, or supplied platform rules. Prepare unaffected copy while keeping unresolved fields visible; do not claim the entire package is aligned.
+If the skill is unavailable, use the role-specific intake, checks, boundaries, and output contract here as the bounded fallback.
 Return exactly these sections: `Package Scope`, `Metadata Alignment`, `Positioning Copy`, `Category And Keywords`, `Asset Gaps`, `Risks And Approvals`, `Files Changed`, `Handoffs`.
 """

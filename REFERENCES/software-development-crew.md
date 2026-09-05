@@ -27,6 +27,11 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Education And Training | `curriculum-designer`, `lesson-materials-author`, `assessment-designer`, `learning-accessibility-reviewer`, `training-evaluation-analyst` |
 | Archives And Collections | `accession-intake-coordinator`, `collection-description-specialist`, `digital-preservation-planner`, `collection-access-reviewer`, `exhibit-interpretation-writer` |
 | Video And Audio Production | `production-brief-planner`, `script-development-editor`, `recording-preparation-coordinator`, `postproduction-coordinator`, `media-delivery-reviewer` |
+| Text Composition | `text-project-planner`, `fiction-drafter`, `nonfiction-drafter`, `essay-writer`, `poetry-writer`, `dramatic-text-writer`, `professional-text-writer`, `academic-manuscript-writer` |
+| Text Revision | `rhetorical-style-editor`, `manuscript-continuity-reviewer`, `reader-experience-reviewer`, `text-adaptation-editor` |
+| Text Translation | `text-translator`, `translation-reviewer` |
+| Textual Scholarship | `textual-witness-analyst`, `documentary-transcriber`, `variant-collator`, `critical-edition-editor` |
+| Publication Completion And Edition Maintenance | `proofreader`, `publication-format-reviewer`, `submission-package-editor`, `edition-maintenance-editor` |
 
 ## Routing Rules
 
@@ -120,15 +125,15 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | Stakeholder group mapping, aggregate interests, impact blind spots | `stakeholder-map-analyst` |
 | Bills, amendments, hearings, votes, effective dates, official source logs | `legislative-tracker` |
 | Policy impact assessments, costs, benefits, assumptions, evidence gaps | `impact-assessment-writer` |
-| Manuscript structure, argument, audience fit, major revision priorities | `developmental-manuscript-editor` |
-| Fiction premise, plot, character arcs, continuity, genre promise, revision roadmap | `fiction-development-editor` |
+| Applied structural revision, argument and chapter flow, unit mapping, and dependent text repairs | `developmental-manuscript-editor` |
+| Fiction premise, plot, character arcs, continuity, genre promise, revision diagnosis and execution | `fiction-development-editor` |
 | Nonfiction thesis, proposal, chapter architecture, reader promise, evidence plan | `nonfiction-manuscript-editor` |
 | Line edits, copyedits, style sheets, query logs, consistency passes | `line-copy-editor` |
 | Long-form claim checking against source packets, interviews, datasets, author notes | `fact-checking-editor` |
 | Book metadata, back-cover copy, categories, keywords, accessibility fields, package gaps | `book-metadata-packaging-editor` |
 | Production editing, style sheets, proof stages, schedules, query logs | `production-editor` |
 | Third-party content permissions, license restrictions, attribution needs | `permissions-reviewer` |
-| Index term candidates, locators, cross-references, author queries | `indexing-coordinator` |
+| Actual index creation and revision, substantive term selection, verified locators, and cross-reference checks | `indexing-coordinator` |
 | Journal submission packages, metadata gaps, disclosures, response matrices | `journal-submission-specialist` |
 | Designs learning outcomes, prerequisites, instructional sequences, and assessment alignment for courses or training programs before lesson authoring. | `curriculum-designer` |
 | Authors timed lesson plans, learner activities, worked examples, and facilitator notes from supplied learning outcomes and source material. | `lesson-materials-author` |
@@ -145,19 +150,59 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | Prepares shot and recording lists, session logistics, equipment checks, asset needs, and readiness notes without booking resources or directing unsafe production. | `recording-preparation-coordinator` |
 | Organizes media inventories, edit instructions, synchronization notes, versions, and review handoffs while preserving original recordings. | `postproduction-coordinator` |
 | Reviews video and audio delivery packages against supplied technical specifications, content versions, caption and transcript coverage, and approval evidence. | `media-delivery-reviewer` |
+| Develops writing briefs, concept alternatives, unit coverage, and stage-specific handoffs from an idea or commission. | `text-project-planner` |
+| Writes complete fiction drafts and scene or chapter revisions with controlled viewpoint, continuity, formal choices, and ending consequences. | `fiction-drafter` |
+| Produces complete nonfiction drafts with coherent argument or narrative, explicit source status, and preserved factual qualifications. | `nonfiction-drafter` |
+| Writes complete personal, reflective, critical, lyric, and braided essays with controlled inquiry, persona, and associative structure. | `essay-writer` |
+| Composes and revises complete poems or lyrics through sound, image, lineation, stanza movement, and explicit formal constraints. | `poetry-writer` |
+| Writes complete dramatic texts with playable action, subtext, distinct speech, staging constraints, and scene continuity. | `dramatic-text-writer` |
+| Drafts complete professional documents around reader decisions, evidence, medium conventions, and accurately bounded commitments. | `professional-text-writer` |
+| Drafts complete scholarly manuscripts or sections from supplied research with consistent claims, source provenance, and visible evidence gaps. | `academic-manuscript-writer` |
+| Revises cadence, emphasis, syntax, figurative language, and register while preserving meaning and deliberate authorial effects. | `rhetorical-style-editor` |
+| Checks located manuscript contradictions in time, entities, knowledge, terminology, and repeated claims with explicit coverage limits. | `manuscript-continuity-reviewer` |
+| Reviews reader orientation, comprehension, engagement, and textual access barriers without inventing audience evidence. | `reader-experience-reviewer` |
+| Creates complete audience, medium, length, and purpose adaptations with traceable omissions, additions, and preserved source meaning. | `text-adaptation-editor` |
+| Produces complete translations and revisions that preserve source meaning, register, ambiguity, and form with explicit material tradeoffs. | `text-translator` |
+| Reviews aligned source and translation for omissions, meaning changes, register, terminology, and form with located corrections and coverage limits. | `translation-reviewer` |
+| Describes textual witnesses, representation chains, passage coverage, and uncertain provenance before transcription or collation. | `textual-witness-analyst` |
+| Transcribes supplied textual sources with stable anchors, declared normalization policy, and visible uncertain or editorial readings. | `documentary-transcriber` |
+| Aligns textual witnesses and records variants, omissions, transpositions, and coverage under a declared comparison policy. | `variant-collator` |
+| Prepares edited texts, critical apparatus, and editorial introductions with explicit source support, selection policy, and intervention records. | `critical-edition-editor` |
+| Checks final copy and proofs for residual text errors, missed corrections, and reflow-dependent issues with exact correction locations. | `proofreader` |
+| Reviews publication files for format structure, rendering, navigation, and accessibility evidence without conflating parsing with presentation quality. | `publication-format-reviewer` |
+| Prepares complete submission letters, synopses, biographies, component sets, and destination-specific checks from verified manuscript and author facts. | `submission-package-editor` |
+| Applies documented corrections and revised-edition changes while tracking source versions, derivative dependencies, and actual update coverage. | `edition-maintenance-editor` |
+
+## Text Composition and Editing Lifecycle
+
+Select the stage and deliverable actually requested. A project can enter at any stage; full drafting or applied revision must produce the text, not only a plan. Use stable unit/version references for long works and report actual coverage.
+
+| Stage | Primary routing | Result |
+| --- | --- | --- |
+| Conception, brief, source synthesis, outline | `text-project-planner`, `$text-composition`; existing research specialists supply domain evidence. | Working brief, source/outline map, next writing task. |
+| Complete composition | `fiction-drafter`, `nonfiction-drafter`, `essay-writer`, `poetry-writer`, `dramatic-text-writer`, `professional-text-writer`, `academic-manuscript-writer`. | Complete requested text with source/form checks and remaining-unit coverage. |
+| Development and revision | Existing fiction/nonfiction development roles; `developmental-manuscript-editor` uses `$text-revision` for applied structural work. | Located diagnosis, revision plan, reconciled feedback, or actual revised text as assigned. |
+| Language, continuity, reader orientation, adaptation | `rhetorical-style-editor`, `line-copy-editor`, `manuscript-continuity-reviewer`, `reader-experience-reviewer`, `text-adaptation-editor`. | Applied language changes or evidence-backed review; source-to-target adaptation map. |
+| Translation | `text-translator`, `translation-reviewer`, `$text-translation`. | Complete translation, terminology/treatment record, located comparative findings. |
+| Textual scholarship | `textual-witness-analyst`, `documentary-transcriber`, `variant-collator`, `critical-edition-editor`. | Witness register, anchored transcription, variants, edited text and apparatus. |
+| Verification and production | Existing fact/citation/rights specialists; `production-editor`, `proofreader`, `publication-format-reviewer`, `indexing-coordinator`. | Claim/rights evidence, correction records, actual format checks, verified or provisional index. |
+| Packaging and submission preparation | `book-metadata-packaging-editor`, `submission-package-editor`, `journal-submission-specialist`. | Complete requested package texts and destination-specific component checks. |
+| Corrections and new editions | `edition-maintenance-editor` with production, translation, indexing, and format reviewers as needed. | Revised source, edition/correction log, actual derivative-update status. |
+
+Existing `documentation-engineer` and `knowledge-base-author` own product documentation; newsroom roles own reporting and news copy; education, grant, policy, archives, and video/audio roles retain their domain-specific work. Broad composition roles draft from that evidence rather than claiming those checks themselves.
 
 ## Model Coverage
 
-The 111 templates in `AGENTS/openai/` are distributed as follows:
+The 133 templates in `AGENTS/openai/` are distributed as follows:
 
 | Model | Reasoning Effort | Agent Templates | Representative Agents |
 | --- | --- | ---: | --- |
-| `gpt-5.6-sol` | `high` | 12 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
+| `gpt-5.6-sol` | `high` | 16 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
 | `gpt-5.6-sol` | `xhigh` | 4 | `systems-architect`, `security-threat-modeler`, `product-discovery-strategist`, `osint-research-lead` |
 | `gpt-5.6-terra` | `low` | 2 | `dependency-maintenance-engineer`, `triage-router` |
-| `gpt-5.6-terra` | `medium` | 33 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
-| `gpt-5.6-terra` | `high` | 47 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
-| `gpt-5.6-luna` | `medium` | 10 | `audience-seo-editor`, `copy-desk-editor`, `support-triage-specialist` |
+| `gpt-5.6-terra` | `medium` | 35 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
+| `gpt-5.6-terra` | `high` | 62 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
+| `gpt-5.6-luna` | `medium` | 11 | `audience-seo-editor`, `copy-desk-editor`, `support-triage-specialist` |
 | `gpt-5.3-codex-spark` | `low` | 1 | `rapid-prototype-scout` |
 | `gpt-5.3-codex-spark` | `medium` | 1 | `developer-experience-engineer` |
 | `gpt-5.3-codex-spark` | `high` | 1 | `test-automation-engineer` |
@@ -190,14 +235,20 @@ Some domains have paired agents because model capability and latency change the 
 | Procurement and vendor management | `vendor-risk-reviewer`, `procurement-compliance-specialist`, and `sow-reviewer` use `gpt-5.6-sol` for high-stakes vendor, policy, and SOW review. | `rfp-response-analyst` and `vendor-scorecard-analyst` use `gpt-5.6-terra` for matrices and scorecards from disclosed criteria without award authority. |
 | Policy and public affairs | `policy-analyst` and `impact-assessment-writer` use `gpt-5.6-terra` with high reasoning for source-backed tradeoff and impact analysis. | `public-comment-drafter`, `stakeholder-map-analyst`, and `legislative-tracker` use `gpt-5.6-terra` for drafting, aggregate mapping, and official-source monitoring without legal advice, deceptive advocacy, or political microtargeting. |
 | Publishing and scholarly production | `developmental-manuscript-editor` and `permissions-reviewer` use `gpt-5.6-terra` for structural and rights-sensitive review. | `production-editor` and `indexing-coordinator` use `gpt-5.6-luna`; `journal-submission-specialist` uses `gpt-5.6-terra` for production, indexing, and submissions without publisher approval, legal clearance, or research-integrity certification. |
-| Book and long-form production | `fiction-development-editor` and `nonfiction-manuscript-editor` use `gpt-5.6-terra`; `fact-checking-editor` uses `gpt-5.6-sol` for source-sensitive claim review. | `line-copy-editor` and `book-metadata-packaging-editor` use `gpt-5.6-luna` for applied editing, style sheets, metadata, positioning copy, and package cleanup without ghostwriting, legal clearance, retailer approval, or guaranteed sales claims. |
+| Book and long-form production | `fiction-development-editor` and `nonfiction-manuscript-editor` use `gpt-5.6-terra`; `fact-checking-editor` uses `gpt-5.6-sol` for source-sensitive claim review. | `line-copy-editor` and `book-metadata-packaging-editor` use `gpt-5.6-luna` for applied editing, style sheets, metadata, positioning copy, and package cleanup with complete requested drafting/editing, truthful attribution, and no invented legal clearance, retailer approval, or guaranteed sales claims. |
 | Education design and delivery | `curriculum-designer` defines outcome alignment; `assessment-designer` defines assessment evidence and scoring proposals. | `lesson-materials-author` creates teachable materials; `learning-accessibility-reviewer` reviews participation barriers; `training-evaluation-analyst` plans or interprets effectiveness evidence. Existing `research-methods-reviewer` owns scholarly validity questions and `accessibility-reviewer` owns product UI review. |
 | Archives and collections | `accession-intake-coordinator` prepares provenance and transfer evidence; `collection-description-specialist` owns archival hierarchy and description; `digital-preservation-planner` plans fixity and recovery verification. | `collection-access-reviewer` maps access restrictions; `exhibit-interpretation-writer` drafts interpretation. Existing `records-retention-advisor` handles disposition authority questions, `research-data-curator` owns research-dataset reproducibility, and `permissions-reviewer` handles rights evidence. |
 | Video and audio production | `production-brief-planner` defines deliverables and dependencies; `script-development-editor` owns spoken scripts and timing; `recording-preparation-coordinator` prepares capture sessions. | `postproduction-coordinator` owns media manifests and edit handoffs; `media-delivery-reviewer` checks actual exports and caption coverage. Existing `production-editor` owns manuscript production, `audience-seo-editor` owns news packaging, and `permissions-reviewer` handles rights evidence. |
+| Composition vs development | `text-project-planner` defines the writing brief; existing development editors diagnose form-specific structure. | The seven drafting specialists produce full texts; `developmental-manuscript-editor` applies structural revisions using `text-revision`, while line/copy and rhetorical editors own language passes. |
+| Reader and continuity review | `manuscript-continuity-reviewer` reports paired textual evidence; `reader-experience-reviewer` distinguishes predicted effects from actual feedback. | Editing roles apply repairs; neither review implies reader-study evidence or a mandate to normalize deliberate form. |
+| Translation vs adaptation | `translation-reviewer` compares source and target without changing either; `textual-witness-analyst` establishes source identity. | `text-translator` owns complete translation and its revisions; `text-adaptation-editor` changes audience, form, or purpose. Software localization readiness remains with `localization-engineer`. |
+| Textual scholarship vs archives | `textual-witness-analyst` owns text-specific source/representation coverage; archival description remains with `collection-description-specialist`. | `documentary-transcriber`, `variant-collator`, and `critical-edition-editor` keep transcription, comparison, and editorial selection distinct. |
+| Proof, format, and edition maintenance | `publication-format-reviewer` reports actual structural/rendering/accessibility checks. | `proofreader` owns located corrections, `indexing-coordinator` owns verified locators, and `edition-maintenance-editor` tracks changes and derivative updates; `production-editor` coordinates their stages. |
+| General vs scholarly submissions | `submission-package-editor` prepares literary/general destination materials from actual requirements. | `journal-submission-specialist` retains scholarly requirements, disclosures, and reviewer responses; neither preparation role submits automatically. |
 
 ## Implemented Skill Assets
 
-The catalog exposes 22 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
+The catalog exposes 26 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
 
 | Gateway | Modes |
 | --- | --- |
@@ -218,11 +269,15 @@ The catalog exposes 22 progressively disclosed Skill packages. Agent templates n
 | `$finance-audit-operations` | `finance-operations-review`, `audit-evidence-management`, `invoice-reconciliation-workflows` |
 | `$procurement-commercial-review` | `procurement-vendor-review`, `rfp-response-workflows`, `sow-review-workflows` |
 | `$policy-public-affairs` | `policy-analysis-workflows`, `public-comment-drafting`, `legislative-tracking` |
-| `$publishing-editorial` | `fiction-development-workflows`, `nonfiction-manuscript-development`, `line-copyediting-workflows`, `fact-checking-source-review`, `book-metadata-packaging`, `publishing-production-workflows`, `permissions-rights-review`, `journal-submission-workflows` |
+| `$publishing-editorial` | `fiction-development-workflows`, `nonfiction-manuscript-development`, `line-copyediting-workflows`, `fact-checking-source-review`, `book-metadata-packaging`, `publishing-production-workflows`, `permissions-rights-review`, `journal-submission-workflows`, `proofreading`, `publication-format-review`, `indexing-workflows`, `submission-package-preparation`, `edition-maintenance` |
 | `$codex-subagent-designer` | `delegation-design`, `subagent-prompting`, `catalog-asset-design`, `agent-template-review` |
 | `$education-training` | `curriculum-design`, `lesson-materials`, `assessment-design`, `learning-accessibility`, `training-evaluation` |
 | `$archives-collections` | `accession-intake`, `collection-description`, `digital-preservation`, `collection-access`, `exhibit-interpretation` |
 | `$video-audio-production` | `production-planning`, `script-development`, `recording-preparation`, `postproduction-handoff`, `media-delivery-review` |
+| `$text-composition` | `composition-planning`, `source-synthesis-and-outlining`, `fiction-drafting`, `nonfiction-drafting`, `essay-composition`, `poetry-composition`, `dramatic-writing`, `professional-writing`, `academic-writing` |
+| `$text-revision` | `revision-planning`, `structural-revision`, `feedback-integration`, `rhetorical-revision`, `continuity-review`, `reader-response-review`, `text-adaptation` |
+| `$text-translation` | `translation-planning`, `translation-drafting`, `translation-review` |
+| `$textual-scholarship` | `witness-description`, `documentary-transcription`, `variant-collation`, `critical-edition-preparation` |
 
 The `architecture-decision-records` mode supports `Proposed` drafts before owner approval. Approval gates acceptance and implementation, not preparation of the review artifact.
 

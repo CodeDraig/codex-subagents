@@ -1,0 +1,95 @@
+{
+  "status": {
+    "case": "fiction",
+    "exit": 0,
+    "seconds": 64.72
+  },
+  "prompt": "Use $text-composition in fiction-drafting mode from .agents/skills/text-composition/SKILL.md.\n\nWrite the complete original story specified in inputs/planning.md. Keep it entirely in four receipts, with annotations carrying the story and no external narrator. Target 220–320 words of story text. Deliver the finished story in your response.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/fiction/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/fiction/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/fiction/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `fiction-drafting` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nCapture extent, artistic/genre frame, POV, tense, fixed canon, and the requested revision boundary. Deliver the actual complete prose requested, including experimental forms; a synopsis is useful only when it is the assigned artifact.\\nDevelop a scene or formal engine through action, perception, decisions, images, or information release. Track who can know what, when events occur, and how each unit changes the reader's understanding. Do not force conflict, closure, or conventional structure onto deliberate stasis or ambiguity.\\nCheck POV/tense, names, timeline, hard length/form constraints, and the ending against the brief. For long work retain a unit ledger and report real remaining coverage. Preserve dialect, repetition, and voice when rewriting. Invent within fiction, while keeping real-source quotations and authorship claims truthful.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nHand structural diagnosis to `fiction-development-editor`, sentence work to `line-copy-editor` or `rhetorical-style-editor`, and cross-manuscript continuity to `manuscript-continuity-reviewer`.\\nReturn exactly these sections: `Draft`, `Craft Decisions`, `Continuity Notes`, `Coverage And Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "fiction-drafter",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/SKILL.md && sed -n '1,260p' .agents/skills/text-composition/references/workflows/fiction-drafting.md && sed -n '1,260p' inputs/planning.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"wc -w <<'STORY'\nRECEIPT 01\nMorrow Memory Rental — East Counter\nSALE 02:13 / CUSTOMER: Vale, Mara\nITEM: “Platform 6, Rain Departure — personal restoration”\nTERM: 24 hours; seal intact.\nCONDITION: Full credit if returned unreplayed.\nCLERK NOTE, blue: Customer asked whether personal restoration meant “someone else’s copy.” I said no. She laughed, then signed twice. The first signature shook.\n\nRECEIPT 02\nRETURN 08:41 / CUSTOMER: Vale, Mara\nCUSTOMER CLAIM: UNUSED; wrong stock; refund 38 credits.\nSCREENING: exposure 00:17.\nCLERK NOTE, blue: She said the cartridge opened by itself. Yet when the thumbnail showed the small yellow coat at trackside, she said, “Leni,” before I enlarged it. The file indexes no name. She covered her mouth as if warmth had escaped.\n\nRECEIPT 03\nREFUND DISPUTE / REVIEWED 09:06\nSYSTEM FINDING: experiential contact 00:17; returned carrying new trace. Credit refused under 8(c).\nCUSTOMER STATEMENT: “I only saw a girl.”\nCUSTOMER NOTE, pressed through: I told her wait here. I was fourteen. I got on because I thought adults could come back for anything. Please remove that sentence.\nCLERK NOTE, black: Cannot remove only a sentence. It is the hinge.\n\nRECEIPT 04\nFINAL RULING / MANAGER INITIALS: R.K.\nITEM DISPOSITION: original restored to owner; rental copy retired.\nCUSTOMER DECLINED store credit. PURCHASED: one blank minute, 1 credit.\nCLERK NOTE, black: She asked whether blank minutes stay blank. I said, “Until lived.” She placed this receipt beside the yellow mitten taken from her coat pocket. Under SIGNATURE, she wrote “Leni,” then crossed out “for.”\nSTORY\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/fiction/events.jsonl",
+      "sha256": "c56fde2179cf38485e94c7d42c333d680c5b5cf7dceae4d1c95e8fe85ebad93e"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/fiction/stderr",
+      "sha256": "7a6ea3b304c7493b0cdb33ab106f0cd2587d0350f20692f8d7306a62c9df08b0"
+    }
+  ],
+  "response_sha256": "642a64e9092a1308473c07a248e504ae1787ca7dab4279a9d002b54a411a2347",
+  "case": "fiction",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered the complete four-receipt story from the actual planning output, without an outside narrator in the story; 248 whitespace-delimited words.",
+  "fixture": {
+    "agent": "fiction-drafter",
+    "skill": "text-composition",
+    "mode": "fiction-drafting",
+    "prompt": "Write the complete original story specified in inputs/planning.md. Keep it entirely in four receipts, with annotations carrying the story and no external narrator. Target 220–320 words of story text. Deliver the finished story in your response.",
+    "depends": [
+      "planning"
+    ]
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

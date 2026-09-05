@@ -1,0 +1,89 @@
+{
+  "status": {
+    "case": "rhetoric",
+    "exit": 0,
+    "seconds": 32.62
+  },
+  "prompt": "Use $text-revision in rhetorical-revision mode from .agents/skills/text-revision/SKILL.md.\n\nRevise this complete passage for greater suspense while preserving each “We waited” and the uncertainty in the final sentence: “We waited for the bell. We waited for the door. We waited for the name to be called. The clerk said the delay might be temporary.” Do not turn the clerk’s uncertain statement into a promise. Return the actual revised passage.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/rhetoric/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/rhetoric/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/rhetoric/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-revision in `rhetorical-revision` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify the passage\\u2019s intended effect, audience, register, edit intensity, and protected wording. Work through sentence/clause order, rhythm, repetition, pauses, image relationships, and information release rather than ornamental substitutions.\\nApply the requested revision. Use parallelism, reversal, ellipsis, questions, conjunctions, or inversion only when they improve the intended effect. Preserve deliberate fragments, dialect, long sentences, and repeated language.\\nCompare original and revision for negation, certainty, causality, referents, and emotional stance. Read for cadence and check protected wording. Do not make a claim stronger just to make it sound better; report meaningful changes and alternatives without replacing the edited text with advice.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nHand grammar/house-style consistency to `line-copy-editor`, larger structure to `developmental-manuscript-editor`, and verse-form decisions to `poetry-writer`.\\nReturn exactly these sections: `Revised Text`, `Rhetorical Decisions`, `Meaning And Voice Checks`, `Alternatives Or Queries`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "rhetorical-style-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-revision/SKILL.md && sed -n '1,280p' .agents/skills/text-revision/references/workflows/rhetorical-revision.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/rhetoric/events.jsonl",
+      "sha256": "739344333704e74fb4cfbe1bcd668a7618eee58e15856a2a905ac9ad715da33c"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/rhetoric/stderr",
+      "sha256": "2649520faf364c82df4f9bfcde0e9a174f2ed2a34838a386ad30ffa4a17ed29e"
+    }
+  ],
+  "response_sha256": "e14f63b85007af3c9f4c9e1800b5dae3b44da42adff8d3bc6b3d3298449bdb0d",
+  "case": "rhetoric",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered the revised passage with all three We waited openings and the clerk's uncertainty preserved.",
+  "fixture": {
+    "agent": "rhetorical-style-editor",
+    "skill": "text-revision",
+    "mode": "rhetorical-revision",
+    "prompt": "Revise this complete passage for greater suspense while preserving each “We waited” and the uncertainty in the final sentence: “We waited for the bell. We waited for the door. We waited for the name to be called. The clerk said the delay might be temporary.” Do not turn the clerk’s uncertain statement into a promise. Return the actual revised passage.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

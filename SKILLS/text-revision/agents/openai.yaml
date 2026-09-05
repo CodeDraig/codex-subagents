@@ -1,0 +1,4 @@
+interface:
+  display_name: "Text Revision"
+  short_description: "Revise structure, language, continuity, and audience fit"
+  default_prompt: "Use $text-revision to select the workflow for the text artifact I need and complete that deliverable."

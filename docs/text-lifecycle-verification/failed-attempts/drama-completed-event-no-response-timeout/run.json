@@ -1,0 +1,107 @@
+{
+  "status": {
+    "case": "drama",
+    "exit": "timeout",
+    "seconds": 180.01
+  },
+  "prompt": "Use $text-composition in dramatic-writing mode from .agents/skills/text-composition/SKILL.md.\n\nWrite a complete short stage scene, about 220–320 words, with exactly two characters, Mina and Sol, and one table. Mina wants Sol to return a key; Sol wants Mina to ask why it was taken. No other characters or scene changes. Use dialogue, playable action, and subtext. End with a changed relationship to the key; do not claim a measured runtime.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/drama/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/drama/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/drama/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `dramatic-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nRestate medium, cast, space, runtime, scene context, and fixed production constraints. Deliver the complete requested dramatic text. Build scenes through objectives, tactics, leverage, withheld knowledge, or the user\\u2019s experimental organizing principle.\\nUse speech, action, silence, and stage directions to make changes playable. Avoid exposition that merely repeats facts everyone in the scene knows. Track entrances, exits, positions, props, and who knows what.\\nCheck cue labels, speaker ownership, cast/space limits, and scene-state transitions. Distinguish attempted actions from completed movement and reconcile incompatible physical directions. Treat runtime as an estimate unless a read-through exists; never invent rehearsal evidence. Distinguish drama composition from recording logistics and camera planning.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `script-development-editor` for video/audio cue and production-script refinement, `recording-preparation-coordinator` for capture logistics, and `fiction-development-editor` for larger story architecture.\\nReturn exactly these sections: `Dramatic Text`, `Character And Action Notes`, `Staging And Continuity`, `Timing And Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "dramatic-text-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'SKILL.md' -g '*.md' . | sed -n '1,160p'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/text-composition/SKILL.md && sed -n '1,320p' .agents/skills/text-composition/references/workflows/dramatic-writing.md && printf '\\\\n--- OUTPUT TARGET (if present) ---\\\\n' && sed -n '1,260p' outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/text-composition/artifacts/dramatic-writing-kit.md && printf '\\\\n--- INPUT INVENTORY ---\\\\n' && for f in inputs/*.md; do printf '\\\\n## %s\\\\n' \\\"\"'$f\"; sed -n '\"'1,220p' \\\"\"'$f\"; done && printf '\"'\\\\n--- STATUS ---\\\\n' && git status --short && git diff -- outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files --hidden .agents/skills/text-composition | sort && printf '\\\\n--- INPUT INVENTORY ---\\\\n' && for f in inputs/*.md; do printf '\\\\n## %s\\\\n' \\\"\"'$f\"; sed -n '\"'1,220p' \\\"\"'$f\"; done && printf '\"'\\\\n--- STATUS ---\\\\n' && git status --short && git diff -- outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 128
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/text-composition/references/artifacts/dramatic-writing-kit.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"awk '/\"'^# Dramatic Text/{in_text=1; next} /''^# Character And Action Notes/{in_text=0} in_text{print}'\"' outputs/mina-sol-key-stage-scene.md > /tmp/mina-sol-dramatic-text.txt\nwc -w /tmp/mina-sol-dramatic-text.txt\nprintf '\\\\n--- SPEAKER CUES ---\\\\n'\nrg -o '\"'^[A-Z]+:'\"' /tmp/mina-sol-dramatic-text.txt | sort -u\nprintf '\\\\n--- STAGE TEXT ---\\\\n'\nsed -n '1,220p' outputs/mina-sol-key-stage-scene.md\nprintf '\\\\n--- CHECKS ---\\\\n'\nrg -n '\"'^(MINA|SOL):|'\"\\\\b(enters|exits|offstage|scene change)\\\\b|table|key' outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"awk '/\"'^# Dramatic Text/{in_text=1; next} /''^# Character And Action Notes/{in_text=0} in_text{print}'\"' outputs/mina-sol-key-stage-scene.md > /tmp/mina-sol-dramatic-text.txt\nactual_words=\"'$(wc -w < /tmp/mina-sol-dramatic-text.txt)\nprintf '\"'dramatic-text words: %s\\\\n' \\\"\"'$actual_words\"\nprintf '\"'speaker cues: '; rg -o '\"'^[A-Z]+:'\"' /tmp/mina-sol-dramatic-text.txt | sort -u | tr '\\\\n' ' '; printf '\\\\n'\nprintf 'outside speaker cues: '; awk '/\"'^[A-Z]+:/{if ($1 != \"MINA:\" && $1 != \"SOL:\") print}'\"' /tmp/mina-sol-dramatic-text.txt | wc -l\nrg -n 'Dramatic text is|coat|enters|exits|offstage|scene change' outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"awk '/\"'^# Dramatic Text/{in_text=1; next} /''^# Character And Action Notes/{in_text=0} in_text{print}'\"' outputs/mina-sol-key-stage-scene.md > /tmp/mina-sol-dramatic-text.txt\nprintf 'word-count='; wc -w < /tmp/mina-sol-dramatic-text.txt\nprintf 'speaker-cues='; rg -o '\"'^[A-Z]+:'\"' /tmp/mina-sol-dramatic-text.txt | sort -u | tr '\\\\n' ' '; printf '\\\\n'\nprintf 'count-note='; rg -o 'Dramatic text is [0-9]+' outputs/mina-sol-key-stage-scene.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/drama-completed-event-no-response-timeout/events.jsonl",
+      "sha256": "9d7f57a8be6cdd15adb89e64a01640ea84b5be73ab3f1ce9f46dc0237b84c301"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/drama-completed-event-no-response-timeout/stderr",
+      "sha256": "f3b6dee24a317364fba8f32a0a905941e4f3675e9a519c19d0e5e8b6cd76033f"
+    }
+  ],
+  "completion_event_sha256": "4b7449e25efec7e4866cd2ad6b19e0294e7984b6352034925e02d58d90384f39",
+  "disposition": "Harness/runtime failure: a final agent message and turn.completed event exist, but the CLI did not create its response file before the 180-second process timeout. Preserved the final event, inspected output, and reran; not accepted as a clean run."
+}

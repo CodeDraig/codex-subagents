@@ -1,0 +1,511 @@
+{
+  "date": "2026-09-05",
+  "cli_version": "0.153.4",
+  "cases": [
+    {
+      "case": "planning",
+      "agent": "text-project-planner",
+      "skill": "text-composition",
+      "mode": "composition-planning",
+      "exit": 0,
+      "seconds": 64.22,
+      "acceptance": "pass",
+      "evidence": "cases/planning/run.json",
+      "response": "cases/planning/response.md",
+      "note": "Produced a four-receipt brief and drafting handoff; explicitly separated the plan from text not yet drafted.",
+      "nonzero_commands": 2,
+      "connection_error_events": 0
+    },
+    {
+      "case": "fiction",
+      "agent": "fiction-drafter",
+      "skill": "text-composition",
+      "mode": "fiction-drafting",
+      "exit": 0,
+      "seconds": 64.72,
+      "acceptance": "pass",
+      "evidence": "cases/fiction/run.json",
+      "response": "cases/fiction/response.md",
+      "note": "Delivered the complete four-receipt story from the actual planning output, without an outside narrator in the story; 248 whitespace-delimited words.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "nonfiction",
+      "agent": "nonfiction-drafter",
+      "skill": "text-composition",
+      "mode": "nonfiction-drafting",
+      "exit": 0,
+      "seconds": 127.03,
+      "acceptance": "pass",
+      "evidence": "cases/nonfiction/run.json",
+      "response": "cases/nonfiction/response.md",
+      "note": "Delivered 272 words excluding title; retained 18/30, entrance recruitment, one Saturday, comparison limits, and a labeled hypothetical example. No unsupported recency or inference about omitted study questions remains.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "essay",
+      "agent": "essay-writer",
+      "skill": "text-composition",
+      "mode": "essay-composition",
+      "exit": 0,
+      "seconds": 47.84,
+      "acceptance": "pass",
+      "evidence": "cases/essay/run.json",
+      "response": "cases/essay/response.md",
+      "note": "Delivered a 232-word complete reflective essay using supplied memories, recurring repair/listening material, and an open ending.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "poetry",
+      "agent": "poetry-writer",
+      "skill": "text-composition",
+      "mode": "poetry-composition",
+      "exit": 0,
+      "seconds": 21.8,
+      "acceptance": "pass",
+      "evidence": "cases/poetry/run.json",
+      "response": "cases/poetry/response.md",
+      "note": "Delivered exactly eight free-verse lines, each beginning Still; retained the refrain and changed the final significance of waiting.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "drama",
+      "agent": "dramatic-text-writer",
+      "skill": "text-composition",
+      "mode": "dramatic-writing",
+      "exit": 0,
+      "seconds": 98.98,
+      "acceptance": "pass",
+      "evidence": "cases/drama/run.json",
+      "response": "cases/drama/response.md",
+      "note": "Delivered a complete 268-word scene with Mina, Sol, one table, coherent key movement, and an altered final relationship; timing remained approximate.",
+      "nonzero_commands": 1,
+      "connection_error_events": 4
+    },
+    {
+      "case": "professional",
+      "agent": "professional-text-writer",
+      "skill": "text-composition",
+      "mode": "professional-writing",
+      "exit": 0,
+      "seconds": 36.83,
+      "acceptance": "pass",
+      "evidence": "cases/professional/run.json",
+      "response": "cases/professional/response.md",
+      "note": "Delivered a complete proposal memo preserving all supplied facts and no approved staffing/budget commitment. The final run executed wc -w and accurately reported 160 words including headers.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "academic",
+      "agent": "academic-manuscript-writer",
+      "skill": "text-composition",
+      "mode": "academic-writing",
+      "exit": 0,
+      "seconds": 42.89,
+      "acceptance": "pass",
+      "evidence": "cases/academic/run.json",
+      "response": "cases/academic/response.md",
+      "note": "Delivered a complete abstract retaining 24 volunteers, two weeks, self-report, 3 minutes/day, no control group, and absent uncertainty information. The final run executed wc -w and accurately reported 178 words excluding metadata.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "revision",
+      "agent": "developmental-manuscript-editor",
+      "skill": "text-revision",
+      "mode": "structural-revision",
+      "exit": 0,
+      "seconds": 103.92,
+      "acceptance": "pass",
+      "evidence": "cases/revision/run.json",
+      "response": "cases/revision/response.md",
+      "note": "Applied the requested date discrepancy to the actual preceding fiction draft; wrote the complete four-receipt revision with a responsive final receipt and unresolved memory origin.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "feedback",
+      "agent": null,
+      "skill": "text-revision",
+      "mode": "feedback-integration",
+      "exit": 0,
+      "seconds": 44.59,
+      "acceptance": "pass",
+      "evidence": "cases/feedback/run.json",
+      "response": "cases/feedback/response.md",
+      "note": "Wrote the complete revised passage; retained all three I remember openings, shortened the explanation, and accounted for the accepted and declined comments.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "rhetoric",
+      "agent": "rhetorical-style-editor",
+      "skill": "text-revision",
+      "mode": "rhetorical-revision",
+      "exit": 0,
+      "seconds": 32.62,
+      "acceptance": "pass",
+      "evidence": "cases/rhetoric/run.json",
+      "response": "cases/rhetoric/response.md",
+      "note": "Delivered the revised passage with all three We waited openings and the clerk's uncertainty preserved.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "continuity",
+      "agent": "manuscript-continuity-reviewer",
+      "skill": "text-revision",
+      "mode": "continuity-review",
+      "exit": 0,
+      "seconds": 34.87,
+      "acceptance": "pass",
+      "evidence": "cases/continuity/run.json",
+      "response": "cases/continuity/response.md",
+      "note": "Reported the paired Tuesday/Wednesday bridge contradiction; distinguished an identified lie and explicitly limited conclusions to supplied excerpts.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "readers",
+      "agent": "reader-experience-reviewer",
+      "skill": "text-revision",
+      "mode": "reader-response-review",
+      "exit": 0,
+      "seconds": 41.13,
+      "acceptance": "pass",
+      "evidence": "cases/readers/run.json",
+      "response": "cases/readers/response.md",
+      "note": "Located undefined concepts and action-order problems; separated predicted effects from absent reader-study evidence and did not modify source files.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "adaptation",
+      "agent": "text-adaptation-editor",
+      "skill": "text-revision",
+      "mode": "text-adaptation",
+      "exit": 0,
+      "seconds": 55.11,
+      "acceptance": "pass",
+      "evidence": "cases/adaptation/run.json",
+      "response": "cases/adaptation/response.md",
+      "note": "Delivered a complete community notice within the 90-130-word range, preserving sampling limits and the unapproved extended-hours proposal without adding unsupported survey duration or recency.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "translation",
+      "agent": "text-translator",
+      "skill": "text-translation",
+      "mode": "translation-drafting",
+      "exit": 0,
+      "seconds": 20.75,
+      "acceptance": "pass",
+      "evidence": "cases/translation/run.json",
+      "response": "cases/translation/response.md",
+      "note": "Translated both source sentences with singular they, preserved negation and might, and retained the two-day interval.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "translation_review",
+      "agent": "translation-reviewer",
+      "skill": "text-translation",
+      "mode": "translation-review",
+      "exit": 0,
+      "seconds": 116.66,
+      "acceptance": "pass",
+      "evidence": "cases/translation_review/run.json",
+      "response": "cases/translation_review/response.md",
+      "note": "Compared the actual preceding translation and a deliberately faulty alternative; accepted defensible A and located B's gender, negation, modality/reported-speech, and time-interval errors without applying changes.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "scholarship",
+      "agent": null,
+      "skill": "textual-scholarship",
+      "mode": "critical-edition-preparation",
+      "exit": 0,
+      "seconds": 125.56,
+      "acceptance": "pass",
+      "evidence": "cases/scholarship/run.json",
+      "response": "cases/scholarship/response.md",
+      "note": "Wrote witness descriptions, diplomatic transcriptions, collation, edited text, apparatus, and policy. Preserved A's unreadable span and historical spelling, distinguished B variants, and made no physical-source or stemma claim.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "proof",
+      "agent": "proofreader",
+      "skill": "publishing-editorial",
+      "mode": "proofreading",
+      "exit": 0,
+      "seconds": 38.13,
+      "acceptance": "pass",
+      "evidence": "cases/proof/run.json",
+      "response": "cases/proof/response.md",
+      "note": "Returned exact public-access and note-number corrections, identified the missed prior correction, and left visual proof coverage unverified.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "format",
+      "agent": "publication-format-reviewer",
+      "skill": "publishing-editorial",
+      "mode": "publication-format-review",
+      "exit": 0,
+      "seconds": 112.74,
+      "acceptance": "pass",
+      "evidence": "cases/format/run.json",
+      "response": "cases/format/response.md",
+      "note": "Inspected the actual EPUB ZIP/XML and found the seeded missing ending anchor. Also reported missing XHTML language attributes. Distinguished those checks from unavailable EPUBCheck, rendering, and accessibility certification.",
+      "nonzero_commands": 0,
+      "connection_error_events": 0
+    },
+    {
+      "case": "index",
+      "agent": "indexing-coordinator",
+      "skill": "publishing-editorial",
+      "mode": "indexing-workflows",
+      "exit": 0,
+      "seconds": 100.23,
+      "acceptance": "pass",
+      "evidence": "cases/index/run.json",
+      "response": "cases/index/response.md",
+      "note": "Wrote a provisional concept index with only supplied anchors, substantive headings, and resolving see-references; did not invent print pages.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "submission",
+      "agent": "submission-package-editor",
+      "skill": "publishing-editorial",
+      "mode": "submission-package-preparation",
+      "exit": 0,
+      "seconds": 74.99,
+      "acceptance": "pass",
+      "evidence": "cases/submission/run.json",
+      "response": "cases/submission/response.md",
+      "note": "Wrote complete separate cover note and nine-word biography. Preserved residence and occupation as separate facts, did not invent credentials, and left the absent anonymous story and metadata unverified.",
+      "nonzero_commands": 1,
+      "connection_error_events": 0
+    },
+    {
+      "case": "edition",
+      "agent": "edition-maintenance-editor",
+      "skill": "publishing-editorial",
+      "mode": "edition-maintenance",
+      "exit": 0,
+      "seconds": 92.42,
+      "acceptance": "pass",
+      "evidence": "cases/edition/run.json",
+      "response": "cases/edition/response.md",
+      "note": "Wrote the corrected source and log. Independent comparison confirms that the sole source change is table-label 2018 to 2019; caption/discussion agree and unavailable PDF/EPUB updates remain pending.",
+      "nonzero_commands": 2,
+      "connection_error_events": 0
+    }
+  ],
+  "failed_attempts": [
+    {
+      "attempt": "adaptation-before-measured-count",
+      "status": {
+        "case": "adaptation",
+        "exit": 0,
+        "seconds": 30.01
+      },
+      "disposition": "Length/reporting failure: after the qualifier correction, the next notice was 83 whitespace-delimited words including title while claiming 91; this missed the 90-word minimum. Added measured hard-limit checks and reran.",
+      "evidence": "failed-attempts/adaptation-before-measured-count/run.json"
+    },
+    {
+      "attempt": "adaptation-before-qualifier-check",
+      "status": {
+        "case": "adaptation",
+        "exit": 0,
+        "seconds": 61.51
+      },
+      "disposition": "Content failure: the notice called the survey brief although no duration was supplied. Added a factual-qualifier check and reran.",
+      "evidence": "failed-attempts/adaptation-before-qualifier-check/run.json"
+    },
+    {
+      "attempt": "nonfiction-before-evidence-rule",
+      "status": {
+        "case": "nonfiction",
+        "exit": 0,
+        "seconds": 97.17
+      },
+      "disposition": "Content failure: inferred that the underlying survey did not ask a question from absence of details in the packet. Added an explicit missing-packet-evidence rule and reran.",
+      "evidence": "failed-attempts/nonfiction-before-evidence-rule/run.json"
+    },
+    {
+      "attempt": "nonfiction-before-recency-check",
+      "status": {
+        "case": "nonfiction",
+        "exit": 0,
+        "seconds": 96.36
+      },
+      "disposition": "Content failure: described an undated survey as recent. Added unsupported-specificity and relationship checks and reran.",
+      "evidence": "failed-attempts/nonfiction-before-recency-check/run.json"
+    },
+    {
+      "attempt": "drama-before-action-check",
+      "status": {
+        "case": "drama",
+        "exit": 0,
+        "seconds": 111.59
+      },
+      "disposition": "Content failure: a direction moved the table and then said it did not move. Added attempted-versus-completed-action checks and reran.",
+      "evidence": "failed-attempts/drama-before-action-check/run.json"
+    },
+    {
+      "attempt": "drama-completed-event-no-response-timeout",
+      "status": {
+        "case": "drama",
+        "exit": "timeout",
+        "seconds": 180.01
+      },
+      "disposition": "Harness/runtime failure: a final agent message and turn.completed event exist, but the CLI did not create its response file before the 180-second process timeout. Preserved the final event, inspected output, and reran; not accepted as a clean run.",
+      "evidence": "failed-attempts/drama-completed-event-no-response-timeout/run.json"
+    },
+    {
+      "attempt": "submission-before-fact-relationship-check",
+      "status": {
+        "case": "submission",
+        "exit": 0,
+        "seconds": 66.32
+      },
+      "disposition": "Content failure: connective wording inferred employment in the author's city of residence. Added a check against relationships not supplied and reran.",
+      "evidence": "failed-attempts/submission-before-fact-relationship-check/run.json"
+    },
+    {
+      "attempt": "nonfiction-network-delay",
+      "status": {
+        "case": "nonfiction",
+        "exit": "timeout",
+        "seconds": 300.02
+      },
+      "disposition": "Network/environment failure: repeated DNS/connection errors, no completed model turn, 300-second timeout. Retained and reran with network access.",
+      "evidence": "failed-attempts/nonfiction-network-delay/run.json"
+    },
+    {
+      "attempt": "submission-network-delay",
+      "status": {
+        "case": "submission",
+        "exit": "timeout",
+        "seconds": 300.01
+      },
+      "disposition": "Network/environment failure: repeated DNS/connection errors, no completed model turn, 300-second timeout. Retained and reran with network access.",
+      "evidence": "failed-attempts/submission-network-delay/run.json"
+    },
+    {
+      "attempt": "translation_review-network-delay",
+      "status": {
+        "case": "translation_review",
+        "exit": -15,
+        "seconds": 110.79
+      },
+      "disposition": "Interrupted attempt after sustained DNS/connection delay; connection had recovered and source reading had begun, but no completed review existed. Retained and reran. The interruption was not a content failure.",
+      "evidence": "failed-attempts/translation_review-network-delay/run.json"
+    },
+    {
+      "attempt": "professional-before-measured-count",
+      "status": {
+        "case": "professional",
+        "exit": 0,
+        "seconds": 48.95
+      },
+      "disposition": "Reporting failure: draft was within the 140-190 word limit, but claimed 158 words; independent whitespace counting found 149 including headers. Added measured-count guidance and reran.",
+      "evidence": "failed-attempts/professional-before-measured-count/run.json"
+    },
+    {
+      "attempt": "academic-before-measured-count",
+      "status": {
+        "case": "academic",
+        "exit": 0,
+        "seconds": 44.33
+      },
+      "disposition": "Reporting failure: abstract was within the 150-200 word limit, but claimed 159 words; independent whitespace counting found 173. Added measured-count guidance and reran.",
+      "evidence": "failed-attempts/academic-before-measured-count/run.json"
+    }
+  ],
+  "independent_artifact_checks": {
+    "fiction": {
+      "word_count": 248,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        220,
+        320
+      ]
+    },
+    "essay": {
+      "word_count": 232,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        220,
+        300
+      ]
+    },
+    "drama": {
+      "word_count": 268,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        220,
+        320
+      ]
+    },
+    "professional": {
+      "word_count": 160,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        140,
+        190
+      ]
+    },
+    "academic": {
+      "word_count": 178,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        150,
+        200
+      ]
+    },
+    "adaptation": {
+      "word_count": 90,
+      "method": "Python str.split over delivered artifact span, excluding Markdown heading markers; headers/title retained where supplied",
+      "range": [
+        90,
+        130
+      ]
+    },
+    "poetry": {
+      "lines": 8,
+      "all_start_with": "Still"
+    }
+  },
+  "input_integrity": {
+    "original_text_fixtures_match_generator": [
+      "refrain.md",
+      "witnesses.md",
+      "copy.md",
+      "proof.md",
+      "index-source.md",
+      "edition-source.md"
+    ],
+    "seeded_epub_target_verified": true
+  },
+  "guidance_integrity": {
+    "files_matching_final_catalog": 391
+  },
+  "limits": [
+    "Representative bounded fixtures, not full-length-book or every-agent runtime coverage.",
+    "Feedback integration and scholarship were direct gateway tests; scholarship exercised four workflows in one invocation, not four independently spawned agents.",
+    "CLI turns completed, but some recovered nonzero tool commands and connection retries occurred; raw evidence and compact command outcomes are retained.",
+    "Most runs predate the later router link-resolution sentence. Nonfiction, submission, translation review, professional, academic, and adaptation exercised the clarified router; no claim that every role was rerun for that navigation clarification.",
+    "No publication, submission, global installation, real external-document transfer, or changes to the host Codex installation."
+  ]
+}

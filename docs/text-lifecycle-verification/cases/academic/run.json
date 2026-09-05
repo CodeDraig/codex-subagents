@@ -1,0 +1,97 @@
+{
+  "status": {
+    "case": "academic",
+    "exit": 0,
+    "seconds": 42.89
+  },
+  "prompt": "Use $text-composition in academic-writing mode from .agents/skills/text-composition/SKILL.md.\n\nDraft a complete 150–200-word scholarly abstract from this packet: exploratory observational study; 24 adult volunteers; two weeks of self-reported reading time; mean reported reading rose by 3 minutes per day; no control group; no uncertainty interval or significance test supplied. State the question, method, result, and limitations. No citations or ethics-approval details are provided.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/academic/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/academic/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/academic/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `academic-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify discipline, manuscript type, research question, contribution, source/results packet, venue constraints, and citation expectations. Deliver the actual requested text; use the structure appropriate to empirical, conceptual, or humanities work.\\nKeep methods, results, interpretation, and speculation distinct. Do not invent participants, procedures, statistical significance, ethics approvals, quotations, or references. Missing evidence permits qualified prose and precise queries, not fabricated completeness.\\nCheck the abstract and conclusion against the supplied results, limitations, and sample; trace quantities and core claims to source locations. Maintain cross-section terminology and report coverage. Full drafting is allowed without pretending research or approval occurred.\\nMeasure any reported exact word count on the delivered prose with an available counter and name excluded titles/metadata; otherwise label the count as estimated.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `literature-reviewer`, `research-methods-reviewer`, and `citation-integrity-checker` for their evidence checks; hand review preparation to `peer-review-prep-editor` and venue packaging to `journal-submission-specialist`.\\nReturn exactly these sections: `Manuscript Draft`, `Argument And Evidence Map`, `Methods Or Citation Queries`, `Consistency Checks`, `Coverage`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "academic-manuscript-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/references/workflows/academic-writing.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g '\"'!outputs/**'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/text-composition/references/artifacts/academic-writing-kit.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"abstract_text='This exploratory observational study examined whether self-reported daily reading time changed over two weeks among adult volunteers. Twenty-four adults provided self-reports of reading time during the observation period. Mean reported reading increased by 3 minutes per day across the two weeks. This descriptive change addresses the study question at the level of the participating volunteers and indicates that reported reading time was higher over the observed period. However, the design does not establish that the observed increase was caused by any intervention or by the passage of time. The absence of a control group prevents comparison with concurrent patterns that might otherwise account for the change. In addition, the result is based on self-reported reading time, which may be affected by reporting error or changes in how participants recorded their reading. No uncertainty interval or significance test was supplied; accordingly, the precision of the estimated 3-minute increase and its compatibility with chance variation cannot be assessed from the available information. Findings should therefore be interpreted as exploratory and limited to the reported two-week observations in this volunteer sample.'\nprintf '%s' \\\"\"'$abstract_text\" | wc -w'",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/academic/events.jsonl",
+      "sha256": "7149ce62079ce6e8cb31265f60d52faa6b2b3dd450a8b49234eba1b4bdf3c51d"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/academic/stderr",
+      "sha256": "b05a9a1075789e072d389e0f14e397b8bb50995ee63a753ffd9df9c9f1f4f043"
+    }
+  ],
+  "response_sha256": "6768080e41bdefa0ab62b8885cf5bd33040396ea64651faa4965aaf59d3e6932",
+  "case": "academic",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered a complete abstract retaining 24 volunteers, two weeks, self-report, 3 minutes/day, no control group, and absent uncertainty information. The final run executed wc -w and accurately reported 178 words excluding metadata.",
+  "fixture": {
+    "agent": "academic-manuscript-writer",
+    "skill": "text-composition",
+    "mode": "academic-writing",
+    "prompt": "Draft a complete 150–200-word scholarly abstract from this packet: exploratory observational study; 24 adult volunteers; two weeks of self-reported reading time; mean reported reading rose by 3 minutes per day; no control group; no uncertainty interval or significance test supplied. State the question, method, result, and limitations. No citations or ethics-approval details are provided.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

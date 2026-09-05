@@ -1,0 +1,4 @@
+interface:
+  display_name: "Textual Scholarship"
+  short_description: "Transcribe, collate, and prepare documented editions"
+  default_prompt: "Use $textual-scholarship to select the workflow for the text artifact I need and complete that deliverable."

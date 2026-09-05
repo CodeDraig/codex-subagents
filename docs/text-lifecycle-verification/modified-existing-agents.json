@@ -1,0 +1,12 @@
+{
+  "fiction-development-editor": "fiction-development-workflows",
+  "nonfiction-manuscript-editor": "nonfiction-manuscript-development",
+  "line-copy-editor": "line-copyediting-workflows",
+  "fact-checking-editor": "fact-checking-source-review",
+  "book-metadata-packaging-editor": "book-metadata-packaging",
+  "production-editor": "publishing-production-workflows",
+  "permissions-reviewer": "permissions-rights-review",
+  "journal-submission-specialist": "journal-submission-workflows",
+  "developmental-manuscript-editor": "structural-revision",
+  "indexing-coordinator": "indexing-workflows"
+}

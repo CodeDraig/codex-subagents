@@ -1,0 +1,109 @@
+{
+  "status": {
+    "case": "format",
+    "exit": 0,
+    "seconds": 112.74
+  },
+  "prompt": "Use $publishing-editorial in publication-format-review mode from .agents/skills/publishing-editorial/SKILL.md.\n\nInspect the actual inputs/book.epub for package and internal navigation defects using available local tools. Do not install anything. Report the checks actually executed and distinguish them from rendering or accessibility checks that you cannot perform.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "read-only",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/format/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/format/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/format/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"medium\"",
+      "-c",
+      "developer_instructions=\"Use $publishing-editorial in `publication-format-review` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify actual files/versions, target formats, specifications, and available tools. Separate source structure, exported package structure, rendered pages, navigation, and accessibility evidence.\\nCheck Markdown/text hierarchy and whitespace; DOCX/ODT styles, fields, notes, revisions, and relationships; PDF text/rendering/links/tags; EPUB manifest/spine/navigation/reflow; and optional TEI/XML against its supplied schema. Use only available format-aware tools or explicit manual inspection.\\nReport exact locations and actual commands/results. Parsing or export success does not prove layout, reading order, or accessibility. Preserve meaningful poem/drama whitespace in comparisons. Missing tools yield partial findings and named unchecked aspects, not invented passes.\\nInspect the assigned sources without modifying them. Return located findings and distinguish inspected coverage from material not supplied or not checked.\\nSend text corrections to `proofreader`, source restructuring to `documentation-engineer` or the owning editor, and release sequencing to `production-editor`.\\nReturn exactly these sections: `Artifact Scope`, `Format And Structure Findings`, `Visual And Navigation Findings`, `Accessibility Evidence`, `Executed Checks`, `Unavailable Checks`, `Required Corrections`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "publication-format-reviewer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "read-only"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/publishing-editorial/SKILL.md && sed -n '1,320p' .agents/skills/publishing-editorial/references/workflows/publication-format-review.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/publishing-editorial/artifacts/publication-format-review-kit.md\nrg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'book.epub' -g '*.epub' .\nprintf '\\\\n-- available format tools --\\\\n'\nfor tool in epubcheck epub3check ebook-viewer calibre-debug unzip zipinfo xmllint tidy python3 java node pandoc; do command -v \\\"\"'$tool\" && \"$tool\" --version 2>&1 | head -n 1; done'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"find .agents/skills/publishing-editorial -maxdepth 4 -type f -print | sort\nprintf '\\\\n-- archive inventory --\\\\n'\nzipinfo -1 inputs/book.epub\nprintf '\\\\n-- archive integrity --\\\\n'\nunzip -t inputs/book.epub\nprintf '\\\\n-- mimetype --\\\\n'\nunzip -p inputs/book.epub mimetype | od -An -tx1c\nprintf '\\\\n-- container --\\\\n'\nunzip -p inputs/book.epub META-INF/container.xml\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/publishing-editorial/references/artifacts/publication-format-review-kit.md\nprintf '\\\\n-- EPUB source files --\\\\n'\nfor member in EPUB/package.opf EPUB/nav.xhtml EPUB/chapter.xhtml; do\n  printf '\\\\n[%s]\\\\n' \\\"\"'$member\"\n  unzip -p inputs/book.epub \"$member\"\ndone'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"printf '%s\\\\n' '-- XML well-formedness --'\nfor member in META-INF/container.xml EPUB/package.opf EPUB/nav.xhtml EPUB/chapter.xhtml; do\n  unzip -p inputs/book.epub \\\"\"'$member\" | xmllint --noout -\n  printf '\"'OK %s\\\\n' \\\"\"'$member\"\ndone\nprintf '\"'%s\\\\n' '-- ZIP member order and compression --'\nzipinfo -v inputs/book.epub | rg -n -C 3 'Central directory entry #1:|mimetype|compression method|offset of local header'\nprintf '%s\\\\n' '-- package and navigation reference audit --'\npython3 - <<'PY'\nfrom zipfile import ZipFile, ZIP_STORED\nfrom xml.etree import ElementTree as ET\nfrom urllib.parse import unquote\nfrom posixpath import normpath, dirname\np='inputs/book.epub'\nNS={'opf':'http://www.idpf.org/2007/opf','x':'http://www.w3.org/1999/xhtml','epub':'http://www.idpf.org/2007/ops'}\nwith ZipFile(p) as z:\n    names=z.namelist(); print('members:', names)\n    first=z.infolist()[0]; print('first-member:', first.filename, 'stored:', first.compress_type == ZIP_STORED)\n    print('mimetype:', z.read('mimetype').decode())\n    rootfile=ET.fromstring(z.read('META-INF/container.xml')).find('.//{*}rootfile').attrib['full-path']; print('rootfile:',rootfile)\n    opf=ET.fromstring(z.read(rootfile)); manifest={x.attrib['id']:x for x in opf.findall('opf:manifest/opf:item',NS)}\n    print('manifest:', [(i, x.attrib.get('href'), x.attrib.get('media-type'), x.attrib.get('properties','')) for i,x in manifest.items()])\n    spine=[x.attrib['idref'] for x in opf.findall('opf:spine/opf:itemref',NS)]; print('spine:',spine, 'all-idrefs-in-manifest:', all(x in manifest for x in spine))\n    nav=[x for x in manifest.values() if 'nav' in x.attrib.get('properties','').split()]; print('nav-items:', [(x.attrib['id'],x.attrib['href']) for x in nav])\n    manifest_paths=set(); bad_manifest=[]\n    for x in manifest.values():\n        target=normpath(dirname(rootfile)+'/'+unquote(x.attrib['href'].split('#',1)[0])); manifest_paths.add(target)\n        if target not in names: bad_manifest.append((x.attrib['id'],target))\n    print('missing-manifest-targets:',bad_manifest)\n    content=[n for n in names if n.endswith(('.xhtml','.html','.css','.svg','.jpg','.jpeg','.png','.gif','.woff','.woff2','.ttf','.otf','.js'))]\n    print('content-assets-not-in-manifest:', sorted(set(content)-manifest_paths))\n    for item in nav:\n        path=normpath(dirname(rootfile)+'/'+item.attrib['href']); doc=ET.fromstring(z.read(path));\n        toc=doc.findall('.//x:nav[@epub:type=\\\"toc\\\"]',NS); print('toc-nav-count:',len(toc))\n        for a in doc.findall('.//x:a',NS):\n            href=a.attrib.get('href',''); base,sep,frag=href.partition('#'); target=normpath(dirname(path)+'/'+unquote(base)) if base else path\n            exists=target in names\n            fragment_exists=None if not sep else (exists and any(e.attrib.get('id') == unquote(frag) for e in ET.fromstring(z.read(target)).iter()))\n            print('nav-link:',href,'target-file-exists:',exists,'fragment-exists:',fragment_exists)\n    for path in ['EPUB/nav.xhtml','EPUB/chapter.xhtml']:\n        doc=ET.fromstring(z.read(path)); root=doc\n        ids=[e.attrib['id'] for e in doc.iter() if 'id' in e.attrib]\n        print(path, 'root-lang:',root.attrib.get('lang'), 'root-xml-lang:',root.attrib.get('{http://www.w3.org/XML/1998/namespace}lang'), 'ids:',ids, 'duplicate-ids:',sorted({i for i in ids if ids.count(i)>1}))\nPY\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"printf '%s\\\\n' '-- artifact identity --'\nsha256sum inputs/book.epub\nstat -c 'size=%s bytes; modified=%y' inputs/book.epub\nprintf '%s\\\\n' '-- all XHTML local-reference audit --'\npython3 - <<'PY'\nfrom zipfile import ZipFile\nfrom xml.etree import ElementTree as ET\nfrom urllib.parse import unquote\nfrom posixpath import dirname, normpath\np='inputs/book.epub'; xns='http://www.w3.org/1999/xhtml'\nwith ZipFile(p) as z:\n    names=set(z.namelist())\n    for path in sorted(n for n in names if n.endswith(('.xhtml','.html'))):\n        doc=ET.fromstring(z.read(path))\n        refs=[]\n        for e in doc.iter():\n            for attr in ('href','src'):\n                if attr in e.attrib: refs.append((e.tag.rsplit('}',1)[-1],attr,e.attrib[attr]))\n        print(path, 'references=', refs)\n        for tag,attr,value in refs:\n            if value.startswith(('#','data:','http:','https:','mailto:','tel:')): continue\n            base,mark,fragment=value.partition('#')\n            target=normpath(dirname(path)+'/'+unquote(base)) if base else path\n            target_ok=target in names\n            fragment_ok=(not mark or (target_ok and any(n.attrib.get('id')==unquote(fragment) for n in ET.fromstring(z.read(target)).iter())))\n            print(' ',tag,attr,value,'file=',target_ok,'fragment=',fragment_ok)\nPY\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/format/events.jsonl",
+      "sha256": "0db90b83ef55e1d3f150ecf0ed21043b678464fb3e870f191bf70f38481899b7"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/format/stderr",
+      "sha256": "616e751ab0587bc8724e8c0e66072cd6ecd5e9ad8f808e91cb7a64f330690f1b"
+    }
+  ],
+  "response_sha256": "1e13a4a27d48b817fb45ea64f8b05e37057cd4a32c80675a7593fa3699fbe765",
+  "case": "format",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Inspected the actual EPUB ZIP/XML and found the seeded missing ending anchor. Also reported missing XHTML language attributes. Distinguished those checks from unavailable EPUBCheck, rendering, and accessibility certification.",
+  "fixture": {
+    "agent": "publication-format-reviewer",
+    "skill": "publishing-editorial",
+    "mode": "publication-format-review",
+    "prompt": "Inspect the actual inputs/book.epub for package and internal navigation defects using available local tools. Do not install anything. Report the checks actually executed and distinguish them from rendering or accessibility checks that you cannot perform.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

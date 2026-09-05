@@ -1,0 +1,101 @@
+{
+  "status": {
+    "case": "adaptation",
+    "exit": 0,
+    "seconds": 55.11
+  },
+  "prompt": "Use $text-revision in text-adaptation mode from .agents/skills/text-revision/SKILL.md.\n\nAdapt this source into a complete 90–130-word community notice: “Of 30 respondents recruited at the library entrance on one Saturday, 18 reported weekly library use. This convenience sample does not estimate citywide use. The committee is considering extended hours; no decision has been made.” Preserve the scope and proposal status. Do not add an interview or approved date.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/adaptation/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/adaptation/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/adaptation/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-revision in `text-adaptation` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify source version, target form/audience/length, protected content, allowed invention, and attribution needs. Map source units to target units and then deliver the complete adapted text.\\nChange explanation, pace, structure, examples, and signposting for the target. Keep claim strength, negation, chronology, essential caveats, and required passages intact unless their change is explicitly assigned. Do not turn abridgment into selective misrepresentation or plain language into a false simplification.\\nCompare source and target for consequential losses/additions, required coverage, and medium constraints. Label hypothetical additions and identify remaining unadapted units. Preserve the source original and its provenance.\\nCheck added qualifiers as factual claims: do not call an unspecified survey brief or recent, or invent other source details merely to smooth the adapted prose.\\nMeasure hard word limits and any reported exact count with an available counter on the delivered text. State whether the title is included, and revise and recount until the requested range is met.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `text-translator` for language transfer, `script-development-editor` for production scripts, and `reader-experience-reviewer` for target-audience review.\\nReturn exactly these sections: `Adapted Text`, `Source To Target Map`, `Transformation Decisions`, `Fidelity And Format Checks`, `Open Queries`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "text-adaptation-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/text-revision/references/workflows/text-adaptation.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'outputs/**' | sed -n '1,160p'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"git status --short && sed -n '1,240p' outputs/library-survey-article.md && printf '\\\\n--- word-count probe ---\\\\n' && printf '%s\\\\n' 'Community Library Use and Possible Hours Extension' 'On one Saturday, 30 people were recruited at the library entrance and asked about their library use. Eighteen said they use the library weekly.' 'These results describe only the people who responded at that place and time. Because the group was a convenience sample, it cannot be used to estimate how many people across the city use the library each week.' 'The committee is considering whether to extend library hours. It has not made a decision. Community members can follow committee updates for any future information about this consideration.' | wc -w\"",
+      "exit_code": 128
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' outputs/library-survey-article.md\nprintf '\\\\n--- word-count probe ---\\\\n'\nprintf '%s\\\\n' 'Community Library Use and Possible Hours Extension' 'On one Saturday, 30 people were recruited at the library entrance and asked about their library use. Eighteen said they use the library weekly.' 'These results describe only the people who responded at that place and time. Because the group was a convenience sample, it cannot be used to estimate how many people across the city use the library each week.' 'The committee is considering whether to extend library hours. It has not made a decision. Community members can follow committee updates for any future information about this consideration.' | wc -w\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"printf '%s\\\\n' 'Library Use Responses and Extended-Hours Consideration' 'On one Saturday, 30 respondents were recruited at the library entrance. Eighteen reported using the library weekly.' 'These responses show what the recruited respondents reported, not how residents across the city use the library. The group was a convenience sample, meaning it was gathered from people available at one location on that day. It does not estimate citywide weekly library use.' 'The committee is considering extended library hours. No decision has been made. No change to library hours has been decided at this time.' | wc -w\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/adaptation/events.jsonl",
+      "sha256": "2964bfd51953dbdbf9c2253905c934c44f93bf2dc28f1d27f583a6333674ac87"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/adaptation/stderr",
+      "sha256": "750e7651c02defb944afd46058d5e428911759c10ec8b60b345f16e841402358"
+    }
+  ],
+  "response_sha256": "658ac2c06b1bf84f864eb6ac325d3c238999de52f8b0bf01b50b00f63db70d7e",
+  "case": "adaptation",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered a complete community notice within the 90-130-word range, preserving sampling limits and the unapproved extended-hours proposal without adding unsupported survey duration or recency.",
+  "fixture": {
+    "agent": "text-adaptation-editor",
+    "skill": "text-revision",
+    "mode": "text-adaptation",
+    "prompt": "Adapt this source into a complete 90–130-word community notice: “Of 30 respondents recruited at the library entrance on one Saturday, 18 reported weekly library use. This convenience sample does not estimate citywide use. The committee is considering extended hours; no decision has been made.” Preserve the scope and proposal status. Do not add an interview or approved date.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

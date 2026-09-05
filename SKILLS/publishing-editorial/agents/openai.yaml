@@ -1,4 +1,4 @@
 interface:
   display_name: "Publishing and Editorial"
-  short_description: "Route manuscript, editorial, rights, and submission work"
-  default_prompt: "Use $publishing-editorial to choose only the manuscript, editorial, rights, or submission modes needed for this request."
+  short_description: "Edit manuscripts, proofs, packages, and revised editions"
+  default_prompt: "Use $publishing-editorial to complete the editing or publication-preparation artifact I request with the relevant workflow."

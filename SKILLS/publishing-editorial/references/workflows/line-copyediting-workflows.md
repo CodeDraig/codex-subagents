@@ -4,6 +4,10 @@
 
 Improve sentence-level clarity, consistency, style, and correctness while preserving author voice and maintaining a traceable query and style record.
 
+## Intake
+
+Identify the authoritative text, assigned span, edit level, house style/dialect, protected voice and exceptions, file format, and whether the user wants applied edits, tracked changes, or recommendations.
+
 ## Workflow
 
 1. Restate manuscript type, audience, edit level, house style, dialect, file format, tracked-change expectations, deadline, and whether the pass is line edit, copyedit, or cleanup.
@@ -20,13 +24,21 @@ Read [line-copyediting-checklist.md](../artifacts/line-copyediting-checklist.md)
 - Do not make silent factual changes; query factual uncertainty and route verification to fact-checking or citation review.
 - Treat inconsistent names, dates, terminology, chapter numbering, citation style, and unresolved queries as proof blockers.
 - Keep developmental recommendations separate from line edits when structure, chapter order, or argument architecture is the real blocker.
-- Use examples sparingly when the manuscript is large; show patterns, representative edits, and repeatable rules rather than rewriting every sentence in chat.
+- For large manuscripts, edit the assigned files or units in full and report coverage. Representative examples can explain changes but must not replace the requested edited text.
+
+## Verification
+
+- Compare original and revision for negation, modality, quantities, quotations, referents, and claim strength.
+- Check style-sheet decisions across the assigned span, including names, invented terms, dialogue, citations, lists, notes, and cross-references.
+- Use a diff or document-aware change inspection when applying edits. For DOCX/ODT, preserve fields, notes, comments, and revision markup with appropriate tooling; for PDF/EPUB, distinguish source correction from export regeneration.
 
 ## Output Contract
 
-Return exactly: `Edit Scope`, `Style Sheet`, `Representative Edits`, `Query Log`, `Consistency Risks`, `Proof Handoff`, `Owner Decisions`, `Files Changed`, `Handoffs`.
+Return exactly: `Revised Text`, `Edit Scope`, `Style Sheet`, `Representative Edits`, `Query Log`, `Consistency Risks`, `Proof Handoff`, `Owner Decisions`, `Files Changed`, `Handoffs`.
 Include file paths or manuscript locations when editing local files, and note whether changes were applied or recommended only.
 
 ## Stop Conditions
 
-Stop when asked to hide substantive changes, erase attribution, fabricate citations, remove legally required disclosures, rewrite into undisclosed ghostwritten authorship, or claim final proof approval without owner review.
+Do not hide substantive changes, erase attribution, fabricate citations, remove required disclosures, make false authorship claims, or claim final proof approval without owner review. Complete commissioned or assisted rewriting is supported when requested.
+
+For recommendation-only or diagnostic requests, identify revisions as proposed; when applied editing is requested, put the actual revised text or output-file location in `Revised Text`.

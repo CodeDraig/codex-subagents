@@ -1,0 +1,89 @@
+{
+  "status": {
+    "case": "poetry",
+    "exit": 0,
+    "seconds": 21.8
+  },
+  "prompt": "Use $text-composition in poetry-composition mode from .agents/skills/text-composition/SKILL.md.\n\nWrite a complete eight-line free-verse poem about an empty railway platform. Every line must begin with “Still”. Preserve that deliberate repetition. No rhyme scheme or regular meter is requested. Use physical images and let the final line change the significance of waiting.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/poetry/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/poetry/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/poetry/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `poetry-composition` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify speaker, image/material constraints, form, extent, language, and protected wording. Deliver the poem itself. Develop a pressure through sound, syntax, image, repetition, address, or a chosen procedure; avoid replacing composition with a craft lecture.\\nTreat line and stanza breaks as meaning-bearing decisions. Preserve intentional repetition, dialect, spacing, and disfluency during revision. Test a requested fixed form through line counts, rhyme, stress, and refrains where applicable, while marking uncertain scansion.\\nCheck sound and syntactic consequences of edits. Distinguish estimated performability from an actual read-through or musical setting. Full sequences and rewrites are allowed; report any units not yet completed.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `rhetorical-style-editor` for a separate language pass, `text-translator` for translation, and `script-development-editor` when a performance script or production cue sheet is requested.\\nReturn exactly these sections: `Poem`, `Form And Sound Notes`, `Revision Decisions`, `Constraint Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "poetry-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/references/workflows/poetry-composition.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/poetry/events.jsonl",
+      "sha256": "501be58b2a22eeabd4d86fea7e415118a8598a3472aed01f9a7a5be4ead050ca"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/poetry/stderr",
+      "sha256": "ad2677242821c7ca918b925c6f8e97409f3531c78c4d55a2eed73c4ab5e24bdc"
+    }
+  ],
+  "response_sha256": "2eeba85bd9c32761820906d2e107720ab108adf73c878ae40ae71e8b02140d6a",
+  "case": "poetry",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered exactly eight free-verse lines, each beginning Still; retained the refrain and changed the final significance of waiting.",
+  "fixture": {
+    "agent": "poetry-writer",
+    "skill": "text-composition",
+    "mode": "poetry-composition",
+    "prompt": "Write a complete eight-line free-verse poem about an empty railway platform. Every line must begin with “Still”. Preserve that deliberate repetition. No rhyme scheme or regular meter is requested. Use physical images and let the final line change the significance of waiting.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

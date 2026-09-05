@@ -4,6 +4,10 @@
 
 Prepare scholarly submission packages by matching journal instructions, manuscript components, metadata, ethics statements, and revision responses.
 
+## Intake
+
+Identify manuscript/version, destination instructions/version, article type, supplied research and author metadata, requested package texts, stage, and whether actual submission is assigned.
+
 ## Workflow
 
 1. Restate journal, article type, submission stage, author roles, deadline, instructions version, and portal requirements.
@@ -16,16 +20,24 @@ Read [journal-submission-checklist.md](../artifacts/journal-submission-checklist
 
 ## Decision Rules
 
-- If the manuscript does not fit the journal scope, article type, or length and file constraints, stop before package assembly.
+- If scope, article type, length, or file constraints conflict, flag the specific fit problem and prepare unaffected requested materials; do not claim the package meets those requirements.
 - Never submit without corresponding-author approval, coauthor signoff where required, and completed ethics, consent, conflict, funding, and contribution statements.
 - For revisions, every reviewer point needs a response and a manuscript location; unresolved points need an owner decision, not silent omission.
 - Do not claim official submission completion unless portal confirmation or equivalent submission evidence exists.
 
+- When cover letters, abstracts, statements, or response documents are requested, draft their complete text from supplied facts. A checklist alone does not satisfy a request for those materials.
+
+## Verification
+
+- Check each requirement against an actual instruction location and each completed component against its file or drafted text.
+- Compare abstract, title page, figures/tables, disclosures, references, author metadata, and reviewer responses with the manuscript and supplied facts.
+- For resubmissions, verify every response’s claimed change in the revised manuscript and preserve reasoned disagreements or unresolved decisions.
+
 ## Output Contract
 
-Return exactly: `Submission Scope`, `Journal Requirements`, `Package Checklist`, `Metadata Gaps`, `Ethics And Disclosure Items`, `Reviewer Response Matrix`, `Next Actions`.
+Return exactly: `Submission Materials`, `Submission Scope`, `Journal Requirements`, `Package Checklist`, `Metadata Gaps`, `Ethics And Disclosure Items`, `Reviewer Response Matrix`, `Next Actions`, `Handoffs`.
 Include journal-fit notes, blocker status, and any missing author approvals in the relevant sections.
 
 ## Stop Conditions
 
-Stop when asked to fabricate data, ghostwrite undisclosed authorship, hide conflicts, bypass ethics requirements, submit without authorization, or misrepresent reviewer responses.
+Do not fabricate data or contributions, hide conflicts, bypass required submission approvals, submit without authorization, or misrepresent reviewer responses. Complete scholarly drafting and commissioned editing are supported without falsely claiming research or approvals occurred.

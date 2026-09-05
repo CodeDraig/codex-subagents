@@ -1,0 +1,101 @@
+{
+  "status": {
+    "case": "readers",
+    "exit": 0,
+    "seconds": 41.13
+  },
+  "prompt": "Use $text-revision in reader-response-review mode from .agents/skills/text-revision/SKILL.md.\n\nReview this opening of a first-time-user guide: “Delete the snapshot after exporting the manifest. Reconcile the retained generation first.” Neither snapshot, manifest, nor generation is defined in the supplied guide. No user testing or reader feedback exists. Identify located reader-orientation concerns and useful revision options; do not rewrite or run a study.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "read-only",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/readers/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/readers/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/readers/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-revision in `reader-response-review` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify audience, reading purpose, form, access goals, actual feedback, and inspected extent. Follow the text in order and locate inference burdens, undefined concepts, unclear transitions, inaccessible cues, and mismatched expectations.\\nDistinguish intended difficulty from accidental obstruction. Preserve experimental form and do not impose simpler language or conventional chronology universally. Separate textual observations, your predicted reader effects, and actual supplied reader feedback.\\nReturn located revision options and concrete questions a reader check could test. Readability scores measure narrow surface features; they do not establish comprehension or accessibility. Do not claim to represent a group\\u2019s lived experience or a study that did not occur.\\nInspect the assigned sources without modifying them. Return located findings and distinguish inspected coverage from material not supplied or not checked.\\nSend applied revisions to `developmental-manuscript-editor`, plain-language adaptations to `text-adaptation-editor`, and exported-document accessibility checks to `publication-format-reviewer`.\\nReturn exactly these sections: `Reader Context`, `Located Observations`, `Predicted Reader Effects`, `Observed Feedback`, `Revision Options`, `Coverage And Checks`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "reader-experience-reviewer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "read-only"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-revision/references/workflows/reader-response-review.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/text-revision/artifacts/reader-response-review-kit.md\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files .agents/skills/text-revision | rg 'reader-response-review-kit|reader-response'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,280p' .agents/skills/text-revision/references/artifacts/reader-response-review-kit.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/readers/events.jsonl",
+      "sha256": "d4b77a677358f25e71144f63de1fed3e6d5213c1e6c2be48a3e7cf80893df50a"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/readers/stderr",
+      "sha256": "d48ddf9bc090db1d884d66d17c35fcf57109e4b4c7adefbfceb1971a0e04765b"
+    }
+  ],
+  "response_sha256": "ddf3a9c93221e2ad1182c8750111256e855f9c40d1d7b088b927559b0e9a5ee4",
+  "case": "readers",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Located undefined concepts and action-order problems; separated predicted effects from absent reader-study evidence and did not modify source files.",
+  "fixture": {
+    "agent": "reader-experience-reviewer",
+    "skill": "text-revision",
+    "mode": "reader-response-review",
+    "prompt": "Review this opening of a first-time-user guide: “Delete the snapshot after exporting the manifest. Reconcile the retained generation first.” Neither snapshot, manifest, nor generation is defined in the supplied guide. No user testing or reader feedback exists. Identify located reader-orientation concerns and useful revision options; do not rewrite or run a study.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

@@ -1,0 +1,93 @@
+{
+  "status": {
+    "case": "professional",
+    "exit": 0,
+    "seconds": 36.83
+  },
+  "prompt": "Use $text-composition in professional-writing mode from .agents/skills/text-composition/SKILL.md.\n\nDraft a complete 140–190-word internal memo proposing a two-week afternoon help-desk pilot. Known facts: the current desk closes at noon; six afternoon requests were logged last week; no staffing allocation or budget is approved. Ask the operations owner for a decision. Do not announce a launch or invent savings.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/professional/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/professional/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/professional/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `professional-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nCapture document type, reader/sender relationship, purpose, desired action, facts, length, and permitted commitments. Write the complete memo, letter, brief, report, speech, or practical text requested.\\nSeparate facts, analysis, proposals, and approved commitments. Adapt structure to the medium: decision context for memos, relationship and request for letters, navigable evidence for reports, and oral signposting for speeches.\\nCheck names, dates, figures, attachments, references, and next actions against supplied material. Keep unknowns explicit and preserve required language. Never invent a budget, promise, organizational decision, or timed performance. Drafting does not authorize sending.\\nMeasure any reported exact word count on the delivered span with an available counter and name included headers/signatures; otherwise label the count as estimated.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `documentation-engineer` or `knowledge-base-author` for product documentation, `budget-justification-writer` for grant budgets, `policy-analyst` for policy evidence, and `customer-communications-specialist` for customer incident messaging.\\nReturn exactly these sections: `Draft`, `Audience And Purpose`, `Fact And Commitment Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "professional-text-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/references/workflows/professional-writing.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"printf '%s' 'To: Operations Owner\nFrom: [Name/Team]\nSubject: Decision request—two-week afternoon help-desk pilot\n\nThe help desk currently closes at noon. Last week, six requests were logged during the afternoon, indicating a limited but documented need outside current desk hours.\n\nI propose a two-week pilot that makes help-desk coverage available in the afternoon. The pilot would record the number and type of requests received, response and resolution status, and operational issues observed. At the end of the period, the results would provide a basis for deciding whether afternoon coverage should continue, change, or end.\n\nNo staffing allocation or budget has been approved for this proposal. Accordingly, this memo does not authorize scheduling changes, expenditures, or a pilot launch.\n\nPlease decide whether to authorize the pilot and, if so, identify the staffing approach, any approved resource limits, and the operations owner responsible for the evaluation. If authorization is not granted, we can retain the request data and revisit the proposal when resources are available.' | wc -w\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/professional/events.jsonl",
+      "sha256": "216c9bf4fca4dd1d5e57de2d1dd7deafa41792dd7fdb563e1b9070f05aec07b2"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/professional/stderr",
+      "sha256": "49b35f58d203df1e8c980092dff03d8c9b4d5d0df9f30473310950dea55de602"
+    }
+  ],
+  "response_sha256": "8a8d8a4b460f8b3e4d4b1492ae9a49d79f7e4974dd3d4c0347e147ad6336dcd6",
+  "case": "professional",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered a complete proposal memo preserving all supplied facts and no approved staffing/budget commitment. The final run executed wc -w and accurately reported 160 words including headers.",
+  "fixture": {
+    "agent": "professional-text-writer",
+    "skill": "text-composition",
+    "mode": "professional-writing",
+    "prompt": "Draft a complete 140–190-word internal memo proposing a two-week afternoon help-desk pilot. Known facts: the current desk closes at noon; six afternoon requests were logged last week; no staffing allocation or budget is approved. Ask the operations owner for a decision. Do not announce a launch or invent savings.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

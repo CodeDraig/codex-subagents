@@ -1,0 +1,1578 @@
+[
+  {
+    "id": 1,
+    "result": {
+      "userAgent": "Codex Desktop/0.153.4 (Fedora 43.0.0; x86_64) dumb (catalog-verification; 1)",
+      "codexHome": "/tmp/text-lifecycle-20260905/home",
+      "platformFamily": "unix",
+      "platformOs": "linux"
+    }
+  },
+  {
+    "method": "configWarning",
+    "params": {
+      "summary": "Project-local config, hooks, and exec policies are disabled in the following folders until the project is trusted, but skills still load.\n    1. /srv/data/code/codex-subagents/.codex\n       To load project-local config, hooks, and exec policies, add /srv/data/code/codex-subagents as a trusted project in /tmp/text-lifecycle-20260905/home/config.toml.\n",
+      "details": null
+    },
+    "emittedAtMs": 1788641529395
+  },
+  {
+    "method": "remoteControl/status/changed",
+    "params": {
+      "status": "disabled",
+      "serverName": "xint",
+      "installationId": "8e8b25f9-e02d-4eb3-93c5-7e698c6ecba5",
+      "environmentId": null
+    },
+    "emittedAtMs": 1788641529395
+  },
+  {
+    "id": 2,
+    "result": {
+      "config": {
+        "model": null,
+        "review_model": null,
+        "model_context_window": null,
+        "model_auto_compact_token_limit": null,
+        "model_auto_compact_token_limit_scope": null,
+        "model_provider": null,
+        "approval_policy": null,
+        "approvals_reviewer": null,
+        "sandbox_mode": null,
+        "sandbox_workspace_write": null,
+        "forced_chatgpt_workspace_id": null,
+        "forced_login_method": null,
+        "web_search": null,
+        "tools": null,
+        "instructions": null,
+        "developer_instructions": null,
+        "compact_prompt": null,
+        "model_reasoning_effort": null,
+        "model_reasoning_summary": null,
+        "model_verbosity": null,
+        "service_tier": null,
+        "analytics": null,
+        "apps": null,
+        "browser_use": null,
+        "computer_use": null,
+        "desktop": null,
+        "profiles": {},
+        "mcp_oauth_callback_port": null,
+        "model_instructions_file": null,
+        "goals": null,
+        "experimental_realtime_ws_base_url": null,
+        "notice": null,
+        "file_opener": "vscode",
+        "experimental_realtime_ws_backend_prompt": null,
+        "skills": null,
+        "permissions": null,
+        "disable_paste_burst": null,
+        "feedback": null,
+        "model_providers": {},
+        "allow_login_shell": true,
+        "tui": null,
+        "ghost_snapshot": null,
+        "include_permissions_instructions": true,
+        "experimental_compact_prompt_file": null,
+        "default_permissions": null,
+        "shell_environment_policy": {
+          "inherit": null,
+          "ignore_default_excludes": null,
+          "exclude": null,
+          "set": null,
+          "include_only": null,
+          "filters": null,
+          "experimental_use_profile": null
+        },
+        "mcp_oauth_callback_url": null,
+        "js_repl_node_path": null,
+        "projects": {
+          "/tmp/text-lifecycle-20260905/project": {
+            "trust_level": "trusted"
+          }
+        },
+        "hooks": null,
+        "include_collaboration_mode_instructions": true,
+        "mcp_servers": {},
+        "realtime": null,
+        "js_repl_node_module_dirs": null,
+        "experimental_thread_store": null,
+        "marketplaces": {},
+        "log_dir": null,
+        "sqlite_home": null,
+        "agents": {
+          "enabled": null,
+          "max_concurrent_threads_per_session": 6,
+          "max_depth": null,
+          "default_subagent_model": null,
+          "default_subagent_reasoning_effort": null,
+          "job_max_runtime_seconds": null,
+          "interrupt_message": null,
+          "fiction-drafter": {
+            "description": null,
+            "config_file": "/tmp/text-lifecycle-20260905/project/.codex/agents/fiction-drafter.toml",
+            "nickname_candidates": null
+          }
+        },
+        "tool_suggest": null,
+        "cli_auth_credentials_store": "file",
+        "experimental_realtime_webrtc_call_base_url": null,
+        "hide_agent_reasoning": false,
+        "profile": null,
+        "mcp_oauth_credentials_store": "auto",
+        "project_doc_max_bytes": 32768,
+        "project_doc_fallback_filenames": [],
+        "background_terminal_max_timeout": 300000,
+        "audio": null,
+        "experimental_realtime_ws_model": null,
+        "notify": null,
+        "mcp_optional_startup_grace_ms": null,
+        "apps_mcp_product_sku": null,
+        "oss_provider": null,
+        "personality": null,
+        "auto_review": null,
+        "include_environment_context": true,
+        "suppress_unstable_features_warning": null,
+        "history": {
+          "persistence": "save-all",
+          "max_bytes": null
+        },
+        "experimental_realtime_start_instructions": null,
+        "model_catalog_json": null,
+        "memories": null,
+        "project_root_markers": [
+          ".git"
+        ],
+        "check_for_update_on_startup": null,
+        "include_apps_instructions": true,
+        "openai_base_url": null,
+        "responses_api_metadata": null,
+        "experimental_use_unified_exec_tool": null,
+        "show_raw_agent_reasoning": null,
+        "otel": null,
+        "orchestrator": null,
+        "experimental_realtime_ws_startup_context": null,
+        "experimental_thread_store_endpoint": null,
+        "chatgpt_base_url": "https://chatgpt.com/backend-api/",
+        "tool_output_token_limit": null,
+        "windows": null,
+        "features": {
+          "auth_elicitation": true,
+          "background_paginated_rollout_migration": false,
+          "mcp_2026_07_28": false,
+          "memories": false,
+          "mentions_v2": true,
+          "remote_control": false,
+          "remote_plugin": true,
+          "tool_suggest": true
+        },
+        "plan_mode_reasoning_effort": null,
+        "plugins": {}
+      },
+      "origins": {
+        "agents.fiction-drafter.config_file": {
+          "name": {
+            "type": "project",
+            "dotCodexFolder": "/tmp/text-lifecycle-20260905/project/.codex"
+          },
+          "version": "sha256:ff8ee3ec243ec3b402796133af0107ac16411f4d7f4f6e6f7f9532819302337f"
+        },
+        "agents.max_concurrent_threads_per_session": {
+          "name": {
+            "type": "project",
+            "dotCodexFolder": "/tmp/text-lifecycle-20260905/project/.codex"
+          },
+          "version": "sha256:ff8ee3ec243ec3b402796133af0107ac16411f4d7f4f6e6f7f9532819302337f"
+        },
+        "projects./tmp/text-lifecycle-20260905/project.trust_level": {
+          "name": {
+            "type": "user",
+            "file": "/tmp/text-lifecycle-20260905/home/config.toml",
+            "profile": null
+          },
+          "version": "sha256:873e82ca8d70f7e810f98b239cb4a9ae6e1f6b6abc693a17a5865bfb930b55b6"
+        }
+      },
+      "layers": [
+        {
+          "name": {
+            "type": "project",
+            "dotCodexFolder": "/tmp/text-lifecycle-20260905/project/.codex"
+          },
+          "version": "sha256:ff8ee3ec243ec3b402796133af0107ac16411f4d7f4f6e6f7f9532819302337f",
+          "config": {
+            "agents": {
+              "max_concurrent_threads_per_session": 6,
+              "fiction-drafter": {
+                "config_file": "/tmp/text-lifecycle-20260905/project/.codex/agents/fiction-drafter.toml"
+              }
+            }
+          }
+        },
+        {
+          "name": {
+            "type": "user",
+            "file": "/tmp/text-lifecycle-20260905/home/config.toml",
+            "profile": null
+          },
+          "version": "sha256:873e82ca8d70f7e810f98b239cb4a9ae6e1f6b6abc693a17a5865bfb930b55b6",
+          "config": {
+            "projects": {
+              "/tmp/text-lifecycle-20260905/project": {
+                "trust_level": "trusted"
+              }
+            }
+          }
+        },
+        {
+          "name": {
+            "type": "system",
+            "file": "/etc/codex/config.toml"
+          },
+          "version": "sha256:44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "config": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "result": {
+      "data": [
+        {
+          "cwd": "/tmp/text-lifecycle-20260905/project",
+          "skills": [
+            {
+              "name": "ai-ml-lifecycle",
+              "description": "Route AI evaluation, ML training and inference engineering, and model operational readiness; use security review for authority-boundary threats.",
+              "interface": {
+                "displayName": "AI and ML Lifecycle",
+                "shortDescription": "Route AI evaluation, ML engineering, and MLOps",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $ai-ml-lifecycle to choose the AI-evaluation, ML-engineering, or MLOps workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/ai-ml-lifecycle/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "architecture-contracts",
+              "description": "Route durable architecture decisions and consumer-facing interface contract reviews; not for implementation sequencing, data analysis, or release execution.",
+              "interface": {
+                "displayName": "Architecture Contracts",
+                "shortDescription": "Route architecture decisions and interface contracts",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $architecture-contracts to choose the architecture-decision or API-contract workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/architecture-contracts/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "archives-collections",
+              "description": "Route accession preparation, collection description, digital preservation planning, access review, and exhibit interpretation; not for acquisition, disposition, or rights approval.",
+              "interface": {
+                "displayName": "Archives And Collections",
+                "shortDescription": "Prepare collection intake, description, and access",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $archives-collections to select the workflow needed for this request and return its evidence-backed deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/archives-collections/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "codex-subagent-designer",
+              "description": "Route Codex delegation design, subagent prompting, reusable catalog-asset design, and custom-agent template review.",
+              "interface": {
+                "displayName": "Codex Subagent Designer",
+                "shortDescription": "Route delegation, prompt, skill, and agent design",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $codex-subagent-designer to choose the delegation, prompting, catalog-asset, or agent-template workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/codex-subagent-designer/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "data-analytics",
+              "description": "Route durable data modeling, analytics engineering, and data-science analysis; not for model-training systems or generic application architecture.",
+              "interface": {
+                "displayName": "Data and Analytics",
+                "shortDescription": "Route data modeling, metrics, and analysis",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $data-analytics to choose the data-modeling, analytics-engineering, or data-science workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/data-analytics/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "docs-information-architecture",
+              "description": "Structure documentation by audience, task, content type, navigation, ownership, and freshness; not for line editing or product implementation.",
+              "interface": {
+                "displayName": "Docs Information Architecture",
+                "shortDescription": "Structure documentation by audience and task",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $docs-information-architecture to structure this documentation set, navigation, or content lifecycle."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/docs-information-architecture/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "education-training",
+              "description": "Route curriculum, lesson materials, assessment design, learning accessibility, and training evaluation for educators and training teams; not for grading learners or institutional decisions.",
+              "interface": {
+                "displayName": "Education And Training",
+                "shortDescription": "Plan learning, materials, assessments, and evaluation",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $education-training to select the workflow needed for this request and return its evidence-backed deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/education-training/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "finance-audit-operations",
+              "description": "Route operational finance review, audit-evidence organization, and invoice reconciliation without payment, certification, tax, or investment authority.",
+              "interface": {
+                "displayName": "Finance and Audit Operations",
+                "shortDescription": "Route finance, audit-evidence, and invoice work",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $finance-audit-operations to choose the finance, audit-evidence, or invoice-reconciliation workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/finance-audit-operations/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "grant-operations",
+              "description": "Route grant proposal compliance, budget justification, and sponsored-project reporting before authorized submission or certification.",
+              "interface": {
+                "displayName": "Grant Operations",
+                "shortDescription": "Route proposal, budget, and reporting workflows",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $grant-operations to choose the proposal, budget-justification, or sponsored-reporting workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/grant-operations/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "interface-design-review",
+              "description": "Route UX flow, design-system, accessibility, and localization work for user-facing interfaces; not for product strategy or implementation planning alone.",
+              "interface": {
+                "displayName": "Interface Design Review",
+                "shortDescription": "Route UX, design-system, accessibility, and locale review",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $interface-design-review to choose only the interface review modes needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/interface-design-review/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "legal-operations",
+              "description": "Route source-backed legal research, contract issue review, and records-retention operations without providing legal advice or final authority.",
+              "interface": {
+                "displayName": "Legal Operations",
+                "shortDescription": "Route legal research, contracts, and retention",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $legal-operations to choose the legal-research, contract-review, or records-retention workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/legal-operations/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "policy-public-affairs",
+              "description": "Route source-backed policy analysis, public-comment drafting, and legislative tracking without deceptive advocacy, legal advice, or submission authority.",
+              "interface": {
+                "displayName": "Policy and Public Affairs",
+                "shortDescription": "Route policy analysis, comments, and legislation",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $policy-public-affairs to choose the policy-analysis, public-comment, or legislative-tracking workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/policy-public-affairs/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "procurement-commercial-review",
+              "description": "Route vendor evaluation, RFP response operations, and statement-of-work review before award, bid submission, negotiation, or execution.",
+              "interface": {
+                "displayName": "Procurement and Commercial Review",
+                "shortDescription": "Route vendor, RFP, and statement-of-work review",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $procurement-commercial-review to choose the vendor, RFP, or statement-of-work workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/procurement-commercial-review/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "product-strategy",
+              "description": "Route product discovery and competitive research that shape user outcomes, evidence, scope, or market context before architecture and implementation.",
+              "interface": {
+                "displayName": "Product Strategy",
+                "shortDescription": "Route discovery and competitive research",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $product-strategy to choose the product-discovery or competitive-research workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/product-strategy/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "production-operations",
+              "description": "Route release readiness, observability and runbook design, and incident postmortems for production systems.",
+              "interface": {
+                "displayName": "Production Operations",
+                "shortDescription": "Route release, observability, and incident work",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $production-operations to choose the release, observability, or postmortem workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/production-operations/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "public-source-research",
+              "description": "Route lawful public-source investigation planning, official-record research, media geolocation, network analysis, and misinformation assessment; not for private targeting.",
+              "interface": {
+                "displayName": "Public-Source Research",
+                "shortDescription": "Route lawful public-source research and analysis",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $public-source-research to choose only the lawful public-source analysis modes needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/public-source-research/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "publishing-editorial",
+              "description": "Edit manuscripts and prepare proofs, metadata, indexes, submission materials, and revised editions with traceable source and production checks.",
+              "interface": {
+                "displayName": "Publishing and Editorial",
+                "shortDescription": "Edit manuscripts, proofs, packages, and revised editions",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $publishing-editorial to complete the editing or publication-preparation artifact I request with the relevant workflow."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/publishing-editorial/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "research-quality",
+              "description": "Route scholarly literature synthesis, study-method review, and citation-integrity checking; not for general market research or legal conclusions.",
+              "interface": {
+                "displayName": "Research Quality",
+                "shortDescription": "Route literature, methods, and citation review",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $research-quality to choose the literature, methods, or citation-integrity workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/research-quality/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "security-privacy-review",
+              "description": "Route threat modeling, prompt-injection defense, and privacy review for trust, authority, and personal-data boundaries.",
+              "interface": {
+                "displayName": "Security and Privacy Review",
+                "shortDescription": "Route threat, prompt-injection, and privacy review",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $security-privacy-review to choose only the security or privacy review modes needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/security-privacy-review/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "software-assurance",
+              "description": "Route dependency risk, performance diagnosis, and risk-based test design before accepting or releasing software changes.",
+              "interface": {
+                "displayName": "Software Assurance",
+                "shortDescription": "Route dependency, performance, and test review",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $software-assurance to choose the dependency, performance, or test-design workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/software-assurance/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "software-delivery",
+              "description": "Route executable implementation planning and multi-part engineering coordination after intent is sufficiently approved; not for architecture selection or release approval.",
+              "interface": {
+                "displayName": "Software Delivery",
+                "shortDescription": "Route implementation planning and execution",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $software-delivery to choose the implementation-planning or engineering-execution workflow needed for this request."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/software-delivery/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "text-composition",
+              "description": "Plan and compose complete fiction, nonfiction, essays, poetry, dramatic, professional, and scholarly texts.",
+              "interface": {
+                "displayName": "Text Composition",
+                "shortDescription": "Compose complete texts from briefs and source material",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $text-composition to select the workflow for the text artifact I need and complete that deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/text-composition/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "text-revision",
+              "description": "Plan and apply manuscript revisions, reconcile feedback, refine rhetoric, review continuity and reader orientation, or adapt texts.",
+              "interface": {
+                "displayName": "Text Revision",
+                "shortDescription": "Revise structure, language, continuity, and audience fit",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $text-revision to select the workflow for the text artifact I need and complete that deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/text-revision/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "text-translation",
+              "description": "Plan, draft, revise, and comparatively review translations with explicit source coverage, register, ambiguity, and form choices.",
+              "interface": {
+                "displayName": "Text Translation",
+                "shortDescription": "Translate complete texts and review source fidelity",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $text-translation to select the workflow for the text artifact I need and complete that deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/text-translation/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "textual-scholarship",
+              "description": "Describe textual witnesses, transcribe sources, collate variants, and prepare edited texts with apparatus and editorial policy.",
+              "interface": {
+                "displayName": "Textual Scholarship",
+                "shortDescription": "Transcribe, collate, and prepare documented editions",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $textual-scholarship to select the workflow for the text artifact I need and complete that deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/textual-scholarship/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "video-audio-production",
+              "description": "Route video and audio briefs, scripts, recording preparation, postproduction handoffs, and delivery review; not for publishing or rights clearance.",
+              "interface": {
+                "displayName": "Video And Audio Production",
+                "shortDescription": "Plan recording, edit handoffs, and media delivery",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $video-audio-production to select the workflow needed for this request and return its evidence-backed deliverable."
+              },
+              "path": "/tmp/text-lifecycle-20260905/project/.agents/skills/video-audio-production/SKILL.md",
+              "scope": "repo",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "adapting-programs-with-wrappers",
+              "description": "Use when an existing procedure should support new units, representations, or data conventions without changing its core implementation.",
+              "path": "/home/cadwaladyr/.agents/skills/adapting-programs-with-wrappers/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "analyze-ai-temporal-interfaces",
+              "description": "Use when evaluating artificial intelligence, simulation, memory, processing speed, human-machine coupling, recursive self-monitoring, or failures caused by incompatible time scales.",
+              "path": "/home/cadwaladyr/.agents/skills/analyze-ai-temporal-interfaces/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "analyze-calendric-panic-feedback",
+              "description": "Use when a scheduled technical transition, deadline, prophecy, or public countdown may create anticipatory behavior that changes the event it predicts.",
+              "path": "/home/cadwaladyr/.agents/skills/analyze-calendric-panic-feedback/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "analyze-self-sealing-conspiracies",
+              "description": "Use when a claim absorbs every objection as confirmation, mixes documented events with unfalsifiable inference, or turns absence of evidence into evidence of suppression.",
+              "path": "/home/cadwaladyr/.agents/skills/analyze-self-sealing-conspiracies/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "analyze-sonic-countercultures",
+              "description": "Use when music, rhythm, broadcast noise, pirate distribution, or media withdrawal functions as direct cultural action rather than as a representation of a political program.",
+              "path": "/home/cadwaladyr/.agents/skills/analyze-sonic-countercultures/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "analyze-suborganizational-signals",
+              "description": "Use when meaningful behavior may arise from noise, glitches, bodily tics, geological traces, microbial processes, or interacting microstimuli without a centralized sender.",
+              "path": "/home/cadwaladyr/.agents/skills/analyze-suborganizational-signals/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "build-linked-reasoning-chains",
+              "description": "Invoke when explaining a sequence in which each result becomes the next cause, each premise leads into the next inference, or successive stages rise toward a climax.",
+              "path": "/home/cadwaladyr/.agents/skills/build-linked-reasoning-chains/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "build-operational-concept-lexicons",
+              "description": "Use when a dense theoretical or speculative corpus contains many coined terms whose relationships must be made navigable without reducing them to disconnected definitions.",
+              "path": "/home/cadwaladyr/.agents/skills/build-operational-concept-lexicons/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "building-combinator-dsls",
+              "description": "Use when a domain can be represented by interchangeable components whose combinations retain a common interface.",
+              "path": "/home/cadwaladyr/.agents/skills/building-combinator-dsls/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "building-extensible-eval-apply-interpreters",
+              "description": "Use when creating or extending a Lisp-like language with customizable syntax, application rules, evaluation order, or parameter declarations.",
+              "path": "/home/cadwaladyr/.agents/skills/building-extensible-eval-apply-interpreters/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "building-propagator-networks",
+              "description": "Use when information should flow opportunistically in multiple directions through a network of independent computational components.",
+              "path": "/home/cadwaladyr/.agents/skills/building-propagator-networks/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "building-term-rewriting-systems",
+              "description": "Use when symbolic expressions, compiler fragments, or other tree-shaped terms must be transformed by extensible local rules.",
+              "path": "/home/cadwaladyr/.agents/skills/building-term-rewriting-systems/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "calibrate-claims-with-correction-and-negation",
+              "description": "Invoke when a claim needs to be strengthened, softened, corrected, redefined, made more precise, contrasted with expectations, or expressed with deliberate understatement.",
+              "path": "/home/cadwaladyr/.agents/skills/calibrate-claims-with-correction-and-negation/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "cli-creator",
+              "description": "Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage auth, and pair with a companion skill.",
+              "interface": {
+                "displayName": "CLI Creator",
+                "shortDescription": "Build CLIs for Codex",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Create a composable CLI from this source material, install it on PATH, test it from outside the source folder, and create a companion skill that teaches Codex when to use it."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/cli-creator/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "code-simplification-decomposition",
+              "description": "Refactor existing code toward maximal coherence-preserving decomposition while preserving intended current behavior and removing legacy compatibility. Use when large or mixed functions, classes, files, or modules contain multiple independently explainable mechanisms, or when dense orchestration, hidden dependencies, duplicate logic, unclear ownership, or no-value abstractions obscure genuine conceptual seams. Split until each remaining unit represents one cohesive mechanism; never split for line count, and stop before fragmenting a single algorithm, state transition, lifecycle, or tightly coupled mechanism. An explicit invocation without a narrower target defaults to the entire repository; a user-named target overrides that default, and implicit skill selection never expands the user's requested scope. Do not apply to new-feature design, speculative architecture, generated or vendored code, or migrations unless the user explicitly includes them.",
+              "path": "/home/cadwaladyr/.agents/skills/code-simplification-decomposition/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "compiling-interpreters-to-execution-procedures",
+              "description": "Use when an extensible interpreter repeatedly reanalyzes syntax and needs a faster execution representation.",
+              "path": "/home/cadwaladyr/.agents/skills/compiling-interpreters-to-execution-procedures/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "compiling-regular-expression-dsls",
+              "description": "Use when conventional regular-expression syntax is too context-sensitive, fragile, or target-specific for programmatic construction.",
+              "path": "/home/cadwaladyr/.agents/skills/compiling-regular-expression-dsls/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "compose-emphatic-word-repetition",
+              "description": "Invoke when language needs emphasis, emotional force, thematic continuity, enlargement, reciprocity, paradox, or memorable verbal texture through repeated words or word roots.",
+              "path": "/home/cadwaladyr/.agents/skills/compose-emphatic-word-repetition/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "compose-recursive-conceptual-fables",
+              "description": "Use when an abstract idea about time, causation, identity, artificial life, contagion, or interpretation should be expressed as a short memorable tale rather than a direct exposition.",
+              "path": "/home/cadwaladyr/.agents/skills/compose-recursive-conceptual-fables/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "conduct-speculative-subculture-ethnography",
+              "description": "Use when reconstructing a dispersed subculture from rumors, artifacts, terminology, media reports, technologies, practices, and conflicting participant accounts.",
+              "path": "/home/cadwaladyr/.agents/skills/conduct-speculative-subculture-ethnography/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "construct-immanent-numerical-systems",
+              "description": "Use when designing or decoding a symbolic system whose topology, entities, classifications, routes, and correspondences must be generated from explicit arithmetic operations rather than arbitrary association.",
+              "path": "/home/cadwaladyr/.agents/skills/construct-immanent-numerical-systems/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "construct-speculative-research-dossiers",
+              "description": "Use when building a fictional world through documents that should resemble biographies, field reports, archival discoveries, interviews, institutional records, and disputed testimony.",
+              "path": "/home/cadwaladyr/.agents/skills/construct-speculative-research-dossiers/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "control-pace-with-conjunctions",
+              "description": "Invoke when composing or revising lists, action sequences, alternatives, invective, or loose sentences whose pace and item-by-item emphasis depend on adding or removing conjunctions.",
+              "path": "/home/cadwaladyr/.agents/skills/control-pace-with-conjunctions/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "controlling-programs-with-continuations",
+              "description": "Use when implementing nonlocal exits, resumable control states, coroutines, or native-language backtracking.",
+              "path": "/home/cadwaladyr/.agents/skills/controlling-programs-with-continuations/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "data-organisation-methods",
+              "description": "Organize and restructure files, folders, datasets, records, archives, and knowledge collections by inventorying the current state, selecting an appropriate hierarchy, taxonomy, schema, naming convention, or metadata model, producing reversible change plans, applying authorized changes safely, and validating completeness. Use for folder cleanup, archive design, naming standardization, taxonomy or tag design, CSV or table organization, record deduplication, knowledge-base restructuring, raw/staged/curated layouts, or choosing among project-based, numerical, chronological, entity-based, relational, tidy-data, graph, and metadata-first methods.",
+              "interface": {
+                "displayName": "Data Organisation Methods",
+                "shortDescription": "Organize files, datasets, records, and knowledge",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $data-organisation-methods to audit this collection and propose a safe, maintainable organization scheme."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/data-organisation-methods/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "dependency-directed-backtracking-in-propagators",
+              "description": "Use when a constraint network must explore hypothetical values while retaining deductions unrelated to failed assumptions.",
+              "path": "/home/cadwaladyr/.agents/skills/dependency-directed-backtracking-in-propagators/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "design-dual-layer-labyrinth-games",
+              "description": "Use when designing an immersive game or interactive narrative whose physical environment, information space, character upgrades, documents, puzzles, and transformations must advance one investigation together.",
+              "path": "/home/cadwaladyr/.agents/skills/design-dual-layer-labyrinth-games/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "design-racket-macros-dsls",
+              "description": "Design, implement, review, debug, test, or evolve hygienic Racket macros and embedded domain-specific languages. Use for syntax objects, syntax-parse or syntax-case, phase levels and for-syntax imports, generated bindings, DSL grammar and IR design, #lang or reader construction, syntax-spec-v3, expansion diagnostics, macro testing, local expansion performance, and compile-time trust boundaries. Use racket-programming instead for ordinary Racket work without a macro or language-design concern.",
+              "interface": {
+                "displayName": "Racket Macro & DSL Design",
+                "shortDescription": "Design hygienic Racket macros and robust DSLs",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $design-racket-macros-dsls to design or review a Racket macro system or embedded DSL."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/design-racket-macros-dsls/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "designing-evolvable-software",
+              "description": "Use when evaluating or designing software that must absorb unanticipated requirements through additive, localized changes.",
+              "path": "/home/cadwaladyr/.agents/skills/designing-evolvable-software/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "diataxis-documentation",
+              "description": "Apply the Diataxis documentation methodology to plan, write, revise, classify, audit, or restructure documentation. Use when Codex needs to create or evaluate tutorials, how-to guides, reference docs, explanation/concept docs, documentation information architecture, docs migration plans, quadrant boundary decisions, or mixed documentation that must be split by user need.",
+              "interface": {
+                "displayName": "Diataxis Documentation",
+                "shortDescription": "Shape docs with Diataxis workflows",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $diataxis-documentation to plan, write, or audit documentation with the Diataxis methodology."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/diataxis-documentation/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "engineer-hyperstitional-fictions",
+              "description": "Use when analyzing or creating fictions intended to alter perception, behavior, cultural circulation, or the conditions of their own realization.",
+              "path": "/home/cadwaladyr/.agents/skills/engineer-hyperstitional-fictions/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "extending-arithmetic-with-generic-procedures",
+              "description": "Use when existing numerical programs should operate on symbolic values, functions, vectors, matrices, or future data types.",
+              "path": "/home/cadwaladyr/.agents/skills/extending-arithmetic-with-generic-procedures/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "extract-repository-topology",
+              "description": "Map observed and expected repository wiring, resolve many-to-many connectors, and diagnose missing, forbidden, ambiguous, test-only, and unreachable connections. Use for evidence-backed repository connectivity reports, including incremental refreshes that re-examine only changed files.",
+              "interface": {
+                "displayName": "Repository Connectivity Mapper",
+                "shortDescription": "Diagnose observed, missing, and unreachable wiring",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $extract-repository-topology to map this repository's observed and expected connections, diagnose missing or unreachable wiring, and reuse unchanged file records from a prior artifact when available."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/extract-repository-topology/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "factoring-rule-driven-domain-models",
+              "description": "Use when domain rules, state transitions, and control flow have become interwoven in a monolithic implementation.",
+              "path": "/home/cadwaladyr/.agents/skills/factoring-rule-driven-domain-models/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "fossil-version-control",
+              "description": "Work safely with Fossil SCM repositories. Use when Codex needs to inspect, clone, open, sync, branch, commit, diff, merge, stash, recover, serve, or translate Git-oriented version-control tasks for Fossil repositories and check-outs.",
+              "interface": {
+                "displayName": "Fossil Version Control",
+                "shortDescription": "Work safely with Fossil VCS repositories",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $fossil-version-control to inspect this Fossil repository and recommend the safest next command."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/fossil-version-control/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "guide-arguments-with-questions-and-objections",
+              "description": "Invoke when explaining a difficult argument, surfacing audience concerns, answering anticipated questions, preempting objections, or structuring a persuasive exchange while retaining control of its sequence.",
+              "path": "/home/cadwaladyr/.agents/skills/guide-arguments-with-questions-and-objections/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "hermes-profile-designer",
+              "description": "Design, preview, validate, package, install, update, and verify Hermes Agent profiles and profile distributions against the Hermes 0.20.0 runtime contract. Use when Codex must create or materially redesign a Hermes profile, write its SOUL and authority boundaries, configure profile-scoped tools or MCP servers, plan profile cron work, author an installable distribution, or diagnose whether a proposed profile matches actual Hermes behavior.",
+              "interface": {
+                "displayName": "Hermes Profile Designer",
+                "shortDescription": "Build Kanban-first Hermes 0.20 profiles",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $hermes-profile-designer to design, preview, and validate a Kanban-first Hermes 0.20 profile distribution with ephemeral delegation disabled."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/hermes-profile-designer/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "implementation-planner",
+              "description": "Plan code changes before implementation. Use when the user asks for an implementation plan, coding plan, refactor plan, migration plan, feature plan, bug-fix plan, or wants to explore implementation approaches before changing code. Inspect the relevant repository state, resolve material ambiguities, present meaningful alternatives when genuine design choices exist, and write the approved plan to a Markdown file. Do not implement the change unless separately asked.",
+              "interface": {
+                "displayName": "Implementation Planner",
+                "shortDescription": "Plan concrete code changes before implementation",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $implementation-planner to inspect this repository, produce an implementation-ready plan for the requested change, and write the plan to a Markdown file after I approve it."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/implementation-planner/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "implementing-backtracking-pattern-matchers",
+              "description": "Use when matching structured data with constants, constrained variables, variable-length segments, alternatives, or recursive patterns.",
+              "path": "/home/cadwaladyr/.agents/skills/implementing-backtracking-pattern-matchers/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "implementing-forward-mode-automatic-differentiation",
+              "description": "Use when adding numerical or symbolic derivatives to an extensible arithmetic, including higher-order and structured functions.",
+              "path": "/home/cadwaladyr/.agents/skills/implementing-forward-mode-automatic-differentiation/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "implementing-unification",
+              "description": "Use when two partially specified symbolic structures must be merged into a common substitution instance.",
+              "path": "/home/cadwaladyr/.agents/skills/implementing-unification/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "imply-through-strategic-nonstatement",
+              "description": "Invoke when a point should be suggested, partially withheld, dramatized through silence, left to the audience's imagination, or presented with a calculated show of restraint.",
+              "path": "/home/cadwaladyr/.agents/skills/imply-through-strategic-nonstatement/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "inferring-types-with-unification",
+              "description": "Use when deriving types from program structure and partial declarations without requiring every type to be written explicitly.",
+              "path": "/home/cadwaladyr/.agents/skills/inferring-types-with-unification/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "langfuse",
+              "description": "Interact with Langfuse and access its documentation. Use when needing to (1) query or modify Langfuse data programmatically via the CLI \u2014 traces, prompts, datasets, scores, sessions, and any other API resource, (2) look up Langfuse documentation, concepts, integration guides, or SDK usage, or (3) understand how any Langfuse feature works. This skill covers CLI-based API access (via npx) and multiple documentation retrieval methods.",
+              "path": "/home/cadwaladyr/.agents/skills/langfuse/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "layering-data-procedures-and-units",
+              "description": "Use when metadata should travel alongside a base computation without tangling the program's essential logic.",
+              "path": "/home/cadwaladyr/.agents/skills/layering-data-procedures-and-units/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "literate-programming",
+              "description": "Work with literate programming projects where prose, code, notebooks, generated source, and rendered documentation are linked. Use when designing, editing, reviewing, debugging, or validating noweb/nuweb, Org Babel, Quarto, R Markdown, Jupyter notebooks, Knitr/Pweave, mdBook-style prose-plus-code workflows, or any project where the source of truth may be a narrative document that tangles executable files or weaves documentation.",
+              "interface": {
+                "displayName": "Literate Programming",
+                "shortDescription": "Work with prose-driven source and woven docs",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $literate-programming to design or maintain a literate program with synchronized narrative and executable source."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/literate-programming/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "map-nonlinear-time-narratives",
+              "description": "Use when stories, archives, or conceptual systems involve loops, retrocausality, missing time, self-originating documents, or events that appear to modify their own preconditions.",
+              "path": "/home/cadwaladyr/.agents/skills/map-nonlinear-time-narratives/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "matching-patterns-on-graphs",
+              "description": "Use when the data of interest is connected by labeled relationships rather than confined to list or tree structure.",
+              "path": "/home/cadwaladyr/.agents/skills/matching-patterns-on-graphs/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "merging-partial-information-in-cells",
+              "description": "Use when cells receive overlapping, differently supported, or temporarily disbelieved pieces of information.",
+              "path": "/home/cadwaladyr/.agents/skills/merging-partial-information-in-cells/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "model-layered-control-systems",
+              "description": "Use when power operates through nested institutions, cover stories, simulations, classifications, memory structures, or higher-order systems that remain opaque to lower levels.",
+              "path": "/home/cadwaladyr/.agents/skills/model-layered-control-systems/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "modeling-worlds-with-multi-argument-dispatch",
+              "description": "Use when behavior depends jointly on several participating entities and does not fit naturally under one receiver object.",
+              "path": "/home/cadwaladyr/.agents/skills/modeling-worlds-with-multi-argument-dispatch/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "operate-symbolic-path-oracles",
+              "description": "Use when a fixed symbolic system must turn combinations, routes, or random outcomes into structured readings without collapsing them into isolated keywords.",
+              "path": "/home/cadwaladyr/.agents/skills/operate-symbolic-path-oracles/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "optimizing-predicate-dispatch",
+              "description": "Use when extensible generic procedures have become costly or ambiguous because handlers are selected by repeated predicate tests.",
+              "path": "/home/cadwaladyr/.agents/skills/optimizing-predicate-dispatch/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "organize-immanent-cultural-research",
+              "description": "Use when forming a distributed research collective that should work with cultural practices, scenes, and media rather than treating them as passive objects of representation.",
+              "path": "/home/cadwaladyr/.agents/skills/organize-immanent-cultural-research/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "pijul-version-control",
+              "description": "Work safely with Pijul distributed version-control repositories. Use when Codex needs to inspect, initialize, clone, record, diff, log, push, pull, channel-switch, fork, unrecord, reset, import from Git, or explain Pijul's patch/change model and how it differs from Git branches, commits, merges, rebases, and staging.",
+              "interface": {
+                "displayName": "Pijul Version Control",
+                "shortDescription": "Use Pijul commands and patch-based workflows",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $pijul-version-control to inspect this Pijul repository and explain the workflow in Git terms."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/pijul-version-control/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "position-repetition-across-clauses",
+              "description": "Invoke when designing a passage around repeated openings, endings, or paired boundaries, or when comparing which placement will best create rhythm, emphasis, contrast, accumulation, or release.",
+              "path": "/home/cadwaladyr/.agents/skills/position-repetition-across-clauses/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "programming-nondeterministic-search-with-amb",
+              "description": "Use when a problem is naturally expressed as choices plus constraints and rejected choices should trigger automatic exploration.",
+              "path": "/home/cadwaladyr/.agents/skills/programming-nondeterministic-search-with-amb/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "racket-programming",
+              "description": "Read, write, debug, review, test, package, document, or explain Racket programs. Use for Racket language work including modules, #lang choices, raco workflows, packages, info.rkt metadata, rackunit tests, macros, syntax objects, contracts, Typed Racket, Scribble documentation, DrRacket-oriented code, command-line tools, and troubleshooting Racket error messages.",
+              "interface": {
+                "displayName": "Racket Programming",
+                "shortDescription": "Work effectively with Racket code, packages, tests, macros, and docs",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $racket-programming to implement and validate a Racket change with the appropriate raco commands."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/racket-programming/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "racket-scribble",
+              "description": "Author, edit, debug, render, test, and package Racket Scribble documents. Use for .scrbl files, Scribble @-expressions, #lang scribble/base or scribble/manual, Racket library manuals, info.rkt scribblings metadata, binding-aware documentation forms, evaluated examples, cross-references, custom styles, literate programs, and raco scribble or raco setup documentation failures.",
+              "interface": {
+                "displayName": "Racket Scribble",
+                "shortDescription": "Author, build, and debug Scribble documents",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $racket-scribble to author and verify a Scribble document or Racket library manual."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/racket-scribble/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "repo-code-review",
+              "description": "Perform a read-only, evidence-backed, end-to-end repository review and classify each proven defect by its operational failure envelope, recovery burden, containment, repair shape, and action disposition. Use for multi-file pre-merge reviews, security or architecture audits, onboarding, and technical-debt assessments, but not for tiny patches, trivial documentation changes, or single-file glances.",
+              "interface": {
+                "displayName": "End-to-End Repository Code Review",
+                "shortDescription": "Classify repository defects operationally",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $repo-code-review to perform a read-only end-to-end review of this repository and classify evidence-backed defects by impact signature and action disposition."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/repo-code-review/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "reshape-syntax-with-inversion-and-ellipsis",
+              "description": "Invoke when ordinary word order feels flat, when a sentence needs suspense or a stronger ending, or when repeated grammatical material can be omitted without losing intelligibility.",
+              "path": "/home/cadwaladyr/.agents/skills/reshape-syntax-with-inversion-and-ellipsis/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "review-code-changes",
+              "description": "Review code changes and report only concrete, actionable correctness, behavioral, architectural, security, data-integrity, and test-validity defects, classified by operational failure envelope, recovery burden, containment, repair shape, and action disposition. Use for reviews of diffs, pull requests, commits, working trees, refactors, deprecations, removals, test changes, or compatibility cleanup, especially when replacements must remove legacy paths and tests must prove reachable behavior.",
+              "interface": {
+                "displayName": "Review Code Changes",
+                "shortDescription": "Classify concrete change defects",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $review-code-changes to review the current changes and classify concrete defects by impact signature and action disposition."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/review-code-changes/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "select-rhetorical-figures-by-effect",
+              "description": "Invoke when recognizing rhetorical figures, choosing a figure for a communicative purpose, or revising language that feels forced, excessive, or mismatched to its occasion.",
+              "path": "/home/cadwaladyr/.agents/skills/select-rhetorical-figures-by-effect/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "shape-parallel-and-reversed-structures",
+              "description": "Invoke when ideas need balanced comparison, antithesis, a forced choice, reciprocal framing, structural reversal, or a memorable formulation whose syntax mirrors its meaning.",
+              "path": "/home/cadwaladyr/.agents/skills/shape-parallel-and-reversed-structures/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "surrealdb-knowledge-graph-design",
+              "description": "Design, review, or configure SurrealDB knowledge graphs, graph schemas, relation tables, record links, record references, traversal queries, graph-plus-vector retrieval, permissions, indexes, and production configuration. Use when modeling entities and relationships in SurrealDB, migrating a graph workload, writing SurrealQL DDL/DML for RELATE or TYPE RELATION tables, choosing between graph edges and record links, or hardening SurrealDB graph/RAG deployments.",
+              "interface": {
+                "displayName": "SurrealDB Knowledge Graph Design",
+                "shortDescription": "Design SurrealDB graph schemas and queries",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $surrealdb-knowledge-graph-design to design a schemafull SurrealDB knowledge graph for my domain."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/surrealdb-knowledge-graph-design/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "surrealdb-vector-design",
+              "description": "Design, review, or troubleshoot SurrealDB vector search schemas, embedding storage, HNSW index configuration, brute-force similarity queries, hybrid full-text plus vector retrieval, RAG chunk models, and operational settings such as HNSW cache sizing. Use when working with SurrealDB vector fields, DEFINE INDEX HNSW, KNN query operators, vector::distance/vector::similarity functions, search::rrf, embedding pipelines, or retrieval architecture.",
+              "interface": {
+                "displayName": "SurrealDB Vector Design",
+                "shortDescription": "Design SurrealDB vector search schemas",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $surrealdb-vector-design to design a SurrealDB vector schema, HNSW index, and retrieval query plan."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/surrealdb-vector-design/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "tracking-provenance-with-support-layers",
+              "description": "Use when computed values need inspectable dependencies, justifications, audit histories, or restrictions on downstream use.",
+              "path": "/home/cadwaladyr/.agents/skills/tracking-provenance-with-support-layers/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "transcribe",
+              "description": "Transcribe audio files to text with optional diarization and known-speaker hints. Use when a user asks to transcribe speech from audio/video, extract text from recordings, or label speakers in interviews or meetings.",
+              "interface": {
+                "displayName": "Audio Transcribe",
+                "shortDescription": "Transcribe audio using OpenAI, with optional speaker diarization when requested. Prefer the bundled CLI for deterministic, repeatable runs.",
+                "iconSmall": "/home/cadwaladyr/.agents/skills/transcribe/assets/transcribe-small.svg",
+                "iconLarge": "/home/cadwaladyr/.agents/skills/transcribe/assets/transcribe.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Transcribe this audio or video, include speaker labels when possible, and provide a clean summary."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/transcribe/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "unconventional-software-brainstorm",
+              "description": "Generate deliberately extreme, originality-first, physically possible software-design candidates. Eligible only when the user explicitly invokes $unconventional-software-brainstorm; otherwise ineligible.",
+              "interface": {
+                "displayName": "Unconventional Software Brainstormer",
+                "shortDescription": "Invent strange, physically possible software designs",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $unconventional-software-brainstorm to generate three raw, physically possible, genuinely alien software-design candidates without practical evaluation."
+              },
+              "path": "/home/cadwaladyr/.agents/skills/unconventional-software-brainstorm/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "use-rhetorical-questions",
+              "description": "Invoke when a statement could gain involvement, incredulity, challenge, sarcasm, argumentative pressure, or emotional momentum by being framed as a question that expects no reply.",
+              "path": "/home/cadwaladyr/.agents/skills/use-rhetorical-questions/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "working-in-mit-gnu-scheme",
+              "description": "Use when reading, running, modifying, or extending the book's Scheme programs and supporting software.",
+              "path": "/home/cadwaladyr/.agents/skills/working-in-mit-gnu-scheme/SKILL.md",
+              "scope": "user",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "imagegen",
+              "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+              "interface": {
+                "displayName": "Image Gen",
+                "shortDescription": "Generate or edit images for websites, games, and more",
+                "iconSmall": "/tmp/text-lifecycle-20260905/home/skills/.system/imagegen/assets/imagegen-small.svg",
+                "iconLarge": "/tmp/text-lifecycle-20260905/home/skills/.system/imagegen/assets/imagegen.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $imagegen to make or edit an image for this project."
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/imagegen/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "openai-docs",
+              "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge\u2014including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex\u2014and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+              "shortDescription": "Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, and self-knowledge; OpenAI APIs and ChatGPT Work. 'You'/'this app' means Codex only.",
+              "interface": {
+                "displayName": "OpenAI Docs",
+                "shortDescription": "OpenAI and Codex docs for models, skills, tasks, and setup",
+                "iconSmall": "/tmp/text-lifecycle-20260905/home/skills/.system/openai-docs/assets/openai-small.svg",
+                "iconLarge": "/tmp/text-lifecycle-20260905/home/skills/.system/openai-docs/assets/openai.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use OpenAI Docs for official docs lookup, questions about Codex itself or Codex surfaces, model selection, model migration, and prompt-upgrade work."
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/openai-docs/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "plugin-creator",
+              "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.",
+              "interface": {
+                "displayName": "Plugin Creator",
+                "shortDescription": "Scaffold plugins and marketplace entries",
+                "iconSmall": "/tmp/text-lifecycle-20260905/home/skills/.system/plugin-creator/assets/plugin-creator-small.svg",
+                "iconLarge": "/tmp/text-lifecycle-20260905/home/skills/.system/plugin-creator/assets/plugin-creator.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $plugin-creator to scaffold a valid plugin in the personal marketplace, then validate it before handing it back."
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/plugin-creator/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "review-agent",
+              "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+              "interface": {
+                "displayName": "Review Agent",
+                "shortDescription": "Find actionable bugs in code changes",
+                "iconSmall": null,
+                "iconLarge": null,
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": "Use $review-agent to review the requested code changes and return actionable findings."
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/review-agent/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "skill-creator",
+              "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+              "shortDescription": "Create or update a skill",
+              "interface": {
+                "displayName": "Skill Creator",
+                "shortDescription": "Create or update a skill",
+                "iconSmall": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-creator/assets/skill-creator-small.svg",
+                "iconLarge": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-creator/assets/skill-creator.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": null
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-creator/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            },
+            {
+              "name": "skill-installer",
+              "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+              "shortDescription": "Install curated skills from openai/skills or other repos",
+              "interface": {
+                "displayName": "Skill Installer",
+                "shortDescription": "Install curated skills from openai/skills or other repos",
+                "iconSmall": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-installer/assets/skill-installer-small.svg",
+                "iconLarge": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-installer/assets/skill-installer.png",
+                "iconSmallUrl": null,
+                "iconLargeUrl": null,
+                "brandColor": null,
+                "defaultPrompt": null
+              },
+              "path": "/tmp/text-lifecycle-20260905/home/skills/.system/skill-installer/SKILL.md",
+              "scope": "system",
+              "enabled": true,
+              "pluginId": null
+            }
+          ],
+          "errors": []
+        }
+      ]
+    }
+  }
+]

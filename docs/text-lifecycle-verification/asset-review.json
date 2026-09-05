@@ -1,0 +1,1868 @@
+{
+  "date": "2026-09-05",
+  "rubric": "REFERENCES/quality-rubric.md",
+  "method": "Full manual content review of all 36 affected workflow/kit pairs, five gateway routers and UI metadata, and 32 new or modified agents. Scores assess reusable instructions, not guaranteed model behavior. All seven criteria are explicitly scored per mode and agent. Static parsing and live evidence are recorded separately.",
+  "skill_criteria": [
+    "trigger_and_routing",
+    "workflow_specificity",
+    "domain_heuristics",
+    "supporting_assets",
+    "tooling_and_validation",
+    "output_contract",
+    "boundaries"
+  ],
+  "agent_criteria": [
+    "role_distinctness",
+    "skill_and_reference_use",
+    "instruction_depth",
+    "runtime_fit",
+    "handoffs_and_boundaries",
+    "output_contract",
+    "catalog_integration"
+  ],
+  "modes": [
+    {
+      "gateway": "text-composition",
+      "mode": "composition-planning",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Distinct concepts become a brief and unit ledger; the receipt-form example preserves the requested form and separates planning from drafted coverage.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/composition-planning.md",
+          "sha256": "8911df7df2d0795edfd57182e7b0a24bd16c767cc7a9913a6d0d067ed6ba465d"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/composition-planning-kit.md",
+          "sha256": "b9c297b546ee04d4580a6677b76d0faa75d1ccef038e11a1a6d8e6a0a46b7f30"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "source-synthesis-and-outlining",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Source classes, derivative-source dependence, contradiction retention, and claim-to-location links make the outline auditable.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/source-synthesis-and-outlining.md",
+          "sha256": "031a1f31c08ca945c2741cfeba2eec066b20a85901475264b1570134d2a0c5c3"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/source-synthesis-and-outlining-kit.md",
+          "sha256": "121b2fe9c608fff7e7f404fcefc48f06e29af1cbdb6888014248bc44310a4872"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "fiction-drafting",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "POV access, formal engines, designed stasis, canon, and complete-unit delivery distinguish drafting from structural diagnosis.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/fiction-drafting.md",
+          "sha256": "275b76eb4a009ff0bc8bfad07ebfb7b9983ac8e6cd9004826bba157dd6e3f226"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/fiction-drafting-kit.md",
+          "sha256": "34738ee772da3a56bf435e17f87b6a25cd4c3d3f50434b48298219fa2757e9b6"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "nonfiction-drafting",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Claim ledger preserves sampling and causality; final rules also prohibit invented survey methods, recency, and relationships between adjacent facts.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/nonfiction-drafting.md",
+          "sha256": "c65350d3d889fc1cff6cda0d153f4bee15cd8f8d6e170fb5ecbd65f4bb388a7b"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/nonfiction-drafting-kit.md",
+          "sha256": "7f56d407209c2631a95a4ee21218ba47f9a811ff5a247305eaf757281122aad6"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "essay-composition",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Braid movement and changing image returns coexist with a strict distinction between supplied memory and invented persona.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/essay-composition.md",
+          "sha256": "a78bfc127ddc633b1dc2ac0c1e98ee8ebe8c18168e394369c820e3d9e5ba4526"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/essay-composition-kit.md",
+          "sha256": "2b2998301afcaf9e0f73b34744dfe41261ce4f7eebcd7770e5272afa794eee16"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "poetry-composition",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Line endings, stress uncertainty, refrains, visual spacing, and performed versus estimated musical fit are inspectable craft decisions.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/poetry-composition.md",
+          "sha256": "14a6f98e1e8fa26a3256772832bff63ccc799b43b6f916407745966e719c06e5"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/poetry-composition-kit.md",
+          "sha256": "6f5006fe51c3e1fc2d9a5e38c9fbedab78fb6b7f38126cb35e9c7ed12d05639a"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "dramatic-writing",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Objectives, tactics, cue ownership, prop state, and staging constraints govern actual scenes; attempted and completed movement are distinguished.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/dramatic-writing.md",
+          "sha256": "fc0f13b51cac10afa4204c572273efbd1f2e80d76eb9525f2ede4a78e0d05d4a"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/dramatic-writing-kit.md",
+          "sha256": "a6e5f7dcecbe8733feb742fcd192e18fe776eca0c96cc4f7a87e73f12aefd43a"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "professional-writing",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Recipient decisions, proposal status, commitment authority, medium conventions, and measured count scope govern complete documents.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/professional-writing.md",
+          "sha256": "0a652d1310589bcd0919b9a4bf150933708028ab076554c531c515d557143217"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/professional-writing-kit.md",
+          "sha256": "e8a23bcdd21402f0b4774832b51ae61e375422eaee02524d4538bd913423819f"
+        }
+      ]
+    },
+    {
+      "gateway": "text-composition",
+      "mode": "academic-writing",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Section-to-evidence mapping, empirical versus humanities structures, result limits, verified citations, and measured count scope prevent fabricated completeness.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/references/workflows/academic-writing.md",
+          "sha256": "36ab8c42a874576261ac0a15e1848f8aa3c50d52e45b7f8a2da350ff1e522443"
+        },
+        {
+          "path": "SKILLS/text-composition/references/artifacts/academic-writing-kit.md",
+          "sha256": "8e3ac41e06f9f237c4e441a24321f8545630eb7a45a66b430a4a7923c2c6503f"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "revision-planning",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Located actions include consequences, preserved choices, dependencies, and acceptance checks; unseen chapters remain outside coverage.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/revision-planning.md",
+          "sha256": "01313a6160f275edc3a78deb11bff538bc56e50acd4e0b712d24c62564083b3c"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/revision-planning-kit.md",
+          "sha256": "8cf22a8b92094d314f52cc502fbd172c7b84d44b504e6c93532030248ffa0c16"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "structural-revision",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Before/after units and applied text include repairs to transitions, references, and claim/evidence dependencies; concurrent changes remain recoverable.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/structural-revision.md",
+          "sha256": "df382cafdc9059f00587390427bb265e8a2ef796643e87564e970698b099f875"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/structural-revision-kit.md",
+          "sha256": "3624d3808959b4ccddf6ad5280daaf28969e22b6aaced707661294e5582b8c42"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "feedback-integration",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Comment IDs retain source and decisions; author constraints outrank votes, and claimed resolutions are checked in the actual revision.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/feedback-integration.md",
+          "sha256": "1209dce9382ce9e1ed79abf45f05f4d60ea7a062511dc7738a203adb4514fcd9"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/feedback-integration-kit.md",
+          "sha256": "6ebb22ff8f6860c876272aecba5844acc8dab40b5249152b0c1383c2dd06079a"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "rhetorical-revision",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Devices are chosen for effects; before/after negation, modality, referents, and voice checks constrain language revision.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/rhetorical-revision.md",
+          "sha256": "92675b9ed0a5daf806951f26153605db45a91b3da5a94c60a765b99e9de8200a"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/rhetorical-revision-kit.md",
+          "sha256": "8463f35c6c8b1cf4eb12030661497f91abb296fa2af94923f3ec52e9afcfff12"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "continuity-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Time and POV ledgers distinguish contradiction, lies, change, and unseen context; every confirmed conflict needs paired passages.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/continuity-review.md",
+          "sha256": "ab5ad47f51c115c98e3b7645496c10c60541cbc7d85c80dedb52b464b67cbe30"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/continuity-review-kit.md",
+          "sha256": "40c2b311d91e273f27115ed171a9310e52c1cead8e6afaa2b3b851b85caae75f"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "reader-response-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Located inference burdens are evaluated against intended difficulty; predicted reader effects remain separate from observed feedback.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/reader-response-review.md",
+          "sha256": "e9c46a24a9b21b9a440701ff84f76154398f2eeadd803b981c3c6b828a7bd198"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/reader-response-review-kit.md",
+          "sha256": "eeae8f3b8f32462e5351c9eee5bda041a8df1cfb814a62cff4f90e8bc87fde40"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode": "text-adaptation",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Source-to-target units account for consequential omissions, additions, changed audience, and preserved claim strength; added qualifiers require source support and hard lengths require measured counts.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/references/workflows/text-adaptation.md",
+          "sha256": "d08819e633af0aa23f4b94c27ce3cc33d24527e7da56f83ce951f72c207d5b10"
+        },
+        {
+          "path": "SKILLS/text-revision/references/artifacts/text-adaptation-kit.md",
+          "sha256": "92d9ef0bf111852d1e1367c144a929b6c93dd0029055b45997cbdc4f1be31264"
+        }
+      ]
+    },
+    {
+      "gateway": "text-translation",
+      "mode": "translation-planning",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Contextual terminology and competing form/fidelity priorities support provisional drafting without forced early disambiguation.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-translation/references/workflows/translation-planning.md",
+          "sha256": "77e840890253b5134b01858596113af2a780a72c346dc6c43453a4c0d639b958"
+        },
+        {
+          "path": "SKILLS/text-translation/references/artifacts/translation-planning-kit.md",
+          "sha256": "a90f1e608737b85068113d3633445eedff240352654e3f5523a609494249542a"
+        }
+      ]
+    },
+    {
+      "gateway": "text-translation",
+      "mode": "translation-drafting",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Complete unit alignment and separate target/source passes check modality, negation, register, form, and unsupported disambiguation.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-translation/references/workflows/translation-drafting.md",
+          "sha256": "86aaa11b995ea740fd6fed482643f808fa7667ffdd4982c7d744cfb8174d8121"
+        },
+        {
+          "path": "SKILLS/text-translation/references/artifacts/translation-drafting-kit.md",
+          "sha256": "935bd8cb933de3880ec6e5550d42106455a942d1c16936e7df74f62b1279b5a8"
+        }
+      ]
+    },
+    {
+      "gateway": "text-translation",
+      "mode": "translation-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Paired source/target findings distinguish meaning errors from defensible alternatives; proposed repairs and coverage remain explicit.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-translation/references/workflows/translation-review.md",
+          "sha256": "f5b5da5dd871062a56ee7ec150839d022326c5bea9695c0c34168fd13dfa4ed0"
+        },
+        {
+          "path": "SKILLS/text-translation/references/artifacts/translation-review-kit.md",
+          "sha256": "9ca419ff90bbe544385a36f478e9506ea6753a7e424f78a918fd4995a647a3c4"
+        }
+      ]
+    },
+    {
+      "gateway": "textual-scholarship",
+      "mode": "witness-description",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Witness identity and representation chains separate observed, catalog-reported, and inferred facts; overlap maps limit later collation.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/textual-scholarship/references/workflows/witness-description.md",
+          "sha256": "637cbed7bb304011ed90a4e50de08c348a4163439d768c119af743129f567c32"
+        },
+        {
+          "path": "SKILLS/textual-scholarship/references/artifacts/witness-description-kit.md",
+          "sha256": "8f60902748136dddbab1ee36cc934b4a87a8f451e40f1c069c5464c61303e9c0"
+        }
+      ]
+    },
+    {
+      "gateway": "textual-scholarship",
+      "mode": "documentary-transcription",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Declared transcription policy, source anchors, gaps, OCR checking, and reversible normalization protect historical readings.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/textual-scholarship/references/workflows/documentary-transcription.md",
+          "sha256": "8f611f3ccfdb07b657263daf6f9f85c64311ca5deb316b77c0c104079fd40bc3"
+        },
+        {
+          "path": "SKILLS/textual-scholarship/references/artifacts/documentary-transcription-kit.md",
+          "sha256": "3a8dfb475d5d9c06ac17a4f41db868abcce5fb79aad0015acdf7de1f3ed9313d"
+        }
+      ]
+    },
+    {
+      "gateway": "textual-scholarship",
+      "mode": "variant-collation",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Raw and normalized readings, difficult alignment boundaries, coverage per locus, and lacuna-versus-omission rules prevent false attestations.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/textual-scholarship/references/workflows/variant-collation.md",
+          "sha256": "afafb5c325e883758e8492db6d90a6d9e4ff9a2f1bbd1a42f2f0a210875bb232"
+        },
+        {
+          "path": "SKILLS/textual-scholarship/references/artifacts/variant-collation-kit.md",
+          "sha256": "3cf9cc9ed7dadddf06c4deb3f2b4427a27e887faafe531d3f973fab1bb7de4a7"
+        }
+      ]
+    },
+    {
+      "gateway": "textual-scholarship",
+      "mode": "critical-edition-preparation",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Base-text policy, apparatus scope, witness attestations, conjectures, and text/apparatus checks support a qualified actual edition.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/textual-scholarship/references/workflows/critical-edition-preparation.md",
+          "sha256": "87d9d841c5ff0bbc046f0f504957855b70cf43f3dc63b427a81c6f4a3daea910"
+        },
+        {
+          "path": "SKILLS/textual-scholarship/references/artifacts/critical-edition-preparation-kit.md",
+          "sha256": "444d2fe7c020ccd94ea3bedf5c74d136c2feb7b2d6c963374df5e72793ce6a19"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "fiction-development-workflows",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 3
+      },
+      "evidence_note": "Existing story diagnosis gains actual revisions, source locations, protected experimental structure, coverage checks, and a nonlinear example.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/fiction-development-workflows.md",
+          "sha256": "1980c759eb8c8a4b8a6eabb13a3c6b0d3f761fbf4429e4844d598adec2b33ed5"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/fiction-development-checklist.md",
+          "sha256": "dbc19c8d3c8f4e4ad34d841628dc3dcc97ffa1b7f3719feba68acf955c75e170"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "nonfiction-manuscript-development",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 3
+      },
+      "evidence_note": "Chapter contracts, counterevidence, memoir/source distinctions, and applied revision checks deepen the existing architecture workflow.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/nonfiction-manuscript-development.md",
+          "sha256": "21208314accfc56ae8456fa5c61b67bf41389fd1b499ef91ba8d7f2916129e40"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/nonfiction-development-checklist.md",
+          "sha256": "634242881babc2a579bdfe37d04bad97fc4d098acac8339d5406df087e9127ef"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "line-copyediting-workflows",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Applied text, style/query records, meaning comparison, and format-aware change inspection preserve deliberate voice and document features.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/line-copyediting-workflows.md",
+          "sha256": "3ef0b6434398f6d547a20a3fccd4b497715fed4b36f9bb641d8e9782e044f0c4"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/line-copyediting-checklist.md",
+          "sha256": "359b3eb907e174f63db5827162516a9b20dbd74632d6eadf9707a60f387aefa1"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "fact-checking-source-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Assigned-claim status, quotation context, denominators, source dates, and located gaps prevent partial review from becoming full verification.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/fact-checking-source-review.md",
+          "sha256": "8d7ee75a792f5b9765e4e244c5d9f473ba2924b015f8792321dc0eb5ba9a186a"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/fact-checking-source-checklist.md",
+          "sha256": "1ef07929b21f5465c002f256ccec56122ceaa20215b4e6793954eae754870108"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "book-metadata-packaging",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 3
+      },
+      "evidence_note": "Field-by-file metadata and full copy records retain conflicts, edition identity, unsupported claims, and unavailable accessibility evidence.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/book-metadata-packaging.md",
+          "sha256": "30aac1957b38ff3b8188bf409f5fbbf20ac678b9ab2537beda36a536298df6aa"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/book-metadata-packaging-checklist.md",
+          "sha256": "6614bfd7a8a2d568762c3957dbc5669a2186e0a216f93b3fe0b11f4ea6b20eda"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "publishing-production-workflows",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 3
+      },
+      "evidence_note": "Stage and artifact evidence distinguish schedules from completed checks; late reflow reopens dependent locators and exports.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/publishing-production-workflows.md",
+          "sha256": "ba6a379b64026bbff1f3b3fc7c7b0f8657083a10e237f397f408e44fe4718b19"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/production-workflow-checklist.md",
+          "sha256": "729a6bd656f219a49d5d8b16454d01a0acb5c3f534c9bda3e585c6b78e7ecb81"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "permissions-rights-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Item/use evidence distinguishes requests, grants, other reuse bases, documented limits, and qualified legal judgment; gaps do not halt the inventory.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/permissions-rights-review.md",
+          "sha256": "cd46ae1c1856d9a405924eec16c577c4a31789854e9c118f987400bd73cf9a42"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/permissions-rights-checklist.md",
+          "sha256": "c93f4fc109f9ab6087f0b537f70a3be62eeeb2d63220f49770d855e1bd6567ca"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "journal-submission-workflows",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Instruction-located requirements and actual manuscript changes support complete letters and responses while preserving unresolved author/research matters.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/journal-submission-workflows.md",
+          "sha256": "ae0bb49fb14e7a943103926815c78e281783a8c49be8c94d6b5186166311a729"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/journal-submission-checklist.md",
+          "sha256": "c20fc2bbf971c389a4100001d55b346a21127761b0a8c4597b1dfa9209a98ed3"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "proofreading",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Copy/proof identity, exact replacements, prior-correction status, rendered coverage, and reflow dependencies bound the proof pass.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/proofreading.md",
+          "sha256": "7299610c2f6ba357cd74b77b96bfd7ef44a89067ab4d11e21b0bc210d42bc241"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/proofreading-kit.md",
+          "sha256": "7f3a50217f13491e6fa5da8b5340108d79f7f4049466543fdd8d1055df125b7c"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "publication-format-review",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Format-specific structure, rendering, navigation, and accessibility evidence are separate checks; parser success cannot certify presentation.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/publication-format-review.md",
+          "sha256": "484445b00e96b0be0fb0412546e3e4353be8a0ccfbb9ff02bfcd33c9bae7b4ae"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/publication-format-review-kit.md",
+          "sha256": "eee2c0801fc78dfb16563de8e915c27df1589467a7b8887de469c48f80990850"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "indexing-workflows",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Reader access points, substantive treatment, verified anchors/pages, see-reference targets, and repagination checks support an actual usable index.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/indexing-workflows.md",
+          "sha256": "1b6fc19ec45fbbbd1a7b11ae97625d70dfd57264e5b5fecdb5eb2cf36562681f"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/indexing-workflows-kit.md",
+          "sha256": "c6754c6ddf2118ca9c8f12a9a973b20ac7c4a5705ac37b46d03a3971311c0110"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "submission-package-preparation",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Actual destination rules, anonymity surfaces, faithful synopsis, separate author facts, and complete files distinguish preparation from submission.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/submission-package-preparation.md",
+          "sha256": "29a79ad89ea28efe879111b6639f85f458d418f3cb58b24168d86a19cfaccc56"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/submission-package-preparation-kit.md",
+          "sha256": "97525801ef7b3562f0be76c42883e3bc8fa9a37730672f97e853a544e45439da"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode": "edition-maintenance",
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "evidence_note": "Correction classes, before/after evidence, historical edition context, and per-derivative status prevent claims that unavailable editions were updated.",
+      "anti_platitude": "pass: domain checks identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/references/workflows/edition-maintenance.md",
+          "sha256": "9f8d287f99673ab3bf5be1d4d92342775a6b5c08d2cb5e68a0941a92b5a10d3c"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/references/artifacts/edition-maintenance-kit.md",
+          "sha256": "6ea20a7c95d2aff459457112b6c70c132511442d4a5aad981784007eef849952"
+        }
+      ]
+    }
+  ],
+  "agents": [
+    {
+      "agent": "text-project-planner",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Concept/brief and unit-coverage ownership is distinct from full drafting; nearby genre roles receive explicit handoffs.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/text-project-planner.toml",
+          "sha256": "a77cd74b0268cbdadfa62815abfc63bcd068a8a93a9ac6030a8a2cfbee48e404"
+        }
+      ]
+    },
+    {
+      "agent": "fiction-drafter",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Full fiction with POV, canon, formal constraints, and ending checks; development and copy passes have distinct owners.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/fiction-drafter.toml",
+          "sha256": "1b29334abade7cc0da1fc1c5d34a70592eb48f29fc8e8b640e34a749e2e837ca"
+        }
+      ]
+    },
+    {
+      "agent": "nonfiction-drafter",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Evidence-scoped complete prose with specific negative-evidence and unsupported-specificity safeguards from observed failures.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/nonfiction-drafter.toml",
+          "sha256": "97541f3cf09f359fb46862c39988aad4bf5cf011f1eaacfc720167722e18383a"
+        }
+      ]
+    },
+    {
+      "agent": "essay-writer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Inquiry, persona, image returns, and open endings distinguish this role from general nonfiction drafting.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/essay-writer.toml",
+          "sha256": "805855436332e5856cfd7bce28660681c520109a552e1d821b3ff0f8e3adc83b"
+        }
+      ]
+    },
+    {
+      "agent": "poetry-writer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Lineation, sound, fixed-form checks, and preserved repetitions provide verse-specific execution beyond prose editing.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/poetry-writer.toml",
+          "sha256": "1c8a8dd6c889f508ac68e4596e03e48de5da87b45729c3c2baf3adfe3bd1a48b"
+        }
+      ]
+    },
+    {
+      "agent": "dramatic-text-writer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Playable tactics, cue ownership, physical states, and staging constraints distinguish drama from recording logistics.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/dramatic-text-writer.toml",
+          "sha256": "35f77ca884ea0fb152d7c4b3d36e6b5807c8ffaf89a0add1e1ac6d259e9a9207"
+        }
+      ]
+    },
+    {
+      "agent": "professional-text-writer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Document purpose and commitment boundaries guide full recipient-facing drafts; domain evidence has specialist owners.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/professional-text-writer.toml",
+          "sha256": "6a85bd1f29b589491d9897ffa7e7e0dc7d0cf0c411e11a9df3fab1546609e568"
+        }
+      ]
+    },
+    {
+      "agent": "academic-manuscript-writer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Evidence and cross-section consistency govern scholarly drafts without inventing methods, citations, or statistical support.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/academic-manuscript-writer.toml",
+          "sha256": "aebbe7b2c805fc9b70ed536e167eb4433a658b824eaad597702d35746cc03c18"
+        }
+      ]
+    },
+    {
+      "agent": "rhetorical-style-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Effect-based language changes require explicit meaning and voice comparison before handoff to copy or structural editing.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/rhetorical-style-editor.toml",
+          "sha256": "2c8cf0b7ed5002e4f89157ac5f9a8a4552fd5871ea23bfad9d51db0904f96549"
+        }
+      ]
+    },
+    {
+      "agent": "manuscript-continuity-reviewer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only paired-location review distinguishes time, knowledge, canon, and missing context before repair options.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/manuscript-continuity-reviewer.toml",
+          "sha256": "ab2e500ac2ad0830e56bbd5cd3a4c7732dbff4790af794fe9e02fff8cb8d8c4a"
+        }
+      ]
+    },
+    {
+      "agent": "reader-experience-reviewer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only reader-friction analysis distinguishes predicted effects from empirical audience evidence.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/reader-experience-reviewer.toml",
+          "sha256": "c95ec15abe0c34df878f6e12b7b671c7c1c7367e9da071ccc5d389e69dbb2149"
+        }
+      ]
+    },
+    {
+      "agent": "text-adaptation-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Actual transformed text and a source-to-target map retain qualifications, check added factual qualifiers, and reveal consequential losses.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/text-adaptation-editor.toml",
+          "sha256": "c2d22317a69332726807336269b52fdfa3a9de64206408cf15bc5deab61a9916"
+        }
+      ]
+    },
+    {
+      "agent": "text-translator",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Complete translation, source comparison, and contextual register/form decisions preserve uncertainty and coverage.",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/text-translator.toml",
+          "sha256": "6e97a7ac236ac8dba62d1dff564023c2556e370561c39ec787fd5061e01670d1"
+        }
+      ]
+    },
+    {
+      "agent": "translation-reviewer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only comparative findings separate source errors from optional preferences and do not imply applied corrections.",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/translation-reviewer.toml",
+          "sha256": "571ab5b3de6389e3cf590fb10eb780cbf4dc42d1f58b39911bd135c01b20af85"
+        }
+      ]
+    },
+    {
+      "agent": "textual-witness-analyst",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only source identity and representation evidence precede transcription and collation; physical inferences remain bounded.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/textual-witness-analyst.toml",
+          "sha256": "f414fd042f64748a6db1fb27531ea170f4716d16ddb91402fb0b73a4b329fc85"
+        }
+      ]
+    },
+    {
+      "agent": "documentary-transcriber",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Actual anchored transcription distinguishes visible readings, OCR candidates, normalization, and conjecture.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/documentary-transcriber.toml",
+          "sha256": "3623fe42e642d9fe1ebf80dfd3bca16a842320b194a6b27281a22a3f3eb37bde"
+        }
+      ]
+    },
+    {
+      "agent": "variant-collator",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Alignment and variant records retain raw readings and per-witness coverage without choosing an edited reading.",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/variant-collator.toml",
+          "sha256": "242e9c4bbe96f85b1b5919379e7bc1449bc56620df37f14bbe13668dddfd7515"
+        }
+      ]
+    },
+    {
+      "agent": "critical-edition-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Edited text, apparatus, explicit policy, and intervention checks distinguish selection from source attestation.",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/critical-edition-editor.toml",
+          "sha256": "b08e41a64906102eb191f9f8ba76f362c8b20859673cd82c71eada698d3fdb88"
+        }
+      ]
+    },
+    {
+      "agent": "proofreader",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Bounded copy/proof comparison supports exact corrections and dependent rechecks on an assigned working copy.",
+      "model": "gpt-5.6-luna",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/proofreader.toml",
+          "sha256": "b21cab67c6f0d77ac6a8543498a6e75cc1d0132c88643c2e6d5271443fb5032f"
+        }
+      ]
+    },
+    {
+      "agent": "publication-format-reviewer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only format-aware inspection names actual tools and separates parsed, rendered, navigational, and inaccessible aspects.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/publication-format-reviewer.toml",
+          "sha256": "956ab0ac74733d2d3f72bd61017af3f5192ccc2c6f5872b06d0ffeaac163f4dd"
+        }
+      ]
+    },
+    {
+      "agent": "submission-package-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Complete destination materials preserve supplied biography relations and expose missing anonymity/metadata checks.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/submission-package-editor.toml",
+          "sha256": "9fee3c8367583dfac5edc8294d258648877f55fbcfa58acf2b63335f675b2422"
+        }
+      ]
+    },
+    {
+      "agent": "edition-maintenance-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Source corrections and derivative state accounting preserve prior text and prevent false distribution claims.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/edition-maintenance-editor.toml",
+          "sha256": "27435cdae925d7a9851b11d7555acd3ac90754dc849af1adcb9fb76c321ae759"
+        }
+      ]
+    },
+    {
+      "agent": "fiction-development-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 3,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Established structural role now returns applied text; full commissioned work and authorial intent are compatible.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/fiction-development-editor.toml",
+          "sha256": "b878105bc1bfab1d04caeabd4c22777cebe8a1c88c2f38b70007744d5cc56257"
+        }
+      ]
+    },
+    {
+      "agent": "nonfiction-manuscript-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 3,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Chapter architecture and evidence planning now require actual assigned revisions with explicit uninspected coverage.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/nonfiction-manuscript-editor.toml",
+          "sha256": "85ad822eff37087c6246f9fd9b3f4fd752fc32911ba95bb8b973c74af3df09bb"
+        }
+      ]
+    },
+    {
+      "agent": "line-copy-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Style sheet, queries, assigned text edits, and protected voice remain distinct from structural and source verification.",
+      "model": "gpt-5.6-luna",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/line-copy-editor.toml",
+          "sha256": "736a8e09a67eb0db0aa42be4519018313db37cb874f0c294d6fa42b0e5cbc3e8"
+        }
+      ]
+    },
+    {
+      "agent": "fact-checking-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only claim/source matching returns partial checked coverage and gaps without unsupported full-check claims.",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/fact-checking-editor.toml",
+          "sha256": "fbf63c90065fde611e6d469917639b18cf06fde6e89eb805706f493f6720f830"
+        }
+      ]
+    },
+    {
+      "agent": "book-metadata-packaging-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 3,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Existing copy and metadata alignment role continues unaffected fields while preserving unresolved conflicts.",
+      "model": "gpt-5.6-luna",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/book-metadata-packaging-editor.toml",
+          "sha256": "8cb304a8cf26a427cb09036b0ba29e15cc45f87d5d40e8640519ef129186e153"
+        }
+      ]
+    },
+    {
+      "agent": "production-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 3,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Stage/version evidence and explicit proof, format, index, and maintenance handoffs distinguish coordination from execution.",
+      "model": "gpt-5.6-luna",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/production-editor.toml",
+          "sha256": "49b7336903db54aca124223e6e4330f92e59f89f8be2ef5a9fa4269cf75704ab"
+        }
+      ]
+    },
+    {
+      "agent": "permissions-reviewer",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 4,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Read-only rights evidence inventory continues around missing evidence and preserves distinctions among documented reuse bases.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/permissions-reviewer.toml",
+          "sha256": "b7a62229fa061b19ed722992484508e066b6d1c0fade863f9147871ba0715f1f"
+        }
+      ]
+    },
+    {
+      "agent": "journal-submission-specialist",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 3,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 3,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Full requested package texts retain scholarly requirements; delegated checks stay unresolved until evidence returns.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/journal-submission-specialist.toml",
+          "sha256": "54ded71cb8caa4db22b5e80b4f406639c1fff3286f68f75cb14e57a1cb3b6ad5"
+        }
+      ]
+    },
+    {
+      "agent": "developmental-manuscript-editor",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Structural execution repairs dependent text and preserves originals, unit mapping, contrary evidence, and author constraints.",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/developmental-manuscript-editor.toml",
+          "sha256": "75be6b268c5805986578d07b87fe5df4b811aa56fbc1d393013a6cdbb4a42804"
+        }
+      ]
+    },
+    {
+      "agent": "indexing-coordinator",
+      "rating": "Ready",
+      "scores": {
+        "role_distinctness": 4,
+        "skill_and_reference_use": 4,
+        "instruction_depth": 4,
+        "runtime_fit": 3,
+        "handoffs_and_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "evidence_note": "Actual index creation and locator/reference checks use existing bounded Luna settings without invented print pages.",
+      "model": "gpt-5.6-luna",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "anti_platitude": "pass: role-specific execution and handoffs identified in evidence note",
+      "reviewed_files": [
+        {
+          "path": "AGENTS/openai/indexing-coordinator.toml",
+          "sha256": "c9c4f8e8fda2ada53d6a516f467df85c227db31f853d63d8067f5117517d1358"
+        }
+      ]
+    }
+  ],
+  "gateways": [
+    {
+      "gateway": "text-composition",
+      "mode_count": 9,
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "progressive_discovery": "pass: each mode directly linked, smallest relevant set selected, kits conditionally loaded from workflows; relative links resolved from containing file",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-composition/SKILL.md",
+          "sha256": "6a557ef6174be770ea6714ce367a6d220a86a557a5b1e781c3a72e7c5b816d25"
+        },
+        {
+          "path": "SKILLS/text-composition/agents/openai.yaml",
+          "sha256": "9896523b3d4acb957b8f9ed89f6c5993cdaa4e60efda815cd2996131c3f4e44c"
+        }
+      ]
+    },
+    {
+      "gateway": "text-revision",
+      "mode_count": 7,
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "progressive_discovery": "pass: each mode directly linked, smallest relevant set selected, kits conditionally loaded from workflows; relative links resolved from containing file",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-revision/SKILL.md",
+          "sha256": "560fb15e51e91f947d96de5934848960d322fe376964a34aafca7eaa76e5004a"
+        },
+        {
+          "path": "SKILLS/text-revision/agents/openai.yaml",
+          "sha256": "9a599247ecd8da3ad272c301434c89fc49e28a6973e29e2fa65f3e2de6e70361"
+        }
+      ]
+    },
+    {
+      "gateway": "text-translation",
+      "mode_count": 3,
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "progressive_discovery": "pass: each mode directly linked, smallest relevant set selected, kits conditionally loaded from workflows; relative links resolved from containing file",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/text-translation/SKILL.md",
+          "sha256": "baf45de36b40192acad1b1ee8f4f9e15dd78576db3b4986eb9176c04e19777d2"
+        },
+        {
+          "path": "SKILLS/text-translation/agents/openai.yaml",
+          "sha256": "5c45ecf340d30b4cebaad6f16b6c0b6e5a276f54e3468b7f8c5da95a12ba98e1"
+        }
+      ]
+    },
+    {
+      "gateway": "textual-scholarship",
+      "mode_count": 4,
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "progressive_discovery": "pass: each mode directly linked, smallest relevant set selected, kits conditionally loaded from workflows; relative links resolved from containing file",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/textual-scholarship/SKILL.md",
+          "sha256": "aa7fdb1cb052877b101bead891448363a7d4bfc586270828ee4014396570a139"
+        },
+        {
+          "path": "SKILLS/textual-scholarship/agents/openai.yaml",
+          "sha256": "23bbce0e96a4f9029ad6b136dca55b17c811c839360e043937339a320534bdc1"
+        }
+      ]
+    },
+    {
+      "gateway": "publishing-editorial",
+      "mode_count": 13,
+      "rating": "Ready",
+      "scores": {
+        "trigger_and_routing": 3,
+        "workflow_specificity": 3,
+        "domain_heuristics": 4,
+        "supporting_assets": 4,
+        "tooling_and_validation": 3,
+        "output_contract": 4,
+        "boundaries": 3
+      },
+      "progressive_discovery": "pass: each mode directly linked, smallest relevant set selected, kits conditionally loaded from workflows; relative links resolved from containing file",
+      "reviewed_files": [
+        {
+          "path": "SKILLS/publishing-editorial/SKILL.md",
+          "sha256": "6793e59cc230758ad57e827281954c25df4f997548451403da611bbf54b47eda"
+        },
+        {
+          "path": "SKILLS/publishing-editorial/agents/openai.yaml",
+          "sha256": "57ddbf337d08b775ff4f3d7ec9e7c056b7f932a5996192684bfbf653091678cf"
+        }
+      ]
+    }
+  ],
+  "integration_files": [
+    {
+      "path": "README.md",
+      "sha256": "dc7dea9d0572862db79f6a365663a65f844c82489965c5d99df20663cdbe02bc"
+    },
+    {
+      "path": "REFERENCES/software-development-crew.md",
+      "sha256": "7127be0b91d56d55fc40c0f00190603d8f858c1ff0c70a653fef9775db2f10f5"
+    }
+  ]
+}

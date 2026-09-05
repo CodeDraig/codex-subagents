@@ -1,0 +1,107 @@
+{
+  "status": {
+    "case": "scholarship",
+    "exit": 0,
+    "seconds": 125.56
+  },
+  "prompt": "Use $textual-scholarship in critical-edition-preparation mode from .agents/skills/textual-scholarship/SKILL.md.\n\nPrepare a small edition from the supplied documentary packet in inputs/witnesses.md. Use witness-description, documentary-transcription, variant-collation, and critical-edition-preparation as needed. Deliver a witness register, diplomatic transcriptions, a collation, and an edited text with apparatus. Use A as a provisional documentary base, preserve historical spelling, and keep an unreadable span unresolved. Do not infer physical manuscript features or a stemma. Write outputs/edition.md.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/scholarship/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/scholarship/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/scholarship/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-"
+    ],
+    "agent": null,
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'SKILL.md' -g 'witnesses.md' -g '*.md' .agents inputs outputs 2>/dev/null\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/textual-scholarship/SKILL.md && sed -n '1,260p' .agents/skills/textual-scholarship/references/workflows/witness-description.md && sed -n '1,300p' .agents/skills/textual-scholarship/references/workflows/documentary-transcription.md && sed -n '1,320p' .agents/skills/textual-scholarship/references/workflows/variant-collation.md && sed -n '1,360p' .agents/skills/textual-scholarship/references/workflows/critical-edition-preparation.md && sed -n '1,360p' .agents/skills/textual-scholarship/references/artifacts/critical-edition-preparation-kit.md && sed -n '1,360p' inputs/witnesses.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/textual-scholarship/references/artifacts/witness-description-kit.md && sed -n '1,360p' .agents/skills/textual-scholarship/references/artifacts/documentary-transcription-kit.md && sed -n '1,360p' .agents/skills/textual-scholarship/references/artifacts/variant-collation-kit.md && rg --files -g 'AGENTS.md' -g 'agents.md' -g 'README*' -g 'CONVENTIONS*' -0 . | xargs -0 -r -n1 sh -c 'case \\\"\"'$0\" in ./inputs/*|./outputs/*|./.agents/*) ;; *) printf \"--- %s'\"\\\\n\\\" \\\"\"'$0\"; sed -n \"1,260p\" \"$0\";; esac'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"git status --short && test -e outputs/edition.md && sed -n '1,320p' outputs/edition.md || true\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"if test -e outputs/edition.md; then sed -n '1,360p' outputs/edition.md; else echo 'outputs/edition.md does not exist'; fi\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' outputs/edition.md && rg -n '\"'^## (Witness Register|Transcription '\"\\\\(Diplomatic Transcriptions\\\\)|Collation|Edited Text|Critical Apparatus|Unresolved Readings|Verification)\"'$|'\"\\\\[illegible: 1 word\\\\]|stemma|physical' outputs/edition.md && test \\\"\"'$(rg -c '\"'\"'^## Critical Apparatus$'\"' outputs/edition.md)\\\" -eq 1 && test \\\"\"'$(rg -c '\"'\"'^## Edited Text$'\"' outputs/edition.md)\\\" -eq 1 && test \\\"\"'$(rg -c '\"'\"'^## Collation$'\"' outputs/edition.md)\\\" -eq 1 && echo 'Structural checks passed.'\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/scholarship/events.jsonl",
+      "sha256": "cfc97457ac01138627823db4ccba8f4df90f42394fa7e2ac8893348b74fe4059"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/scholarship/stderr",
+      "sha256": "b11552f4b8e5a65fb5a79c4f8c63c37bbedc176ddcfdcf26e9f0fc4f6d8949b7"
+    }
+  ],
+  "response_sha256": "4523ce31ccfcf29c1dc408316f9ee3184eaaa06af2dbe2278db758aeca244cd4",
+  "case": "scholarship",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Wrote witness descriptions, diplomatic transcriptions, collation, edited text, apparatus, and policy. Preserved A's unreadable span and historical spelling, distinguished B variants, and made no physical-source or stemma claim.",
+  "fixture": {
+    "agent": null,
+    "skill": "textual-scholarship",
+    "mode": "critical-edition-preparation",
+    "prompt": "Prepare a small edition from the supplied documentary packet in inputs/witnesses.md. Use witness-description, documentary-transcription, variant-collation, and critical-edition-preparation as needed. Deliver a witness register, diplomatic transcriptions, a collation, and an edited text with apparatus. Use A as a provisional documentary base, preserve historical spelling, and keep an unreadable span unresolved. Do not infer physical manuscript features or a stemma. Write outputs/edition.md.",
+    "depends": []
+  },
+  "runtime_scope": "Direct gateway workflow invocation on Terra/high; no individual specialist-agent runtime claim."
+}

@@ -1,0 +1,89 @@
+{
+  "status": {
+    "case": "translation",
+    "exit": 0,
+    "seconds": 20.75
+  },
+  "prompt": "Use $text-translation in translation-drafting mode from .agents/skills/text-translation/SKILL.md.\n\nTranslate the complete Spanish passage into English: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” The subject’s gender is not established by any surrounding context. Preserve the degree of commitment and uncertainty, and explain any material choice briefly.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/translation/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/translation/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/translation/response.md",
+      "-c",
+      "model=\"gpt-5.6-sol\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-translation in `translation-drafting` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify source/target varieties, version, genre, audience, extent, treatment policy, and allowed adaptation. Translate the complete assigned text and revise the target itself when changes are requested.\\nResolve meaning in context: referents, tense/aspect, negation, modality, idiom, discourse links, terminology, and speaker relationships. Do not silently add gender, certainty, or facts. Preserve deliberate ambiguity and recurring formal devices where the brief requires them.\\nRead the target for idiomatic flow and separately compare every source unit for omissions, additions, and emphasis shifts. For verse/drama record sound/form tradeoffs; for practical texts preserve conditions, units, and obligations. Back-translation is not proof of fidelity. Mark missing source units and language uncertainties; never invent certification or outside review.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nHand comparative assessment to `translation-reviewer`, source-witness questions to `textual-witness-analyst`, and publication proofs to `proofreader`.\\nReturn exactly these sections: `Translation`, `Translation Decisions`, `Terminology Notes`, `Source Queries`, `Coverage And Checks`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "text-translator",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-translation/references/workflows/translation-drafting.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/translation/events.jsonl",
+      "sha256": "9f2393343ff0de0fe185ae49cbdde6cbafb050034d3845ed2ae4d8a71ace1515"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/translation/stderr",
+      "sha256": "974e69cfadce016a774583234a269f300655bea26ae340da940e6322d5c21c2e"
+    }
+  ],
+  "response_sha256": "5f5eef5bf674e114bc7bb8d4d56ad1170552646f902227f3565045ed671ec142",
+  "case": "translation",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Translated both source sentences with singular they, preserved negation and might, and retained the two-day interval.",
+  "fixture": {
+    "agent": "text-translator",
+    "skill": "text-translation",
+    "mode": "translation-drafting",
+    "prompt": "Translate the complete Spanish passage into English: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” The subject’s gender is not established by any surrounding context. Preserve the degree of commitment and uncertainty, and explain any material choice briefly.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

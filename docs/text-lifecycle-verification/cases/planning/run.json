@@ -1,0 +1,105 @@
+{
+  "status": {
+    "case": "planning",
+    "exit": 0,
+    "seconds": 64.22
+  },
+  "prompt": "Use $text-composition in composition-planning mode from .agents/skills/text-composition/SKILL.md.\n\nPlan a short original fiction told entirely as four receipts from a shop that rents memories. One customer disputes a refund. I want the annotations to carry the story; there must be no narrator outside the receipts. The eventual story should be 220–320 words. Produce the working brief and a concrete drafting handoff, not the story yet.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/planning/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/planning/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/planning/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `composition-planning` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify the desired artifact and distinguish creative constraints from missing source facts. Explore concepts through different narrative, argumentative, or formal engines, then turn the selected working direction into a brief with audience, extent, voice, source status, and completion criteria.\\nBuild a unit ledger only when length or multiple stages make it useful. Track drafted units separately from outlines and proposals. A draft request must continue to a drafting workflow instead of ending with a planning report.\\nPreserve experimental form and author choices; do not require a market position or conventional plot for every work. Test the brief against explicit constraints and state reversible assumptions. Missing preferences permit a working direction; never invent owner approval or source evidence.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nHand full texts to `fiction-drafter`, `nonfiction-drafter`, `essay-writer`, `poetry-writer`, `dramatic-text-writer`, `professional-text-writer`, or `academic-manuscript-writer`. Use `production-editor` for a requested production schedule.\\nReturn exactly these sections: `Writing Brief`, `Concept Options`, `Chosen Working Direction`, `Structure And Coverage`, `Next Writing Task`, `Open Decisions`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "text-project-planner",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'SKILL.md' -g 'composition-planning.md' -g 'outputs/**' . .agents 2>/dev/null\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/text-composition/references/workflows/composition-planning.md && find . -maxdepth 2 -type d -name outputs -print\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/text-composition/artifacts/composition-planning-kit.md && rg --files outputs\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc 'find .agents/skills/text-composition -maxdepth 3 -type f -print | sort && find outputs -maxdepth 2 -type f -print | sort'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/text-composition/references/artifacts/composition-planning-kit.md && git status --short\"",
+      "exit_code": 128
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/planning/events.jsonl",
+      "sha256": "6f8195873720b2cd958e1cf70449224c27102f0b135c253f4b7547ecf1e03821"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/planning/stderr",
+      "sha256": "67e2d8856b276bfe9db37f5b2fdc71bdfb301c0e864344a772804766993a6a6f"
+    }
+  ],
+  "response_sha256": "779c091df900e9828654ec40d56aab28ebb4c35bba0a8ee25720b87d96a9281d",
+  "case": "planning",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Produced a four-receipt brief and drafting handoff; explicitly separated the plan from text not yet drafted.",
+  "fixture": {
+    "agent": "text-project-planner",
+    "skill": "text-composition",
+    "mode": "composition-planning",
+    "prompt": "Plan a short original fiction told entirely as four receipts from a shop that rents memories. One customer disputes a refund. I want the annotations to carry the story; there must be no narrator outside the receipts. The eventual story should be 220–320 words. Produce the working brief and a concrete drafting handoff, not the story yet.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

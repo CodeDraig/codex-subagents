@@ -1,0 +1,162 @@
+{
+  "planning": {
+    "agent": "text-project-planner",
+    "skill": "text-composition",
+    "mode": "composition-planning",
+    "prompt": "Plan a short original fiction told entirely as four receipts from a shop that rents memories. One customer disputes a refund. I want the annotations to carry the story; there must be no narrator outside the receipts. The eventual story should be 220–320 words. Produce the working brief and a concrete drafting handoff, not the story yet.",
+    "depends": []
+  },
+  "fiction": {
+    "agent": "fiction-drafter",
+    "skill": "text-composition",
+    "mode": "fiction-drafting",
+    "prompt": "Write the complete original story specified in inputs/planning.md. Keep it entirely in four receipts, with annotations carrying the story and no external narrator. Target 220–320 words of story text. Deliver the finished story in your response.",
+    "depends": [
+      "planning"
+    ]
+  },
+  "nonfiction": {
+    "agent": "nonfiction-drafter",
+    "skill": "text-composition",
+    "mode": "nonfiction-drafting",
+    "prompt": "Write a complete 220–300-word explanatory article for residents about a neighborhood library survey. Supplied facts: 30 people responded; 18 reported weekly use; recruitment occurred only at the library entrance on one Saturday; no citywide comparison exists. Discuss what can and cannot be learned. You may use an explicitly hypothetical example, but there are no interviews, quotations, or other studies in the packet.",
+    "depends": []
+  },
+  "essay": {
+    "agent": "essay-writer",
+    "skill": "text-composition",
+    "mode": "essay-composition",
+    "prompt": "Write a complete 220–300-word reflective essay in first person from these supplied memories: I repaired an old radio alone at my kitchen table; the tuning knob was cracked; I found a station after replacing a loose wire; I now keep the cracked knob. Braid the repair scene with reflection on listening. Keep the ending open. Do not invent additional biographical events or relationships.",
+    "depends": []
+  },
+  "poetry": {
+    "agent": "poetry-writer",
+    "skill": "text-composition",
+    "mode": "poetry-composition",
+    "prompt": "Write a complete eight-line free-verse poem about an empty railway platform. Every line must begin with “Still”. Preserve that deliberate repetition. No rhyme scheme or regular meter is requested. Use physical images and let the final line change the significance of waiting.",
+    "depends": []
+  },
+  "drama": {
+    "agent": "dramatic-text-writer",
+    "skill": "text-composition",
+    "mode": "dramatic-writing",
+    "prompt": "Write a complete short stage scene, about 220–320 words, with exactly two characters, Mina and Sol, and one table. Mina wants Sol to return a key; Sol wants Mina to ask why it was taken. No other characters or scene changes. Use dialogue, playable action, and subtext. End with a changed relationship to the key; do not claim a measured runtime.",
+    "depends": []
+  },
+  "professional": {
+    "agent": "professional-text-writer",
+    "skill": "text-composition",
+    "mode": "professional-writing",
+    "prompt": "Draft a complete 140–190-word internal memo proposing a two-week afternoon help-desk pilot. Known facts: the current desk closes at noon; six afternoon requests were logged last week; no staffing allocation or budget is approved. Ask the operations owner for a decision. Do not announce a launch or invent savings.",
+    "depends": []
+  },
+  "academic": {
+    "agent": "academic-manuscript-writer",
+    "skill": "text-composition",
+    "mode": "academic-writing",
+    "prompt": "Draft a complete 150–200-word scholarly abstract from this packet: exploratory observational study; 24 adult volunteers; two weeks of self-reported reading time; mean reported reading rose by 3 minutes per day; no control group; no uncertainty interval or significance test supplied. State the question, method, result, and limitations. No citations or ethics-approval details are provided.",
+    "depends": []
+  },
+  "revision": {
+    "agent": "developmental-manuscript-editor",
+    "skill": "text-revision",
+    "mode": "structural-revision",
+    "prompt": "Revise the actual story in inputs/fiction.md. Keep four receipts and no external narrator. In the third receipt introduce a discrepancy in the rented memory’s date, and make the final receipt respond to that discrepancy without explaining the memory’s true origin. Preserve the disputed-refund premise. Write the complete revised story to outputs/revised-fiction.md, then report the structural changes and checks.",
+    "depends": [
+      "fiction"
+    ]
+  },
+  "feedback": {
+    "agent": null,
+    "skill": "text-revision",
+    "mode": "feedback-integration",
+    "prompt": "Apply feedback to inputs/refrain.md and write the complete revised passage to outputs/feedback-revision.md. My fixed requirement is to keep all three occurrences of “I remember”. Comment A asks to remove the repeated openings. Comment B asks to shorten the explanatory sentence between the second and third memories. Account for both comments and preserve the supplied facts.",
+    "depends": []
+  },
+  "rhetoric": {
+    "agent": "rhetorical-style-editor",
+    "skill": "text-revision",
+    "mode": "rhetorical-revision",
+    "prompt": "Revise this complete passage for greater suspense while preserving each “We waited” and the uncertainty in the final sentence: “We waited for the bell. We waited for the door. We waited for the name to be called. The clerk said the delay might be temporary.” Do not turn the clerk’s uncertain statement into a promise. Return the actual revised passage.",
+    "depends": []
+  },
+  "continuity": {
+    "agent": "manuscript-continuity-reviewer",
+    "skill": "text-revision",
+    "mode": "continuity-review",
+    "prompt": "Review only these supplied excerpts. Ch1, reliable narration: “The north bridge fell on Tuesday. No route crossed the river afterward.” Ch2, Wednesday, reliable narration: “The truck crossed the north bridge.” Ch3: “Neri claimed the bridge was safe, although the narrator had already identified Neri’s statement as a lie.” Later chapters are not supplied. Report supported continuity findings and their limits.",
+    "depends": []
+  },
+  "readers": {
+    "agent": "reader-experience-reviewer",
+    "skill": "text-revision",
+    "mode": "reader-response-review",
+    "prompt": "Review this opening of a first-time-user guide: “Delete the snapshot after exporting the manifest. Reconcile the retained generation first.” Neither snapshot, manifest, nor generation is defined in the supplied guide. No user testing or reader feedback exists. Identify located reader-orientation concerns and useful revision options; do not rewrite or run a study.",
+    "depends": []
+  },
+  "adaptation": {
+    "agent": "text-adaptation-editor",
+    "skill": "text-revision",
+    "mode": "text-adaptation",
+    "prompt": "Adapt this source into a complete 90–130-word community notice: “Of 30 respondents recruited at the library entrance on one Saturday, 18 reported weekly library use. This convenience sample does not estimate citywide use. The committee is considering extended hours; no decision has been made.” Preserve the scope and proposal status. Do not add an interview or approved date.",
+    "depends": []
+  },
+  "translation": {
+    "agent": "text-translator",
+    "skill": "text-translation",
+    "mode": "translation-drafting",
+    "prompt": "Translate the complete Spanish passage into English: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” The subject’s gender is not established by any surrounding context. Preserve the degree of commitment and uncertainty, and explain any material choice briefly.",
+    "depends": []
+  },
+  "translation_review": {
+    "agent": "translation-reviewer",
+    "skill": "text-translation",
+    "mode": "translation-review",
+    "prompt": "Compare the translator’s actual draft in inputs/translation.md and this alternative B against the source. Source: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” Alternative B: “He promised to return and will write. The letter arrived that evening.” No context establishes the subject’s gender. Report located findings for each target, distinguishing material errors from defensible choices.",
+    "depends": [
+      "translation"
+    ]
+  },
+  "scholarship": {
+    "agent": null,
+    "skill": "textual-scholarship",
+    "mode": "critical-edition-preparation",
+    "prompt": "Prepare a small edition from the supplied documentary packet in inputs/witnesses.md. Use witness-description, documentary-transcription, variant-collation, and critical-edition-preparation as needed. Deliver a witness register, diplomatic transcriptions, a collation, and an edited text with apparatus. Use A as a provisional documentary base, preserve historical spelling, and keep an unreadable span unresolved. Do not infer physical manuscript features or a stemma. Write outputs/edition.md.",
+    "depends": []
+  },
+  "proof": {
+    "agent": "proofreader",
+    "skill": "publishing-editorial",
+    "mode": "proofreading",
+    "prompt": "Compare inputs/copy.md and inputs/proof.md. Prepare an exact correction list with locations; do not perform developmental rewriting. Prior correction Q1 required changing note 2 to note 3. Only text files are supplied; no PDF pages were rendered.",
+    "depends": []
+  },
+  "format": {
+    "agent": "publication-format-reviewer",
+    "skill": "publishing-editorial",
+    "mode": "publication-format-review",
+    "prompt": "Inspect the actual inputs/book.epub for package and internal navigation defects using available local tools. Do not install anything. Report the checks actually executed and distinguish them from rendering or accessibility checks that you cannot perform.",
+    "depends": []
+  },
+  "index": {
+    "agent": "indexing-coordinator",
+    "skill": "publishing-editorial",
+    "mode": "indexing-workflows",
+    "prompt": "Create a provisional index from inputs/index-source.md. Only the supplied stable anchors exist; no print pagination is available. Use meaningful concept entries and useful cross-references. Deliver the index, locator evidence, and unresolved production checks.",
+    "depends": []
+  },
+  "submission": {
+    "agent": "submission-package-editor",
+    "skill": "publishing-editorial",
+    "mode": "submission-package-preparation",
+    "prompt": "Prepare a complete submission cover note and a separate biography under 50 words. Magazine requirements: anonymous story file, separate identifying cover note and biography; no submission is authorized. Work: “The Spare Key”, a 2,100-word story about two siblings returning a lost key. Author: Rowan Hale, lives in Leeds, teaches adult literacy. No publications or awards are supplied. Identify package checks without inventing credentials.",
+    "depends": []
+  },
+  "edition": {
+    "agent": "edition-maintenance-editor",
+    "skill": "publishing-editorial",
+    "mode": "edition-maintenance",
+    "prompt": "Apply correction C1 to inputs/edition-source.md and write outputs/edition-source-corrected.md. Supplied evidence establishes that the table label must say 2019, not 2018. Caption and discussion already say 2019. A distributed PDF and EPUB exist but are not supplied and cannot be updated here. Deliver a correction log and accurate derivative-update status.",
+    "depends": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "status": {
+    "case": "translation_review",
+    "exit": 0,
+    "seconds": 116.66
+  },
+  "prompt": "Use $text-translation in translation-review mode from .agents/skills/text-translation/SKILL.md.\n\nCompare the translator’s actual draft in inputs/translation.md and this alternative B against the source. Source: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” Alternative B: “He promised to return and will write. The letter arrived that evening.” No context establishes the subject’s gender. Report located findings for each target, distinguishing material errors from defensible choices.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "read-only",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/translation_review/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/translation_review/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/translation_review/response.md",
+      "-c",
+      "model=\"gpt-5.6-sol\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-translation in `translation-review` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify both versions, language varieties, brief, genre, and review extent. Align source and target and check omissions/additions, negation, modality, referents, tense, quantities, names, terminology, register, and recurring devices.\\nSeparate demonstrable meaning errors from defensible translation strategies and optional stylistic preferences. Preserve source ambiguity rather than resolving it by guesswork. Explain how proposed corrections affect meaning and form.\\nProvide paired source/target locations, consequences, correction options, and confidence. Verify each issue in context and report exactly which units were inspected. Do not use back-translation as sole proof, certify unseen coverage, or claim corrections were applied.\\nInspect the assigned sources without modifying them. Return located findings and distinguish inspected coverage from material not supplied or not checked.\\nReturn corrections to `text-translator`; route source identity to `textual-witness-analyst`, specialist factual issues to `fact-checking-editor`, and final layout checks to `publication-format-reviewer`.\\nReturn exactly these sections: `Review Scope`, `Alignment And Coverage`, `Meaning Findings`, `Register And Form Findings`, `Suggested Corrections`, `Unresolved Choices`, `Verification`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "translation-reviewer",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-translation/references/workflows/translation-review.md && rg --files inputs && sed -n '1,240p' inputs/translation.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc 'find .. -name AGENTS.md -print && nl -ba inputs/translation.md'",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/translation_review/events.jsonl",
+      "sha256": "c5398e4a6b97c8563d4f7d64410eb262f822ca32defa38a91b1eae96e3ff9c60"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/translation_review/stderr",
+      "sha256": "272da62857ce48898dab1b7f1b83cdd7c29e94dbc23490258bb665e9d02d2d44"
+    }
+  ],
+  "response_sha256": "3ddb20ded639510a6f27e6b8423946b6cdfafa584146476a8ebf41b66b9b307e",
+  "case": "translation_review",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Compared the actual preceding translation and a deliberately faulty alternative; accepted defensible A and located B's gender, negation, modality/reported-speech, and time-interval errors without applying changes.",
+  "fixture": {
+    "agent": "translation-reviewer",
+    "skill": "text-translation",
+    "mode": "translation-review",
+    "prompt": "Compare the translator’s actual draft in inputs/translation.md and this alternative B against the source. Source: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” Alternative B: “He promised to return and will write. The letter arrived that evening.” No context establishes the subject’s gender. Report located findings for each target, distinguishing material errors from defensible choices.",
+    "depends": [
+      "translation"
+    ]
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

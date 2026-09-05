@@ -1,0 +1,91 @@
+{
+  "status": {
+    "case": "professional",
+    "exit": 0,
+    "seconds": 48.95
+  },
+  "prompt": "Use $text-composition in professional-writing mode from .agents/skills/text-composition/SKILL.md.\n\nDraft a complete 140–190-word internal memo proposing a two-week afternoon help-desk pilot. Known facts: the current desk closes at noon; six afternoon requests were logged last week; no staffing allocation or budget is approved. Ask the operations owner for a decision. Do not announce a launch or invent savings.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/professional/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/professional/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/professional/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `professional-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nCapture document type, reader/sender relationship, purpose, desired action, facts, length, and permitted commitments. Write the complete memo, letter, brief, report, speech, or practical text requested.\\nSeparate facts, analysis, proposals, and approved commitments. Adapt structure to the medium: decision context for memos, relationship and request for letters, navigable evidence for reports, and oral signposting for speeches.\\nCheck names, dates, figures, attachments, references, and next actions against supplied material. Keep unknowns explicit and preserve required language. Never invent a budget, promise, organizational decision, or timed performance. Drafting does not authorize sending.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `documentation-engineer` or `knowledge-base-author` for product documentation, `budget-justification-writer` for grant budgets, `policy-analyst` for policy evidence, and `customer-communications-specialist` for customer incident messaging.\\nReturn exactly these sections: `Draft`, `Audience And Purpose`, `Fact And Commitment Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "professional-text-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'SKILL.md' -g 'professional-writing.md' -g 'outputs/**' . /tmp/text-lifecycle-20260905/project/.agents 2>/dev/null\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/text-composition/SKILL.md && sed -n '1,320p' .agents/skills/text-composition/references/workflows/professional-writing.md && find . -maxdepth 2 -type d -name outputs -print\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files -g '\"'!AGENTS.md'\"' -g '\"'!.agents/**'\"' -g '\"'!outputs/**'\"' . && rg --files outputs\"",
+      "exit_code": 1
+    },
+    {
+      "command": "/bin/bash -lc \"find outputs -maxdepth 2 -type f -printf '%p\\\\n' && rg -n -i -e 'help.?desk' -e 'afternoon' -e 'operations' outputs inputs 2>/dev/null\"",
+      "exit_code": 1
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/professional-before-measured-count/events.jsonl",
+      "sha256": "a429f11b1cbf6d38cd7c6f0453c1d43dc9013a291ad32c073d54d73c6d6a281c"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/professional-before-measured-count/stderr",
+      "sha256": "402db46e43607bce2a93db6b5df2125a72ea39a292a1ba4b4e8702442f08b854"
+    }
+  ],
+  "response_sha256": "3019a49d2cb880736a08424a286f16a708e2f7e04184b47eea4d76bf9b7ac61b",
+  "disposition": "Reporting failure: draft was within the 140-190 word limit, but claimed 158 words; independent whitespace counting found 149 including headers. Added measured-count guidance and reran."
+}

@@ -1,0 +1,118 @@
+{
+  "status": {
+    "case": "drama",
+    "exit": 0,
+    "seconds": 98.98
+  },
+  "prompt": "Use $text-composition in dramatic-writing mode from .agents/skills/text-composition/SKILL.md.\n\nWrite a complete short stage scene, about 220–320 words, with exactly two characters, Mina and Sol, and one table. Mina wants Sol to return a key; Sol wants Mina to ask why it was taken. No other characters or scene changes. Use dialogue, playable action, and subtext. End with a changed relationship to the key; do not claim a measured runtime.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/drama/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/drama/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/drama/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `dramatic-writing` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nRestate medium, cast, space, runtime, scene context, and fixed production constraints. Deliver the complete requested dramatic text. Build scenes through objectives, tactics, leverage, withheld knowledge, or the user\\u2019s experimental organizing principle.\\nUse speech, action, silence, and stage directions to make changes playable. Avoid exposition that merely repeats facts everyone in the scene knows. Track entrances, exits, positions, props, and who knows what.\\nCheck cue labels, speaker ownership, cast/space limits, and scene-state transitions. Distinguish attempted actions from completed movement and reconcile incompatible physical directions. Treat runtime as an estimate unless a read-through exists; never invent rehearsal evidence. Distinguish drama composition from recording logistics and camera planning.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `script-development-editor` for video/audio cue and production-script refinement, `recording-preparation-coordinator` for capture logistics, and `fiction-development-editor` for larger story architecture.\\nReturn exactly these sections: `Dramatic Text`, `Character And Action Notes`, `Staging And Continuity`, `Timing And Checks`, `Open Questions`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "dramatic-text-writer",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [
+    {
+      "type": "error",
+      "message": "Reconnecting... 2/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 3/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 4/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 5/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-composition/references/workflows/dramatic-writing.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g '*brief*' -g '*prompt*' | sed -n '1,160p'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/text-composition/artifacts/dramatic-writing-kit.md && sed -n '1,220p' AGENTS.md\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files .agents/skills | rg 'dramatic-writing-kit\\\\.md\"'$|(''^|/)AGENTS'\"\\\\.md\"'$'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,300p' .agents/skills/text-composition/references/artifacts/dramatic-writing-kit.md && sed -n '1,220p' AGENTS.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/drama/events.jsonl",
+      "sha256": "ee13c5e5130db51747e4edb0512a0888da2fff9104204f582baab5731ce32f6b"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/drama/stderr",
+      "sha256": "c0d027e8cad3cf4f864c56fbc278163f77e626ff9d6f5816a4782f13e428468d"
+    }
+  ],
+  "response_sha256": "01929b5fdb1b73ecd4d5191990fba9be2c64f8225aee9cfd903a1a003875a12e",
+  "case": "drama",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Delivered a complete 268-word scene with Mina, Sol, one table, coherent key movement, and an altered final relationship; timing remained approximate.",
+  "fixture": {
+    "agent": "dramatic-text-writer",
+    "skill": "text-composition",
+    "mode": "dramatic-writing",
+    "prompt": "Write a complete short stage scene, about 220–320 words, with exactly two characters, Mina and Sol, and one table. Mina wants Sol to return a key; Sol wants Mina to ask why it was taken. No other characters or scene changes. Use dialogue, playable action, and subtext. End with a changed relationship to the key; do not claim a measured runtime.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

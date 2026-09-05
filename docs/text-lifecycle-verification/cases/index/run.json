@@ -1,0 +1,101 @@
+{
+  "status": {
+    "case": "index",
+    "exit": 0,
+    "seconds": 100.23
+  },
+  "prompt": "Use $publishing-editorial in indexing-workflows mode from .agents/skills/publishing-editorial/SKILL.md.\n\nCreate a provisional index from inputs/index-source.md. Only the supplied stable anchors exist; no print pagination is available. Use meaningful concept entries and useful cross-references. Deliver the index, locator evidence, and unresolved production checks.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/index/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/index/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/index/response.md",
+      "-c",
+      "model=\"gpt-5.6-luna\"",
+      "-c",
+      "model_reasoning_effort=\"medium\"",
+      "-c",
+      "developer_instructions=\"Use $publishing-editorial in `indexing-workflows` mode. If unavailable, use the intake, checks, and output contract below as a bounded fallback.\\nIdentify index purpose, reader, scope, house style, source/proof version, and locator scheme. Select substantive reader access points rather than indexing every word occurrence.\\nCreate the actual index with coherent headings/subheadings, disambiguation, synonyms, and useful see/see-also references. Use only locators present in the supplied source or page map; label electronic anchors or draft pages as provisional when pagination is not final.\\nVerify locator evidence, cross-reference targets, sorting, duplicate concepts, and affected entries after repagination. Preserve source-version context and report uninspected units. Do not invent page numbers or claim final approval.\\nPreserve concurrent changes and source originals; edit only assigned working artifacts.\\nUse `production-editor` for pagination/version control, `proofreader` for final locator proofing, and `developmental-manuscript-editor` for unresolved structure.\\nReturn exactly these sections: `Index`, `Index Scope And Policy`, `Locator Evidence`, `Cross Reference Checks`, `Open Queries`, `Coverage And Checks`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "indexing-coordinator",
+    "model": "gpt-5.6-luna",
+    "reasoning": "medium",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/publishing-editorial/references/workflows/indexing-workflows.md && printf '\\\\n---FILES---\\\\n' && rg --files inputs outputs 2>/dev/null | sort && printf '\\\\n---SOURCE---\\\\n' && sed -n '1,260p' inputs/index-source.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,280p' .agents/skills/publishing-editorial/references/artifacts/indexing-workflows-kit.md; printf '\\\\n---AGENTS---\\\\n'; find .. -name AGENTS.md -print; printf '\\\\n---GIT STATUS---\\\\n'; git status --short\"",
+      "exit_code": 128
+    },
+    {
+      "command": "/bin/bash -lc 'nl -ba inputs/index-source.md; sha256sum inputs/index-source.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' outputs/index.md; printf '\\\\n---CHECKS---\\\\n'; rg -n '(\"'^|[''^#])'\"\\\\b[0-9]+\\\\b|#(collective|archive)|See|see-also|Uninspected|Outstanding' outputs/index.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/index/events.jsonl",
+      "sha256": "c16fae088fb84b8b88368c07bf66f52743390113ddcb671d524a8a243ad186cf"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/index/stderr",
+      "sha256": "23a247c7d9694670f90e98568e08eb5ae94915a169b29e62a74090a0e89923fc"
+    }
+  ],
+  "response_sha256": "1c437b5431f75bc91819a76c0797f2ebc1b457896e1715001d6791da0cf6a538",
+  "case": "index",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Wrote a provisional concept index with only supplied anchors, substantive headings, and resolving see-references; did not invent print pages.",
+  "fixture": {
+    "agent": "indexing-coordinator",
+    "skill": "publishing-editorial",
+    "mode": "indexing-workflows",
+    "prompt": "Create a provisional index from inputs/index-source.md. Only the supplied stable anchors exist; no print pagination is available. Use meaningful concept entries and useful cross-references. Deliver the index, locator evidence, and unresolved production checks.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

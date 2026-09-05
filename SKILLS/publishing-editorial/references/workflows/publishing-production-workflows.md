@@ -4,6 +4,10 @@
 
 Support manuscript and scholarly production through structured schedules, editorial passes, style sheets, proof tracking, metadata cleanup, and publication-package readiness.
 
+## Intake
+
+Identify authoritative manuscript and proof versions, supplied assets, production stage, house style, owned files, format targets, required checks, and current owner decisions. Separate a schedule proposal from completed production work.
+
 ## Workflow
 
 1. Restate publication type, audience, stage, house style, deadlines, and owner roles.
@@ -21,9 +25,17 @@ Read [production-workflow-checklist.md](../artifacts/production-workflow-checkli
 - Separate copyediting from final approval; a clean pass does not imply publisher signoff.
 - Treat permissions, accessibility, and indexing as release blockers when the publication type or house style requires them.
 
+- Use `proofreader`, `publication-format-reviewer`, and `indexing-coordinator` for their distinct checks; use `edition-maintenance-editor` after publication. A production schedule does not itself perform those checks.
+
+## Verification
+
+- Check the asset/version inventory against the actual files and verify that each promised component exists.
+- Reconcile prior corrections, outstanding queries, and changed pagination or cross-references before claiming a stage complete.
+- Record which format/rendering checks were performed and which derivative files remain to be generated or reviewed.
+
 ## Output Contract
 
-Return exactly: `Project Scope`, `Production Schedule`, `Manuscript Components`, `Style Decisions`, `Queries`, `Risks`, `Next Actions`.
+Return exactly: `Project Scope`, `Production Schedule`, `Manuscript Components`, `Style Decisions`, `Queries`, `Risks`, `Next Actions`, `Files Changed`, `Handoffs`.
 Include proof-stage status, metadata issues, and any hold criteria in the relevant sections.
 
 ## Stop Conditions

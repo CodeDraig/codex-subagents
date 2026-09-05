@@ -1,0 +1,111 @@
+{
+  "status": {
+    "case": "revision",
+    "exit": 0,
+    "seconds": 103.92
+  },
+  "prompt": "Use $text-revision in structural-revision mode from .agents/skills/text-revision/SKILL.md.\n\nRevise the actual story in inputs/fiction.md. Keep four receipts and no external narrator. In the third receipt introduce a discrepancy in the rented memory’s date, and make the final receipt respond to that discrepancy without explaining the memory’s true origin. Preserve the disputed-refund premise. Write the complete revised story to outputs/revised-fiction.md, then report the structural changes and checks.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/revision/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/revision/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/revision/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-revision in `structural-revision` mode. If unavailable, use the intake, checks, and output contract below as a bounded fallback.\\nIdentify the authoritative draft, revision brief, assigned units, protected form/voice/facts, and whether the work is diagnosis or applied revision. Use revision-planning or feedback-integration only when their distinct artifacts are needed.\\nMap units to relocations, cuts, expansions, and new connective text. Apply the requested revisions, then repair transitions, setup/payoff, claim/evidence relationships, terms, chronology, and references affected by the change. Preserve contrary evidence and deliberate experimental structure.\\nKeep a before/after unit map and recoverable original. Compare the revised span with the brief and source, inspect the whole assigned span, and report actual remaining coverage. Planning and examples must not substitute for a requested full revision.\\nPreserve concurrent changes and source originals; edit only assigned working artifacts.\\nHand language refinement to `rhetorical-style-editor` or `line-copy-editor`, continuity to `manuscript-continuity-reviewer`, and source questions to `fact-checking-editor`.\\nReturn exactly these sections: `Revised Text`, `Structural Changes`, `Unit Map`, `Preserved Choices`, `Open Queries`, `Coverage And Checks`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "developmental-manuscript-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"pwd && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'SKILL.md' -g 'structural-revision.md' -g 'fiction.md' -g 'revised-fiction.md' . .agents 2>/dev/null\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/text-revision/SKILL.md && sed -n '1,300p' .agents/skills/text-revision/references/workflows/structural-revision.md && sed -n '1,320p' inputs/fiction.md\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/text-revision/artifacts/structural-revision-kit.md && git status --short && (test -d outputs && rg --files outputs || true)\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files .agents/skills/text-revision | rg 'structural-revision-kit|artifacts' ; git status --short ; if test -d outputs; then rg --files outputs; fi\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/text-revision/references/artifacts/structural-revision-kit.md && find . -name AGENTS.md -print\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"printf '%s\\\\n' '--- revised story ---'; sed -n '1,260p' outputs/revised-fiction.md; printf '%s\\\\n' '--- structural diff ---'; diff -u --label inputs/fiction.md --label outputs/revised-fiction.md <(sed -n '/\"'^RECEIPT 01/,/''^## Craft Decisions/p'\"' inputs/fiction.md | sed '\"'$d'\"') outputs/revised-fiction.md || true; printf '%s\\\\n' '--- checks ---'; printf 'receipt-blocks='; rg -c '\"'^RECEIPT [0-9]{2}'\"' outputs/revised-fiction.md; printf 'refund-dispute='; rg -c '\"'^REFUND DISPUTE'\"' outputs/revised-fiction.md; printf 'date-conflict='; rg -c 'rental file stamped 19 January 2041|it was June' outputs/revised-fiction.md; printf 'final-response='; rg -c 'DATE FIELD: left unassigned|unassigned field' outputs/revised-fiction.md; printf 'external-narrative-headings='; rg -c '\"'^#'\"' outputs/revised-fiction.md || true; printf 'origin-assertions='; rg -in 'origin|whose memory|true source' outputs/revised-fiction.md || true\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/revision/events.jsonl",
+      "sha256": "0f6783b2e30ed52936108d23b2c2619ce8ca8ce5eaa4ffbbe68f2e7a86811ce0"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/revision/stderr",
+      "sha256": "c8aa6b595f5b80bef435c0c599e3c53d7e8a24dd825ac2e367ab57781ea8d805"
+    }
+  ],
+  "response_sha256": "6bf90876a19974dc453c140cd7458a6a639688baef431a4ad40104256f918e96",
+  "case": "revision",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Applied the requested date discrepancy to the actual preceding fiction draft; wrote the complete four-receipt revision with a responsive final receipt and unresolved memory origin.",
+  "fixture": {
+    "agent": "developmental-manuscript-editor",
+    "skill": "text-revision",
+    "mode": "structural-revision",
+    "prompt": "Revise the actual story in inputs/fiction.md. Keep four receipts and no external narrator. In the third receipt introduce a discrepancy in the rented memory’s date, and make the final receipt respond to that discrepancy without explaining the memory’s true origin. Preserve the disputed-refund premise. Write the complete revised story to outputs/revised-fiction.md, then report the structural changes and checks.",
+    "depends": [
+      "fiction"
+    ]
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

@@ -1,0 +1,110 @@
+{
+  "status": {
+    "case": "nonfiction",
+    "exit": "timeout",
+    "seconds": 300.02
+  },
+  "prompt": "Use $text-composition in nonfiction-drafting mode from .agents/skills/text-composition/SKILL.md.\n\nWrite a complete 220–300-word explanatory article for residents about a neighborhood library survey. Supplied facts: 30 people responded; 18 reported weekly use; recruitment occurred only at the library entrance on one Saturday; no citywide comparison exists. Discuss what can and cannot be learned. You may use an explicitly hypothetical example, but there are no interviews, quotations, or other studies in the packet.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/nonfiction/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/nonfiction/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/nonfiction/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-composition in `nonfiction-drafting` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify the reader question, thesis, category, extent, evidence packet, and citation expectations. Write the complete requested text with a distinct purpose for each section and meaningful transitions.\\nTrack documented fact, memory, interpretation, hypothetical illustration, and open source needs. Preserve comparison groups, units, chronology, uncertainty, and causal scope. Never turn a paraphrase into an invented quotation or add personal experiences or credentials for the author.\\nMissing facts can be queried, qualified, or omitted while the draft proceeds. Missing packet details do not prove that an underlying study omitted a question, method, or result; limit negative claims to the supplied evidence. Do not add unsupported recency or causal, geographic, or chronological relationships to smooth prose. Check core claims against supplied locations and report what remains unverified. Do not replace a requested full draft with an outline; mark actual remaining units for long work.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `nonfiction-manuscript-editor` for thesis and chapter architecture, `fact-checking-editor` for verification, `citation-integrity-checker` for citations, and `line-copy-editor` for the later copy pass.\\nReturn exactly these sections: `Draft`, `Source And Claim Notes`, `Editorial Decisions`, `Coverage And Checks`, `Open Queries`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "nonfiction-drafter",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 0,
+  "error_events": [
+    {
+      "type": "error",
+      "message": "Reconnecting... 2/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 3/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 4/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 5/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... waiting for network (Connection failed: error sending request)"
+    }
+  ],
+  "commands": [],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/nonfiction-network-delay/events.jsonl",
+      "sha256": "3695978a11c36f788b223dc49206f71db900ed943c17870e50a4877aea00bb3f"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/nonfiction-network-delay/stderr",
+      "sha256": "bd488904a2b851f53b93a529dd3f9e55e7d2bc891d2e0937920577ba4d04490b"
+    }
+  ],
+  "disposition": "Network/environment failure: repeated DNS/connection errors, no completed model turn, 300-second timeout. Retained and reran with network access."
+}

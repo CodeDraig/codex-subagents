@@ -1,0 +1,79 @@
+{
+  "status": {
+    "case": "adaptation",
+    "exit": 0,
+    "seconds": 30.01
+  },
+  "prompt": "Use $text-revision in text-adaptation mode from .agents/skills/text-revision/SKILL.md.\n\nAdapt this source into a complete 90–130-word community notice: “Of 30 respondents recruited at the library entrance on one Saturday, 18 reported weekly library use. This convenience sample does not estimate citywide use. The committee is considering extended hours; no decision has been made.” Preserve the scope and proposal status. Do not add an interview or approved date.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/adaptation/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/adaptation/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/adaptation/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-revision in `text-adaptation` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify source version, target form/audience/length, protected content, allowed invention, and attribution needs. Map source units to target units and then deliver the complete adapted text.\\nChange explanation, pace, structure, examples, and signposting for the target. Keep claim strength, negation, chronology, essential caveats, and required passages intact unless their change is explicitly assigned. Do not turn abridgment into selective misrepresentation or plain language into a false simplification.\\nCompare source and target for consequential losses/additions, required coverage, and medium constraints. Label hypothetical additions and identify remaining unadapted units. Preserve the source original and its provenance.\\nCheck added qualifiers as factual claims: do not call an unspecified survey brief or recent, or invent other source details merely to smooth the adapted prose.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `text-translator` for language transfer, `script-development-editor` for production scripts, and `reader-experience-reviewer` for target-audience review.\\nReturn exactly these sections: `Adapted Text`, `Source To Target Map`, `Transformation Decisions`, `Fidelity And Format Checks`, `Open Queries`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "text-adaptation-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/text-revision/SKILL.md && sed -n '1,320p' .agents/skills/text-revision/references/workflows/text-adaptation.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'guidance*' -g 'source*' -g 'outputs/**' .\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/adaptation-before-measured-count/events.jsonl",
+      "sha256": "078e83be4b34c027777b8fc0372100b5ca54ffa1491f8332d7ebb529ae68cc6c"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/adaptation-before-measured-count/stderr",
+      "sha256": "022264759f910abc38bd85fabc28cfc6f41b0a6d83c12a301602c1b52b0ec794"
+    }
+  ],
+  "response_sha256": "c895f45f29334172ba4e64517bd6c593d9a74782223a1c60649fe8863f718c59",
+  "disposition": "Length/reporting failure: after the qualifier correction, the next notice was 83 whitespace-delimited words including title while claiming 91; this missed the 90-word minimum. Added measured hard-limit checks and reran."
+}

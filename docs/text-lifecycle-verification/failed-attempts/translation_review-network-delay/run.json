@@ -1,0 +1,95 @@
+{
+  "status": {
+    "case": "translation_review",
+    "exit": -15,
+    "seconds": 110.79
+  },
+  "prompt": "Use $text-translation in translation-review mode from .agents/skills/text-translation/SKILL.md.\n\nCompare the translator’s actual draft in inputs/translation.md and this alternative B against the source. Source: “No prometió volver; dijo que quizá escribiría. La carta llegó dos días después.” Alternative B: “He promised to return and will write. The letter arrived that evening.” No context establishes the subject’s gender. Report located findings for each target, distinguishing material errors from defensible choices.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "read-only",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/translation_review/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/translation_review/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/translation_review/response.md",
+      "-c",
+      "model=\"gpt-5.6-sol\"",
+      "-c",
+      "model_reasoning_effort=\"high\"",
+      "-c",
+      "developer_instructions=\"Use $text-translation in `translation-review` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify both versions, language varieties, brief, genre, and review extent. Align source and target and check omissions/additions, negation, modality, referents, tense, quantities, names, terminology, register, and recurring devices.\\nSeparate demonstrable meaning errors from defensible translation strategies and optional stylistic preferences. Preserve source ambiguity rather than resolving it by guesswork. Explain how proposed corrections affect meaning and form.\\nProvide paired source/target locations, consequences, correction options, and confidence. Verify each issue in context and report exactly which units were inspected. Do not use back-translation as sole proof, certify unseen coverage, or claim corrections were applied.\\nInspect the assigned sources without modifying them. Return located findings and distinguish inspected coverage from material not supplied or not checked.\\nReturn corrections to `text-translator`; route source identity to `textual-witness-analyst`, specialist factual issues to `fact-checking-editor`, and final layout checks to `publication-format-reviewer`.\\nReturn exactly these sections: `Review Scope`, `Alignment And Coverage`, `Meaning Findings`, `Register And Form Findings`, `Suggested Corrections`, `Unresolved Choices`, `Verification`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "translation-reviewer",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only"
+  },
+  "turn_completed_events": 0,
+  "error_events": [
+    {
+      "type": "error",
+      "message": "Reconnecting... 2/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 3/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 4/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    },
+    {
+      "type": "error",
+      "message": "Reconnecting... 5/5 (stream disconnected before completion: failed to lookup address information: Try again)"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/text-translation/references/workflows/translation-review.md && printf '\\\\n--- DRAFT ---\\\\n' && sed -n '1,240p' inputs/translation.md && printf '\\\\n--- FILES ---\\\\n' && rg --files inputs\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/translation_review-network-delay/events.jsonl",
+      "sha256": "42d724046ab2e7017ab123b3e4edf4179d36bd0b9c42a78d5574eee0f8cbe939"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/failed-attempts/translation_review-network-delay/stderr",
+      "sha256": "73f16ef715242ec5a4a87093b57662a56d15fa133668e4293ef7f2f9ae497e3d"
+    }
+  ],
+  "disposition": "Interrupted attempt after sustained DNS/connection delay; connection had recovered and source reading had begun, but no completed review existed. Retained and reran. The interruption was not a content failure."
+}

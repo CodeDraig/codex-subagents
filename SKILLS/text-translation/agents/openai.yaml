@@ -1,0 +1,4 @@
+interface:
+  display_name: "Text Translation"
+  short_description: "Translate complete texts and review source fidelity"
+  default_prompt: "Use $text-translation to select the workflow for the text artifact I need and complete that deliverable."

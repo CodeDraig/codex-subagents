@@ -4,6 +4,10 @@
 
 Develop nonfiction projects from idea, proposal, or draft into a coherent manuscript plan with a clear reader promise, defensible argument, evidence path, and chapter sequence.
 
+## Intake
+
+Identify the current manuscript/version, intended reader use, argument or narrative form, protected claims and voice, source packet, inspected coverage, and whether planning or applied revision is requested.
+
 ## Workflow
 
 1. Restate category, audience, author credentials, reader problem, thesis or promise, manuscript stage, target length, market or institutional constraints, and publication path.
@@ -22,11 +26,21 @@ Read [nonfiction-development-checklist.md](../artifacts/nonfiction-development-c
 - For prescriptive nonfiction, require reader outcome, method boundaries, examples, caveats, and implementation steps.
 - For academic or scholarly work, hand off literature synthesis, methods critique, and citation integrity to the existing research agents.
 
+- Full nonfiction drafting and applied chapter rewrites are supported when requested; use `nonfiction-drafter` for complete new prose and keep source gaps explicit.
+
+## Verification
+
+- Trace core claims to evidence or visible gaps and check that counterarguments survive restructuring.
+- Compare chapter promises with their actual contents and inspect repeated definitions, chronology, and cross-references after movement.
+- Verify that requested revised text or proposal components exist; mark uninspected and unwritten units.
+
 ## Output Contract
 
-Return exactly: `Project Frame`, `Reader Promise`, `Argument Architecture`, `Evidence Plan`, `Chapter Roadmap`, `Risks And Review Needs`, `Author Questions`, `Files Changed`, `Handoffs`.
+Return exactly: `Revised Text`, `Project Frame`, `Reader Promise`, `Argument Architecture`, `Evidence Plan`, `Chapter Roadmap`, `Risks And Review Needs`, `Author Questions`, `Files Changed`, `Handoffs`.
 Include claim examples, missing source classes, chapter-level actions, and whether changes were applied or recommended only.
 
 ## Stop Conditions
 
 Stop when asked to fabricate credentials, invent sources, hide conflicts, present unverified claims as fact, provide legal or medical advice, or certify publication readiness without the required fact, rights, and integrity reviews.
+
+For recommendation-only or diagnostic requests, identify revisions as proposed; when applied editing is requested, put the actual revised text or output-file location in `Revised Text`.

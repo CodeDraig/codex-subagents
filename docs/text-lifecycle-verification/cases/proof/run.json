@@ -1,0 +1,97 @@
+{
+  "status": {
+    "case": "proof",
+    "exit": 0,
+    "seconds": 38.13
+  },
+  "prompt": "Use $publishing-editorial in proofreading mode from .agents/skills/publishing-editorial/SKILL.md.\n\nCompare inputs/copy.md and inputs/proof.md. Prepare an exact correction list with locations; do not perform developmental rewriting. Prior correction Q1 required changing note 2 to note 3. Only text files are supplied; no PDF pages were rendered.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/proof/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/proof/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/proof/response.md",
+      "-c",
+      "model=\"gpt-5.6-luna\"",
+      "-c",
+      "model_reasoning_effort=\"medium\"",
+      "-c",
+      "developer_instructions=\"Use $publishing-editorial in `proofreading` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify copy, proof, versions, correction history, style, and assigned correction target. Compare text for omissions, duplication, substitutions, punctuation, headings, notes, and captions. Inspect rendered layout only when a rendering is actually available.\\nReturn exact existing/replacement text with stable locations and basis; apply to an assigned working copy when requested. Track prior corrections as incorporated, missed, or superseded and recheck changed neighboring text.\\nDo not turn proofing into developmental editing or erase intentional voice/style exceptions. Flag pagination, index, and cross-reference effects of late changes. Distinguish extracted-text checks from visual inspection and never claim final approval.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nSend layout/export issues to `publication-format-reviewer`, schedule/reflow dependencies to `production-editor`, locators to `indexing-coordinator`, and factual uncertainty to `fact-checking-editor`.\\nReturn exactly these sections: `Proof Scope`, `Corrected Text Or Corrections`, `Prior Correction Status`, `Layout Observations`, `Recheck Needs`, `Coverage And Checks`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "proofreader",
+    "model": "gpt-5.6-luna",
+    "reasoning": "medium",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/publishing-editorial/SKILL.md && sed -n '1,260p' .agents/skills/publishing-editorial/references/workflows/proofreading.md && printf '\\\\n--- files ---\\\\n' && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'inputs/*' -g '\"'!outputs/**'\"'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/publishing-editorial/references/artifacts/proofreading-kit.md; printf '\\\\n--- copy ---\\\\n'; nl -ba inputs/copy.md; printf '\\\\n--- proof ---\\\\n'; nl -ba inputs/proof.md; printf '\\\\n--- diff ---\\\\n'; diff -u inputs/copy.md inputs/proof.md || true\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"git status --short -- inputs/copy.md inputs/proof.md; printf '\\\\n--- exact content checks ---\\\\n'; rg -n -F -e 'public access' -e 'pubic access' -e 'See note 2' -e 'See note 3' inputs/copy.md inputs/proof.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/proof/events.jsonl",
+      "sha256": "95d12c0b36ae7cd3985a3c59ef96a46647f9d3083d71a4500dd005df128be50c"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/proof/stderr",
+      "sha256": "cd29d3de466461344165efbb3400d269a05f8c953e10a8f36dc1bd2470f9463c"
+    }
+  ],
+  "response_sha256": "68b664f4b5b84bde5825ab1f7fc95f54e7a6c3d798c352995bd5ee60bcc4f76b",
+  "case": "proof",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Returned exact public-access and note-number corrections, identified the missed prior correction, and left visual proof coverage unverified.",
+  "fixture": {
+    "agent": "proofreader",
+    "skill": "publishing-editorial",
+    "mode": "proofreading",
+    "prompt": "Compare inputs/copy.md and inputs/proof.md. Prepare an exact correction list with locations; do not perform developmental rewriting. Prior correction Q1 required changing note 2 to note 3. Only text files are supplied; no PDF pages were rendered.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

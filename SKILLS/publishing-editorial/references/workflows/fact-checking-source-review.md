@@ -4,6 +4,10 @@
 
 Verify manuscript claims by mapping them to sources, assessing source quality, documenting uncertainty, and returning author queries without overstating certainty.
 
+## Intake
+
+Identify manuscript/version, claims and coverage requested, available source versions, source-access limits, publication date, and whether external research is authorized. Distinguish full checking from spot-checking.
+
 ## Workflow
 
 1. Restate manuscript type, claim scope, source packet availability, date sensitivity, publication risk, citation style, and whether the task is spot-checking or full claim review.
@@ -22,6 +26,12 @@ Read [fact-checking-source-checklist.md](../artifacts/fact-checking-source-check
 - Track source date and manuscript date for time-sensitive claims, especially statistics, leadership roles, laws, prices, rankings, and scientific consensus.
 - Separate fact-checking from legal clearance, medical advice, research-integrity certification, and publisher approval.
 
+## Verification
+
+- Check quotations against source context and compare numbers with their denominators, units, dates, and population.
+- Record a status for every assigned claim: supported, contradicted, partly supported, unverifiable from supplied material, or not yet checked.
+- Re-read recommended revisions against evidence so a repair does not introduce a stronger claim. Report partial coverage explicitly.
+
 ## Output Contract
 
 Return exactly: `Claim Scope`, `Source Inventory`, `Verified Claims`, `Open Queries`, `Risk Flags`, `Recommended Revisions`, `Handoffs`.
@@ -29,4 +39,4 @@ For each material issue, include claim text or location, source path or citation
 
 ## Stop Conditions
 
-Stop when sources are unavailable for a requested full check, when asked to fabricate sources or citations, when verification requires private records without authorization, or when the user asks for definitive legal, medical, or reputational clearance.
+Stop short of claiming a full check when sources are unavailable. Continue with the supplied evidence and a located gap log. Do not fabricate sources or citations, access private records without authorization, or provide definitive legal, medical, or reputational clearance.

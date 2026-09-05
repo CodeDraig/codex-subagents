@@ -1,0 +1,105 @@
+{
+  "status": {
+    "case": "edition",
+    "exit": 0,
+    "seconds": 92.42
+  },
+  "prompt": "Use $publishing-editorial in edition-maintenance mode from .agents/skills/publishing-editorial/SKILL.md.\n\nApply correction C1 to inputs/edition-source.md and write outputs/edition-source-corrected.md. Supplied evidence establishes that the table label must say 2019, not 2018. Caption and discussion already say 2019. A distributed PDF and EPUB exist but are not supplied and cannot be updated here. Deliver a correction log and accurate derivative-update status.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/edition/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/edition/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/edition/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"medium\"",
+      "-c",
+      "developer_instructions=\"Use $publishing-editorial in `edition-maintenance` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify the authoritative edition, correction evidence, requested change class, affected formats, and owned files. Apply authorized source changes and keep prior text recoverable with a located correction/edition log.\\nTrack dependencies across contents, indexes, cross-references, translations, metadata, summaries, accessible versions, and exports. Mark each artifact\\u2019s real state: updated, requiring regeneration, checked, unavailable, or outside access.\\nVerify changed text against evidence and inspect affected dependencies. Do not call a substantive rewrite a typo fix or claim every edition is updated after editing one source. Prepare reader-facing correction notes when requested, while keeping redistribution separate from local maintenance.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `production-editor` for release sequencing, `indexing-coordinator` for locator changes, `text-translator` for affected translations, and `publication-format-reviewer` for regenerated exports.\\nReturn exactly these sections: `Revised Text`, `Correction And Edition Log`, `Affected Artifact Map`, `Consistency Checks`, `Outstanding Updates`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "edition-maintenance-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/publishing-editorial/references/workflows/edition-maintenance.md && rg --files -g 'AGENTS.md' -g 'README*' -g 'CONVENTIONS*' -g 'edition-source.md' -g 'outputs/**' -g 'inputs/**'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/publishing-editorial/artifacts/edition-maintenance-kit.md && sed -n '1,240p' inputs/edition-source.md && git status --short && rg -n -i -C 2 '2018|2019|table|caption' inputs/edition-source.md outputs 2>/dev/null\"",
+      "exit_code": 2
+    },
+    {
+      "command": "/bin/bash -lc \"rg --files .agents/skills/publishing-editorial | rg 'edition-maintenance-kit|edition-maintenance' && sed -n '1,240p' inputs/edition-source.md && git status --short && rg -n -i -C 2 '2018|2019|table|caption' inputs/edition-source.md outputs 2>/dev/null\"",
+      "exit_code": 128
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,300p' .agents/skills/publishing-editorial/references/artifacts/edition-maintenance-kit.md && find . -maxdepth 3 -type f -printf '%p\\\\n' | sort | sed -n '1,240p'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc 'diff -u inputs/edition-source.md outputs/edition-source-corrected.md || test $? -eq 1\nrg -n '\"'2018|2019' outputs/edition-source-corrected.md outputs/edition-source-correction-log.md\nsed -n '1,160p' outputs/edition-source-corrected.md\nsed -n '1,220p' outputs/edition-source-correction-log.md\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/edition/events.jsonl",
+      "sha256": "ed4766549555c7e5bec2caa7ae4accc2604987450154ec842dc0405aaec1b908"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/edition/stderr",
+      "sha256": "63cded43467edbf2d1fb8250a7f2c221210f06d09b53fa40f0fce9377c2c8a1b"
+    }
+  ],
+  "response_sha256": "e12bca5c8f1ac36f4841f2f5cd09c466ede0f048102c175ccd4c1226b6302cd3",
+  "case": "edition",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Wrote the corrected source and log. Independent comparison confirms that the sole source change is table-label 2018 to 2019; caption/discussion agree and unavailable PDF/EPUB updates remain pending.",
+  "fixture": {
+    "agent": "edition-maintenance-editor",
+    "skill": "publishing-editorial",
+    "mode": "edition-maintenance",
+    "prompt": "Apply correction C1 to inputs/edition-source.md and write outputs/edition-source-corrected.md. Supplied evidence establishes that the table label must say 2019, not 2018. Caption and discussion already say 2019. A distributed PDF and EPUB exist but are not supplied and cannot be updated here. Deliver a correction log and accurate derivative-update status.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

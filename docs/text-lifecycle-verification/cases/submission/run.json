@@ -1,0 +1,101 @@
+{
+  "status": {
+    "case": "submission",
+    "exit": 0,
+    "seconds": 74.99
+  },
+  "prompt": "Use $publishing-editorial in submission-package-preparation mode from .agents/skills/publishing-editorial/SKILL.md.\n\nPrepare a complete submission cover note and a separate biography under 50 words. Magazine requirements: anonymous story file, separate identifying cover note and biography; no submission is authorized. Work: “The Spare Key”, a 2,100-word story about two siblings returning a lost key. Author: Rowan Hale, lives in Leeds, teaches adult literacy. No publications or awards are supplied. Identify package checks without inventing credentials.\n",
+  "invocation": {
+    "args": [
+      "/tmp/text-lifecycle-20260905/bin/codex-x86_64-unknown-linux-musl",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--color",
+      "never",
+      "--json",
+      "-C",
+      "/tmp/text-lifecycle-20260905/project",
+      "-c",
+      "agents.enabled=false",
+      "--disable",
+      "multi_agent",
+      "--disable",
+      "multi_agent_v2",
+      "--disable",
+      "hooks",
+      "--disable",
+      "shell_snapshot",
+      "--disable",
+      "apps",
+      "--disable",
+      "remote_plugin",
+      "-c",
+      "web_search=\"disabled\"",
+      "-c",
+      "history.persistence=\"none\"",
+      "-c",
+      "log_dir=\"/tmp/text-lifecycle-20260905/live/submission/log\"",
+      "-c",
+      "sqlite_home=\"/tmp/text-lifecycle-20260905/live/submission/state\"",
+      "-o",
+      "/tmp/text-lifecycle-20260905/live/submission/response.md",
+      "-c",
+      "model=\"gpt-5.6-terra\"",
+      "-c",
+      "model_reasoning_effort=\"medium\"",
+      "-c",
+      "developer_instructions=\"Use $publishing-editorial in `submission-package-preparation` mode. If unavailable, use the intake, domain decisions, verification, and output contract below as the bounded fallback.\\nIdentify destination instructions/version, work, author facts, components, deadlines, anonymity, and file scope. Extract actual requirements into a component matrix and draft every requested package text in full.\\nKeep synopses faithful to the manuscript and credentials/biography grounded in supplied facts. Do not infer relationships between adjacent facts, such as a place of employment from a residence and occupation. Check title, author, extent, versions, filenames, anonymity, and limits across the package. Missing facts become precise queries rather than invented awards, experience, or disclosures.\\nDistinguish completed local materials from remaining inspection and from actual submission. Do not upload, contact a publisher, pay, or claim acceptance as part of preparation.\\nInspect assigned files before editing, preserve concurrent edits and source originals, and apply changes only within the requested artifact scope. Full drafting and rewriting are supported when requested.\\nUse `journal-submission-specialist` for scholarly journal requirements, `book-metadata-packaging-editor` for positioning copy, `permissions-reviewer` for supplied rights questions, and `production-editor` for package sequencing.\\nReturn exactly these sections: `Submission Materials`, `Requirements Matrix`, `Package Inventory`, `Consistency Checks`, `Open Items`, `Files Changed`, `Handoffs`.\\n\"",
+      "-"
+    ],
+    "agent": "submission-package-editor",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "workspace-write"
+  },
+  "turn_completed_events": 1,
+  "error_events": [],
+  "commands": [
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/publishing-editorial/references/workflows/submission-package-preparation.md && rg --files -g '\"'!*'\"\\\\.git*'\"",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,240p' AGENTS.md && sed -n '1,260p' .agents/skills/publishing-editorial/references/artifacts/submission-package-preparation-kit.md && git status --short && rg -n -i -C 2 'spare key|rowan hale|lost key|sibling' inputs outputs\"",
+      "exit_code": 128
+    },
+    {
+      "command": "/bin/bash -lc \"rg -n -i -C 3 'spare key|rowan hale|lost key|sibling' inputs outputs || true\nrg --files outputs | sort\nfor f in outputs/*; do [ -f \\\"\"'$f\" ] && printf '\"'%s\\\\n' \\\"--- \"'$f\" && sed -n '\"'1,80p' \\\"\"'$f\"; done'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/bash -lc \"sed -n '1,120p' outputs/the-spare-key-cover-note.md\nsed -n '1,40p' outputs/rowan-hale-biography.md\nprintf 'Biography word count: '\nwc -w < outputs/rowan-hale-biography.md\nprintf 'Identifying-name occurrences in cover note: '\nrg -o -i 'Rowan Hale' outputs/the-spare-key-cover-note.md | wc -l\nprintf 'Identifying-name occurrences in biography: '\nrg -o -i 'Rowan Hale' outputs/rowan-hale-biography.md | wc -l\nprintf 'Anonymous story file candidates: '\nrg --files inputs outputs | rg -i 'spare.*key|key.*spare' || true\nprintf 'Output files: '\nrg --files outputs | rg 'the-spare-key-cover-note|rowan-hale-biography'\"",
+      "exit_code": 0
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/submission/events.jsonl",
+      "sha256": "b011ebacb90f8f9d0c4a81d11e2cf893dbd085bed3ff0cc5cd4fea1d26ee6d01"
+    },
+    {
+      "path": "/tmp/text-lifecycle-20260905/live/submission/stderr",
+      "sha256": "2b5e9864f3e01fd7f28d91a0418d9ce807e906f37aebbbf3201345ea67cd670e"
+    }
+  ],
+  "response_sha256": "7f2e607466508b201543059adbbc2c069061bb668a866a73d507be4b05601e40",
+  "case": "submission",
+  "acceptance": "pass",
+  "manual_acceptance_evidence": "Wrote complete separate cover note and nine-word biography. Preserved residence and occupation as separate facts, did not invent credentials, and left the absent anonymous story and metadata unverified.",
+  "fixture": {
+    "agent": "submission-package-editor",
+    "skill": "publishing-editorial",
+    "mode": "submission-package-preparation",
+    "prompt": "Prepare a complete submission cover note and a separate biography under 50 words. Magazine requirements: anonymous story file, separate identifying cover note and biography; no submission is authorized. Work: “The Spare Key”, a 2,100-word story about two siblings returning a lost key. Author: Rowan Hale, lives in Leeds, teaches adult literacy. No publications or awards are supplied. Identify package checks without inventing credentials.",
+    "depends": []
+  },
+  "runtime_scope": "Ephemeral single Codex invocation using the named template settings; delegation disabled."
+}

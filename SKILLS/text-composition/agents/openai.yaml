@@ -1,0 +1,4 @@
+interface:
+  display_name: "Text Composition"
+  short_description: "Compose complete texts from briefs and source material"
+  default_prompt: "Use $text-composition to select the workflow for the text artifact I need and complete that deliverable."
