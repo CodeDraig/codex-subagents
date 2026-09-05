@@ -4,7 +4,7 @@
 
 1. Restate the concrete result and identify the main agent's immediate critical path.
 2. Delegate only independent work that can be bounded by inputs, ownership, output, and validation.
-3. Prefer an exposed named custom agent when its domain and standing contract fit; otherwise use `explorer`, `worker`, `validator`, or `default` explicitly as a fallback.
+3. Prefer an exposed named custom agent when its domain and standing contract fit; otherwise use the active tool's supported fallback mechanism. Use `explorer`, `worker`, or `default` only when those types are exposed. Validation is an assignment, not a guaranteed built-in `validator` type; give that assignment to an available agent.
 4. Give each coding worker a disjoint write set and warn it not to revert concurrent edits. Keep dependent, tightly coupled, trivial, secret-bearing, or destructive work local.
 5. Define integration order, conflict ownership, review gates, and the evidence required before accepting each result.
 6. Obey the active session's delegation limits and approval rules. If delegation is unavailable or unauthorized, return the same design as a plan without spawning agents.

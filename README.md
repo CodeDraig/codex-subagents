@@ -8,10 +8,10 @@ This repository is a catalog, not an application. It provides copyable OpenAI/Co
 
 ## Current Inventory
 
-- 96 OpenAI agent templates in `AGENTS/openai/`.
-- 19 skill gateways in `SKILLS/` covering 58 established workflows.
-- 19 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
-- 120 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
+- 111 OpenAI agent templates in `AGENTS/openai/`.
+- 22 skill gateways in `SKILLS/` covering 76 workflows.
+- 22 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
+- 150 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
 
 ## Repository Layout
 

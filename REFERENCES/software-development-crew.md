@@ -24,6 +24,9 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Policy and Public Affairs | `policy-analyst`, `public-comment-drafter`, `stakeholder-map-analyst`, `legislative-tracker`, `impact-assessment-writer` |
 | Publishing and Scholarly Production | `developmental-manuscript-editor`, `production-editor`, `permissions-reviewer`, `indexing-coordinator`, `journal-submission-specialist` |
 | Book and Long-Form Production | `fiction-development-editor`, `nonfiction-manuscript-editor`, `line-copy-editor`, `fact-checking-editor`, `book-metadata-packaging-editor` |
+| Education And Training | `curriculum-designer`, `lesson-materials-author`, `assessment-designer`, `learning-accessibility-reviewer`, `training-evaluation-analyst` |
+| Archives And Collections | `accession-intake-coordinator`, `collection-description-specialist`, `digital-preservation-planner`, `collection-access-reviewer`, `exhibit-interpretation-writer` |
+| Video And Audio Production | `production-brief-planner`, `script-development-editor`, `recording-preparation-coordinator`, `postproduction-coordinator`, `media-delivery-reviewer` |
 
 ## Routing Rules
 
@@ -127,18 +130,33 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | Third-party content permissions, license restrictions, attribution needs | `permissions-reviewer` |
 | Index term candidates, locators, cross-references, author queries | `indexing-coordinator` |
 | Journal submission packages, metadata gaps, disclosures, response matrices | `journal-submission-specialist` |
+| Designs learning outcomes, prerequisites, instructional sequences, and assessment alignment for courses or training programs before lesson authoring. | `curriculum-designer` |
+| Authors timed lesson plans, learner activities, worked examples, and facilitator notes from supplied learning outcomes and source material. | `lesson-materials-author` |
+| Designs assessment blueprints, items, answer rationales, and scoring rubrics aligned to learning outcomes without grading individual learners. | `assessment-designer` |
+| Reviews learning materials and activities for participation barriers, usable alternatives, and verification needs without certifying accessibility or deciding individual accommodations. | `learning-accessibility-reviewer` |
+| Plans training evaluation and interprets supplied participation, learning, transfer, and outcome evidence without inventing effectiveness or causal claims. | `training-evaluation-analyst` |
+| Prepares collection intake inventories, provenance and transfer evidence, condition notes, and accession questions without authorizing acquisition or changing ownership. | `accession-intake-coordinator` |
+| Creates hierarchical collection descriptions, finding-aid drafts, and terminology decisions from supplied inventories while preserving provenance and original-order evidence. | `collection-description-specialist` |
+| Plans fixity, format-risk review, storage independence, recovery verification, and reversible migration for digital collections without altering original assets. | `digital-preservation-planner` |
+| Reviews collection access requests against supplied donor terms, restrictions, privacy concerns, and institutional policy without authorizing release or resolving legal conflicts. | `collection-access-reviewer` |
+| Writes source-backed exhibit narratives, object labels, and accessible interpretive alternatives from collection evidence without inventing provenance or granting publication clearance. | `exhibit-interpretation-writer` |
+| Plans video and audio production briefs, deliverables, schedules, dependencies, and resource assumptions before scripting or recording. | `production-brief-planner` |
+| Develops and edits video or audio scripts for audience, spoken timing, visual or sound cues, continuity, and factual support. | `script-development-editor` |
+| Prepares shot and recording lists, session logistics, equipment checks, asset needs, and readiness notes without booking resources or directing unsafe production. | `recording-preparation-coordinator` |
+| Organizes media inventories, edit instructions, synchronization notes, versions, and review handoffs while preserving original recordings. | `postproduction-coordinator` |
+| Reviews video and audio delivery packages against supplied technical specifications, content versions, caption and transcript coverage, and approval evidence. | `media-delivery-reviewer` |
 
 ## Model Coverage
 
-The 96 templates in `AGENTS/openai/` are distributed as follows:
+The 111 templates in `AGENTS/openai/` are distributed as follows:
 
 | Model | Reasoning Effort | Agent Templates | Representative Agents |
 | --- | --- | ---: | --- |
 | `gpt-5.6-sol` | `high` | 12 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
 | `gpt-5.6-sol` | `xhigh` | 4 | `systems-architect`, `security-threat-modeler`, `product-discovery-strategist`, `osint-research-lead` |
 | `gpt-5.6-terra` | `low` | 2 | `dependency-maintenance-engineer`, `triage-router` |
-| `gpt-5.6-terra` | `medium` | 24 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
-| `gpt-5.6-terra` | `high` | 41 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
+| `gpt-5.6-terra` | `medium` | 33 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
+| `gpt-5.6-terra` | `high` | 47 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
 | `gpt-5.6-luna` | `medium` | 10 | `audience-seo-editor`, `copy-desk-editor`, `support-triage-specialist` |
 | `gpt-5.3-codex-spark` | `low` | 1 | `rapid-prototype-scout` |
 | `gpt-5.3-codex-spark` | `medium` | 1 | `developer-experience-engineer` |
@@ -151,7 +169,7 @@ Some domains have paired agents because model capability and latency change the 
 | Domain | Thinking Agent | Execution Agent |
 | --- | --- | --- |
 | Security | `security-threat-modeler` uses `gpt-5.6-sol` with `xhigh` reasoning for threat modeling and attack-path analysis. | `security-fix-engineer` uses `gpt-5.6-terra` with `high` reasoning for bounded remediation patches. |
-| Performance | `performance-investigator` uses `gpt-5.6-terra` with `high` reasoning to interpret measurements and isolate causes. | `performance-optimizer` uses `gpt-5.6-terra` with `high` reasoning to implement focused optimizations. |
+| Performance | `performance-investigator` uses `gpt-5.6-terra` with `high` reasoning to design initial measurements or repair confounded measurement plans, then interpret valid evidence and isolate causes. Missing measurements block diagnosis and optimization recommendations, not measurement planning. | `performance-optimizer` uses `gpt-5.6-terra` with `high` reasoning to implement focused optimizations. |
 | Testing | `test-strategy-architect` uses `gpt-5.6-terra` with `high` reasoning to design risk-based coverage. | `test-automation-engineer` remains on `gpt-5.3-codex-spark` with `high` reasoning to quickly add executable tests. |
 | Architecture | `systems-architect` uses `gpt-5.6-sol` with `xhigh` reasoning for durable system boundaries. | `rapid-prototype-scout` remains on `gpt-5.3-codex-spark` with `low` reasoning to test feasibility quickly. |
 | News verification | `news-fact-checker` uses `gpt-5.6-terra` with `high` reasoning for publication risk. | `copy-desk-editor` uses `gpt-5.6-luna` with `medium` reasoning for line edits and packaging. |
@@ -173,10 +191,13 @@ Some domains have paired agents because model capability and latency change the 
 | Policy and public affairs | `policy-analyst` and `impact-assessment-writer` use `gpt-5.6-terra` with high reasoning for source-backed tradeoff and impact analysis. | `public-comment-drafter`, `stakeholder-map-analyst`, and `legislative-tracker` use `gpt-5.6-terra` for drafting, aggregate mapping, and official-source monitoring without legal advice, deceptive advocacy, or political microtargeting. |
 | Publishing and scholarly production | `developmental-manuscript-editor` and `permissions-reviewer` use `gpt-5.6-terra` for structural and rights-sensitive review. | `production-editor` and `indexing-coordinator` use `gpt-5.6-luna`; `journal-submission-specialist` uses `gpt-5.6-terra` for production, indexing, and submissions without publisher approval, legal clearance, or research-integrity certification. |
 | Book and long-form production | `fiction-development-editor` and `nonfiction-manuscript-editor` use `gpt-5.6-terra`; `fact-checking-editor` uses `gpt-5.6-sol` for source-sensitive claim review. | `line-copy-editor` and `book-metadata-packaging-editor` use `gpt-5.6-luna` for applied editing, style sheets, metadata, positioning copy, and package cleanup without ghostwriting, legal clearance, retailer approval, or guaranteed sales claims. |
+| Education design and delivery | `curriculum-designer` defines outcome alignment; `assessment-designer` defines assessment evidence and scoring proposals. | `lesson-materials-author` creates teachable materials; `learning-accessibility-reviewer` reviews participation barriers; `training-evaluation-analyst` plans or interprets effectiveness evidence. Existing `research-methods-reviewer` owns scholarly validity questions and `accessibility-reviewer` owns product UI review. |
+| Archives and collections | `accession-intake-coordinator` prepares provenance and transfer evidence; `collection-description-specialist` owns archival hierarchy and description; `digital-preservation-planner` plans fixity and recovery verification. | `collection-access-reviewer` maps access restrictions; `exhibit-interpretation-writer` drafts interpretation. Existing `records-retention-advisor` handles disposition authority questions, `research-data-curator` owns research-dataset reproducibility, and `permissions-reviewer` handles rights evidence. |
+| Video and audio production | `production-brief-planner` defines deliverables and dependencies; `script-development-editor` owns spoken scripts and timing; `recording-preparation-coordinator` prepares capture sessions. | `postproduction-coordinator` owns media manifests and edit handoffs; `media-delivery-reviewer` checks actual exports and caption coverage. Existing `production-editor` owns manuscript production, `audience-seo-editor` owns news packaging, and `permissions-reviewer` handles rights evidence. |
 
 ## Implemented Skill Assets
 
-The catalog exposes 19 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
+The catalog exposes 22 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
 
 | Gateway | Modes |
 | --- | --- |
@@ -199,6 +220,11 @@ The catalog exposes 19 progressively disclosed Skill packages. Agent templates n
 | `$policy-public-affairs` | `policy-analysis-workflows`, `public-comment-drafting`, `legislative-tracking` |
 | `$publishing-editorial` | `fiction-development-workflows`, `nonfiction-manuscript-development`, `line-copyediting-workflows`, `fact-checking-source-review`, `book-metadata-packaging`, `publishing-production-workflows`, `permissions-rights-review`, `journal-submission-workflows` |
 | `$codex-subagent-designer` | `delegation-design`, `subagent-prompting`, `catalog-asset-design`, `agent-template-review` |
+| `$education-training` | `curriculum-design`, `lesson-materials`, `assessment-design`, `learning-accessibility`, `training-evaluation` |
+| `$archives-collections` | `accession-intake`, `collection-description`, `digital-preservation`, `collection-access`, `exhibit-interpretation` |
+| `$video-audio-production` | `production-planning`, `script-development`, `recording-preparation`, `postproduction-handoff`, `media-delivery-review` |
+
+The `architecture-decision-records` mode supports `Proposed` drafts before owner approval. Approval gates acceptance and implementation, not preparation of the review artifact.
 
 ## Remaining Skill Backlog
 
@@ -208,4 +234,4 @@ None. Every Skill currently referenced by the agent templates has a repository-l
 
 Use `gpt-5.6-sol` for the catalog’s explicitly high-stakes or highest-complexity roles. Use `gpt-5.6-terra` as the default for bounded implementation, analysis, review, and documentation work. Use `gpt-5.6-luna` for the selected repeatable editorial and support roles. Retain `gpt-5.3-codex-spark` only for fast scaffolding, test generation, and narrow experiments.
 
-These examples are intentionally reusable rather than automatically enabled. A project should copy only the agents it needs and keep `max_depth = 1` unless nested delegation is deliberately designed and reviewed.
+These examples are intentionally reusable rather than automatically enabled. Copy only the agents a project needs and use only the dispatch mechanism exposed by the active session; validation work does not imply a built-in `validator` agent. Keep nested delegation deliberately bounded by task ownership and the active tool contract. See [subagent-toml.md](subagent-toml.md#runtime-agent-limits) for current concurrency settings and the limits of legacy depth and timeout fields.

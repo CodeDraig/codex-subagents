@@ -4,6 +4,8 @@ Use this reference when creating or reviewing Codex custom subagent files and re
 
 Use `REFERENCES/quality-rubric.md` alongside this file when deciding whether an agent template is complete enough for reusable catalog inclusion.
 
+Runtime guidance checked on 2026-09-05 against [Codex CLI 0.153.4](https://github.com/openai/codex/releases/tag/rust-v0.153.4), the latest stable release on that date, and the current [configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference) and [subagent documentation](https://learn.chatgpt.com/docs/agent-configuration/subagents). Recheck the target version and exposed tools before relying on runtime controls.
+
 ## Locations
 
 - Project-scoped custom agents: `.codex/agents/<name>.toml`
@@ -73,29 +75,29 @@ Keep changes scoped, follow existing patterns, and report files changed plus com
 
 ## Runtime Agent Limits
 
-Use `[agents]` in `config.toml` for concurrency and nesting limits:
+Use `[agents]` in `config.toml` to limit simultaneously open spawned-agent threads per session; this count excludes the primary thread:
 
 ```toml
 [agents]
-max_threads = 6
-max_depth = 1
-job_max_runtime_seconds = 1800
+max_concurrent_threads_per_session = 6
 ```
 
-Current config schema also supports role entries with `config_file`, `description`, and `nickname_candidates`:
+`max_threads` remains a legacy alias for `max_concurrent_threads_per_session`; use one spelling. In Codex 0.153.4, `max_depth` applies only to V1 and is ignored by V2, while `job_max_runtime_seconds` is a compatibility no-op. Neither provides a V2 nesting or wall-clock guarantee. Follow the active tool's limits and use caller-controlled cancellation when available. These compatibility semantics are recorded in the [released configuration types](https://github.com/openai/codex/blob/rust-v0.153.4/codex-rs/config/src/config_toml.rs#L671-L688).
+
+Standalone files in `.codex/agents/` are discovered automatically. Explicit registration is also supported. For a project-level `.codex/config.toml` referring to `.codex/agents/reviewer.toml`, use:
 
 ```toml
 [agents.reviewer]
-config_file = ".codex/agents/reviewer.toml"
+config_file = "agents/reviewer.toml"
 description = "Read-only reviewer for code quality and regression risks."
 nickname_candidates = ["Atlas", "Delta", "Echo"]
 ```
 
-Use `max_depth = 1` unless there is a strong reason to allow subagents to spawn their own subagents.
+Resolve a relative `config_file` from the directory containing the declaring configuration file. Including `.codex/` again in this example would point to `.codex/.codex/agents/reviewer.toml`. Confirm the resolved file exists; automatic discovery does not make a broken explicit registration valid.
 
 ## Practical Caveats
 
-- Tool-backed Codex sessions may expose only generic `default`, `worker`, and `explorer` spawning even when custom TOML files exist. In that case, read the TOML and inject the role's `developer_instructions` into a generic spawned agent prompt.
+- Use the active spawn tool's actual schema. Some sessions expose `default`, `worker`, and `explorer`; others accept task names and prompts without an agent-type selector. If a custom role is unavailable, use an exposed mechanism and include its `developer_instructions` in the task prompt. Copying instructions alone does not apply TOML model, reasoning, or sandbox settings; verify supported overrides separately.
 - Agent-local `skills.config` behavior has changed across releases. Verify it in the target runtime before relying on per-agent skill enable/disable overrides.
 - Keep agent files narrow. Broad "do everything" agents usually perform worse than explicit prompts plus built-in `worker` or `explorer` roles.
 - Do not accept generic developer instructions that only say to be careful, communicate clearly, follow best practices, or consider edge cases. Reusable agents need domain-specific intake, checks, artifacts, boundaries, handoffs, and output contracts.

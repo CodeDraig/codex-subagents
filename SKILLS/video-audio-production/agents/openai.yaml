@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video And Audio Production"
+  short_description: "Plan recording, edit handoffs, and media delivery"
+  default_prompt: "Use $video-audio-production to select the workflow needed for this request and return its evidence-backed deliverable."

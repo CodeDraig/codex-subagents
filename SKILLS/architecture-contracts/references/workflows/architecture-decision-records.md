@@ -18,6 +18,7 @@ Read [adr-template.md](../artifacts/adr-template.md) when you need drafting and 
 
 - If the work contains multiple unrelated decisions, split it into separate ADRs.
 - If a decision is irreversible or expensive to reverse, say so explicitly and include the migration path or acceptance of the lock-in.
+- Draft an unapproved choice with `Status: Proposed`, identify the approval owner and pending questions, and preserve the alternatives for review. A proposal does not authorize implementation.
 - If the decision is already approved elsewhere, record that approval rather than recreating an unapproved rationale.
 - Prefer concrete alternatives tables with option, strengths, weaknesses, and rejection reason.
 
@@ -27,4 +28,4 @@ Return exactly: `Title`, `Status`, `Context`, `Decision`, `Alternatives`, `Conse
 
 ## Stop Conditions
 
-Stop when the decision is actually multiple decisions, key constraints are unknown, the choice is not yet approved, or the ADR would hide an irreversible tradeoff.
+Stop when the decision is actually multiple decisions, key constraints are unknown, or the ADR would hide an irreversible tradeoff. Stop before marking a choice `Accepted` or acting on it without the required owner approval; pending approval does not block a `Proposed` draft.

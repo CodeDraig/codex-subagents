@@ -1,0 +1,4 @@
+interface:
+  display_name: "Education And Training"
+  short_description: "Plan learning, materials, assessments, and evaluation"
+  default_prompt: "Use $education-training to select the workflow needed for this request and return its evidence-backed deliverable."

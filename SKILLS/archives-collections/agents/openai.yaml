@@ -1,0 +1,4 @@
+interface:
+  display_name: "Archives And Collections"
+  short_description: "Prepare collection intake, description, and access"
+  default_prompt: "Use $archives-collections to select the workflow needed for this request and return its evidence-backed deliverable."
