@@ -1,0 +1,4 @@
+interface:
+  display_name: "Heritage Conservation"
+  short_description: "Document and plan care for objects and sites"
+  default_prompt: "Use $heritage-conservation to select the needed workflow and produce its source-linked deliverable."

@@ -1,0 +1,14 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/heritage-conservation/references/workflows/treatment-proposal-review.md && sed -n '1,320p' inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "c879a9d3f84923de32c46e0c4c8670005d96d935fc0ee2216a83b3b0eeea76b0"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/heritage-conservation/references/artifacts/treatment-proposal-review-kit.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "c79738647d38c4b3a0034a6bdb8da106d796dafa55879f053c33ba788304e552"
+  }
+]

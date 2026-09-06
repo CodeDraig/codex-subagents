@@ -8,10 +8,10 @@ This repository is a catalog, not an application. It provides copyable OpenAI/Co
 
 ## Current Inventory
 
-- 133 OpenAI agent templates in `AGENTS/openai/`.
-- 26 skill gateways in `SKILLS/` covering 104 workflows.
-- 26 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
-- 206 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
+- 154 OpenAI agent templates in `AGENTS/openai/`.
+- 30 skill gateways in `SKILLS/` covering 125 workflows.
+- 30 skill-sidecar files at `SKILLS/*/agents/openai.yaml`.
+- 248 selectively loaded workflow and artifact references under `SKILLS/*/references/`.
 
 ## Text Composition and Editing
 
@@ -20,6 +20,14 @@ The catalog covers briefs and outlines, complete fiction/nonfiction/essay/poetry
 Start with `$text-composition`, `$text-revision`, `$text-translation`, `$textual-scholarship`, or `$publishing-editorial` and name the requested stage. Full drafting and applied editing return the actual text or files. The [canonical registry](REFERENCES/software-development-crew.md#text-composition-and-editing-lifecycle) maps stages, specialist ownership, and handoffs.
 
 The [verification record](docs/text-lifecycle-verification.md) covers every affected asset and retains representative live inputs, outputs, failures, and corrective reruns.
+
+## Heritage and Fieldwork
+
+Four specialist categories add archaeological fieldwork, language documentation, oral history, and heritage conservation for objects and sites. Their 21 agents prepare source-linked records, complete editorial artifacts, plans, and evidence-backed reviews across 21 workflows.
+
+Start with `$archaeological-fieldwork`, `$language-documentation`, `$oral-history`, or `$heritage-conservation` and name the requested stage. The [canonical registry](REFERENCES/software-development-crew.md#heritage-and-fieldwork-lifecycle) distinguishes ownership from existing archives, media, research, and textual-scholarship roles.
+
+The [verification record](docs/heritage-fieldwork-verification.md) documents complete asset review, structural checks, runtime discovery, and representative live scenarios.
 
 ## Repository Layout
 

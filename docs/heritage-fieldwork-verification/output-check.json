@@ -1,0 +1,7 @@
+{
+  "result": "passed",
+  "accepted_case_provenance_checks": 8,
+  "reviewed_asset_hashes": 71,
+  "structured_output_scenarios": 5,
+  "prose_review_judgments": "manual; see live-results.json"
+}

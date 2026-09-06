@@ -1,0 +1,4 @@
+interface:
+  display_name: "Archaeological Fieldwork"
+  short_description: "Prepare archaeological records and reporting"
+  default_prompt: "Use $archaeological-fieldwork to select the needed workflow and produce its source-linked deliverable."

@@ -1,0 +1,3 @@
+task_id,component,task,scheduled_or_due_date,status,completion_date,completion_evidence,owner,source_id,follow_up_and_limit
+T1,K1,"cabinet inspection",2026-09-02,scheduled but unperformed/unverified,,,not stated,T1;INV1,"Invoice INV1 dated 2026-09-02 is not completion evidence. Confirm whether inspection occurred; if not, assign owner and complete/document the check."
+T2,W1,"check W1 gauge installation",,completed,2026-09-03,"signed completion note CN2",not stated,T2;CN2,"Completion of gauge-installation check is evidenced; it does not interpret the +0.2 mm reading or establish treatment success."

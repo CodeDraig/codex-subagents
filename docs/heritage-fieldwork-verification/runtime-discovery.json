@@ -1,0 +1,38 @@
+{
+  "runtime": "Codex Desktop/0.153.4 (Fedora 43.0.0; x86_64) dumb (heritage-catalog-check; 1)",
+  "registered_new_agents": 21,
+  "discovered_project_skills": 30,
+  "new_gateways_discovered": [
+    "archaeological-fieldwork",
+    "heritage-conservation",
+    "language-documentation",
+    "oral-history"
+  ],
+  "skill_errors": [],
+  "native_agent_dispatch_tested": false,
+  "agent_config_files": {
+    "archaeological-project-planner": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/archaeological-project-planner.toml",
+    "archaeological-recording-specialist": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/archaeological-recording-specialist.toml",
+    "stratigraphic-sequence-reviewer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/stratigraphic-sequence-reviewer.toml",
+    "archaeological-finds-coordinator": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/archaeological-finds-coordinator.toml",
+    "archaeological-report-author": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/archaeological-report-author.toml",
+    "language-documentation-planner": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/language-documentation-planner.toml",
+    "linguistic-session-designer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/linguistic-session-designer.toml",
+    "linguistic-annotation-editor": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/linguistic-annotation-editor.toml",
+    "lexicon-corpus-curator": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/lexicon-corpus-curator.toml",
+    "language-deposit-coordinator": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/language-deposit-coordinator.toml",
+    "oral-history-project-planner": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/oral-history-project-planner.toml",
+    "oral-history-interview-designer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/oral-history-interview-designer.toml",
+    "oral-history-transcript-editor": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/oral-history-transcript-editor.toml",
+    "oral-history-access-reviewer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/oral-history-access-reviewer.toml",
+    "oral-history-interpretation-editor": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/oral-history-interpretation-editor.toml",
+    "conservation-condition-reviewer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/conservation-condition-reviewer.toml",
+    "preventive-conservation-planner": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/preventive-conservation-planner.toml",
+    "conservation-treatment-reviewer": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/conservation-treatment-reviewer.toml",
+    "historic-fabric-recording-specialist": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/historic-fabric-recording-specialist.toml",
+    "site-conservation-planner": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/site-conservation-planner.toml",
+    "conservation-monitoring-coordinator": "/tmp/heritage-fieldwork-20260906/runtime/project/.codex/agents/conservation-monitoring-coordinator.toml"
+  },
+  "raw_config_sha256": "4f658d5c359069331d1d8b059f3d74c30c055ee6a07f6da6177f5698f9274844",
+  "raw_skills_sha256": "238d49aa8718a7b926cd9c9f980dbc376c7537d222c36f17b389d525827cbda0"
+}

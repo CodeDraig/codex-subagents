@@ -1,0 +1,4 @@
+segment_id	start_s	end_s	source_form	gloss	translation	status
+U1	1.0	2.5	na ki tu	1SG SEE BIRD	I see a bird	complete-supported
+U2	3.0	4.2	na lo tu	1SG [UNRESOLVED] BIRD	[unresolved: no supplied translation]	partial-unresolved-analysis
+U3	5.0	6.4	tu ki na	BIRD SEE 1SG	A bird sees me	complete-supported

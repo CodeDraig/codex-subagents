@@ -1,6 +1,6 @@
 # Software Development Crew
 
-This reference catalogs reusable Codex custom-agent examples for a full software development lifecycle. Copy individual TOML files from `AGENTS/openai/` into a project's `.codex/agents/` directory when that role is useful.
+This reference catalogs reusable Codex custom-agent examples for software development and specialist professional lifecycles. Copy individual TOML files from `AGENTS/openai/` into a project's `.codex/agents/` directory when that role is useful.
 
 ## Lifecycle Map
 
@@ -32,6 +32,10 @@ This reference catalogs reusable Codex custom-agent examples for a full software
 | Text Translation | `text-translator`, `translation-reviewer` |
 | Textual Scholarship | `textual-witness-analyst`, `documentary-transcriber`, `variant-collator`, `critical-edition-editor` |
 | Publication Completion And Edition Maintenance | `proofreader`, `publication-format-reviewer`, `submission-package-editor`, `edition-maintenance-editor` |
+| Archaeological Fieldwork | `archaeological-project-planner`, `archaeological-recording-specialist`, `stratigraphic-sequence-reviewer`, `archaeological-finds-coordinator`, `archaeological-report-author` |
+| Language Documentation | `language-documentation-planner`, `linguistic-session-designer`, `linguistic-annotation-editor`, `lexicon-corpus-curator`, `language-deposit-coordinator` |
+| Oral History | `oral-history-project-planner`, `oral-history-interview-designer`, `oral-history-transcript-editor`, `oral-history-access-reviewer`, `oral-history-interpretation-editor` |
+| Heritage Conservation | `conservation-condition-reviewer`, `preventive-conservation-planner`, `conservation-treatment-reviewer`, `historic-fabric-recording-specialist`, `site-conservation-planner`, `conservation-monitoring-coordinator` |
 
 ## Routing Rules
 
@@ -172,6 +176,27 @@ Use this crew before falling back to generic `worker` or `explorer`.
 | Reviews publication files for format structure, rendering, navigation, and accessibility evidence without conflating parsing with presentation quality. | `publication-format-reviewer` |
 | Prepares complete submission letters, synopses, biographies, component sets, and destination-specific checks from verified manuscript and author facts. | `submission-package-editor` |
 | Applies documented corrections and revised-edition changes while tracking source versions, derivative dependencies, and actual update coverage. | `edition-maintenance-editor` |
+| Produces archaeological research designs linking questions, investigation coverage, sampling, recording, post-fieldwork analysis, and archive requirements. | `archaeological-project-planner` |
+| Builds traceable context, spatial, photograph, and sample registers from supplied archaeological observations while preserving observation and interpretation separately. | `archaeological-recording-specialist` |
+| Reviews context relationships and proposed archaeological sequences for cycles, missing references, unsupported equivalences, and uncertainty before grouping or dating. | `stratigraphic-sequence-reviewer` |
+| Reconciles finds and sample inventories with archaeological contexts, container identifiers, movement records, conservation flags, and archive requirements. | `archaeological-finds-coordinator` |
+| Writes archaeological reports that connect research questions to inspected records, distinguish observation from interpretation, and prepare traceable archive handoffs. | `archaeological-report-author` |
+| Creates language documentation plans connecting community priorities, speaker and genre coverage, recording sessions, annotation capacity, access terms, and useful return materials. | `language-documentation-planner` |
+| Designs language documentation sessions with traceable prompts, natural-context tasks, participant review points, and recording metadata without manufacturing linguistic responses. | `linguistic-session-designer` |
+| Produces or edits source-linked language transcripts and annotation tiers while keeping attested forms, segmentation, glosses, translations, and uncertainty distinct. | `linguistic-annotation-editor` |
+| Builds lexical and corpus records with attestation links, sense distinctions, variety information, analytical uncertainty, and reversible deduplication proposals. | `lexicon-corpus-curator` |
+| Prepares language recording and annotation deposits with manifests, participant metadata, resource relationships, access decisions, and community-return copies. | `language-deposit-coordinator` |
+| Develops oral-history project designs linking historical questions, narrator coverage, interview preparation, review processes, stewardship, and intended uses. | `oral-history-project-planner` |
+| Creates historically grounded oral-history interview guides with open prompts, source-aware follow-ups, narrator choice, and recording/review preparation. | `oral-history-interview-designer` |
+| Edits oral-history transcripts into traceable reading or documentary versions while preserving narrator meaning, source anchors, speech conventions, and unresolved hearing. | `oral-history-transcript-editor` |
+| Reviews oral-history agreements, narrator decisions, transcript versions, excerpts, and proposed uses to identify supported access, conflicts, and unresolved release conditions. | `oral-history-access-reviewer` |
+| Builds source-linked oral-history narratives, excerpts, and editions that preserve context, distinguish memory from corroboration, and respect documented use restrictions. | `oral-history-interpretation-editor` |
+| Reviews supplied condition records for objects or historic fabric, separating observations, material identifications, deterioration hypotheses, and inspection limits. | `conservation-condition-reviewer` |
+| Creates evidence-based preventive-care plans for collections and historic interiors, linking material sensitivities, environmental exposure, handling, storage, and review priorities. | `preventive-conservation-planner` |
+| Reviews proposed conservation interventions against condition evidence, significance, material compatibility, prior treatment, alternatives, and documentation requirements. | `conservation-treatment-reviewer` |
+| Builds traceable records of historic building and site fabric, separating observed configuration, material descriptions, alteration evidence, phase interpretation, and inspection coverage. | `historic-fabric-recording-specialist` |
+| Develops conservation plans for archaeological places and historic structures linking significance, fabric condition, site pressures, management options, and staged decisions. | `site-conservation-planner` |
+| Organizes repeatable condition monitoring and maintenance records for objects and historic places, separating measured change, comparison limits, triggers, and completed work. | `conservation-monitoring-coordinator` |
 
 ## Text Composition and Editing Lifecycle
 
@@ -191,17 +216,32 @@ Select the stage and deliverable actually requested. A project can enter at any 
 
 Existing `documentation-engineer` and `knowledge-base-author` own product documentation; newsroom roles own reporting and news copy; education, grant, policy, archives, and video/audio roles retain their domain-specific work. Broad composition roles draft from that evidence rather than claiming those checks themselves.
 
+## Heritage and Fieldwork Lifecycle
+
+Use these categories for domain-specific records, planning, editing, and review. Projects can enter at any stage; missing evidence permits a bounded deliverable with unresolved items. Field observations, linguistic analysis, narrator decisions, and conservation diagnoses must remain distinguishable from proposals.
+
+| Category | Gateway and stages | Deliverables |
+| --- | --- | --- |
+| Archaeology | `$archaeological-fieldwork`: project design, field recording, stratigraphic review, finds registers, post-fieldwork reporting. | Evidence-to-method plans, context and finds records, located sequence findings, actual reports, archive handoffs. |
+| Language documentation | `$language-documentation`: planning, session design, transcription/annotation, lexicon curation, archive preparation. | Session guides, source-linked tiers and lexical entries, access-aware manifests, community-return packages. |
+| Oral history | `$oral-history`: project planning, interview preparation, transcript editing, narrator review/access, interpretation/edition. | Interview guides, complete edited transcripts and editions, version-specific access matrices, traceable excerpts. |
+| Heritage conservation | `$heritage-conservation`: condition assessment, preventive care, treatment-proposal review, historic fabric recording, site conservation planning, monitoring/maintenance. | Condition evidence, care and site plans, proposal findings, component records, comparable monitoring logs. |
+
+These 21 agents use 21 workflows and 21 artifact kits. Conservation includes movable objects, archaeological sites, and historic building fabric. Four reviewers use `gpt-5.6-sol/high` with read-only sandboxes; three record coordinators use `gpt-5.6-terra/medium`; the remaining authors use `gpt-5.6-terra/high` with workspace-write sandboxes for assigned local artifacts. External deposits, publication, physical interventions, and institutional decisions require their own applicable authorization.
+
+The [verification record](../docs/heritage-fieldwork-verification.md) separates complete asset review, catalog structure, runtime discovery, and eight representative live scenarios.
+
 ## Model Coverage
 
-The 133 templates in `AGENTS/openai/` are distributed as follows:
+The 154 templates in `AGENTS/openai/` are distributed as follows:
 
 | Model | Reasoning Effort | Agent Templates | Representative Agents |
 | --- | --- | ---: | --- |
-| `gpt-5.6-sol` | `high` | 16 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
+| `gpt-5.6-sol` | `high` | 20 | `accounting-controls-reviewer`, `citation-integrity-checker`, `source-verification-analyst` |
 | `gpt-5.6-sol` | `xhigh` | 4 | `systems-architect`, `security-threat-modeler`, `product-discovery-strategist`, `osint-research-lead` |
 | `gpt-5.6-terra` | `low` | 2 | `dependency-maintenance-engineer`, `triage-router` |
-| `gpt-5.6-terra` | `medium` | 35 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
-| `gpt-5.6-terra` | `high` | 62 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
+| `gpt-5.6-terra` | `medium` | 38 | `documentation-engineer`, `peer-review-prep-editor`, `accessibility-reviewer` |
+| `gpt-5.6-terra` | `high` | 76 | `backend-domain-engineer`, `security-fix-engineer`, `software-engineering-lead` |
 | `gpt-5.6-luna` | `medium` | 11 | `audience-seo-editor`, `copy-desk-editor`, `support-triage-specialist` |
 | `gpt-5.3-codex-spark` | `low` | 1 | `rapid-prototype-scout` |
 | `gpt-5.3-codex-spark` | `medium` | 1 | `developer-experience-engineer` |
@@ -245,10 +285,14 @@ Some domains have paired agents because model capability and latency change the 
 | Textual scholarship vs archives | `textual-witness-analyst` owns text-specific source/representation coverage; archival description remains with `collection-description-specialist`. | `documentary-transcriber`, `variant-collator`, and `critical-edition-editor` keep transcription, comparison, and editorial selection distinct. |
 | Proof, format, and edition maintenance | `publication-format-reviewer` reports actual structural/rendering/accessibility checks. | `proofreader` owns located corrections, `indexing-coordinator` owns verified locators, and `edition-maintenance-editor` tracks changes and derivative updates; `production-editor` coordinates their stages. |
 | General vs scholarly submissions | `submission-package-editor` prepares literary/general destination materials from actual requirements. | `journal-submission-specialist` retains scholarly requirements, disclosures, and reviewer responses; neither preparation role submits automatically. |
+| Archaeological records vs archives | `archaeological-recording-specialist`, `archaeological-finds-coordinator`, and `stratigraphic-sequence-reviewer` own context provenance, material registers, and relative-sequence evidence; `archaeological-project-planner` and `archaeological-report-author` connect design and synthesis. | `accession-intake-coordinator`, `collection-description-specialist`, and `digital-preservation-planner` retain custody/intake, archival hierarchy, and preservation planning; `research-methods-reviewer` owns broader study-validity critique. |
+| Language evidence vs translation | `language-documentation-planner` and `linguistic-session-designer` plan evidence collection; `linguistic-annotation-editor` and `lexicon-corpus-curator` preserve attestation and analytical uncertainty; `language-deposit-coordinator` packages linked resources and restrictions. | `text-translator` owns separately requested target-language literary translation; `recording-preparation-coordinator` handles capture logistics; archive specialists retain preservation and description. |
+| Oral history vs media and textual scholarship | `oral-history-project-planner` and `oral-history-interview-designer` own historical questions and narrator-centered preparation; `oral-history-transcript-editor`, `oral-history-access-reviewer`, and `oral-history-interpretation-editor` separate source speech, edits, decisions, and contextual use. | `documentary-transcriber` owns supplied written textual witnesses; `postproduction-coordinator` owns media synchronization; `collection-access-reviewer` and `permissions-reviewer` handle adjacent repository and rights evidence. |
+| Conservation objects and places | `conservation-condition-reviewer` reviews supplied observations; `preventive-conservation-planner` plans care; `conservation-treatment-reviewer` critiques proposals; `historic-fabric-recording-specialist` records buildings and sites; `site-conservation-planner` connects significance and site pressures; `conservation-monitoring-coordinator` maintains observation and action records. | These roles do not replace physical examination, qualified conservator or structural decisions, or custodian authority. Archives roles retain provenance and custody; archaeological roles retain excavation-record relationships and sequence analysis. |
 
 ## Implemented Skill Assets
 
-The catalog exposes 26 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
+The catalog exposes 30 progressively disclosed Skill packages. Agent templates name the gateway and one or more modes; a gateway loads only the smallest workflow set needed.
 
 | Gateway | Modes |
 | --- | --- |
@@ -278,6 +322,10 @@ The catalog exposes 26 progressively disclosed Skill packages. Agent templates n
 | `$text-revision` | `revision-planning`, `structural-revision`, `feedback-integration`, `rhetorical-revision`, `continuity-review`, `reader-response-review`, `text-adaptation` |
 | `$text-translation` | `translation-planning`, `translation-drafting`, `translation-review` |
 | `$textual-scholarship` | `witness-description`, `documentary-transcription`, `variant-collation`, `critical-edition-preparation` |
+| `$archaeological-fieldwork` | `project-design`, `field-recording`, `stratigraphic-review`, `finds-register`, `post-fieldwork-reporting` |
+| `$language-documentation` | `documentation-planning`, `session-design`, `transcription-annotation`, `lexicon-curation`, `archive-preparation` |
+| `$oral-history` | `project-planning`, `interview-preparation`, `transcript-editing`, `narrator-review-access`, `interpretation-edition` |
+| `$heritage-conservation` | `condition-assessment`, `preventive-care`, `treatment-proposal-review`, `historic-fabric-recording`, `site-conservation-planning`, `monitoring-maintenance` |
 
 The `architecture-decision-records` mode supports `Proposed` drafts before owner approval. Approval gates acceptance and implementation, not preparation of the review artifact.
 

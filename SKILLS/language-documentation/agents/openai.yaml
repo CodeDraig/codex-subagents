@@ -1,0 +1,4 @@
+interface:
+  display_name: "Language Documentation"
+  short_description: "Build traceable language documentation records"
+  default_prompt: "Use $language-documentation to select the needed workflow and produce its source-linked deliverable."

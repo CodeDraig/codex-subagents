@@ -1,0 +1,38 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/oral-history/references/workflows/transcript-editing.md && rg --files -g '\"'!outputs/**'\"' -g '\"'! .git/**'\"' && printf '\\\\n-- git status --\\\\n' && git status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "da560418ecd2131603153e024d49ff64a2222bf0abf5402153641a20cddd4b82"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/oral-history/artifacts/transcript-editing-kit.md && printf '\\\\n-- packet --\\\\n' && sed -n '1,300p' inputs/packet.md && printf '\\\\n-- workspace inventory --\\\\n' && rg --files -uu | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "5705cfceb0d36fcc6848fbca08d3cef2f91bb90a72b9e4e7f09edb33a03c21b5"
+  },
+  {
+    "command": "/bin/bash -lc \"rg --files .agents/skills/oral-history | sort && printf '\\\\n-- packet --\\\\n' && sed -n '1,320p' inputs/packet.md && printf '\\\\n-- workspace inventory --\\\\n' && rg --files -uu | sort\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "4fc4de0f32984f906174508c917b2175036c71f69c6c29a0b1593722986da5d2"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/oral-history/references/artifacts/transcript-editing-kit.md && printf '\\\\n-- output directory status --\\\\n' && if [ -d outputs ]; then rg --files outputs -uu | sort; else printf 'outputs/ does not exist\\\\n'; fi && printf '\\\\n-- source line anchors --\\\\n' && nl -ba inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "896bcabe36c3ec65037531c878c4b18ef088125e7042e9d8e6c12976dbd8c9db"
+  },
+  {
+    "command": "/bin/bash -lc 'mkdir -p outputs'",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,280p' outputs/transcript.md && printf '\\\\n-- editorial record --\\\\n' && sed -n '1,320p' outputs/editorial-record.md && printf '\\\\n-- changed-file inventory --\\\\n' && find outputs -maxdepth 1 -type f -printf '%f\\\\n' | sort && printf '\\\\n-- source remains --\\\\n' && sha256sum inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "1bbf856f9acedf1bb289636f89785c4f97a56d583011e356962f4d9890231760"
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Oral History"
+  short_description: "Prepare interviews and traceable oral histories"
+  default_prompt: "Use $oral-history to select the needed workflow and produce its source-linked deliverable."

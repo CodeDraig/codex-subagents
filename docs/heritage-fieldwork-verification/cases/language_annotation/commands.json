@@ -1,0 +1,56 @@
+[
+  {
+    "command": "/bin/bash -lc \"find inputs outputs -maxdepth 2 -type f -printf '%p\\\\n' 2>/dev/null\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "5c0dd2b6a118493d2723e4beee4eb750dc43c2d1f69aeafb2586d0e388a99b64"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/language-documentation/references/workflows/transcription-annotation.md && rg --files -g '\"'!*outputs*'\"' -g 'inputs/**' -g 'outputs/**' -g '\"'!**/.git/**'\"' && git status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "a83c5cddd753760c58fad2730687b4f6dfaac7f09a26f2aa88f2e20856f07f01"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,260p' inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "06e1ca8aa7776890e388152047e403f069ef92909faa28feb3a055be6f19449b"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,300p' .agents/skills/language-documentation/artifacts/transcription-annotation-kit.md && find . -maxdepth 3 -type f -printf '%p\\\\n' | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "1d1f48d42cbf4122a9f3178d85f8221a0fb4fbd9a0afe4ff4ef87eb1576d55d9"
+  },
+  {
+    "command": "/bin/bash -lc \"find .agents/skills/language-documentation -type f -name 'transcription-annotation-kit.md' -o -type d -name artifacts; find . -maxdepth 2 -type d -printf '%p\\\\n' | sort; if [ -d outputs ]; then find outputs -maxdepth 1 -type f -printf '%f\\\\n' | sort; fi\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "549cc8837643f07aebf3b99baea277ff97d7c608098f32063521e3d5a712a1df"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/language-documentation/references/artifacts/transcription-annotation-kit.md; ls -la outputs; git -C . status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "73443c04127cad63d67af6e1be7d833644e6b56f5a3c3a28a1ca2b9131fe4982"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,220p' outputs/annotation-notes.md && find outputs -maxdepth 1 -type f -printf '%p %s bytes\\\\n' | sort\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "b95153061ebac5bd8afbaa56632737685f984c433200c28969836008b386d517"
+  },
+  {
+    "command": "/bin/bash -lc \"awk -F '|' '\nfunction trim(x) { sub(/\"'^[[:space:]]+/, \"\", x); sub(/[[:space:]]+$/, \"\", x); return x }\nFNR == NR { if ($0 ~ /''^'\"\\\\| U[123] \\\\|/) { id=trim(\"'$2); expected[id]=trim($3) \"|\" trim($4) \"|\" trim($6) \"|\" trim($7) }; next }\nNR > FNR { n=split($0,a,\"'\"\\\\t\\\"); if (n == 7 && a[1] in expected) { actual=a[2] \\\"|\\\" a[3] \\\"|\\\" a[4]; split(expected[a[1]],e,\\\"\\\\\\\\|\\\"); if (actual \"'!= e[1] \"|\" e[2] \"|\" e[3]) { print \"FAIL source mismatch \" a[1]; bad=1 }; seen[a[1]]=1 } }\nEND { for (id in expected) if (!(id in seen)) { print \"FAIL missing \" id; bad=1 }; if (bad) exit 1; print \"PASS: every TSV ID, time, and source form matches packet; anchors retained in notes as TR1:1--TR1:3\" }\n'\"' inputs/packet.md outputs/segments.tsv\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "7aa3ce5e3a95771c3302f4ab32b4e6ec8c6488a31f2c43fdf28d67e6b0405969"
+  },
+  {
+    "command": "/bin/bash -lc \"awk -F '\\\\t' '\nNR==1 { expected=\\\"segment_id,start_s,end_s,source_form,gloss,translation,status\\\"; got=\"'$1 \",\" $2 \",\" $3 \",\" $4 \",\" $5 \",\" $6 \",\" $7; if (NF != 7 || got != expected) { print \"FAIL header/column count\"; bad=1 }; next }\n{ if (NF != 7) { print \"FAIL fields line \" NR; bad=1 }; if ($1 in seen) { print \"FAIL duplicate ID \" $1; bad=1 }; seen[$1]=1; if ($2 !~ /''^[0-9]+('\"\\\\.[0-9]+)?\"'$/ || $3 !~ /''^[0-9]+('\"\\\\.[0-9]+)?\"'$/ || ($2+0) >= ($3+0)) { print \"FAIL time bounds \" $1; bad=1 }; rows++ }\nEND { if (NR != 4 || rows != 3) { print \"FAIL row count\"; bad=1 }; if (bad) exit 1; print \"PASS: header, 3 rows, 7 columns, unique IDs, numeric increasing bounds\" }\n'\"' outputs/segments.tsv\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "9d8a1fa339cb6b4cd564d641984dc2f6c5f7f18789f6923ee488bad36f853b89"
+  }
+]

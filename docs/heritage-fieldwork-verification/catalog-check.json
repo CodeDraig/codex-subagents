@@ -1,0 +1,20 @@
+{
+  "agents": 154,
+  "gateways": 30,
+  "workflows": 125,
+  "artifacts": 123,
+  "local_links": 259,
+  "new_aligned_contracts": 21,
+  "model_counts": {
+    "gpt-5.3-codex-spark/high": 1,
+    "gpt-5.3-codex-spark/low": 1,
+    "gpt-5.3-codex-spark/medium": 1,
+    "gpt-5.6-luna/medium": 11,
+    "gpt-5.6-sol/high": 20,
+    "gpt-5.6-sol/xhigh": 4,
+    "gpt-5.6-terra/high": 76,
+    "gpt-5.6-terra/low": 2,
+    "gpt-5.6-terra/medium": 38
+  },
+  "git_diff_check": "passed"
+}

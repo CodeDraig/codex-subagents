@@ -1,0 +1,764 @@
+{
+  "review_kind": "Complete manual instruction-quality review with static example walkthroughs; not independent model evaluation or professional certification.",
+  "skill_criteria": [
+    "trigger_routing",
+    "workflow_specificity",
+    "domain_heuristics",
+    "supporting_assets",
+    "tooling_validation",
+    "output_contract",
+    "boundaries"
+  ],
+  "agent_criteria": [
+    "role_distinctness",
+    "skill_reference_use",
+    "instruction_depth",
+    "runtime_fit",
+    "handoffs_boundaries",
+    "output_contract",
+    "catalog_integration"
+  ],
+  "assets_reviewed": 71,
+  "agents_reviewed": 21,
+  "workflow_kit_pairs_reviewed": 21,
+  "static_example_walkthroughs": 42,
+  "gateways": [
+    {
+      "gateway": "archaeological-fieldwork",
+      "modes": 5,
+      "weakest_mode_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "rating": "Ready",
+      "router_review": "Concise frontmatter, discriminating mode table, smallest-workflow selection, file-relative links, and shared-only boundaries.",
+      "sidecar_review": "Name, 25–64 character short description, and explicit gateway invocation checked; no additional runtime/tool dependencies declared.",
+      "progressive_discovery": "passed"
+    },
+    {
+      "gateway": "heritage-conservation",
+      "modes": 6,
+      "weakest_mode_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "rating": "Ready",
+      "router_review": "Concise frontmatter, discriminating mode table, smallest-workflow selection, file-relative links, and shared-only boundaries.",
+      "sidecar_review": "Name, 25–64 character short description, and explicit gateway invocation checked; no additional runtime/tool dependencies declared.",
+      "progressive_discovery": "passed"
+    },
+    {
+      "gateway": "language-documentation",
+      "modes": 5,
+      "weakest_mode_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "rating": "Ready",
+      "router_review": "Concise frontmatter, discriminating mode table, smallest-workflow selection, file-relative links, and shared-only boundaries.",
+      "sidecar_review": "Name, 25–64 character short description, and explicit gateway invocation checked; no additional runtime/tool dependencies declared.",
+      "progressive_discovery": "passed"
+    },
+    {
+      "gateway": "oral-history",
+      "modes": 5,
+      "weakest_mode_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "rating": "Ready",
+      "router_review": "Concise frontmatter, discriminating mode table, smallest-workflow selection, file-relative links, and shared-only boundaries.",
+      "sidecar_review": "Name, 25–64 character short description, and explicit gateway invocation checked; no additional runtime/tool dependencies declared.",
+      "progressive_discovery": "passed"
+    }
+  ],
+  "rows": [
+    {
+      "agent": "archaeological-project-planner",
+      "gateway": "archaeological-fieldwork",
+      "mode": "project-design",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Question-to-method and archive dependencies support a usable design without field approval.",
+      "worked_and_failure_walkthrough": "Q1 stays unresolved without a stratigraphic link; an unsurveyed half-field cannot support absence.",
+      "domain_distinctness": "Sampling rationale, detection limits, intervention scope, and specialist capacity make this specific to archaeological design.",
+      "required_fixes": []
+    },
+    {
+      "agent": "archaeological-recording-specialist",
+      "gateway": "archaeological-fieldwork",
+      "mode": "field-recording",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Derived registers preserve context/source IDs, observed descriptions, and separate interpretations.",
+      "worked_and_failure_walkthrough": "C12 links to N4/P2/PH7/S6; duplicate C12 labels remain source-qualified rather than silently merged.",
+      "domain_distinctness": "Coordinates, unit declarations, source versions, and foreign-key checks support reproducible register review.",
+      "required_fixes": []
+    },
+    {
+      "agent": "stratigraphic-sequence-reviewer",
+      "gateway": "archaeological-fieldwork",
+      "mode": "stratigraphic-review",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The declared edge convention, provenance, and partial-order treatment make sequence findings inspectable.",
+      "worked_and_failure_walkthrough": "The three-edge cycle is reported intact while C4→C5 survives; candidate repairs remain alternatives.",
+      "domain_distinctness": "Temporal and spatial relations, equivalence proposals, unordered pairs, and residual finds are separated.",
+      "required_fixes": []
+    },
+    {
+      "agent": "archaeological-finds-coordinator",
+      "gateway": "archaeological-fieldwork",
+      "mode": "finds-register",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Container, object, sample, and movement records remain linked without inventing custody or counts.",
+      "worked_and_failure_walkthrough": "B8 and S8a retain their parent link and unknown remainder; equal bag/object totals do not reconcile units.",
+      "domain_distinctness": "Recovery provenance, split/merge history, conservation flags, and destination status distinguish this from generic inventory work.",
+      "required_fixes": []
+    },
+    {
+      "agent": "archaeological-report-author",
+      "gateway": "archaeological-fieldwork",
+      "mode": "post-fieldwork-reporting",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The workflow requires a complete report and archive handoff tied to investigated extent.",
+      "worked_and_failure_walkthrough": "The T1/T2 report keeps T3 uninvestigated and missing specialist analysis unresolved.",
+      "domain_distinctness": "Observation, sequence interpretation, dating, figure inspection, and actual deposition remain separate claims.",
+      "required_fixes": []
+    },
+    {
+      "agent": "language-documentation-planner",
+      "gateway": "language-documentation",
+      "mode": "documentation-planning",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Partner priorities lead to genre/session coverage, annotation capacity, and return materials.",
+      "worked_and_failure_walkthrough": "Story coverage is added as a gap; research permission does not silently become teaching permission.",
+      "domain_distinctness": "Variety labels, orthography choices, recording-to-annotation capacity, and community return define this planning role.",
+      "required_fixes": []
+    },
+    {
+      "agent": "linguistic-session-designer",
+      "gateway": "language-documentation",
+      "mode": "session-design",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Prompts are concrete deliverables linked to documentation questions and response records.",
+      "worked_and_failure_walkthrough": "Motion examples motivate neutral tasks; expected yes answers are not manufactured attestation.",
+      "domain_distinctness": "Production type, participant correction, non-response, and recording anchors change how sessions are designed.",
+      "required_fixes": []
+    },
+    {
+      "agent": "linguistic-annotation-editor",
+      "gateway": "language-documentation",
+      "mode": "transcription-annotation",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The actual tiers remain linked to forms, segments, and available source representations.",
+      "worked_and_failure_walkthrough": "Unknown ku is retained; repairing it to ke would fabricate source evidence.",
+      "domain_distinctness": "Unicode contrasts, overlap intervals, analytical versus perceptual uncertainty, and separate validation claims are explicit.",
+      "required_fixes": []
+    },
+    {
+      "agent": "lexicon-corpus-curator",
+      "gateway": "language-documentation",
+      "mode": "lexicon-curation",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Entry/sense IDs and attestation links support curation without unsupported equivalence.",
+      "worked_and_failure_walkthrough": "Equal tal spellings and a related-looking variety form remain distinguishable; search keys cannot erase diacritics.",
+      "domain_distinctness": "Homographs, senses, varieties, source versions, and reversible merge maps prevent generic deduplication behavior.",
+      "required_fixes": []
+    },
+    {
+      "agent": "language-deposit-coordinator",
+      "gateway": "language-documentation",
+      "mode": "archive-preparation",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The manifest and relationship/access records remain useful when release decisions are unresolved.",
+      "worked_and_failure_walkthrough": "R1/T1/X1 stay linked while conflicting public/research terms block only unsupported transfer claims.",
+      "domain_distinctness": "Metadata disclosure, collection defaults, item exceptions, byte identity, and repository acceptance are separated.",
+      "required_fixes": []
+    },
+    {
+      "agent": "oral-history-project-planner",
+      "gateway": "oral-history",
+      "mode": "project-planning",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Historical coverage, narrator process, and stewardship become a complete project artifact.",
+      "worked_and_failure_walkthrough": "Unrepresented passenger experience remains a coverage gap; unsupported permanent withdrawal promises are removed from draft wording.",
+      "domain_distinctness": "Purposive narrator coverage, review arrangements, preservation capacity, and limits of promises distinguish oral-history planning.",
+      "required_fixes": []
+    },
+    {
+      "agent": "oral-history-interview-designer",
+      "gateway": "oral-history",
+      "mode": "interview-preparation",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The guide contains actual open prompts and source-aware follow-ups without simulated testimony.",
+      "worked_and_failure_walkthrough": "The timetable/memory discrepancy prompts inquiry; an allegation of concealment is not a premise.",
+      "domain_distinctness": "Witnessed versus heard experience, narrator refusal, disputed sources, and agreed session scope are operational checks.",
+      "required_fixes": []
+    },
+    {
+      "agent": "oral-history-transcript-editor",
+      "gateway": "oral-history",
+      "mode": "transcript-editing",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Reading and documentary edits retain source speech, later correction, and review status separately.",
+      "worked_and_failure_walkthrough": "May/June/maybe remains speech and July a later correction; negation cannot disappear during smoothing.",
+      "domain_distinctness": "Dialect, repetition, uncertainty, speaker attribution, anchors, and audio availability constrain real editorial choices.",
+      "required_fixes": []
+    },
+    {
+      "agent": "oral-history-access-reviewer",
+      "gateway": "oral-history",
+      "mode": "narrator-review-access",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "An evidence matrix maps actual decisions to versions, excerpts, audience, and use.",
+      "worked_and_failure_walkthrough": "V2 booklet approval cannot clear V1 or the whole recording; restricted intervals remain visible.",
+      "domain_distinctness": "Silence, supersession scope, derivative disclosure, and version-specific review prevent invented permission. The corrected archive handoff explicitly requests read-only assessment; authorized operators own implementation.",
+      "required_fixes": []
+    },
+    {
+      "agent": "oral-history-interpretation-editor",
+      "gateway": "oral-history",
+      "mode": "interpretation-edition",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The requested edition is written with attributable excerpts and source-supported connecting prose.",
+      "worked_and_failure_walkthrough": "April/summer accounts remain attributed while the timetable is limited to scheduled service; splices cannot create testimony.",
+      "domain_distinctness": "Corroboration independence, excerpt context, access terms, and full-source locators distinguish this from ordinary prose editing.",
+      "required_fixes": []
+    },
+    {
+      "agent": "conservation-condition-reviewer",
+      "gateway": "heritage-conservation",
+      "mode": "condition-assessment",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Located observations and comparison limits precede diagnosis or intervention questions.",
+      "worked_and_failure_walkthrough": "Dark appearance is distinct from active corrosion; non-comparable crack photos cannot prove improvement.",
+      "domain_distinctness": "Material uncertainty, capture conditions, significance, inspection extent, and specialist evidence ground the review.",
+      "required_fixes": []
+    },
+    {
+      "agent": "preventive-conservation-planner",
+      "gateway": "heritage-conservation",
+      "mode": "preventive-care",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Care actions and monitoring are connected to actual exposure and material context.",
+      "worked_and_failure_walkthrough": "Paper/unknown-metal needs remain separate; rapid drying is not a universal response.",
+      "domain_distinctness": "Mixed materials, sensor placement, environmental targets, access/use conflicts, and action owners support practical planning.",
+      "required_fixes": []
+    },
+    {
+      "agent": "conservation-treatment-reviewer",
+      "gateway": "heritage-conservation",
+      "mode": "treatment-proposal-review",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "The review compares intervention claims, alternatives, evidence gaps, and required decisions.",
+      "worked_and_failure_walkthrough": "Unidentified coatings prevent a compatibility conclusion; test-tube removability does not prove object-level reversibility.",
+      "domain_distinctness": "Substrate, prior intervention, significance loss, retreatment limits, and baseline/follow-up evidence are explicit. The corrected handoff permits bounded preventive planning while causes remain unresolved.",
+      "required_fixes": []
+    },
+    {
+      "agent": "historic-fabric-recording-specialist",
+      "gateway": "heritage-conservation",
+      "mode": "historic-fabric-recording",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Component registers preserve observed configuration, source geometry, and phase interpretations.",
+      "worked_and_failure_walkthrough": "A blocked opening remains undated and unmeasured where sources lack those facts; hidden wall dimensions are not invented.",
+      "domain_distinctness": "Location hierarchy, scale, precision, obscured fabric, alteration evidence, and rival phases make the record specific.",
+      "required_fixes": []
+    },
+    {
+      "agent": "site-conservation-planner",
+      "gateway": "heritage-conservation",
+      "mode": "site-conservation-planning",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 3,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Mapped significance and pressures lead to staged options and accountable decisions.",
+      "worked_and_failure_walkthrough": "Visitor-path erosion supports option comparison; drainage or tree removal remains assessment-dependent.",
+      "domain_distinctness": "Fabric/deposit consequences, use/access conflicts, causation hypotheses, and explicit priority rationales distinguish site planning.",
+      "required_fixes": []
+    },
+    {
+      "agent": "conservation-monitoring-coordinator",
+      "gateway": "heritage-conservation",
+      "mode": "monitoring-maintenance",
+      "workflow_kit_scores": {
+        "trigger_routing": 4,
+        "workflow_specificity": 4,
+        "domain_heuristics": 4,
+        "supporting_assets": 3,
+        "tooling_validation": 4,
+        "output_contract": 4,
+        "boundaries": 4
+      },
+      "agent_scores": {
+        "role_distinctness": 4,
+        "skill_reference_use": 4,
+        "instruction_depth": 3,
+        "runtime_fit": 4,
+        "handoffs_boundaries": 4,
+        "output_contract": 4,
+        "catalog_integration": 4
+      },
+      "rating": "Ready",
+      "manual_evidence": "Comparable observations, material-specific triggers, and maintenance evidence form usable records.",
+      "worked_and_failure_walkthrough": "52→58 percent is six percentage points; an unscaled wall photo remains non-comparable and missing readings cannot show stability. The extended failure case keeps an initial change trigger unassessed and completion unverified.",
+      "domain_distinctness": "Instrument/location changes, baseline links, review-only triggers, missing values, and completion evidence support operational monitoring. Corrected rules separate scheduled, missing, unverified, and confirmed unperformed states and distinguish absolute from change triggers.",
+      "required_fixes": []
+    }
+  ],
+  "source_hashes": {
+    "AGENTS/openai/archaeological-project-planner.toml": "eb5e06bce9aeffd802f78e2eb346c1afeb087b8c6370cfd71e3406e34d66ce8f",
+    "SKILLS/archaeological-fieldwork/SKILL.md": "a8bfe663ea79c63a765747ad93e0fd6218fa3b34ca008340331d9f91258bcde4",
+    "SKILLS/archaeological-fieldwork/agents/openai.yaml": "36bc93d387cc6150556837c68c6c24ee2716dd291dda40883ec942c217b54473",
+    "SKILLS/archaeological-fieldwork/references/workflows/project-design.md": "1c89a5af4c1fa17ca36e72fb6baf59c7f3d9025f01c23789c8b98612248a462b",
+    "SKILLS/archaeological-fieldwork/references/artifacts/project-design-kit.md": "e36013ae7dd1e373a8ef14f96357518da889ef7f7389fbeb1601a7068616831a",
+    "AGENTS/openai/archaeological-recording-specialist.toml": "b18ceceaf33092e80f0dd20ecdb225f5f912b3deb56949e812f482956b76a802",
+    "SKILLS/archaeological-fieldwork/references/workflows/field-recording.md": "ad14ccf12dcb9a3784e346718b7b04a78b7aeabd01cc966f787c19337a15e7cb",
+    "SKILLS/archaeological-fieldwork/references/artifacts/field-recording-kit.md": "52a8510520925956558a3e9eec80e436b143275f519912983e32fd8f1f0710d5",
+    "AGENTS/openai/stratigraphic-sequence-reviewer.toml": "de22a3020058daf24b954fd7c52ded3a76102dddcf803e7e47552c234bc8e496",
+    "SKILLS/archaeological-fieldwork/references/workflows/stratigraphic-review.md": "6bbb76dce729ee8950e4cee9bf2ddbb671f99cb26322c5343cb6e1b4665d68d2",
+    "SKILLS/archaeological-fieldwork/references/artifacts/stratigraphic-review-kit.md": "9ebb1fffe8386be0fdb4fdd9533d4630566409ded788f07148e81f64490509e9",
+    "AGENTS/openai/archaeological-finds-coordinator.toml": "cf8f69f473c6d4f603b61263afba5a80d450915a8b7888829fddb29f74421a0f",
+    "SKILLS/archaeological-fieldwork/references/workflows/finds-register.md": "3134ebba9bd27b85c0c6989943da737776f2c5553974786c94557e68056c1e4a",
+    "SKILLS/archaeological-fieldwork/references/artifacts/finds-register-kit.md": "f12eaa56084bc5da47c045e026e4730b946d9f1f5450667e992490766597d91c",
+    "AGENTS/openai/archaeological-report-author.toml": "6c1cb3813a2b9a60947b94fec5c491a8cbe990ea507c8fd92239161cbd98977c",
+    "SKILLS/archaeological-fieldwork/references/workflows/post-fieldwork-reporting.md": "f9de680edbc64970c13b8a3cb0091b94a1629d2cf9c295d388c74a8ade36ace4",
+    "SKILLS/archaeological-fieldwork/references/artifacts/post-fieldwork-reporting-kit.md": "a4a88410c4240cebc1f6091c2bc8e267abeeb940ea9fceaca0508072ecbebe4d",
+    "AGENTS/openai/language-documentation-planner.toml": "b4b69590601f67413110307823c8a03acdd97614c56c3fd8639a357be0b0d558",
+    "SKILLS/language-documentation/SKILL.md": "585cc78ebbcea9a618416d80645d7599a2a7c95ecdf9cb9cae2a605a38d1026b",
+    "SKILLS/language-documentation/agents/openai.yaml": "0d3a8c562cfec836ca11867e13ffd904abb774f394decafebad378a73a9e5690",
+    "SKILLS/language-documentation/references/workflows/documentation-planning.md": "43174880b0c08a7b0a7b5a34c63065928c07eedfb001d286bb7e6c889f73c4cc",
+    "SKILLS/language-documentation/references/artifacts/documentation-planning-kit.md": "c5a7cbcd1ffe586def1dc9cf3426b9ecd210860ded972f2aacd9709e5f573a66",
+    "AGENTS/openai/linguistic-session-designer.toml": "48b71c2f648b88da5c5c5919b84395d0f06c207aa832bb35708cb5a225536190",
+    "SKILLS/language-documentation/references/workflows/session-design.md": "69d491f36a3a297a8589f81b95bb5a1e6b56873d139f5720203210d0f8c7f7c3",
+    "SKILLS/language-documentation/references/artifacts/session-design-kit.md": "044f6deef977a8ac9b76a3d00c3da2c0f09a7b46831eb3edbec8eca2cbd3a231",
+    "AGENTS/openai/linguistic-annotation-editor.toml": "6c26528ce1990b4db84143748ea1eab16bc00071c763cb1ec2b29b0dbe26c0fe",
+    "SKILLS/language-documentation/references/workflows/transcription-annotation.md": "25cbbfd1ff2c3f337bde068b9a8cd2fa77f5f2e863c3b42395815c67d25e98d2",
+    "SKILLS/language-documentation/references/artifacts/transcription-annotation-kit.md": "7577a1ee7923d2817766720e25cd11fbd0442b6dd3438fae20f89fbe491d8d39",
+    "AGENTS/openai/lexicon-corpus-curator.toml": "736150e61b1066ac74f9fbb14fdf91c4c49837bc5249bcf0347df0ec3ccd5789",
+    "SKILLS/language-documentation/references/workflows/lexicon-curation.md": "491056f02d4ff3d69a16d6390a3f17ece1b0b43bf2794309b77b7e5c6ae6d798",
+    "SKILLS/language-documentation/references/artifacts/lexicon-curation-kit.md": "f459eee28c5c05106269dd1176d6993dc44bea4f24a8f138ea6655e4a821d36a",
+    "AGENTS/openai/language-deposit-coordinator.toml": "2d46da5d773eacb5dac4280f149eb47f24122b44546dddac8deed3ee7d5f28d1",
+    "SKILLS/language-documentation/references/workflows/archive-preparation.md": "3eb6bd7ed735d4c76ec1b9baeafed67bb9a2a38534adb24262dd689c89a8514f",
+    "SKILLS/language-documentation/references/artifacts/archive-preparation-kit.md": "f70a0c3e20daae29aaedca4a8b8035193c43f37d35b5e00e55eea41257991bbb",
+    "AGENTS/openai/oral-history-project-planner.toml": "9d4044452defcce38f3b0dfcc228481e8301055aea802cc34ed08ff49629f33c",
+    "SKILLS/oral-history/SKILL.md": "28bf0c374112f8e88633a11693b6de4fe20af40fed4cc7978d366eeea27ff279",
+    "SKILLS/oral-history/agents/openai.yaml": "2fa67fd1693b114ccc8ab44fa715f9039494e5b4803bac422694cea110bb178a",
+    "SKILLS/oral-history/references/workflows/project-planning.md": "f23220ce860174610f5f626198c44c977e0ba82ff0c5926d990240bb82c6238f",
+    "SKILLS/oral-history/references/artifacts/project-planning-kit.md": "d54d5423efda8f322bbad531f1651752f08ba26b2c40daf56505c12892b1e0ef",
+    "AGENTS/openai/oral-history-interview-designer.toml": "da135bce42bf4ef3677a23f61b8e80a6905641f64e53c0346dbf456140cd9707",
+    "SKILLS/oral-history/references/workflows/interview-preparation.md": "759b0fcc0a57d5bea71cb09feb9b5ad128788dcd1795e064d1db6709c928d739",
+    "SKILLS/oral-history/references/artifacts/interview-preparation-kit.md": "e70121da9b532e4266d6ad791a36ef0b4003e97f70f4e25c41dea038d780f3b5",
+    "AGENTS/openai/oral-history-transcript-editor.toml": "2a9ab61619f4e4dcaef0bcb8e8946e61f98771445c14b38982588364274cb06f",
+    "SKILLS/oral-history/references/workflows/transcript-editing.md": "0cbc3611d9e7191682203b5b2ce496838f9feba1e53f4bef8683c1a01aa08437",
+    "SKILLS/oral-history/references/artifacts/transcript-editing-kit.md": "a7e09ad6b7fc2963bc5746fdbf73ad1fe4d7ee40efa42edee664c3c37742af50",
+    "AGENTS/openai/oral-history-access-reviewer.toml": "cb84675eb420aa22a3a68870eaf0cb84e04b43676f8d5e985e2d3a0ab646265c",
+    "SKILLS/oral-history/references/workflows/narrator-review-access.md": "57a9a33999b6fd22dbf3ee059b216ef97cc3511c91dfb5c42885e692484e72f8",
+    "SKILLS/oral-history/references/artifacts/narrator-review-access-kit.md": "a985ee5548eb3a41c7b852960cd6903b61c417283984744a2572afe988b38312",
+    "AGENTS/openai/oral-history-interpretation-editor.toml": "bfd862eb01f7b857eafe6ab406ca3ae4406f0fab67555f68519e2ca568ddf3df",
+    "SKILLS/oral-history/references/workflows/interpretation-edition.md": "6f675a3df7db0ecc9d11d90cb721ccca706c886948f44eebdff4acce1272e6a5",
+    "SKILLS/oral-history/references/artifacts/interpretation-edition-kit.md": "0b9254e161928ac91cfb80d2356808cbdbec9e071f03ccf198aea1f3ae71db42",
+    "AGENTS/openai/conservation-condition-reviewer.toml": "0a196ee9c90e11b0a2badc3aabf81cec0d858bb41bb62167f6202b0573f17edc",
+    "SKILLS/heritage-conservation/SKILL.md": "6272d18fa5f86d34c249af9db8d9925c460205aeb451d984cb8152775fd830d0",
+    "SKILLS/heritage-conservation/agents/openai.yaml": "e155bce7ae33bd99c2db427f948cb38e4a363ed558b925a3271fe6be003f11a9",
+    "SKILLS/heritage-conservation/references/workflows/condition-assessment.md": "b97bcc444ad739c0f086b44398f0957804266c268db0a892754589aa51bd260f",
+    "SKILLS/heritage-conservation/references/artifacts/condition-assessment-kit.md": "fff1b7662411a31c36fe801755026375d75c38ce3341fa897f7acee8c2519710",
+    "AGENTS/openai/preventive-conservation-planner.toml": "e23d46f6c8c1447c9a1d5e60e312a4f8ff7005314b66600b728c521cfdef083b",
+    "SKILLS/heritage-conservation/references/workflows/preventive-care.md": "8f8cd98126e6d832509eb59ccf4d7f792f278098ec9ca162baa44b55576f20c0",
+    "SKILLS/heritage-conservation/references/artifacts/preventive-care-kit.md": "f44bfafd55c11ba2e43fa774f5fd7d9f245e2edbf37a1f3f485677a8fcebc19a",
+    "AGENTS/openai/conservation-treatment-reviewer.toml": "399e720512075ce83baeeddc2a67aab8ff4e497c77060be7319d1a020269bfbb",
+    "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md": "f3461fc3eb7282b040fd9e93e72089fc0e0323091188a2005b9e5b9c8cf60b7c",
+    "SKILLS/heritage-conservation/references/artifacts/treatment-proposal-review-kit.md": "c79738647d38c4b3a0034a6bdb8da106d796dafa55879f053c33ba788304e552",
+    "AGENTS/openai/historic-fabric-recording-specialist.toml": "4cd02e2e267ed5b285ec44bbef0b16251c831a90eac3f44fee21caa45b4e26f8",
+    "SKILLS/heritage-conservation/references/workflows/historic-fabric-recording.md": "701258c34c5612a3ed71ba1aabeca608d47e1c08c6175d320c272369dad364af",
+    "SKILLS/heritage-conservation/references/artifacts/historic-fabric-recording-kit.md": "8f42efb2b5630c667b7e7f826c85b75b9902b7b0ad01b387c8daf962fd9dcf8a",
+    "AGENTS/openai/site-conservation-planner.toml": "bcf25e56ed46842f269c1f5722589cb81c329ba8c059370ca68646cbe89963dd",
+    "SKILLS/heritage-conservation/references/workflows/site-conservation-planning.md": "01b4e8fdbc31a0f59aa52724eefddddeb387f0ff0f0e2e7fb80455d876a00ce7",
+    "SKILLS/heritage-conservation/references/artifacts/site-conservation-planning-kit.md": "458c5fd2df746b8d01675d302d42503ad94839c3a5dfd632db954ba98dafa989",
+    "AGENTS/openai/conservation-monitoring-coordinator.toml": "adef4b6f2725135d6e9bf5369981fddf667002d2290beffd498368866bcbae3f",
+    "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md": "f2e58bbabcc3af16d4e22efadaa7ddde99ac53c279e2b208d314f3f17c01e338",
+    "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md": "f392e322e84d1dcd0e333dda44faeddee0ebfa635891344f5702264524f42a5a"
+  },
+  "required_fixes": [],
+  "live_corrections_reviewed": [
+    "narrator-review-access: read-only archival review handoff",
+    "monitoring-maintenance: evidence status and initial change-trigger handling",
+    "treatment-proposal-review: bounded preventive planning with unresolved causes"
+  ]
+}

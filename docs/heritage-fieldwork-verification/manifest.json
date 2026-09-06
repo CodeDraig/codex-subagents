@@ -1,0 +1,394 @@
+[
+  {
+    "agent": "archaeological-project-planner",
+    "gateway": "archaeological-fieldwork",
+    "mode": "project-design",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Project Context",
+      "Research Design",
+      "Evidence And Method Matrix",
+      "Recording And Archive Plan",
+      "Dependencies And Alternatives",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "archaeological-recording-specialist",
+    "gateway": "archaeological-fieldwork",
+    "mode": "field-recording",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Recording Context",
+      "Field Registers",
+      "Source Index",
+      "Record Exceptions",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "stratigraphic-sequence-reviewer",
+    "gateway": "archaeological-fieldwork",
+    "mode": "stratigraphic-review",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only",
+    "sections": [
+      "Review Scope",
+      "Relationship Model",
+      "Sequence Findings",
+      "Supported Order And Alternatives",
+      "Dating Limits",
+      "Checks And Limits",
+      "Owner Questions",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "archaeological-finds-coordinator",
+    "gateway": "archaeological-fieldwork",
+    "mode": "finds-register",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Finds Context",
+      "Finds And Sample Register",
+      "Reconciliation",
+      "Custody And Conservation Flags",
+      "Handoff Manifest",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "archaeological-report-author",
+    "gateway": "archaeological-fieldwork",
+    "mode": "post-fieldwork-reporting",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Report Context",
+      "Report",
+      "Evidence And Alternatives",
+      "Figure And Source Index",
+      "Archive Handoff",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "language-documentation-planner",
+    "gateway": "language-documentation",
+    "mode": "documentation-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Documentation Context",
+      "Documentation Plan",
+      "Coverage Matrix",
+      "Access And Return Plan",
+      "Dependencies",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "linguistic-session-designer",
+    "gateway": "language-documentation",
+    "mode": "session-design",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Session Context",
+      "Session Guide",
+      "Response Record",
+      "Hypotheses And Coverage",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "linguistic-annotation-editor",
+    "gateway": "language-documentation",
+    "mode": "transcription-annotation",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Annotation Context",
+      "Annotated Text",
+      "Tier And Transcription Policy",
+      "Source Anchors",
+      "Uncertain Analyses",
+      "Editorial Changes",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "lexicon-corpus-curator",
+    "gateway": "language-documentation",
+    "mode": "lexicon-curation",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Curation Context",
+      "Lexicon Or Corpus Index",
+      "Attestation Links",
+      "Merge And Variant Decisions",
+      "Unresolved Analyses",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "language-deposit-coordinator",
+    "gateway": "language-documentation",
+    "mode": "archive-preparation",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Deposit Context",
+      "Deposit Manifest",
+      "Resource Relationships",
+      "Access And Metadata Decisions",
+      "Community Return Package",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "oral-history-project-planner",
+    "gateway": "oral-history",
+    "mode": "project-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Project Context",
+      "Project Plan",
+      "Narrator Coverage",
+      "Participant Process Draft",
+      "Stewardship Plan",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "oral-history-interview-designer",
+    "gateway": "oral-history",
+    "mode": "interview-preparation",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Interview Context",
+      "Interview Guide",
+      "Source And Follow-up Notes",
+      "Session Preparation",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "oral-history-transcript-editor",
+    "gateway": "oral-history",
+    "mode": "transcript-editing",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Transcript Context",
+      "Edited Transcript",
+      "Editorial Policy",
+      "Source Anchors",
+      "Changes And Queries",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "oral-history-access-reviewer",
+    "gateway": "oral-history",
+    "mode": "narrator-review-access",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only",
+    "sections": [
+      "Review Context",
+      "Access Matrix",
+      "Version And Restriction Findings",
+      "Supported Dispositions",
+      "Release Questions",
+      "Checks And Limits",
+      "Owner Questions",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "oral-history-interpretation-editor",
+    "gateway": "oral-history",
+    "mode": "interpretation-edition",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Edition Context",
+      "Edited Narrative Or Edition",
+      "Excerpt And Source Index",
+      "Editorial Decisions",
+      "Unresolved Historical Questions",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "conservation-condition-reviewer",
+    "gateway": "heritage-conservation",
+    "mode": "condition-assessment",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only",
+    "sections": [
+      "Assessment Context",
+      "Condition Evidence",
+      "Comparison Findings",
+      "Risk And Examination Questions",
+      "Checks And Limits",
+      "Owner Questions",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "preventive-conservation-planner",
+    "gateway": "heritage-conservation",
+    "mode": "preventive-care",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Care Context",
+      "Risk And Exposure Map",
+      "Preventive Care Plan",
+      "Alternatives And Dependencies",
+      "Monitoring Handoff",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "conservation-treatment-reviewer",
+    "gateway": "heritage-conservation",
+    "mode": "treatment-proposal-review",
+    "model": "gpt-5.6-sol",
+    "reasoning": "high",
+    "sandbox": "read-only",
+    "sections": [
+      "Proposal Context",
+      "Treatment Review",
+      "Evidence Gaps",
+      "Alternatives And Tradeoffs",
+      "Required Decisions",
+      "Checks And Limits",
+      "Owner Questions",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "historic-fabric-recording-specialist",
+    "gateway": "heritage-conservation",
+    "mode": "historic-fabric-recording",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Recording Context",
+      "Fabric Register",
+      "Spatial And Source Index",
+      "Phase Interpretations",
+      "Coverage Gaps",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "site-conservation-planner",
+    "gateway": "heritage-conservation",
+    "mode": "site-conservation-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning": "high",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Site Context",
+      "Significance And Pressure Map",
+      "Site Conservation Plan",
+      "Options And Priorities",
+      "Monitoring And Decision Brief",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  },
+  {
+    "agent": "conservation-monitoring-coordinator",
+    "gateway": "heritage-conservation",
+    "mode": "monitoring-maintenance",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "sandbox": "workspace-write",
+    "sections": [
+      "Monitoring Context",
+      "Monitoring Register",
+      "Change And Trigger Findings",
+      "Maintenance Record",
+      "Follow-up Plan",
+      "Checks And Limits",
+      "Owner Questions",
+      "Files Changed",
+      "Handoffs"
+    ]
+  }
+]

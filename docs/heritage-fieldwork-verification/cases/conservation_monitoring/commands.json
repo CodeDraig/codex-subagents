@@ -1,0 +1,32 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/heritage-conservation/references/workflows/monitoring-maintenance.md && rg --files inputs outputs . | sed -n '1,160p' && printf '\\\\n--- packet ---\\\\n' && sed -n '1,320p' inputs/packet.md && printf '\\\\n--- git ---\\\\n' && git status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "9e3cc08efb14bb37d408e59fbaadb8be6e73e5892beaebde1f20f63abfdeee90"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/heritage-conservation/artifacts/monitoring-maintenance-kit.md && find . -maxdepth 2 -type f -printf '%p\\\\n' | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "4a9aff91db4ff8e2d6a75900d6ea3738afa077de756a2442543cdddb4bf9c52b"
+  },
+  {
+    "command": "/bin/bash -lc \"rg --files .agents/skills/heritage-conservation | sort && sed -n '1,360p' .agents/skills/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "65fe90ecda2c95e61a2d290dd55dc1d5c850bc61db2f43c56c1ff31b202af2ec"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,220p' outputs/monitoring.csv && sed -n '1,160p' outputs/maintenance.csv && awk -F',' 'NR==1 {n=NF; print \\\"monitoring columns=\\\" n; next} NF\"'!=n {print \"monitoring field-count mismatch at row \" NR \": \" NF}'\"' outputs/monitoring.csv && awk -F',' 'NR==1 {n=NF; print \\\"maintenance columns=\\\" n; next} NF\"'!=n {print \"maintenance field-count mismatch at row \" NR \": \" NF}'\"' outputs/maintenance.csv && rg -n \\\"\"'^# (Monitoring Context|Monitoring Register|Change And Trigger Findings|Maintenance Record|Follow-up Plan|Checks And Limits|Owner Questions|Files Changed|Handoffs)$\" outputs/findings.md'",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "758345c0fff7fc307ca076833b193d8c5bf24142e0fa20c0c421ead55a032380"
+  },
+  {
+    "command": "/bin/bash -lc \"awk -F',' 'NR==1 {n=NF; next} NF\"'!=n {bad=1; print \"field-count mismatch \" NR} $4 !~ /''^2026-09-(01|03|04)$/ {bad=1; print \"unexpected monitoring date \" NR \":\" $4} END {if (!bad) print \"monitoring.csv: 7 records; 20 fields per record; dates valid\"; exit bad}'\"' outputs/monitoring.csv\nawk -F',' 'NR==1 {n=NF; next} NF\"'!=n {bad=1; print \"field-count mismatch \" NR} $4 != \"\" && $4 !~ /''^2026-09-02$/ {bad=1; print \"unexpected due date \" NR \":\" $4} $5 != \"\" && $5 !~ /''^2026-09-03$/ {bad=1; print \"unexpected completion date \" NR \":\" $5} END {if (!bad) print \"maintenance.csv: 2 records; 11 fields per record; dates valid\"; exit bad}'\"' outputs/maintenance.csv\nrg -n 'M2.*\\\\+4 percentage points|M5.*\\\\+0\\\\.2 mm|M3.*missing|M7.*not comparable|T1.*unverified|T2.*completed' outputs/monitoring.csv outputs/maintenance.csv\nfind outputs -maxdepth 1 -type f -printf '%f\\\\n' | sort\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "98ba514b35c40c5c5c4c1e325f28455df22faddb4912bffa46d3f8e6921deb1c"
+  }
+]

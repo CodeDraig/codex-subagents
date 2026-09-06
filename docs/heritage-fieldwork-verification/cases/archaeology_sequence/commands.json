@@ -1,0 +1,20 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/archaeological-fieldwork/references/workflows/stratigraphic-review.md && sed -n '1,280p' inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "715ff3b24c67074be393ede26164dbd9ead10acda7ff5c5724d7196d9260eb91"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,280p' .agents/skills/archaeological-fieldwork/references/artifacts/stratigraphic-review-kit.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "9ebb1fffe8386be0fdb4fdd9533d4630566409ded788f07148e81f64490509e9"
+  },
+  {
+    "command": "/bin/bash -lc \"python - <<'PY'\nfrom pathlib import Path\nimport re\nfrom collections import defaultdict, deque\n\npath = Path('inputs/packet.md')\nlines = path.read_text().splitlines()\ntext = '\\\\n'.join(lines)\ninv_match = re.search(r'inventory INV1 contains ([\"'^.]+)'\"\\\\.', text)\ninventory = [x.strip() for x in inv_match.group(1).split(',')]\nrows = []\nfor lineno, line in enumerate(lines, 1):\n    m = re.match(r'\\\\| (R[\"'^|]+?) '\"\\\\| (C\\\\d+) \\\\| (C\\\\d+) \\\\|\"'$'\"', line)\n    if m:\n        rows.append((m.group(1).strip(), m.group(2), m.group(3), lineno))\n\nnodes = set(inventory)\nreferenced = {n for _, a, b, _ in rows for n in (a, b)}\nall_nodes = nodes | referenced\nadj = defaultdict(list)\nindeg = {n: 0 for n in all_nodes}\nfor src, later, earlier, lineno in rows:\n    adj[later].append((earlier, src, lineno))\n    indeg[earlier] += 1\n\nq = deque(sorted(n for n, d in indeg.items() if d == 0))\ntopo = []\nwhile q:\n    n = q.popleft(); topo.append(n)\n    for nxt, _, _ in adj[n]:\n        indeg[nxt] -= 1\n        if indeg[nxt] == 0:\n            q.append(nxt)\n\n# Tarjan SCCs\nidx = 0; stack = []; on = set(); index = {}; low = {}; sccs = []\ndef visit(v):\n    global idx\n    index[v] = low[v] = idx; idx += 1\n    stack.append(v); on.add(v)\n    for w, _, _ in adj[v]:\n        if w not in index:\n            visit(w); low[v] = min(low[v], low[w])\n        elif w in on:\n            low[v] = min(low[v], index[w])\n    if low[v] == index[v]:\n        comp = []\n        while True:\n            w = stack.pop(); on.remove(w); comp.append(w)\n            if w == v: break\n        sccs.append(sorted(comp))\nfor n in sorted(all_nodes):\n    if n not in index: visit(n)\n\npairs = {(a,b) for _,a,b,_ in rows}\nprint('inventory_count', len(inventory), inventory)\nprint('relation_count', len(rows))\nprint('relation_rows', rows)\nprint('distinct_referenced_nodes', len(referenced), sorted(referenced))\nprint('all_graph_nodes', len(all_nodes), sorted(all_nodes))\nprint('missing_from_INV1', sorted(referenced - nodes))\nprint('inventory_unreferenced', sorted(nodes - referenced))\nprint('self_links', [(s,a,b,l) for s,a,b,l in rows if a == b])\nprint('duplicate_edges', len(rows) - len(pairs))\nprint('reciprocal_pairs', sorted((a,b) for a,b in pairs if (b,a) in pairs and a < b))\nprint('cyclic_SCCs', [c for c in sccs if len(c) > 1])\nprint('topological_processed', len(topo), 'of', len(all_nodes), topo)\nprint('topological_result', 'FAIL_CYCLE' if len(topo) \"'!= len(all_nodes) else '\"'PASS')\nPY\nnl -ba inputs/packet.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "52eb52bf3a53a53f9c24038df0ac10c6a77369c0819c1944a95af8cdcef69319"
+  }
+]

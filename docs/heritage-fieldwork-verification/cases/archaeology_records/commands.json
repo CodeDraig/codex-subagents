@@ -1,0 +1,38 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/archaeological-fieldwork/references/workflows/field-recording.md && printf '\\\\n--- files ---\\\\n' && rg --files -g '\"'!outputs/**'\"' -g '\"'!*.git*'\"' | sort && printf '\\\\n--- git status ---\\\\n' && git status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "b4e19e0feef36241afd49a4a835f64d7c421f9bdfe1c987df1546541836bc58d"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,260p' .agents/skills/archaeological-fieldwork/artifacts/field-recording-kit.md && printf '\\\\n--- packet ---\\\\n' && sed -n '1,320p' inputs/packet.md && printf '\\\\n--- directory detail ---\\\\n' && find . -maxdepth 2 -type f -printf '%p\\\\n' | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "d267405c37cfd1b6243a745a7f6a431ed783054ad2c3991e52bec8d78bbb2660"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,300p' .agents/skills/archaeological-fieldwork/references/artifacts/field-recording-kit.md && printf '\\\\n--- packet ---\\\\n' && sed -n '1,360p' inputs/packet.md && printf '\\\\n--- directory detail ---\\\\n' && find . -maxdepth 3 -type f -printf '%p\\\\n' | sort\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "f469dcba4a7801828dc3897ede5831c5f7f81b9a684b512b8aa3b30b95bc6508"
+  },
+  {
+    "command": "/bin/bash -lc 'mkdir -p outputs'",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": "/bin/bash -lc 'nl -ba inputs/packet.md'",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "dc8e0d88578381c3f5f6817e356e91baa9f5dc7a6ba0bd02a0bbd0ff60c54bfa"
+  },
+  {
+    "command": "/bin/bash -lc \"node <<'NODE'\nconst fs = require('fs');\nfunction parseCsv(text) {\n  const rows=[]; let row=[], field='', quoted=false;\n  for (let i=0;i<text.length;i++) {\n    const ch=text[i];\n    if (quoted) {\n      if (ch==='\\\"' && text[i+1]==='\\\"') { field+='\\\"'; i++; }\n      else if (ch==='\\\"') quoted=false;\n      else field+=ch;\n    } else if (ch==='\\\"') quoted=true;\n    else if (ch===',') { row.push(field); field=''; }\n    else if (ch==='\\\\n') { row.push(field); rows.push(row); row=[]; field=''; }\n    else if (ch\"'!=='\"'\\\\r') field+=ch;\n  }\n  if (field || row.length) { row.push(field); rows.push(row); }\n  return rows;\n}\nfunction load(file) {\n const rows=parseCsv(fs.readFileSync(file,'utf8')); const [header,...data]=rows;\n const bad=data.filter(r=>r.length\"'!==header.length);\n if (bad.length) throw new Error(`${file}: ${bad.length} row(s) have a field-count mismatch`);\n return {header,data,objects:data.map(r=>Object.fromEntries(header.map((h,i)=>[h,r[i]])))};\n}\nconst c=load('\"'outputs/contexts.csv'), f=load('outputs/find-links.csv');\nfunction assert(ok,msg){if(\"'!ok) throw new Error(msg)}\nconst cids=c.objects.map(x=>`${x.project_code}/${x.trench_code}/${x.context_id}`);\nassert(new Set(cids).size===cids.length,'\"'context identifier collision');\nconst fids=f.objects.map(x=>\"'`${x.project_code}/${x.trench_code}/${x.item_type}/${x.item_id}`);\nassert(new Set(fids).size===fids.length,'\"'find/sample identifier collision');\nconst cset=new Set(cids);\nfor (const x of f.objects) assert(cset.has(\"'`${x.project_code}/${x.trench_code}/${x.context_id}`),`broken context link for ${x.item_id}`);\nconst allowed=new Set(['\"'above','']);\nfor (const x of c.objects) assert(allowed.has(x.recorded_relation_term),\"'`invalid relationship term for ${x.context_id}`);\nfor (const x of c.objects) for (const k of ['\"'easting','northing','elevation']) assert(x[k]==='' || Number.isFinite(Number(x[k])),\"'`non-numeric ${k} for ${x.context_id}`);\nfor (const x of f.objects) assert(x.quantity_value==='\"'' || Number.isFinite(Number(x.quantity_value)),\"'`non-numeric quantity for ${x.item_id}`);\nconst packet=fs.readFileSync('\"'inputs/packet.md','utf8');\nfor (const text of ['brown sandy layer','grey silty fill','pale clay','pottery fragments, identification provisional','stone fragment, identification provisional']) assert(packet.includes(text),\"'`source quotation missing: ${text}`);\nconsole.log(JSON.stringify({contexts_supplied:3,contexts_transcribed:c.objects.length,finds_supplied:2,finds_transcribed:f.objects.filter(x=>x.item_type==='\"'find').length,samples_supplied:1,samples_transcribed:f.objects.filter(x=>x.item_type==='sample').length,context_fk_links_checked:f.objects.length,plan_references_retained:c.objects.map(x=>x.plan_id),photo_references_retained:c.objects.map(x=>x.photo_id),result:'PASS'},null,2));\nNODE\nsed -n '1,12p' outputs/contexts.csv\nsed -n '1,10p' outputs/find-links.csv\nsed -n '1,220p' outputs/exceptions.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "122342aae1949a6d8c2fbfde75a3bddbb667c669abddca6049f038a5444524a9"
+  }
+]

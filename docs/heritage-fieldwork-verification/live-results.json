@@ -1,0 +1,308 @@
+{
+  "cases": [
+    {
+      "case": "archaeology_records",
+      "attempt": "attempt-3",
+      "result": "accepted",
+      "evidence": "Independent CSV parsing confirmed three context rows, two finds and one sample, exact context links and quantities, no inferred coordinates, and retained source anchors. Requested files exist and inputs are unchanged.",
+      "agent": "archaeological-recording-specialist",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "seconds": 154.08,
+      "relevant_final_sources": {
+        "AGENTS/openai/archaeological-recording-specialist.toml": "b18ceceaf33092e80f0dd20ecdb225f5f912b3deb56949e812f482956b76a802",
+        "SKILLS/archaeological-fieldwork/SKILL.md": "a8bfe663ea79c63a765747ad93e0fd6218fa3b34ca008340331d9f91258bcde4",
+        "SKILLS/archaeological-fieldwork/references/workflows/field-recording.md": "ad14ccf12dcb9a3784e346718b7b04a78b7aeabd01cc966f787c19337a15e7cb",
+        "SKILLS/archaeological-fieldwork/references/artifacts/field-recording-kit.md": "52a8510520925956558a3e9eec80e436b143275f519912983e32fd8f1f0710d5"
+      },
+      "copied_unselected_sources_changed_later": [
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md"
+      ],
+      "response_sha256": "b54338f4f593f36eb0ebde241892be0e50ecdc4dfb47816da9288f824aabb974",
+      "output_hashes": {
+        "outputs/exceptions.md": "9b0d8d44e5c809ad7039573a3bdd07b1744717f5ceb87236dc758a07d26a15d2",
+        "outputs/find-links.csv": "380f08020abcd5bc36921d9dcb3eecdffcdec6cba50c0f7f751d2b8623f21632",
+        "outputs/contexts.csv": "146be7bdc7d6fc70d22b095644749c4693fca5c94fe6f16a3f31ab85e3d80381"
+      },
+      "command_count": 6,
+      "nonzero_commands": 2
+    },
+    {
+      "case": "archaeology_sequence",
+      "attempt": "attempt-2",
+      "result": "accepted",
+      "evidence": "Reported the C201-C202-C203 cycle with its three source rows, missing C999, supported C205-before-C204 chain, conditional repairs, and object-versus-deposition dating limits without source edits.",
+      "agent": "stratigraphic-sequence-reviewer",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "seconds": 98.62,
+      "relevant_final_sources": {
+        "AGENTS/openai/stratigraphic-sequence-reviewer.toml": "de22a3020058daf24b954fd7c52ded3a76102dddcf803e7e47552c234bc8e496",
+        "SKILLS/archaeological-fieldwork/SKILL.md": "a8bfe663ea79c63a765747ad93e0fd6218fa3b34ca008340331d9f91258bcde4",
+        "SKILLS/archaeological-fieldwork/references/workflows/stratigraphic-review.md": "6bbb76dce729ee8950e4cee9bf2ddbb671f99cb26322c5343cb6e1b4665d68d2",
+        "SKILLS/archaeological-fieldwork/references/artifacts/stratigraphic-review-kit.md": "9ebb1fffe8386be0fdb4fdd9533d4630566409ded788f07148e81f64490509e9"
+      },
+      "copied_unselected_sources_changed_later": [
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md"
+      ],
+      "response_sha256": "7709abd399526e53b954b80cff37be71ec170066dd420fc4e46c148073417147",
+      "output_hashes": {},
+      "command_count": 3,
+      "nonzero_commands": 0
+    },
+    {
+      "case": "language_annotation",
+      "attempt": "attempt-2",
+      "result": "accepted",
+      "evidence": "Delivered all three source forms and supplied intervals in TSV, retained lo as analytically unresolved, reproduced only supplied translations, and explicitly limited verification to text rather than unavailable audio.",
+      "agent": "linguistic-annotation-editor",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "seconds": 119.91,
+      "relevant_final_sources": {
+        "AGENTS/openai/linguistic-annotation-editor.toml": "6c26528ce1990b4db84143748ea1eab16bc00071c763cb1ec2b29b0dbe26c0fe",
+        "SKILLS/language-documentation/SKILL.md": "585cc78ebbcea9a618416d80645d7599a2a7c95ecdf9cb9cae2a605a38d1026b",
+        "SKILLS/language-documentation/references/workflows/transcription-annotation.md": "25cbbfd1ff2c3f337bde068b9a8cd2fa77f5f2e863c3b42395815c67d25e98d2",
+        "SKILLS/language-documentation/references/artifacts/transcription-annotation-kit.md": "7577a1ee7923d2817766720e25cd11fbd0442b6dd3438fae20f89fbe491d8d39"
+      },
+      "copied_unselected_sources_changed_later": [
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md"
+      ],
+      "response_sha256": "0f469415bfe8b7a152214b48728fe4d2843fa3b08f9526903a4a1680d1eb1ead",
+      "output_hashes": {
+        "outputs/annotation-notes.md": "65934740c003b420a8d0fcc3d0172b5c514177a56a7afb27774fe7830f8801da",
+        "outputs/segments.tsv": "8053dc6a66989ca0aa52133ab03097df9224c805bce72ed8e4ac1376fb56a4fa"
+      },
+      "command_count": 9,
+      "nonzero_commands": 3
+    },
+    {
+      "case": "language_lexicon",
+      "attempt": "attempt-2",
+      "result": "accepted",
+      "evidence": "Retained E1-E4 and the tal/tál distinction, kept the two tal senses separate, identified the missing U99 attestation, preserved unknown analyses, and rejected blanket public release under conflicting A12/X1 terms.",
+      "agent": "lexicon-corpus-curator",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "seconds": 137.49,
+      "relevant_final_sources": {
+        "AGENTS/openai/lexicon-corpus-curator.toml": "736150e61b1066ac74f9fbb14fdf91c4c49837bc5249bcf0347df0ec3ccd5789",
+        "SKILLS/language-documentation/SKILL.md": "585cc78ebbcea9a618416d80645d7599a2a7c95ecdf9cb9cae2a605a38d1026b",
+        "SKILLS/language-documentation/references/workflows/lexicon-curation.md": "491056f02d4ff3d69a16d6390a3f17ece1b0b43bf2794309b77b7e5c6ae6d798",
+        "SKILLS/language-documentation/references/artifacts/lexicon-curation-kit.md": "f459eee28c5c05106269dd1176d6993dc44bea4f24a8f138ea6655e4a821d36a"
+      },
+      "copied_unselected_sources_changed_later": [
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md"
+      ],
+      "response_sha256": "febdb01c7b5f8b5d62cd6d438071cdaf18058c8b81ea8739d7002562414b3923",
+      "output_hashes": {
+        "outputs/curation-decisions.md": "00c4e8ee4ae50ec2e1bb404f9824a71a01d7d6aebcb5af05287efc58167bfc34",
+        "outputs/lexicon.tsv": "787d1b39458149e4b7a974745b21c9a9a7289f546966bd9a9351decc7f3db58f"
+      },
+      "command_count": 7,
+      "nonzero_commands": 3
+    },
+    {
+      "case": "oral_transcript",
+      "attempt": "attempt-2",
+      "result": "accepted",
+      "evidence": "Delivered all eight anchored turns; removed only the isolated Um; preserved negation, dialect, repetition, uncertainty, and hearsay; retained July as a separate RN2 annotation without replacing the original May/June account.",
+      "agent": "oral-history-transcript-editor",
+      "model": "gpt-5.6-terra",
+      "reasoning": "high",
+      "sandbox": "workspace-write",
+      "seconds": 100.63,
+      "relevant_final_sources": {
+        "AGENTS/openai/oral-history-transcript-editor.toml": "2a9ab61619f4e4dcaef0bcb8e8946e61f98771445c14b38982588364274cb06f",
+        "SKILLS/oral-history/SKILL.md": "28bf0c374112f8e88633a11693b6de4fe20af40fed4cc7978d366eeea27ff279",
+        "SKILLS/oral-history/references/workflows/transcript-editing.md": "0cbc3611d9e7191682203b5b2ce496838f9feba1e53f4bef8683c1a01aa08437",
+        "SKILLS/oral-history/references/artifacts/transcript-editing-kit.md": "a7e09ad6b7fc2963bc5746fdbf73ad1fe4d7ee40efa42edee664c3c37742af50"
+      },
+      "copied_unselected_sources_changed_later": [
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md"
+      ],
+      "response_sha256": "ca9a4b71774072de3f2eb5a36eaa77da07c01bd026a38ce69952349f1213c72a",
+      "output_hashes": {
+        "outputs/editorial-record.md": "00907d7552057826526a5c80679f0e0b9c67c0b6aabff02aed9e22cd1d135a31",
+        "outputs/transcript.md": "7f69c51ee84eff25a4c3f3aa1ce02d50482e999b40a95be2dcdcc78617837a2c"
+      },
+      "command_count": 6,
+      "nonzero_commands": 2
+    },
+    {
+      "case": "oral_access",
+      "attempt": "attempt-3",
+      "result": "accepted",
+      "evidence": "Correctly separated internal, booklet, derivative and web scopes; located the restricted-interval overlap and V1 package-removal decision. The corrected handoff requests read-only repository assessment and assigns approved implementation to authorized operators. No source files changed.",
+      "agent": "oral-history-access-reviewer",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "seconds": 69.68,
+      "relevant_final_sources": {
+        "AGENTS/openai/oral-history-access-reviewer.toml": "cb84675eb420aa22a3a68870eaf0cb84e04b43676f8d5e985e2d3a0ab646265c",
+        "SKILLS/oral-history/SKILL.md": "28bf0c374112f8e88633a11693b6de4fe20af40fed4cc7978d366eeea27ff279",
+        "SKILLS/oral-history/references/workflows/narrator-review-access.md": "57a9a33999b6fd22dbf3ee059b216ef97cc3511c91dfb5c42885e692484e72f8",
+        "SKILLS/oral-history/references/artifacts/narrator-review-access-kit.md": "a985ee5548eb3a41c7b852960cd6903b61c417283984744a2572afe988b38312"
+      },
+      "copied_unselected_sources_changed_later": [],
+      "response_sha256": "1b80b2e7b69e78475630d9bec2c562007973ad1ad607624d5521ea995d1a1f63",
+      "output_hashes": {},
+      "command_count": 3,
+      "nonzero_commands": 0
+    },
+    {
+      "case": "conservation_monitoring",
+      "attempt": "attempt-3",
+      "result": "accepted",
+      "evidence": "Retained seven observations and two maintenance tasks; calculated +4 percentage points and +0.2 mm only for comparable pairs. Absolute baseline trigger assessed, initial change trigger unassessable, no schedule inferred for a missing reading, incompatible photos non-comparable, and T1 completion unverified rather than confirmed unperformed; T2 supported by CN2.",
+      "agent": "conservation-monitoring-coordinator",
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "sandbox": "workspace-write",
+      "seconds": 115.46,
+      "relevant_final_sources": {
+        "AGENTS/openai/conservation-monitoring-coordinator.toml": "adef4b6f2725135d6e9bf5369981fddf667002d2290beffd498368866bcbae3f",
+        "SKILLS/heritage-conservation/SKILL.md": "6272d18fa5f86d34c249af9db8d9925c460205aeb451d984cb8152775fd830d0",
+        "SKILLS/heritage-conservation/references/workflows/monitoring-maintenance.md": "f2e58bbabcc3af16d4e22efadaa7ddde99ac53c279e2b208d314f3f17c01e338",
+        "SKILLS/heritage-conservation/references/artifacts/monitoring-maintenance-kit.md": "f392e322e84d1dcd0e333dda44faeddee0ebfa635891344f5702264524f42a5a"
+      },
+      "copied_unselected_sources_changed_later": [],
+      "response_sha256": "e731eb43046e0ae0bca00fc24ed439afd1173ae23b126cd83b16960a5c86d61e",
+      "output_hashes": {
+        "outputs/findings.md": "4ec55c18828a798a47ffe4560b68db4d33375e1002235022d07ceb364ae66cdc",
+        "outputs/maintenance.csv": "247dfd6d1541487be72e047dd38d79f4319a9bfea8dd3a7168731cdeaf77c769",
+        "outputs/monitoring.csv": "eab08982d52ccacf2c196c5be384410caec36685757041339b754f00d40bb9c0"
+      },
+      "command_count": 5,
+      "nonzero_commands": 2
+    },
+    {
+      "case": "conservation_treatment",
+      "attempt": "attempt-3",
+      "result": "accepted",
+      "evidence": "Located unsupported layer identification, original-appearance, compatibility, reversibility, photographic stability and structural-safety claims; distinguished glass evaporation from object-level behavior. Corrected handoff permits preventive planning with unresolved causes and proposed measurements without authorizing interventions.",
+      "agent": "conservation-treatment-reviewer",
+      "model": "gpt-5.6-sol",
+      "reasoning": "high",
+      "sandbox": "read-only",
+      "seconds": 81.7,
+      "relevant_final_sources": {
+        "AGENTS/openai/conservation-treatment-reviewer.toml": "399e720512075ce83baeeddc2a67aab8ff4e497c77060be7319d1a020269bfbb",
+        "SKILLS/heritage-conservation/SKILL.md": "6272d18fa5f86d34c249af9db8d9925c460205aeb451d984cb8152775fd830d0",
+        "SKILLS/heritage-conservation/references/workflows/treatment-proposal-review.md": "f3461fc3eb7282b040fd9e93e72089fc0e0323091188a2005b9e5b9c8cf60b7c",
+        "SKILLS/heritage-conservation/references/artifacts/treatment-proposal-review-kit.md": "c79738647d38c4b3a0034a6bdb8da106d796dafa55879f053c33ba788304e552"
+      },
+      "copied_unselected_sources_changed_later": [],
+      "response_sha256": "c8229e978ee4d3fb50f550d59d666b39864b343e961f5cc38d0bcdbde8ccc5ac",
+      "output_hashes": {},
+      "command_count": 2,
+      "nonzero_commands": 0
+    }
+  ],
+  "prior_attempts": [
+    {
+      "case": "archaeology_records",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/archaeology_records/attempt-1/run.json"
+    },
+    {
+      "case": "archaeology_records",
+      "attempt": "attempt-2",
+      "exit": "timeout",
+      "reason": "Writable temporary home initialized; sandbox network denial prevented model access and the harness timed out.",
+      "record": "prior-attempts/archaeology_records/attempt-2/run.json"
+    },
+    {
+      "case": "archaeology_sequence",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/archaeology_sequence/attempt-1/run.json"
+    },
+    {
+      "case": "conservation_monitoring",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/conservation_monitoring/attempt-1/run.json"
+    },
+    {
+      "case": "conservation_monitoring",
+      "attempt": "attempt-2",
+      "exit": 0,
+      "reason": "Unsupported scheduled/non-performance labels and a negative change-trigger result without a prior baseline comparison; rules and kit were corrected and rerun.",
+      "record": "prior-attempts/conservation_monitoring/attempt-2/run.json"
+    },
+    {
+      "case": "conservation_treatment",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/conservation_treatment/attempt-1/run.json"
+    },
+    {
+      "case": "conservation_treatment",
+      "attempt": "attempt-2",
+      "exit": 0,
+      "reason": "Preventive-planning handoff waited for established causes; clarified that bounded planning can begin with unresolved causes, then reran.",
+      "record": "prior-attempts/conservation_treatment/attempt-2/run.json"
+    },
+    {
+      "case": "language_annotation",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/language_annotation/attempt-1/run.json"
+    },
+    {
+      "case": "language_lexicon",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/language_lexicon/attempt-1/run.json"
+    },
+    {
+      "case": "oral_access",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/oral_access/attempt-1/run.json"
+    },
+    {
+      "case": "oral_access",
+      "attempt": "attempt-2",
+      "exit": 0,
+      "reason": "Main access findings were supported, but the final handoff assigned repository implementation to a read-only reviewer; instructions were narrowed and rerun.",
+      "record": "prior-attempts/oral_access/attempt-2/run.json"
+    },
+    {
+      "case": "oral_transcript",
+      "attempt": "attempt-1",
+      "exit": 1,
+      "reason": "CLI startup failed on the read-only default runtime home before a model turn.",
+      "record": "prior-attempts/oral_transcript/attempt-1/run.json"
+    }
+  ]
+}

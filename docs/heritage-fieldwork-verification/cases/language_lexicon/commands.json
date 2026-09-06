@@ -1,0 +1,44 @@
+[
+  {
+    "command": "/bin/bash -lc \"sed -n '1,240p' .agents/skills/language-documentation/references/workflows/lexicon-curation.md && rg --files -g '\"'!*'\"\\\\.git*' . | sort && git status --short\"",
+    "exit_code": 128,
+    "status": "failed",
+    "output_sha256": "2af7bcd03f32e57511db47585c5321fed02c97f5bb82d96430566b549bbbb4ad"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,280p' .agents/skills/language-documentation/artifacts/lexicon-curation-kit.md && printf '\\\\n--- PACKET ---\\\\n' && sed -n '1,320p' inputs/packet.md && printf '\\\\n--- TREE ---\\\\n' && find . -maxdepth 2 -type d -print | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "403b48e1b6d2462c8927df81f7f6d3b25bea135ddfced24049a6c29c56349a8a"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,320p' .agents/skills/artifacts/lexicon-curation-kit.md && printf '\\\\n--- PACKET ---\\\\n' && sed -n '1,360p' inputs/packet.md && printf '\\\\n--- TREE ---\\\\n' && find . -maxdepth 2 -type d -print | sort\"",
+    "exit_code": 2,
+    "status": "failed",
+    "output_sha256": "df1f5d69844e681192bf78171f6411c3e0a01cd6dd06832637b342ac89f01f27"
+  },
+  {
+    "command": "/bin/bash -lc \"find .agents -maxdepth 4 -type f -name 'lexicon-curation-kit.md' -o -name 'SKILL.md' | sort\nprintf '\\\\n--- SKILL DIR ---\\\\n'\nfind .agents/skills/language-documentation -maxdepth 3 -type f -print | sort\nprintf '\\\\n--- PACKET ---\\\\n'\nsed -n '1,400p' inputs/packet.md\nprintf '\\\\n--- DIRECTORY INVENTORY ---\\\\n'\nfind . -maxdepth 3 -type f -print | sort\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "3514fdeaddcbe532b4311ea75cfdcc4dd087ef813f9acb5b2d720587c90e7843"
+  },
+  {
+    "command": "/bin/bash -lc \"sed -n '1,360p' .agents/skills/language-documentation/references/artifacts/lexicon-curation-kit.md && printf '\\\\n--- AGENT CONFIG ---\\\\n' && sed -n '1,240p' .codex/agents/lexicon-corpus-curator.toml && printf '\\\\n--- OUTPUT STATE ---\\\\n' && if [ -d outputs ]; then find outputs -maxdepth 2 -type f -print | sort; else printf 'outputs directory does not yet exist\\\\n'; fi\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "ebdcda47a68a07288d0254cb7f7fb8dd3ae360be53305a66504ca3e1c990b680"
+  },
+  {
+    "command": "/bin/bash -lc 'mkdir -p outputs'",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": "/bin/bash -lc \"awk -F '\\\\t' '\nNR==1 {fields=NF; next}\nNF\"'!=fields {print \"FIELD_COUNT_ERROR line=\" NR \" expected=\" fields \" got=\" NF; bad=1}\nseen_entry[$1]++ {print \"DUPLICATE_ENTRY \" $1; bad=1}\nseen_sense[$2]++ {print \"DUPLICATE_SENSE \" $2; bad=1}\n$1==\"E1\" && !($13==\"U10\" && $14==\"C1:10\") {print \"BAD_E1_LINK\"; bad=1}\n$1==\"E2\" && !($13==\"U11\" && $14==\"C1:11\") {print \"BAD_E2_LINK\"; bad=1}\n$1==\"E3\" && !($13==\"U12\" && $14==\"C1:12\") {print \"BAD_E3_LINK\"; bad=1}\n$1==\"E4\" && !($13==\"U99\" && $14==\"unresolved reference: no C1 anchor\") {print \"BAD_E4_LINK\"; bad=1}\nEND {if (NR!=5) {print \"ROW_COUNT_ERROR records=\" NR-1; bad=1}; if (!bad) print \"TSV_OK fields=\" fields \" records=\" NR-1 \" unique_entry_ids=\" length(seen_entry) \" unique_sense_ids=\" length(seen_sense); exit bad}\n'\"' outputs/lexicon.tsv\nrg -n '\"'^# (Curation Context|Lexicon Or Corpus Index|Attestation Links|Merge And Variant Decisions|Unresolved Analyses|Checks And Limits|Owner Questions|Files Changed|Handoffs)$'\"' outputs/curation-decisions.md\nrg -n 'E[1-4]-S1|U(10|11|12|99)|A12|P1|X1' outputs/lexicon.tsv outputs/curation-decisions.md\"",
+    "exit_code": 0,
+    "status": "completed",
+    "output_sha256": "13f3d83cb9dce0b0116bc982eeb2bf7b8d2eb09c5c600ab96b12976247773ac9"
+  }
+]
