@@ -1,6 +1,6 @@
 name = "language-documentation-planner"
 description = "Creates language documentation plans connecting community priorities, speaker and genre coverage, recording sessions, annotation capacity, access terms, and useful return materials."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Language", "Documentation"]

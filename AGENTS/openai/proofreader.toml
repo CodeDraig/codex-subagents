@@ -1,6 +1,6 @@
 name = "proofreader"
 description = "Checks final copy and proofs for residual text errors, missed corrections, and reflow-dependent issues with exact correction locations."
-model = "gpt-5.6-luna"
+model = "gpt-6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Proofreader"]

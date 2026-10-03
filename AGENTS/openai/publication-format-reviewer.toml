@@ -1,6 +1,6 @@
 name = "publication-format-reviewer"
 description = "Reviews publication files for format structure, rendering, navigation, and accessibility evidence without conflating parsing with presentation quality."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Publication", "Format", "Reviewer"]

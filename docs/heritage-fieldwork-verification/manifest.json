@@ -3,7 +3,7 @@
     "agent": "archaeological-project-planner",
     "gateway": "archaeological-fieldwork",
     "mode": "project-design",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -22,7 +22,7 @@
     "agent": "archaeological-recording-specialist",
     "gateway": "archaeological-fieldwork",
     "mode": "field-recording",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -40,7 +40,7 @@
     "agent": "stratigraphic-sequence-reviewer",
     "gateway": "archaeological-fieldwork",
     "mode": "stratigraphic-review",
-    "model": "gpt-5.6-sol",
+    "model": "gpt-6-astra",
     "reasoning": "high",
     "sandbox": "read-only",
     "sections": [
@@ -58,7 +58,7 @@
     "agent": "archaeological-finds-coordinator",
     "gateway": "archaeological-fieldwork",
     "mode": "finds-register",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "medium",
     "sandbox": "workspace-write",
     "sections": [
@@ -77,7 +77,7 @@
     "agent": "archaeological-report-author",
     "gateway": "archaeological-fieldwork",
     "mode": "post-fieldwork-reporting",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -96,7 +96,7 @@
     "agent": "language-documentation-planner",
     "gateway": "language-documentation",
     "mode": "documentation-planning",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -115,7 +115,7 @@
     "agent": "linguistic-session-designer",
     "gateway": "language-documentation",
     "mode": "session-design",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -133,7 +133,7 @@
     "agent": "linguistic-annotation-editor",
     "gateway": "language-documentation",
     "mode": "transcription-annotation",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -153,7 +153,7 @@
     "agent": "lexicon-corpus-curator",
     "gateway": "language-documentation",
     "mode": "lexicon-curation",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -172,7 +172,7 @@
     "agent": "language-deposit-coordinator",
     "gateway": "language-documentation",
     "mode": "archive-preparation",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "medium",
     "sandbox": "workspace-write",
     "sections": [
@@ -191,7 +191,7 @@
     "agent": "oral-history-project-planner",
     "gateway": "oral-history",
     "mode": "project-planning",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -210,7 +210,7 @@
     "agent": "oral-history-interview-designer",
     "gateway": "oral-history",
     "mode": "interview-preparation",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -228,7 +228,7 @@
     "agent": "oral-history-transcript-editor",
     "gateway": "oral-history",
     "mode": "transcript-editing",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -247,7 +247,7 @@
     "agent": "oral-history-access-reviewer",
     "gateway": "oral-history",
     "mode": "narrator-review-access",
-    "model": "gpt-5.6-sol",
+    "model": "gpt-6-astra",
     "reasoning": "high",
     "sandbox": "read-only",
     "sections": [
@@ -265,7 +265,7 @@
     "agent": "oral-history-interpretation-editor",
     "gateway": "oral-history",
     "mode": "interpretation-edition",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -284,7 +284,7 @@
     "agent": "conservation-condition-reviewer",
     "gateway": "heritage-conservation",
     "mode": "condition-assessment",
-    "model": "gpt-5.6-sol",
+    "model": "gpt-6-astra",
     "reasoning": "high",
     "sandbox": "read-only",
     "sections": [
@@ -301,7 +301,7 @@
     "agent": "preventive-conservation-planner",
     "gateway": "heritage-conservation",
     "mode": "preventive-care",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -320,7 +320,7 @@
     "agent": "conservation-treatment-reviewer",
     "gateway": "heritage-conservation",
     "mode": "treatment-proposal-review",
-    "model": "gpt-5.6-sol",
+    "model": "gpt-6-astra",
     "reasoning": "high",
     "sandbox": "read-only",
     "sections": [
@@ -338,7 +338,7 @@
     "agent": "historic-fabric-recording-specialist",
     "gateway": "heritage-conservation",
     "mode": "historic-fabric-recording",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -357,7 +357,7 @@
     "agent": "site-conservation-planner",
     "gateway": "heritage-conservation",
     "mode": "site-conservation-planning",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "high",
     "sandbox": "workspace-write",
     "sections": [
@@ -376,7 +376,7 @@
     "agent": "conservation-monitoring-coordinator",
     "gateway": "heritage-conservation",
     "mode": "monitoring-maintenance",
-    "model": "gpt-5.6-terra",
+    "model": "gpt-6.1-sol",
     "reasoning": "medium",
     "sandbox": "workspace-write",
     "sections": [

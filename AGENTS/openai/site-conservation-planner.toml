@@ -1,6 +1,6 @@
 name = "site-conservation-planner"
 description = "Develops conservation plans for archaeological places and historic structures linking significance, fabric condition, site pressures, management options, and staged decisions."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Site", "Conservation"]

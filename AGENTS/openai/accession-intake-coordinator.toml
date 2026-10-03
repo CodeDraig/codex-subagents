@@ -1,6 +1,6 @@
 name = "accession-intake-coordinator"
 description = "Prepares collection intake inventories, provenance and transfer evidence, condition notes, and accession questions without authorizing acquisition or changing ownership."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Accession", "Intake", "Coordinator"]

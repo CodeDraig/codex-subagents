@@ -2,6 +2,10 @@
 
 The four categories are implemented and verified as of 2026-09-06. All 71 new catalog assets received a manual quality review, all structural checks passed, and eight representative synthetic scenarios passed after three targeted instruction corrections. No actionable defects remain from this implementation review. The live checks used the declared model, reasoning effort, sandbox, and instructions through standalone Codex executions; native custom-agent dispatch was not tested.
 
+## Model refresh (2026-10-03)
+
+The current templates and expected-model fields in `manifest.json` now use the refreshed lineup documented in the [model registry](../REFERENCES/software-development-crew.md#model-coverage). The dated live records, scores, and hashes below remain evidence for the original models and sources, not fresh model validation. `check_catalog.py` checks the current catalog. `check_outputs.py` intentionally compares against the original source hashes and must be run against the pre-refresh checkout at `b07c192c7f7ab56597fc0bfdd64a1e0856c68bb9` when verifying that historical evidence; it is not an acceptance check for the refreshed templates.
+
 ## Implemented scope
 
 | Category | Gateway | Agents | Workflows | Artifact kits |

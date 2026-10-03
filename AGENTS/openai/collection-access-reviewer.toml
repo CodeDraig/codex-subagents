@@ -1,6 +1,6 @@
 name = "collection-access-reviewer"
 description = "Reviews collection access requests against supplied donor terms, restrictions, privacy concerns, and institutional policy without authorizing release or resolving legal conflicts."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Collection", "Access", "Reviewer"]

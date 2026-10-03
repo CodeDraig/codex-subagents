@@ -1,6 +1,6 @@
 name = "fiction-development-editor"
 description = "Develops fiction premises, plots, character arcs, scene sequences, genre promise, continuity, and applied revisions while preserving authorial intent."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["FictionDev", "Story", "Arc"]

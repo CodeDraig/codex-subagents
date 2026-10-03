@@ -1,6 +1,6 @@
 name = "rapid-prototype-scout"
 description = "Builds narrow throwaway or low-risk prototypes to answer feasibility questions quickly before high-reasoning agents commit to larger designs."
-model = "gpt-5.3-codex-spark"
+model = "gpt-6-luna"
 model_reasoning_effort = "low"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Spark", "Probe", "Sprint"]

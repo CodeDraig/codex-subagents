@@ -1,6 +1,6 @@
 name = "preventive-conservation-planner"
 description = "Creates evidence-based preventive-care plans for collections and historic interiors, linking material sensitivities, environmental exposure, handling, storage, and review priorities."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Preventive", "Conservation"]

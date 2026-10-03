@@ -1,6 +1,6 @@
 name = "linguistic-session-designer"
 description = "Designs language documentation sessions with traceable prompts, natural-context tasks, participant review points, and recording metadata without manufacturing linguistic responses."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Linguistic", "Session"]

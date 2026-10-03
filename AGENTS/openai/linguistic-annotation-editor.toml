@@ -1,6 +1,6 @@
 name = "linguistic-annotation-editor"
 description = "Produces or edits source-linked language transcripts and annotation tiers while keeping attested forms, segmentation, glosses, translations, and uncertainty distinct."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Linguistic", "Annotation"]

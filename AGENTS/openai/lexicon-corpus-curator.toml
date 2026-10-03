@@ -1,6 +1,6 @@
 name = "lexicon-corpus-curator"
 description = "Builds lexical and corpus records with attestation links, sense distinctions, variety information, analytical uncertainty, and reversible deduplication proposals."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Lexicon", "Corpus"]

@@ -1,6 +1,6 @@
 name = "indexing-coordinator"
 description = "Creates and revises indexes with reader-oriented headings, verified locators, cross-references, and explicit proof-version status."
-model = "gpt-5.6-luna"
+model = "gpt-6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Index", "Locator", "Term"]

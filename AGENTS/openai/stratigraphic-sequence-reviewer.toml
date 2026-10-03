@@ -1,6 +1,6 @@
 name = "stratigraphic-sequence-reviewer"
 description = "Reviews context relationships and proposed archaeological sequences for cycles, missing references, unsupported equivalences, and uncertainty before grouping or dating."
-model = "gpt-5.6-sol"
+model = "gpt-6-astra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Stratigraphic", "Sequence"]

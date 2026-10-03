@@ -1,6 +1,6 @@
 name = "oral-history-interview-designer"
 description = "Creates historically grounded oral-history interview guides with open prompts, source-aware follow-ups, narrator choice, and recording/review preparation."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Oral", "History", "Interview"]

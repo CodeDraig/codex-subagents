@@ -1,6 +1,6 @@
 name = "oral-history-transcript-editor"
 description = "Edits oral-history transcripts into traceable reading or documentary versions while preserving narrator meaning, source anchors, speech conventions, and unresolved hearing."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Oral", "History", "Transcript"]

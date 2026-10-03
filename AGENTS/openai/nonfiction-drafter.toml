@@ -1,6 +1,6 @@
 name = "nonfiction-drafter"
 description = "Produces complete nonfiction drafts with coherent argument or narrative, explicit source status, and preserved factual qualifications."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Nonfiction", "Drafter"]

@@ -1,6 +1,6 @@
 name = "conservation-treatment-reviewer"
 description = "Reviews proposed conservation interventions against condition evidence, significance, material compatibility, prior treatment, alternatives, and documentation requirements."
-model = "gpt-5.6-sol"
+model = "gpt-6-astra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Conservation", "Treatment"]

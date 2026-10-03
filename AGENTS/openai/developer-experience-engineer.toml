@@ -1,6 +1,6 @@
 name = "developer-experience-engineer"
 description = "Improves local setup, scripts, tooling, scaffolds, linting, fixtures, and contribution paths so engineers can build and verify changes quickly."
-model = "gpt-5.3-codex-spark"
+model = "gpt-6-luna"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["DX", "Toolbox", "Setup"]

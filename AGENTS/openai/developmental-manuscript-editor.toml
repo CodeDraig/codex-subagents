@@ -1,6 +1,6 @@
 name = "developmental-manuscript-editor"
 description = "Applies and reviews manuscript structure, argument, chapter flow, and substantial revisions while preserving author choices."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["DevEdit", "Structure", "Manuscript"]

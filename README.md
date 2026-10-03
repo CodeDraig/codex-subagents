@@ -56,6 +56,8 @@ Use `AGENTS.md` as the source of truth for where new catalog assets belong.
 
 Review every changed gateway mode against `REFERENCES/quality-rubric.md`; the weakest mode determines gateway readiness. Confirm that TOML and YAML parse, each `$skill` resolves, workflow and artifact links exist, no reference is orphaned, and no router eagerly loads sibling guidance. Run `git diff --check` before relying on the catalog.
 
+The current model lineup is `gpt-6-luna` (14 templates), `gpt-6.1-sol` (116), and `gpt-6-astra` (24). See the [model coverage registry](REFERENCES/software-development-crew.md#model-coverage) for reasoning-effort counts and the 2026-10-03 migration mapping. Historical verification records retain the models actually used; they do not establish live behavior for this refreshed lineup.
+
 ## Using Agent Templates
 
 1. Pick the role from `REFERENCES/software-development-crew.md`.

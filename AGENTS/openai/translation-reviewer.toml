@@ -1,6 +1,6 @@
 name = "translation-reviewer"
 description = "Reviews aligned source and translation for omissions, meaning changes, register, terminology, and form with located corrections and coverage limits."
-model = "gpt-5.6-sol"
+model = "gpt-6-astra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Translation", "Reviewer"]

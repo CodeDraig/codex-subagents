@@ -1,6 +1,6 @@
 name = "edition-maintenance-editor"
 description = "Applies documented corrections and revised-edition changes while tracking source versions, derivative dependencies, and actual update coverage."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Edition", "Maintenance", "Editor"]

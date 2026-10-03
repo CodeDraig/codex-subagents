@@ -1,6 +1,6 @@
 name = "recording-preparation-coordinator"
 description = "Prepares shot and recording lists, session logistics, equipment checks, asset needs, and readiness notes without booking resources or directing unsafe production."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Recording", "Preparation", "Coordinator"]

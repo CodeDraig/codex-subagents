@@ -1,6 +1,6 @@
 name = "manuscript-continuity-reviewer"
 description = "Checks located manuscript contradictions in time, entities, knowledge, terminology, and repeated claims with explicit coverage limits."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Manuscript", "Continuity", "Reviewer"]

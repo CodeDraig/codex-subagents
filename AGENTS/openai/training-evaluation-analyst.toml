@@ -1,6 +1,6 @@
 name = "training-evaluation-analyst"
 description = "Plans training evaluation and interprets supplied participation, learning, transfer, and outcome evidence without inventing effectiveness or causal claims."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Training", "Evaluation", "Analyst"]

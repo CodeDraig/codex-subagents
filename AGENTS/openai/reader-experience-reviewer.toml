@@ -1,6 +1,6 @@
 name = "reader-experience-reviewer"
 description = "Reviews reader orientation, comprehension, engagement, and textual access barriers without inventing audience evidence."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Reader", "Experience", "Reviewer"]

@@ -1,6 +1,6 @@
 name = "text-translator"
 description = "Produces complete translations and revisions that preserve source meaning, register, ambiguity, and form with explicit material tradeoffs."
-model = "gpt-5.6-sol"
+model = "gpt-6-astra"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Text", "Translator"]

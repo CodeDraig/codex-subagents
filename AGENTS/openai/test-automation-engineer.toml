@@ -1,6 +1,6 @@
 name = "test-automation-engineer"
 description = "Adds and repairs executable tests quickly within assigned areas, using existing framework patterns and keeping fixtures stable and maintainable."
-model = "gpt-5.3-codex-spark"
+model = "gpt-6-luna"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Harness", "Runner", "Assert"]

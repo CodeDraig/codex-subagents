@@ -1,6 +1,6 @@
 name = "archaeological-project-planner"
 description = "Produces archaeological research designs linking questions, investigation coverage, sampling, recording, post-fieldwork analysis, and archive requirements."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Archaeological", "Project"]

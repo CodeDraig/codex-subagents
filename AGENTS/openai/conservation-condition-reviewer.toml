@@ -1,6 +1,6 @@
 name = "conservation-condition-reviewer"
 description = "Reviews supplied condition records for objects or historic fabric, separating observations, material identifications, deterioration hypotheses, and inspection limits."
-model = "gpt-5.6-sol"
+model = "gpt-6-astra"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 nickname_candidates = ["Conservation", "Condition"]

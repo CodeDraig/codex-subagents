@@ -1,6 +1,6 @@
 name = "conservation-monitoring-coordinator"
 description = "Organizes repeatable condition monitoring and maintenance records for objects and historic places, separating measured change, comparison limits, triggers, and completed work."
-model = "gpt-5.6-terra"
+model = "gpt-6.1-sol"
 model_reasoning_effort = "medium"
 sandbox_mode = "workspace-write"
 nickname_candidates = ["Conservation", "Monitoring"]
