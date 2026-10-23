@@ -1,0 +1,13 @@
+# Project metadata for work-catalog. Edit deliberately; refresh imports changes.
+schema_version = 1
+
+[project]
+id = "codex-subagents-7a0c0de4"
+purpose = "Catalog of reusable Codex agent templates, skill packages, and references."
+state = "active"
+next_action = "Use the documented entry point to select the next task; confirm owner intent before changing lifecycle. Runtime behavior was not tested."
+tags = ["repository", "xint"]
+
+[annotations]
+tags = []
+note = ""
