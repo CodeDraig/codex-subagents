@@ -82,6 +82,43 @@ Invoke the gateway and name the intended mode, for example `$interface-design-re
 
 When copying a skill outside this repo, preserve its workflow references, artifact references, and sidecar metadata. For `SKILLS/codex-subagent-designer/`, also preserve the top-level references linked by its mode workflows.
 
+### Preview a selective installation
+
+Use Python 3.11 or later to plan an installation without changing any files:
+
+```bash
+python3 tools/plan_install.py \
+  --agent code-reviewer --skill codex-subagent-designer \
+  --project /path/to/project
+
+python3 tools/plan_install.py \
+  --agent technical-planner --personal --format json
+```
+
+Repeat `--agent` and `--skill` to select more assets. The planner includes agents' literal `$skill-name` dependencies and complete tracked skill packages, but does not select handoff agents. It reads current working-tree contents and reports the source commit and selected-file content changes. Untracked files and caches are excluded.
+
+Project destinations use `.codex/agents/` and `.agents/skills/` beneath the supplied path. Personal destinations default to `~/.codex/agents/` and `~/.agents/skills/`; override them with `--agents-dir` and `--skills-dir`. These overrides require `--personal`. Use `--source-root` to inspect another catalog checkout.
+
+Shared references are planned under each consuming skill's `references/catalog/`, with link changes calculated in memory. Historical evidence links become absolute paths into the source checkout and are listed as dependencies; the planned installation therefore requires that checkout to remain available. Nothing is copied or rewritten.
+
+Each file reports its inclusion reasons, source/proposed/destination SHA-256 hashes, link adaptations, and one status:
+
+| Status | Meaning |
+| --- | --- |
+| `missing` | No destination file exists. |
+| `current` | Destination matches the proposed installed contents. |
+| `link-adaptation-needed` | Destination matches raw source but needs the proposed link changes. |
+| `conflict` | Destination differs from both raw and adapted source; the planner does not infer why. |
+| `blocked` | A symlink, unreadable file, or path collision prevents comparison. |
+
+Exit codes are `0` for a complete plan without conflicts, `1` for destination conflicts/blockers, and `2` for invalid arguments or unresolved source dependencies. JSON reports use `schema_version: 1`, include structured errors and the exit code, and sort files deterministically. A report containing errors is incomplete and must not be treated as an installable manifest. Text errors go to stderr. Prior installation receipts are not consulted, and unrelated destination files are not inventoried or removed.
+
+The planner uses only the Python standard library and Git. It never invokes Codex or performs an installation. Run its isolated tests with:
+
+```bash
+python3 -B -m unittest discover -s tests -v
+```
+
 ## Adding Or Changing Assets
 
 Before adding a new skill or agent:
