@@ -54,3 +54,10 @@ Every template must parse as TOML and contain:
 - Update that registry when an asset changes routing, lifecycle coverage, model coverage, intentional overlap, or implemented skill coverage.
 - Use `REFERENCES/prompt-patterns.md` for subagent prompt patterns.
 - Use `REFERENCES/quality-rubric.md` to determine whether skills and agents are complete enough for reusable catalog inclusion.
+
+## Backup and archive policy
+
+- Do not create additional backup or archive copies of content that can be recovered from Git history.
+- Any necessary backup or archive copies must be placed under the owning project's `tmp/` directory.
+- The project's `tmp/` directory and everything inside it must remain untracked and ignored by Git. Verify this before writing copies there; add `/tmp/` to the project's `.gitignore` if necessary. Never force-add these copies.
+- These rules take precedence over conflicting backup-location or duplicate-copy instructions in this file.
